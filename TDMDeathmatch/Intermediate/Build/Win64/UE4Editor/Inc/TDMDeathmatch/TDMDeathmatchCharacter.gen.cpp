@@ -27,6 +27,20 @@ void EmptyLinkFunctionForGeneratedCodeTDMDeathmatchCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ATDMDeathmatchCharacter::execMulti_OnFire)
+	{
+		P_GET_STRUCT(FVector,Z_Param_SpawnLocation);
+		P_GET_STRUCT(FRotator,Z_Param_SpawnRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->Multi_OnFire_Validate(Z_Param_SpawnLocation,Z_Param_SpawnRotation))
+		{
+			RPC_ValidateFailed(TEXT("Multi_OnFire_Validate"));
+			return;
+		}
+		P_THIS->Multi_OnFire_Implementation(Z_Param_SpawnLocation,Z_Param_SpawnRotation);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATDMDeathmatchCharacter::execServer_OnFire)
 	{
 		P_GET_STRUCT(FVector,Z_Param_SpawnLocation);
@@ -41,6 +55,14 @@ void EmptyLinkFunctionForGeneratedCodeTDMDeathmatchCharacter() {}
 		P_THIS->Server_OnFire_Implementation(Z_Param_SpawnLocation,Z_Param_SpawnRotation);
 		P_NATIVE_END;
 	}
+	static FName NAME_ATDMDeathmatchCharacter_Multi_OnFire = FName(TEXT("Multi_OnFire"));
+	void ATDMDeathmatchCharacter::Multi_OnFire(FVector SpawnLocation, FRotator SpawnRotation)
+	{
+		TDMDeathmatchCharacter_eventMulti_OnFire_Parms Parms;
+		Parms.SpawnLocation=SpawnLocation;
+		Parms.SpawnRotation=SpawnRotation;
+		ProcessEvent(FindFunctionChecked(NAME_ATDMDeathmatchCharacter_Multi_OnFire),&Parms);
+	}
 	static FName NAME_ATDMDeathmatchCharacter_Server_OnFire = FName(TEXT("Server_OnFire"));
 	void ATDMDeathmatchCharacter::Server_OnFire(FVector SpawnLocation, FRotator SpawnRotation)
 	{
@@ -53,9 +75,41 @@ void EmptyLinkFunctionForGeneratedCodeTDMDeathmatchCharacter() {}
 	{
 		UClass* Class = ATDMDeathmatchCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "Multi_OnFire", &ATDMDeathmatchCharacter::execMulti_OnFire },
 			{ "Server_OnFire", &ATDMDeathmatchCharacter::execServer_OnFire },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics
+	{
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnRotation;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnLocation;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::NewProp_SpawnRotation = { "SpawnRotation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMDeathmatchCharacter_eventMulti_OnFire_Parms, SpawnRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::NewProp_SpawnLocation = { "SpawnLocation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMDeathmatchCharacter_eventMulti_OnFire_Parms, SpawnLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::NewProp_SpawnRotation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::NewProp_SpawnLocation,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "TDMDeathmatchCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMDeathmatchCharacter, nullptr, "Multi_OnFire", nullptr, nullptr, sizeof(TDMDeathmatchCharacter_eventMulti_OnFire_Parms), Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80884CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ATDMDeathmatchCharacter_Server_OnFire_Statics
 	{
@@ -148,6 +202,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMDeathmatchCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TDMDeathmatch,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMDeathmatchCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATDMDeathmatchCharacter_Multi_OnFire, "Multi_OnFire" }, // 1447202984
 		{ &Z_Construct_UFunction_ATDMDeathmatchCharacter_Server_OnFire, "Server_OnFire" }, // 2309241738
 	};
 #if WITH_METADATA
@@ -291,7 +346,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMDeathmatchCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMDeathmatchCharacter, 541772239);
+	IMPLEMENT_CLASS(ATDMDeathmatchCharacter, 3361446074);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMDeathmatchCharacter>()
 	{
 		return ATDMDeathmatchCharacter::StaticClass();

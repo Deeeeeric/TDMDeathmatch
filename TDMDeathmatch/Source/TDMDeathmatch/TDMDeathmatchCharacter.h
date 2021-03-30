@@ -70,7 +70,10 @@ protected:
 	bool Server_OnFire_Validate(FVector SpawnLocation, FRotator SpawnRotation);
 	void Server_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation);
 
-
+	UFUNCTION(NetMulticast, Reliable, WithValidation)
+	void Multi_OnFire(FVector SpawnLocation, FRotator SpawnRotation);
+	bool Multi_OnFire_Validate(FVector SpawnLocation, FRotator SpawnRotation);
+	void Multi_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation);
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);

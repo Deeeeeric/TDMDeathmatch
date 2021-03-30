@@ -116,12 +116,10 @@ void ATDMDeathmatchCharacter::OnFire()
 			}
 			else
 			{
-				//Call Multicast RPC
-				
+				Multi_OnFire(SpawnLocation, SpawnRotation);
 			}
 		}
 	}
-
 
 	// try and play the sound if specified
 	if (FireSound != NULL)
@@ -149,6 +147,43 @@ bool ATDMDeathmatchCharacter::Server_OnFire_Validate(FVector SpawnLocation, FRot
 void ATDMDeathmatchCharacter::Server_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Server_On_Fire_Implementation"));
+	Multi_OnFire(SpawnLocation, SpawnRotation);
+}
+
+bool ATDMDeathmatchCharacter::Multi_OnFire_Validate(FVector SpawnLocation, FRotator SpawnRotation)
+{
+	return true;
+}
+
+void ATDMDeathmatchCharacter::Multi_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation)
+{
+	if (IsLocallyControlled()) {return;}
+
+	UE_LOG(LogTemp, Warning, TEXT("Multi_On_Fire_Implementation"));
+
+	//Set Spawn Collision Handling Override
+	FActorSpawnParameters ActorSpawnParams;
+	ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+
+	// spawn the projectile at the muzzle
+	GetWorld()->SpawnActor<ATDMDeathmatchProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+
+	// try and play the sound if specified
+	if (FireSound != NULL)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+	}
+
+	// try and play a firing animation if specified
+	if (FireAnimation != NULL)
+	{
+		// Get the animation object for the arms mesh
+		UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
+		if (AnimInstance != NULL)
+		{
+			AnimInstance->Montage_Play(FireAnimation, 1.f);
+		}
+	}
 }
 
 void ATDMDeathmatchCharacter::MoveForward(float Value)

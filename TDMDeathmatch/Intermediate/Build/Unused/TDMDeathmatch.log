@@ -8,12 +8,12 @@
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMDeathmatchCharacter.cpp (0:02.32 at +0:00)
-  UE4Editor-TDMDeathmatch-0004.dll (0:01.07 at +0:02)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.suppressed.exp
-  UE4Editor-TDMDeathmatch-0004.lib (0:00.14 at +0:03)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.exp
-  TDMDeathmatchEditor.target (0:00.28 at +0:03)
+  TDMDeathmatchCharacter.cpp (0:02.26 at +0:00)
+  UE4Editor-TDMDeathmatch-0007.dll (0:01.21 at +0:02)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.suppressed.exp
+  UE4Editor-TDMDeathmatch-0007.lib (0:00.15 at +0:03)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.exp
+  TDMDeathmatchEditor.target (0:00.26 at +0:03)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -21,5 +21,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 4.17 seconds
-  Total execution time: 5.49 seconds
+  Total time in XGE executor: 4.45 seconds
+  Total execution time: 5.46 seconds

@@ -17,18 +17,27 @@ struct FRotator;
 
 #define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_SPARSE_DATA
 #define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_RPC_WRAPPERS \
+	virtual bool Multi_OnFire_Validate(FVector , FRotator ); \
+	virtual void Multi_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation); \
 	virtual bool Server_OnFire_Validate(FVector , FRotator ); \
 	virtual void Server_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation); \
  \
+	DECLARE_FUNCTION(execMulti_OnFire); \
 	DECLARE_FUNCTION(execServer_OnFire);
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execMulti_OnFire); \
 	DECLARE_FUNCTION(execServer_OnFire);
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_EVENT_PARMS \
+	struct TDMDeathmatchCharacter_eventMulti_OnFire_Parms \
+	{ \
+		FVector SpawnLocation; \
+		FRotator SpawnRotation; \
+	}; \
 	struct TDMDeathmatchCharacter_eventServer_OnFire_Parms \
 	{ \
 		FVector SpawnLocation; \

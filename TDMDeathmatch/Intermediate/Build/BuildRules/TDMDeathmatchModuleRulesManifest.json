@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\DW\\Documents\\GitHub\\TDMDeathmatch\\TDMDeathmatch\\Source\\TDMDeathmatch\\TDMDeathmatch.Build.cs",
+		"D:\\DW\\Documents\\GitHub\\TDMDeathmatch\\TDMDeathmatch\\Source\\TDMDeathmatch.Target.cs",
+		"D:\\DW\\Documents\\GitHub\\TDMDeathmatch\\TDMDeathmatch\\Source\\TDMDeathmatchEditor.Target.cs"
+	],
+	"EngineVersion": "4.25.4"
+}

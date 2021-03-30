@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "TDMDeathmatch",
+			"Path": "D:\\DW\\Documents\\GitHub\\TDMDeathmatch\\TDMDeathmatch\\Source\\TDMDeathmatch.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TDMDeathmatchEditor",
+			"Path": "D:\\DW\\Documents\\GitHub\\TDMDeathmatch\\TDMDeathmatch\\Source\\TDMDeathmatchEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

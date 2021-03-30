@@ -29,9 +29,6 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
-    <Filter Include="Source\TDMDeathmatch">
-      <UniqueIdentifier>{AD32423A-83AB-4BFF-BBCA-42E58CC16468}</UniqueIdentifier>
-    </Filter>
     <None Include="..\..\Source\TDMDeathmatch\TDMDeathmatch.Build.cs">
       <Filter>Source\TDMDeathmatch</Filter>
     </None>
@@ -65,5 +62,10 @@
     <ClInclude Include="..\..\Source\TDMDeathmatch\TDMDeathmatchProjectile.h">
       <Filter>Source\TDMDeathmatch</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\TDMDeathmatch">
+      <UniqueIdentifier>{AD32423A-83AB-4BFF-BBCA-42E58CC16468}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

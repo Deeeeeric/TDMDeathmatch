@@ -8,14 +8,35 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
+struct FRotator;
 #ifdef TDMDEATHMATCH_TDMDeathmatchCharacter_generated_h
 #error "TDMDeathmatchCharacter.generated.h already included, missing '#pragma once' in TDMDeathmatchCharacter.h"
 #endif
 #define TDMDEATHMATCH_TDMDeathmatchCharacter_generated_h
 
 #define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_SPARSE_DATA
-#define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_RPC_WRAPPERS
-#define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_RPC_WRAPPERS \
+	virtual bool Server_OnFire_Validate(FVector , FRotator ); \
+	virtual void Server_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation); \
+ \
+	DECLARE_FUNCTION(execServer_OnFire);
+
+
+#define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execServer_OnFire);
+
+
+#define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_EVENT_PARMS \
+	struct TDMDeathmatchCharacter_eventServer_OnFire_Parms \
+	{ \
+		FVector SpawnLocation; \
+		FRotator SpawnRotation; \
+	};
+
+
+#define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_CALLBACK_WRAPPERS
 #define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATDMDeathmatchCharacter(); \
@@ -62,20 +83,20 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMDeathmatchCharacter); \
 	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, Mesh1P); } \
 	FORCEINLINE static uint32 __PPO__FP_Gun() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, FP_Gun); } \
 	FORCEINLINE static uint32 __PPO__FP_MuzzleLocation() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, FP_MuzzleLocation); } \
-	FORCEINLINE static uint32 __PPO__VR_Gun() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, VR_Gun); } \
-	FORCEINLINE static uint32 __PPO__VR_MuzzleLocation() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, VR_MuzzleLocation); } \
-	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, FirstPersonCameraComponent); } \
-	FORCEINLINE static uint32 __PPO__R_MotionController() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, R_MotionController); } \
-	FORCEINLINE static uint32 __PPO__L_MotionController() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, L_MotionController); }
+	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(ATDMDeathmatchCharacter, FirstPersonCameraComponent); }
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_11_PROLOG
+#define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_11_PROLOG \
+	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_EVENT_PARMS
+
+
 #define TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_SPARSE_DATA \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_RPC_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_CALLBACK_WRAPPERS \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_INCLASS \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_STANDARD_CONSTRUCTORS \
 public: \
@@ -88,6 +109,7 @@ public: \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_PRIVATE_PROPERTY_OFFSET \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_SPARSE_DATA \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_CALLBACK_WRAPPERS \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_INCLASS_NO_PURE_DECLS \
 	TDMDeathmatch_Source_TDMDeathmatch_TDMDeathmatchCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \

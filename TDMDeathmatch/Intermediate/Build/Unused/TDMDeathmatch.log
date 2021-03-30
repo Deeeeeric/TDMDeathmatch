@@ -1,15 +1,19 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\DW\Documents\GitHub\TDMDeathmatch).
-  Creating makefile for TDMDeathmatchEditor (.uproject file is newer)
   Building TDMDeathmatchEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 1 action to XGE
+  Distributing 4 actions to XGE
   --------------------Build System Warning---------------------------------------
   Failed to connect to Coordinator:
       All builds will run in standalone mode.
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMDeathmatchEditor.target (0:00.70 at +0:00)
+  TDMDeathmatchCharacter.cpp (0:02.32 at +0:00)
+  UE4Editor-TDMDeathmatch-0004.dll (0:01.07 at +0:02)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.suppressed.exp
+  UE4Editor-TDMDeathmatch-0004.lib (0:00.14 at +0:03)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.exp
+  TDMDeathmatchEditor.target (0:00.28 at +0:03)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -17,5 +21,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 1.91 seconds
-  Total execution time: 7.75 seconds
+  Total time in XGE executor: 4.17 seconds
+  Total execution time: 5.49 seconds

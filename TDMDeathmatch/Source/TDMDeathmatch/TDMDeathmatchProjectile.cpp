@@ -1,6 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "TDMDeathmatchProjectile.h"
+#include "TDMDeathmatchCharacter.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
 
@@ -33,11 +34,25 @@ ATDMDeathmatchProjectile::ATDMDeathmatchProjectile()
 
 void ATDMDeathmatchProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	if (OtherActor == nullptr)
+	{
+		return;
+	}
 	// Only add impulse and destroy projectile if we hit a physics
-	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics())
+	if ((OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics()) // Replicate on server
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
 
 		Destroy();
+	}
+
+	if (ATDMDeathmatchCharacter* Character = Cast<ATDMDeathmatchCharacter>(OtherActor))
+	{
+		// Spawn effects
+		if (GetWorld()->IsServer())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Dealing damage from server"));
+			//Deal damage
+		}
 	}
 }

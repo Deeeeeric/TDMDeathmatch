@@ -2,7 +2,8 @@
 
 
 #include "Player/TDMCharacterBase.h"
-#include "TDMDeathMatch/TDMDeathmatchProjectile.h"
+#include "Game/Weapon/TDMProjectileBase.h"
+
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -100,7 +101,7 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 void ATDMCharacterBase::OnFire()
 {
 	// try and fire a projectile
-	if (ProjectileClass != NULL)
+	if (NewProjectileClass != NULL)
 	{
 		UWorld* const World = GetWorld();
 		if (World != NULL)
@@ -114,7 +115,7 @@ void ATDMCharacterBase::OnFire()
 			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
 			// spawn the projectile at the muzzle
-			World->SpawnActor<ATDMDeathmatchProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+			World->SpawnActor<ATDMProjectileBase>(NewProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
 			if (!HasAuthority())
 			{
 				Server_OnFire(SpawnLocation, SpawnRotation);
@@ -171,7 +172,7 @@ void ATDMCharacterBase::Multi_OnFire_Implementation(FVector SpawnLocation, FRota
 	ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
 	// spawn the projectile at the muzzle
-	GetWorld()->SpawnActor<ATDMDeathmatchProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+	GetWorld()->SpawnActor<ATDMProjectileBase>(NewProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
 
 	// try and play the sound if specified
 	if (FireSound != NULL)

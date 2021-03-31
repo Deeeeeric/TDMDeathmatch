@@ -22,7 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMDeathmatchProjectile_NoRegister();
+	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMProjectileBase_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
@@ -162,9 +162,9 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FireSound;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NewProjectileClass_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ProjectileClass;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_NewProjectileClass;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GunOffset_MetaData[];
 #endif
@@ -231,14 +231,14 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_FireSound = { "FireSound", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, FireSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_FireSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_FireSound_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_ProjectileClass_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_NewProjectileClass_MetaData[] = {
 		{ "Category", "Projectile" },
 		{ "Comment", "/** Projectile class to spawn */" },
 		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
 		{ "ToolTip", "Projectile class to spawn" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, ProjectileClass), Z_Construct_UClass_ATDMDeathmatchProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_ProjectileClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_NewProjectileClass = { "NewProjectileClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, NewProjectileClass), Z_Construct_UClass_ATDMProjectileBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_NewProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_NewProjectileClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_GunOffset_MetaData[] = {
 		{ "Category", "Gameplay" },
@@ -310,7 +310,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATDMCharacterBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_FireAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_FireSound,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_ProjectileClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_NewProjectileClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_GunOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseTurnRate,
@@ -346,7 +346,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMCharacterBase, 3283576665);
+	IMPLEMENT_CLASS(ATDMCharacterBase, 3168573406);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMCharacterBase>()
 	{
 		return ATDMCharacterBase::StaticClass();

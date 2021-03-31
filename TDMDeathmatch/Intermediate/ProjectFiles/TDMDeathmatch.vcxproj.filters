@@ -41,12 +41,6 @@
     <ClInclude Include="..\..\Source\TDMDeathmatch\TDMDeathmatch.h">
       <Filter>Source\TDMDeathmatch</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\TDMDeathmatch\TDMDeathmatchCharacter.cpp">
-      <Filter>Source\TDMDeathmatch</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TDMDeathmatch\TDMDeathmatchCharacter.h">
-      <Filter>Source\TDMDeathmatch</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\TDMDeathmatch\TDMDeathmatchGameMode.cpp">
       <Filter>Source\TDMDeathmatch</Filter>
     </ClCompile>
@@ -57,12 +51,6 @@
       <Filter>Source\TDMDeathmatch</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TDMDeathmatch\TDMDeathmatchHUD.h">
-      <Filter>Source\TDMDeathmatch</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TDMDeathmatch\TDMDeathmatchProjectile.cpp">
-      <Filter>Source\TDMDeathmatch</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TDMDeathmatch\TDMDeathmatchProjectile.h">
       <Filter>Source\TDMDeathmatch</Filter>
     </ClInclude>
     <Filter Include="Source\TDMDeathmatch\Private">

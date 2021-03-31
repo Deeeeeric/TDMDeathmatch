@@ -6,3 +6,4 @@ A fully replicated Team Deathmatch
 * Multicast OnFire
 * Projectile Hit on Server
 * Create new character and projectile class
+* Fix projectile class and clean up project files

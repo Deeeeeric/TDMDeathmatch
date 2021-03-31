@@ -12,7 +12,7 @@
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 //////////////////////////////////////////////////////////////////////////
-// ATDMDeathmatchCharacter
+// ATDMCharacterBase
 
 ATDMDeathmatchCharacter::ATDMDeathmatchCharacter()
 {

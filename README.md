@@ -7,3 +7,4 @@ A fully replicated Team Deathmatch
 * Projectile Hit on Server
 * Create new character and projectile class
 * Fix projectile class and clean up project files
+* Weapon Class Actor

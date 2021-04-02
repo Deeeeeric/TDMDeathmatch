@@ -11,3 +11,4 @@ A fully replicated Team Deathmatch
 * Shoot weapon on client and server
 * Create Player State and Teams
 * Create Gamemode and Gamestate
+* Setup Scoring and testing

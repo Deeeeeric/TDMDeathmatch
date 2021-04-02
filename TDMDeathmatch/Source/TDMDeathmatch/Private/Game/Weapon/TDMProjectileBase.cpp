@@ -3,6 +3,7 @@
 
 #include "Game/Weapon/TDMProjectileBase.h"
 #include "Player/TDMCharacterBase.h"
+#include "Game/GameMode/TDMGameModeBase.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
@@ -50,13 +51,22 @@ void ATDMProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 		Destroy();
 	}
 
-	if (ATDMCharacterBase* Character = Cast<ATDMCharacterBase>(OtherActor))
+	if (ATDMCharacterBase* ShotPlayer = Cast<ATDMCharacterBase>(OtherActor))
 	{
 		// Spawn effects
 		if (GetWorld()->IsServer())
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Dealing damage from server"));
 			//Deal damage
+			if (ATDMGameModeBase* GM = GetWorld()->GetAuthGameMode<ATDMGameModeBase>())
+			{
+				if (AActor* CurrentWeapon = GetOwner())
+				{
+					if (ATDMCharacterBase* Shooter = Cast<ATDMCharacterBase>(CurrentWeapon->GetOwner()))
+					{
+						GM->PlayerKilled(Shooter, ShotPlayer);
+					}
+				}
+			}
 		}
 	}
 }

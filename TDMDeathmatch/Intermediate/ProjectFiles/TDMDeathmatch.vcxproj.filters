@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TDMDeathmatch.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{419FFC10-69B9-4109-8717-A258670F70A2}</UniqueIdentifier>
+      <UniqueIdentifier>{D0F86BE8-CAE2-4FDB-8EC8-F3008725AB5B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TDMDeathmatch.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{F8D7347A-80E4-45DF-9A0E-46DE5D8FFA61}</UniqueIdentifier>
+      <UniqueIdentifier>{05633F5F-A899-4D22-9CA2-85217D4F0862}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TDMDeathmatch">
-      <UniqueIdentifier>{BBDF9AAB-08E4-43F0-9EDB-F11C9049E762}</UniqueIdentifier>
+      <UniqueIdentifier>{466B336E-79F3-4ACF-AAD5-39A28CAB8687}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TDMDeathmatch\TDMDeathmatch.Build.cs">
       <Filter>Source\TDMDeathmatch</Filter>
@@ -54,13 +54,13 @@
       <Filter>Source\TDMDeathmatch</Filter>
     </ClInclude>
     <Filter Include="Source\TDMDeathmatch\Private">
-      <UniqueIdentifier>{23E71457-83FD-48CA-8C67-0D8618ED3BD0}</UniqueIdentifier>
+      <UniqueIdentifier>{93265D0D-9786-431B-A771-2A38DEBCDB06}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TDMDeathmatch\Private\Game">
-      <UniqueIdentifier>{91E3180D-B39F-4372-9E00-300656696E12}</UniqueIdentifier>
+      <UniqueIdentifier>{376B0505-ADA5-4EE6-AC6F-5DBBDB9DE8E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TDMDeathmatch\Private\Game\Weapon">
-      <UniqueIdentifier>{92C54669-9614-405C-B554-453B533AE29A}</UniqueIdentifier>
+      <UniqueIdentifier>{15904B26-5A34-432A-A9E4-E4B194E81BCE}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Game\Weapon\TDMProjectileBase.cpp">
       <Filter>Source\TDMDeathmatch\Private\Game\Weapon</Filter>
@@ -69,19 +69,22 @@
       <Filter>Source\TDMDeathmatch\Private\Game\Weapon</Filter>
     </ClCompile>
     <Filter Include="Source\TDMDeathmatch\Private\Player">
-      <UniqueIdentifier>{73D35B22-E9A6-481E-923B-E6F044380DB0}</UniqueIdentifier>
+      <UniqueIdentifier>{A008F3C6-55FB-4F89-AEB2-91F53D1E61C0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Player\TDMCharacterBase.cpp">
       <Filter>Source\TDMDeathmatch\Private\Player</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Player\TDMPlayerState.cpp">
+      <Filter>Source\TDMDeathmatch\Private\Player</Filter>
+    </ClCompile>
     <Filter Include="Source\TDMDeathmatch\Public">
-      <UniqueIdentifier>{5A3C2D08-7983-445E-BAFD-08BE8F3477FF}</UniqueIdentifier>
+      <UniqueIdentifier>{2DA712CB-358F-471F-A537-57C90CF9068E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TDMDeathmatch\Public\Game">
-      <UniqueIdentifier>{C2E4D655-E585-427E-BBD9-19FDA06D02F2}</UniqueIdentifier>
+      <UniqueIdentifier>{421539CE-82C3-41D0-8D11-BB2DF9E63F4F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TDMDeathmatch\Public\Game\Weapon">
-      <UniqueIdentifier>{31D7EAAE-BEDE-4F97-A629-3D2D24828646}</UniqueIdentifier>
+      <UniqueIdentifier>{24114893-2A46-4643-8275-FC49187333ED}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Game\Weapon\TDMProjectileBase.h">
       <Filter>Source\TDMDeathmatch\Public\Game\Weapon</Filter>
@@ -90,9 +93,12 @@
       <Filter>Source\TDMDeathmatch\Public\Game\Weapon</Filter>
     </ClInclude>
     <Filter Include="Source\TDMDeathmatch\Public\Player">
-      <UniqueIdentifier>{FD7083F0-6447-4389-849D-FDE40A17E7D8}</UniqueIdentifier>
+      <UniqueIdentifier>{A437CEE3-AC57-4FD5-AF1B-8C05F39B967B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Player\TDMCharacterBase.h">
+      <Filter>Source\TDMDeathmatch\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Player\TDMPlayerState.h">
       <Filter>Source\TDMDeathmatch\Public\Player</Filter>
     </ClInclude>
   </ItemGroup>

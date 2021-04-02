@@ -2030,3 +2030,72 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.04.02-14.31.12:164][697]Display: HotReload successful (3 functions remapped  0 scriptstructs remapped)
 [2021.04.02-14.31.12:284][697]LogContentBrowser: Native class hierarchy populated in 0.0132 seconds. Added 3412 classes and 811 folders.
 [2021.04.02-14.31.12:288][697]Display: HotReload took  3.4s.
+[2021.04.02-14.42.44:492][154]LogSlate: WidgetSwitcher ('None') active index changed to -1
+[2021.04.02-14.42.44:493][154]LogSlate: WidgetSwitcher ('None') active index changed to 0
+[2021.04.02-14.42.46:013][229]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2021.04.02-14.42.51:292][529]LogSlate: WidgetSwitcher ('None') active index changed to 1
+[2021.04.02-14.43.10:848][  8]Running D:/Program Files/Epic Games/UE_4.25/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/TDMDeathmatch.uproject" -game -rocket -progress
+[2021.04.02-14.43.11:456][  8]Discovering modules, targets and source code for project...
+[2021.04.02-14.43.14:174][  8]Binding IntelliSense data...
+[2021.04.02-14.43.17:621][  8]Binding IntelliSense data... 100%
+[2021.04.02-14.43.17:722][  8]Writing project files...
+[2021.04.02-14.43.24:986][  8]Writing project files... 100%
+[2021.04.02-14.43.25:139][  8]Candidate modules for hot reload:
+[2021.04.02-14.43.25:139][  8]  TDMDeathmatch
+[2021.04.02-14.43.25:139][  8]Launching UnrealBuildTool... [D:/Program Files/Epic Games/UE_4.25/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=TDMDeathmatch,150 TDMDeathmatchEditor Win64 Development -Project="D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/TDMDeathmatch.uproject" "D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/TDMDeathmatch.uproject"  -IgnoreJunk]
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: New page: Compilation - 2 Apr 2021, 16:43:44
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\DW\Documents\GitHub\TDMDeathmatch).
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Creating makefile for TDMDeathmatchEditor (no existing makefile)
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Parsing headers for TDMDeathmatchEditor
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog:   Running UnrealHeaderTool "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\TDMDeathmatch.uproject" "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\TDMDeathmatchEditor\Development\TDMDeathmatchEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\DW\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Reflection code generated for TDMDeathmatchEditor in 8.6221202 seconds
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Building TDMDeathmatchEditor...
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Distributing 6 actions to XGE
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Failed to connect to Coordinator:
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog:     All builds will run in standalone mode.
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: 
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: -------------------------------------------------------------------------------
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: TDMPlayerState.gen.cpp (0:04.17 at +0:00)
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: TDMDeathmatch.init.gen.cpp (0:01.11 at +0:04)
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: TDMPlayerState.cpp (0:00.76 at +0:05)
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Private\Player\TDMPlayerState.cpp(4): fatal error C1083: Cannot open include file: 'TDMPlayerState.h': No such file or directory
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: 
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: Error executing D:\Program Files\Epic Games\UE_4.25\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: ---------------------- Done ----------------------
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog: 
+[2021.04.02-14.43.44:800][  8]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2021.04.02-14.43.44:801][  8]CompilerResultsLog: 
+[2021.04.02-14.43.44:801][  8]CompilerResultsLog: 1 build system warning(s):
+[2021.04.02-14.43.44:801][  8]CompilerResultsLog:    - Failed to connect to Coordinator
+[2021.04.02-14.43.44:801][  8]CompilerResultsLog: 
+[2021.04.02-14.43.44:801][  8]LogMainFrame: MainFrame: Module compiling took 19.668 seconds
+[2021.04.02-14.43.44:801][  8]Warning: HotReload failed, recompile failed
+[2021.04.02-14.43.44:801][  8]Warning: RebindPackages failed because compilation failed.
+[2021.04.02-14.44.37:101][  8]LogSlate: Window 'Message' being destroyed
+[2021.04.02-14.44.37:108][  8]Message dialog closed, result: No, title: Message, text: Successfully added class 'TDMPlayerState', however you must recompile the 'TDMDeathmatch' module before it will appear in the Content Browser. Failed to automatically hot reload the 'TDMDeathmatch' module.
+
+Would you like to open the Output Log to see more details?
+[2021.04.02-14.44.37:108][  8]LogSlate: Window 'Add C++ Class' being destroyed
+[2021.04.02-14.49.48:422][ 10]LogHotReload: New module detected: UE4Editor-TDMDeathmatch-0005.dll
+[2021.04.02-14.49.49:796][ 15]LogHotReload: Starting Hot-Reload from IDE
+[2021.04.02-14.49.53:027][ 15]LogClass: Could not find existing class TDMPlayerState in package /Script/TDMDeathmatch for HotReload, assuming new class
+[2021.04.02-14.49.53:027][ 15]LogClass: Function GetDeaths is new.
+[2021.04.02-14.49.53:027][ 15]LogClass: Function GetKills is new.
+[2021.04.02-14.49.53:027][ 15]LogClass: Function GetTeam is new.
+[2021.04.02-14.49.53:027][ 15]LogClass: Function SetTeam is new.
+[2021.04.02-14.49.53:031][ 15]LogClass: Could not find existing type ETeam for HotReload. Assuming new
+[2021.04.02-14.49.53:044][ 15]LogContentBrowser: Native class hierarchy updated for 'TDMDeathmatch' in 0.0013 seconds. Added 6 classes and 6 folders.
+[2021.04.02-14.49.53:052][ 15]Display: HotReload successful (3 functions remapped  0 scriptstructs remapped)
+[2021.04.02-14.49.53:221][ 15]LogContentBrowser: Native class hierarchy populated in 0.0162 seconds. Added 3413 classes and 811 folders.
+[2021.04.02-14.49.53:230][ 15]Display: HotReload took  3.4s.
+[2021.04.02-14.50.08:693][432]LogSlate: WidgetSwitcher ('None') active index changed to -1
+[2021.04.02-14.50.08:693][432]LogSlate: WidgetSwitcher ('None') active index changed to 1
+[2021.04.02-14.50.17:229][922]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/BlueprintClasses/Player/BP_TDMPlayerState.BP_TDMPlayerState
+[2021.04.02-14.50.17:796][922]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2021.04.02-14.50.17:856][923]LogRenderer: Reallocating scene render targets to support 1296x760 Format 9 NumSamples 1 (Frame:1).
+[2021.04.02-14.50.20:052][ 49]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMPlayerStateE73640C74C076752A3767189A876ACA1.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMPlayerState.uasset'
+[2021.04.02-14.50.20:077][ 49]AssetCheck: New page: Asset Save: BP_TDMPlayerState
+[2021.04.02-14.50.20:077][ 49]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMPlayerState.BP_TDMPlayerState

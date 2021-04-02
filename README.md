@@ -9,3 +9,4 @@ A fully replicated Team Deathmatch
 * Fix projectile class and clean up project files
 * Weapon Class Actor
 * Shoot weapon on client and server
+* Create Player State and Teams

@@ -8,3 +8,4 @@ A fully replicated Team Deathmatch
 * Create new character and projectile class
 * Fix projectile class and clean up project files
 * Weapon Class Actor
+* Shoot weapon on client and server

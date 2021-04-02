@@ -3,13 +3,14 @@
 
 #include "Player/TDMCharacterBase.h"
 #include "Game/Weapon/TDMProjectileBase.h"
+#include "Game/Weapon/TDMWeaponBase.h"
 
-#include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/InputSettings.h"
 #include "Kismet/GameplayStatics.h"
+#include "Net/UnrealNetwork.h"
 
 // Sets default values
 ATDMCharacterBase::ATDMCharacterBase()
@@ -38,40 +39,40 @@ ATDMCharacterBase::ATDMCharacterBase()
 	Mesh1P->SetRelativeRotation(FRotator(1.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-0.5f, -4.4f, -155.7f));
 
-	// Create a gun mesh component
-	FP_Gun = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FP_Gun"));
-	FP_Gun->bCastDynamicShadow = false;
-	FP_Gun->CastShadow = false;
-	// FP_Gun->SetupAttachment(Mesh1P, TEXT("GripPoint"));
-	FP_Gun->SetupAttachment(RootComponent);
-
-	FP_MuzzleLocation = CreateDefaultSubobject<USceneComponent>(TEXT("MuzzleLocation"));
-	FP_MuzzleLocation->SetupAttachment(FP_Gun);
-	FP_MuzzleLocation->SetRelativeLocation(FVector(0.2f, 48.4f, -10.6f));
-
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 0.0f, 10.0f);
 
 }
 
-
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
-
-//////////////////////////////////////////////////////////////////////////
-// ATDMCharacterBase
 
 void ATDMCharacterBase::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
 
-	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
-	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 	Mesh1P->SetHiddenInGame(false, true);
+
+	if (HasAuthority())
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn; 
+		WeaponInHand = GetWorld()->SpawnActor<ATDMWeaponBase>(WeaponToSpawn, SpawnParams);
+
+		if (WeaponInHand)
+		{
+			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+		}
+	}
 }
 
-//////////////////////////////////////////////////////////////////////////
-// Input
+void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const 
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(ATDMCharacterBase, WeaponInHand);
+}
+
 
 void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
@@ -100,95 +101,9 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 
 void ATDMCharacterBase::OnFire()
 {
-	// try and fire a projectile
-	if (NewProjectileClass != NULL)
+	if (WeaponInHand)
 	{
-		UWorld* const World = GetWorld();
-		if (World != NULL)
-		{
-			const FRotator SpawnRotation = GetControlRotation();
-			// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-			const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
-
-			//Set Spawn Collision Handling Override
-			FActorSpawnParameters ActorSpawnParams;
-			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
-
-			// spawn the projectile at the muzzle
-			World->SpawnActor<ATDMProjectileBase>(NewProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
-			if (!HasAuthority())
-			{
-				Server_OnFire(SpawnLocation, SpawnRotation);
-			}
-			else
-			{
-				Multi_OnFire(SpawnLocation, SpawnRotation);
-			}
-		}
-	}
-
-	// try and play the sound if specified
-	if (FireSound != NULL)
-	{
-		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-	}
-
-	// try and play a firing animation if specified
-	if (FireAnimation != NULL)
-	{
-		// Get the animation object for the arms mesh
-		UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
-		if (AnimInstance != NULL)
-		{
-			AnimInstance->Montage_Play(FireAnimation, 1.f);
-		}
-	}
-}
-
-bool ATDMCharacterBase::Server_OnFire_Validate(FVector SpawnLocation, FRotator SpawnRotation)
-{
-	return true;
-}
-
-void ATDMCharacterBase::Server_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation)
-{
-	UE_LOG(LogTemp, Warning, TEXT("Server_On_Fire_Implementation"));
-	Multi_OnFire(SpawnLocation, SpawnRotation);
-}
-
-bool ATDMCharacterBase::Multi_OnFire_Validate(FVector SpawnLocation, FRotator SpawnRotation)
-{
-	return true;
-}
-
-void ATDMCharacterBase::Multi_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation)
-{
-	if (IsLocallyControlled()) { return; }
-
-	UE_LOG(LogTemp, Warning, TEXT("Multi_On_Fire_Implementation"));
-
-	//Set Spawn Collision Handling Override
-	FActorSpawnParameters ActorSpawnParams;
-	ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
-
-	// spawn the projectile at the muzzle
-	GetWorld()->SpawnActor<ATDMProjectileBase>(NewProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
-
-	// try and play the sound if specified
-	if (FireSound != NULL)
-	{
-		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-	}
-
-	// try and play a firing animation if specified
-	if (FireAnimation != NULL)
-	{
-		// Get the animation object for the arms mesh
-		UAnimInstance* AnimInstance = Mesh1P->GetAnimInstance();
-		if (AnimInstance != NULL)
-		{
-			AnimInstance->Montage_Play(FireAnimation, 1.f);
-		}
+		WeaponInHand->Fire();
 	}
 }
 

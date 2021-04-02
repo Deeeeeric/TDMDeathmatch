@@ -6,6 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "TDMWeaponBase.generated.h"
 
+class ATDMProjectileBase;
+class USkeletalMeshComponent;
+
 UCLASS()
 class TDMDEATHMATCH_API ATDMWeaponBase : public AActor
 {
@@ -17,10 +20,10 @@ public:
 	
 protected:
 	UPROPERTY(EditDefaultsOnly, Category="Weapon")
-	class USkeletalMeshComponent* WeaponMesh;
+	USkeletalMeshComponent* WeaponMesh;
 
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
-	TSubclassOf<class ATDMProjectileBase> NewProjectileClass;
+	TSubclassOf<ATDMProjectileBase> ProjectileClass;
 
 protected:
 	// Called when the game starts or when spawned

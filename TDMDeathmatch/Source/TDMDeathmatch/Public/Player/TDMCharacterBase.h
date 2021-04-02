@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "TDMCharacterBase.generated.h"
 
+class ATDMWeaponBase;
+
 UCLASS()
 class TDMDEATHMATCH_API ATDMCharacterBase : public ACharacter
 {
@@ -18,14 +20,6 @@ public:
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 		class USkeletalMeshComponent* Mesh1P;
-
-	/** Gun mesh: 1st person view (seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-		class USkeletalMeshComponent* FP_Gun;
-
-	/** Location on gun mesh where projectiles should spawn. */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-		class USceneComponent* FP_MuzzleLocation;
 
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
@@ -47,32 +41,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		FVector GunOffset;
 
-	/** Projectile class to spawn */
-	UPROPERTY(EditDefaultsOnly, Category = Projectile)
-		TSubclassOf<class ATDMProjectileBase> NewProjectileClass;
-
-	/** Sound to play each time we fire */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-		class USoundBase* FireSound;
-
-	/** AnimMontage to play each time we fire */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-		class UAnimMontage* FireAnimation;
-
 protected:
+	UPROPERTY(EditAnywhere, Category="Weapon")
+	TSubclassOf<ATDMWeaponBase> WeaponToSpawn;
+
+	UPROPERTY(Replicated)
+	ATDMWeaponBase* WeaponInHand;
 
 	/** Fires a projectile. */
 	void OnFire();
-
-	UFUNCTION(Server, Reliable, WithValidation)
-		void Server_OnFire(FVector SpawnLocation, FRotator SpawnRotation);
-	bool Server_OnFire_Validate(FVector SpawnLocation, FRotator SpawnRotation);
-	void Server_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation);
-
-	UFUNCTION(NetMulticast, Reliable, WithValidation)
-		void Multi_OnFire(FVector SpawnLocation, FRotator SpawnRotation);
-	bool Multi_OnFire_Validate(FVector SpawnLocation, FRotator SpawnRotation);
-	void Multi_OnFire_Implementation(FVector SpawnLocation, FRotator SpawnRotation);
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);

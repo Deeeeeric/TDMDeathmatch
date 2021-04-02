@@ -10,3 +10,4 @@ A fully replicated Team Deathmatch
 * Weapon Class Actor
 * Shoot weapon on client and server
 * Create Player State and Teams
+* Create Gamemode and Gamestate

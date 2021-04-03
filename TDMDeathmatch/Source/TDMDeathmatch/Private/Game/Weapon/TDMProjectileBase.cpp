@@ -56,15 +56,11 @@ void ATDMProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 		// Spawn effects
 		if (GetWorld()->IsServer())
 		{
-			//Deal damage
-			if (ATDMGameModeBase* GM = GetWorld()->GetAuthGameMode<ATDMGameModeBase>())
+			if (AActor* CurrentWeapon = GetOwner())
 			{
-				if (AActor* CurrentWeapon = GetOwner())
+				if (ATDMCharacterBase* Shooter = Cast<ATDMCharacterBase>(CurrentWeapon->GetOwner()))
 				{
-					if (ATDMCharacterBase* Shooter = Cast<ATDMCharacterBase>(CurrentWeapon->GetOwner()))
-					{
-						GM->PlayerKilled(Shooter, ShotPlayer);
-					}
+					ShotPlayer->TakeDamage(35.0f, FDamageEvent(), nullptr, Shooter);
 				}
 			}
 		}

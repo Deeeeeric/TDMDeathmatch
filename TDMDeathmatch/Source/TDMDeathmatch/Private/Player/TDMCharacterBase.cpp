@@ -4,6 +4,7 @@
 #include "Player/TDMCharacterBase.h"
 #include "Game/Weapon/TDMProjectileBase.h"
 #include "Game/Weapon/TDMWeaponBase.h"
+#include "Game/GameMode/TDMGameModeBase.h"
 
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -39,6 +40,8 @@ ATDMCharacterBase::ATDMCharacterBase()
 	Mesh1P->SetRelativeRotation(FRotator(1.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-0.5f, -4.4f, -155.7f));
 
+	Health = 100.0f;
+
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 0.0f, 10.0f);
 
@@ -65,6 +68,27 @@ void ATDMCharacterBase::BeginPlay()
 			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 		}
 	}
+}
+
+float ATDMCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+
+	Health -= DamageAmount; //Adjust health when taking damage
+
+	//Health Logic
+	if (Health > 0)
+	{
+		return ActualDamage;
+	}
+	else
+	{//We are dead
+		if (ATDMGameModeBase* GM = GetWorld()->GetAuthGameMode<ATDMGameModeBase>())
+		{
+			GM->PlayerKilled(Cast<ATDMCharacterBase>(DamageCauser), this);
+		}
+	}
+	return ActualDamage;
 }
 
 void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const 

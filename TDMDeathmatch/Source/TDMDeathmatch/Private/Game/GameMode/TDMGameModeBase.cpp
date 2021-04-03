@@ -22,9 +22,6 @@ void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase
 	{
 		return;
 	}
-	// Go to Team State and add point for team killer
-	// add point to killer player state
-	// add death to killed player state
 
 	if (ATDMGameStateBase* GS = GetGameState<ATDMGameStateBase>())
 	{

@@ -12,3 +12,4 @@ A fully replicated Team Deathmatch
 * Create Player State and Teams
 * Create Gamemode and Gamestate
 * Setup Scoring and testing
+* Finish Basic Game Logic

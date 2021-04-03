@@ -1,19 +1,29 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\DW\Documents\GitHub\TDMDeathmatch).
+  Parsing headers for TDMDeathmatchEditor
+    Running UnrealHeaderTool "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\TDMDeathmatch.uproject" "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\TDMDeathmatchEditor\Development\TDMDeathmatchEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\DW\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for TDMDeathmatchEditor in 8.696706 seconds
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0005.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0006.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0005.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0006.lib
   Building TDMDeathmatchEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 4 actions to XGE
+  Distributing 7 actions to XGE
   --------------------Build System Warning---------------------------------------
   Failed to connect to Coordinator:
       All builds will run in standalone mode.
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMProjectileBase.cpp (0:17.62 at +0:00)
-  UE4Editor-TDMDeathmatch-0006.dll (0:01.35 at +0:17)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0006.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0006.suppressed.exp
-  UE4Editor-TDMDeathmatch-0006.lib (0:00.20 at +0:19)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0006.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0006.exp
-  TDMDeathmatchEditor.target (0:00.32 at +0:19)
+  TDMGameStateBase.gen.cpp (0:11.06 at +0:00)
+  TDMProjectileBase.cpp (0:01.70 at +0:11)
+  TDMGameStateBase.cpp (0:01.31 at +0:12)
+  TDMGameModeBase.cpp (0:01.28 at +0:14)
+  UE4Editor-TDMDeathmatch.dll (0:01.11 at +0:15)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.exp
+  UE4Editor-TDMDeathmatch.lib (0:00.14 at +0:16)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.exp
+  TDMDeathmatchEditor.target (0:00.26 at +0:16)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -21,5 +31,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 20.25 seconds
-  Total execution time: 21.58 seconds
+  Total time in XGE executor: 17.99 seconds
+  Total execution time: 27.69 seconds

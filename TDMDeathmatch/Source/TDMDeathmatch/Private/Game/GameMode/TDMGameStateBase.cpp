@@ -6,10 +6,18 @@
 
 ATDMGameStateBase::ATDMGameStateBase()
 {
-	ScoreToWin = 10;
+	ScoreToWin = 5;
 	IncrementScoreValue = 1;
 	AlphaTeamScore = 0;
 	BravoTeamScore = 0;
+}
+
+void ATDMGameStateBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ATDMGameStateBase, AlphaTeamScore);
+	DOREPLIFETIME(ATDMGameStateBase, BravoTeamScore);
 }
 
 ETeam ATDMGameStateBase::AddScoreToTeam(ETeam Team)

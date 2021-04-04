@@ -60,7 +60,7 @@ void ATDMProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 			{
 				if (ATDMCharacterBase* Shooter = Cast<ATDMCharacterBase>(CurrentWeapon->GetOwner()))
 				{
-					ShotPlayer->TakeDamage(35.0f, FDamageEvent(), nullptr, Shooter);
+					ShotPlayer->TakeDamage(20.0f, FDamageEvent(), nullptr, Shooter);
 				}
 			}
 		}

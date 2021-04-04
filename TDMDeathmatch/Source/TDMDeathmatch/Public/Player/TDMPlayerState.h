@@ -33,6 +33,9 @@ protected:
 	UPROPERTY(Replicated)
 		int Deaths;
 
+protected:
+	virtual void BeginPlay() override;
+
 public:
 	UFUNCTION(BlueprintCallable)
 		FORCEINLINE ETeam GetTeam() const { return Team; }

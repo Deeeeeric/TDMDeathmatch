@@ -32,9 +32,16 @@ void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase
 				PS->AddKill();
 				ETeam WinningTeam = GS->AddScoreToTeam(PS->GetTeam());
 				if (WinningTeam != ETeam::None)
-				{
-					// A team has won
+				{// A team has won
 					bGameInProgress = false;
+					if (WinningTeam == ETeam::Alpha)
+					{
+						UE_LOG(LogTemp, Warning, TEXT("ALPHA Team WON"));
+					}
+					else
+					{
+						UE_LOG(LogTemp, Warning, TEXT("BRAVO Team WON"));
+					}
 				}
 			}
 		}

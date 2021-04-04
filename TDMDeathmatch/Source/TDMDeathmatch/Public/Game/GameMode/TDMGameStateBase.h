@@ -25,15 +25,20 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 		int IncrementScoreValue;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(Replicated, BlueprintReadOnly)
 		int AlphaTeamScore;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(Replicated, BlueprintReadOnly)
 		int BravoTeamScore;
 
 public:
 	// Returns None if neither team has >= ScoreTowin
 	ETeam AddScoreToTeam(ETeam Team);
-
 	ETeam GetWinningTeam();
+
+	UFUNCTION(BlueprintCallable)
+	FORCEINLINE int GetAlphaTeamScore() const {return AlphaTeamScore;}
+
+	UFUNCTION(BlueprintCallable)
+	FORCEINLINE int GetBravoTeamScore() const {return BravoTeamScore;}
 };

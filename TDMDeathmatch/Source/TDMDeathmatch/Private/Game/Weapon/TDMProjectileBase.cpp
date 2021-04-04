@@ -65,6 +65,8 @@ void ATDMProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 			}
 		}
 	}
+
+	Destroy(); //Destroy projectile on any blocking hit (no bounce-back)
 }
 
 

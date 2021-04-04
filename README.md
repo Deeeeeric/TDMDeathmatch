@@ -15,3 +15,4 @@ A fully replicated Team Deathmatch
 * Finish Basic Game Logic
 * Create Basic Health System
 * Auto Select Team
+* Prevent Self Kill and Adding to Score

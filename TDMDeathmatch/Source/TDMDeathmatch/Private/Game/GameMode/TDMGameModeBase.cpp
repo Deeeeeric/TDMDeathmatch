@@ -18,39 +18,41 @@ bool ATDMGameModeBase::CheckIfTeamScoreWins()
 
 void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase* Killed)
 {
-	if (!bGameInProgress)
+	if (!bGameInProgress) { return; }
+	if (Killer == nullptr || Killed == nullptr) { return; }
+
+	if (Killer == Killed)
 	{
+		if (ATDMPlayerState* PS = Killer->GetPlayerState<ATDMPlayerState>())
+		{
+			PS->AddDeath();
+		}
 		return;
 	}
 
 	if (ATDMGameStateBase* GS = GetGameState<ATDMGameStateBase>())
 	{
-		if (Killer)
+		if (ATDMPlayerState* PS = Killer->GetPlayerState<ATDMPlayerState>())
 		{
-			if (ATDMPlayerState* PS = Killer->GetPlayerState<ATDMPlayerState>())
-			{
-				PS->AddKill();
-				ETeam WinningTeam = GS->AddScoreToTeam(PS->GetTeam());
-				if (WinningTeam != ETeam::None)
-				{// A team has won
-					bGameInProgress = false;
-					if (WinningTeam == ETeam::Alpha)
-					{
-						UE_LOG(LogTemp, Warning, TEXT("ALPHA Team WON"));
-					}
-					else
-					{
-						UE_LOG(LogTemp, Warning, TEXT("BRAVO Team WON"));
-					}
+			PS->AddKill();
+			ETeam WinningTeam = GS->AddScoreToTeam(PS->GetTeam());
+			if (WinningTeam != ETeam::None)
+			{// A team has won
+				bGameInProgress = false;
+				if (WinningTeam == ETeam::Alpha)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("ALPHA Team WON"));
+				}
+				else
+				{
+					UE_LOG(LogTemp, Warning, TEXT("BRAVO Team WON"));
 				}
 			}
 		}
-		if (Killed)
+
+		if (ATDMPlayerState* PS = Killed->GetPlayerState<ATDMPlayerState>())
 		{
-			if (ATDMPlayerState* PS = Killed->GetPlayerState<ATDMPlayerState>())
-			{
-				PS->AddDeath();
-			}
+			PS->AddDeath();
 		}
 	}
 }

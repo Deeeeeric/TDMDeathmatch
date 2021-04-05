@@ -39,7 +39,6 @@ protected:
 public:
 	UFUNCTION(BlueprintCallable)
 		FORCEINLINE ETeam GetTeam() const { return Team; }
-
 	UFUNCTION(BlueprintCallable)
 		FORCEINLINE int GetKills() const { return Kills; }
 	UFUNCTION(BlueprintCallable)
@@ -51,4 +50,6 @@ public:
 
 	void AddKill() { ++Kills; }
 	void AddDeath() { ++Deaths; }
+
+	bool IsOnSameTeam(class ATDMCharacterBase* Character);
 };

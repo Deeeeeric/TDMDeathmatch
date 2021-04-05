@@ -4,6 +4,8 @@
 #include "Game/Weapon/TDMProjectileBase.h"
 #include "Player/TDMCharacterBase.h"
 #include "Game/GameMode/TDMGameModeBase.h"
+#include "Player/TDMPlayerState.h"
+
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
@@ -59,8 +61,11 @@ void ATDMProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
 			if (AActor* CurrentWeapon = GetOwner())
 			{
 				if (ATDMCharacterBase* Shooter = Cast<ATDMCharacterBase>(CurrentWeapon->GetOwner()))
-				{
-					ShotPlayer->TakeDamage(20.0f, FDamageEvent(), nullptr, Shooter);
+				{//Make sure a player is valid before we call the function IsOnSameTeam
+					if (Shooter->GetPlayerState<ATDMPlayerState>() && !Shooter->GetPlayerState<ATDMPlayerState>()->IsOnSameTeam(ShotPlayer))
+					{//Player not on the same team will take damage
+						ShotPlayer->TakeDamage(20.0f, FDamageEvent(), nullptr, Shooter);
+					}
 				}
 			}
 		}

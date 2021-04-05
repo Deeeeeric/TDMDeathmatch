@@ -16,3 +16,4 @@ A fully replicated Team Deathmatch
 * Create Basic Health System
 * Auto Select Team
 * Prevent Self Kill and Adding to Score
+* Stop Team Damage

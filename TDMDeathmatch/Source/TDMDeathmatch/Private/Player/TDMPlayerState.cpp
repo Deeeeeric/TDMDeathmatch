@@ -3,6 +3,7 @@
 
 #include "Player/TDMPlayerState.h"
 #include "Game/GameMode/TDMGameStateBase.h"
+#include "Player/TDMCharacterBase.h"
 #include "Net/UnrealNetwork.h"
 
 ATDMPlayerState::ATDMPlayerState()
@@ -68,6 +69,22 @@ bool ATDMPlayerState::SetTeam(ETeam JoinTeam)
 		//Perform to see if joining team is full	
 		Team = JoinTeam;
 		return true;
+	}
+	return false;
+}
+
+bool ATDMPlayerState::IsOnSameTeam(class ATDMCharacterBase* Character)
+{//Check if valid
+	if (Character == nullptr)
+	{
+		return false;
+	}
+	if (ATDMPlayerState* PS = Character->GetPlayerState<ATDMPlayerState>())
+	{
+		if (PS->GetTeam() == Team)
+		{
+			return true;
+		}
 	}
 	return false;
 }

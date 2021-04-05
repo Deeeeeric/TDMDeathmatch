@@ -18,3 +18,4 @@ A fully replicated Team Deathmatch
 * Prevent Self Kill and Adding to Score
 * Stop Team Damage
 * Prevent Double Killing Dead Players
+* Create Spawn Points and Spawn

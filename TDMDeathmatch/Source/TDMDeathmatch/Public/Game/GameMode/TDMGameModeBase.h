@@ -7,6 +7,7 @@
 #include "TDMGameModeBase.generated.h"
 
 class ATDMCharacterBase;
+class ATDMSpawnPoint;
 
 UCLASS()
 class TDMDEATHMATCH_API ATDMGameModeBase : public AGameModeBase
@@ -20,7 +21,19 @@ public:
 protected:
 	bool bGameInProgress;
 
+	UPROPERTY(EditDefaultsOnly, Category="TDM")
+	TSubclassOf<ATDMCharacterBase> CharacterClass;
+
+	//Dedicated TArray of spawn points
+	TArray<ATDMSpawnPoint*> SpawnPoints;
+
 protected:
+	virtual void BeginPlay() override;
+	virtual void PostLogin(APlayerController* NewPlayer) override;
+
+	ATDMSpawnPoint* FindSpawnPoint();
+	void SpawnAtPoint(APlayerController* NewPlayer);
+	
 	// Returns true if a team has won
 	bool CheckIfTeamScoreWins();
 

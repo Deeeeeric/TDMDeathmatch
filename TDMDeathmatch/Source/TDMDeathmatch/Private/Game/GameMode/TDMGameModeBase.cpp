@@ -76,8 +76,14 @@ void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase
 {
 	if (!bGameInProgress) { return; }
 	//Unpossess current pawn
-	if (Killer == nullptr || Killed == nullptr) { return; }
+	if (Killed == nullptr) {return;}
+	if (APlayerController* PC = Killed->GetController<APlayerController>())
+	{	
+		PC->UnPossess();
+		SpawnAtPoint(PC);
+	}
 
+	if (Killer == nullptr) { return; }
 	if (Killer == Killed)
 	{//If self kill, add to death, not score
 		if (ATDMPlayerState* PS = Killer->GetPlayerState<ATDMPlayerState>())

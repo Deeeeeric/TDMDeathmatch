@@ -6,7 +6,7 @@
 
 ATDMGameStateBase::ATDMGameStateBase()
 {
-	ScoreToWin = 5;
+	ScoreToWin = 2;
 	IncrementScoreValue = 1;
 	AlphaTeamScore = 0;
 	BravoTeamScore = 0;

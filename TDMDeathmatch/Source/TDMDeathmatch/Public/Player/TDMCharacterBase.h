@@ -32,6 +32,9 @@ public:
 	UFUNCTION()
 	void OnRep_IsDead();
 
+	void DestroyCharacter();
+
+
 protected:
 	virtual void BeginPlay();
 

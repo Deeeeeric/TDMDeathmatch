@@ -119,9 +119,11 @@ float ATDMCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& Dama
 		else
 		{//We are dead
 			bIsDead = true;
+			OnRep_IsDead();
 			if (ATDMGameModeBase* GM = GetWorld()->GetAuthGameMode<ATDMGameModeBase>())
 			{
 				GM->PlayerKilled(Cast<ATDMCharacterBase>(DamageCauser), this);
+
 			}
 		}
 	}
@@ -130,7 +132,17 @@ float ATDMCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& Dama
 
 void ATDMCharacterBase::OnRep_IsDead()
 {
+	if (HasAuthority())
+	{
+		FTimerHandle HandleTimer;
+		GetWorldTimerManager().SetTimer(HandleTimer,this,&ATDMCharacterBase::DestroyCharacter, 1.0f, false);
+	}
+}
 
+void ATDMCharacterBase::DestroyCharacter()
+{
+	if (WeaponInHand) {WeaponInHand->Destroy();}
+	Destroy();
 }
 
 void ATDMCharacterBase::OnFire()

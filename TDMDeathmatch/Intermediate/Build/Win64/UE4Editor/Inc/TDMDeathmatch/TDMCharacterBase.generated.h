@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TDMDEATHMATCH_TDMCharacterBase_generated_h
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_SPARSE_DATA
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_RPC_WRAPPERS
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnRep_IsDead);
+
+
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnRep_IsDead);
+
+
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATDMCharacterBase(); \
@@ -27,7 +35,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		WeaponInHand=NETFIELD_REP_START, \
+		bIsDead=NETFIELD_REP_START, \
+		WeaponInHand, \
 		NETFIELD_REP_END=WeaponInHand	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
@@ -43,7 +52,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		WeaponInHand=NETFIELD_REP_START, \
+		bIsDead=NETFIELD_REP_START, \
+		WeaponInHand, \
 		NETFIELD_REP_END=WeaponInHand	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 

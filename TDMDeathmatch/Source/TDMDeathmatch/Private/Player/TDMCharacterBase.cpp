@@ -16,7 +16,7 @@
 // Sets default values
 ATDMCharacterBase::ATDMCharacterBase()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
 	// Set size for collision capsule
@@ -41,10 +41,10 @@ ATDMCharacterBase::ATDMCharacterBase()
 	Mesh1P->SetRelativeLocation(FVector(-0.5f, -4.4f, -155.7f));
 
 	Health = 100.0f;
+	bIsDead = false;
 
 	// Default offset from the character location for projectiles to spawn
 	GunOffset = FVector(100.0f, 0.0f, 10.0f);
-
 }
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
@@ -60,7 +60,7 @@ void ATDMCharacterBase::BeginPlay()
 	{
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
-		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn; 
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		WeaponInHand = GetWorld()->SpawnActor<ATDMWeaponBase>(WeaponToSpawn, SpawnParams);
 
 		if (WeaponInHand)
@@ -69,34 +69,6 @@ void ATDMCharacterBase::BeginPlay()
 		}
 	}
 }
-
-float ATDMCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
-{
-	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-
-	Health -= DamageAmount; //Adjust health when taking damage
-
-	//Health Logic
-	if (Health > 0)
-	{
-		return ActualDamage;
-	}
-	else
-	{//We are dead
-		if (ATDMGameModeBase* GM = GetWorld()->GetAuthGameMode<ATDMGameModeBase>())
-		{
-			GM->PlayerKilled(Cast<ATDMCharacterBase>(DamageCauser), this);
-		}
-	}
-	return ActualDamage;
-}
-
-void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const 
-{
-	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	DOREPLIFETIME(ATDMCharacterBase, WeaponInHand);
-}
-
 
 void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
@@ -121,6 +93,44 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 	PlayerInputComponent->BindAxis("TurnRate", this, &ATDMCharacterBase::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("LookUpRate", this, &ATDMCharacterBase::LookUpAtRate);
+}
+
+void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(ATDMCharacterBase, WeaponInHand);
+	DOREPLIFETIME(ATDMCharacterBase, bIsDead);
+}
+
+float ATDMCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	if (bIsDead) {return 0.0f;}
+
+	if (HasAuthority())
+	{
+		Health -= DamageAmount; //Adjust health when taking damage
+
+		//Health Logic
+		if (Health > 0)
+		{
+			return ActualDamage;
+		}
+		else
+		{//We are dead
+			bIsDead = true;
+			if (ATDMGameModeBase* GM = GetWorld()->GetAuthGameMode<ATDMGameModeBase>())
+			{
+				GM->PlayerKilled(Cast<ATDMCharacterBase>(DamageCauser), this);
+			}
+		}
+	}
+	return ActualDamage;
+}
+
+void ATDMCharacterBase::OnRep_IsDead()
+{
+
 }
 
 void ATDMCharacterBase::OnFire()

@@ -22,7 +22,7 @@ void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase
 	if (Killer == nullptr || Killed == nullptr) { return; }
 
 	if (Killer == Killed)
-	{
+	{//If self kill, add to death, not score
 		if (ATDMPlayerState* PS = Killer->GetPlayerState<ATDMPlayerState>())
 		{
 			PS->AddDeath();

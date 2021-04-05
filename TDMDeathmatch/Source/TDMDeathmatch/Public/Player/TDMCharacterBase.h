@@ -27,6 +27,11 @@ public:
 
 	float Health;
 
+	UPROPERTY(ReplicatedUsing = OnRep_IsDead)
+	bool bIsDead;
+	UFUNCTION()
+	void OnRep_IsDead();
+
 protected:
 	virtual void BeginPlay();
 

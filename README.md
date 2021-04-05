@@ -17,3 +17,4 @@ A fully replicated Team Deathmatch
 * Auto Select Team
 * Prevent Self Kill and Adding to Score
 * Stop Team Damage
+* Prevent Double Killing Dead Players

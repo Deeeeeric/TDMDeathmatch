@@ -41,28 +41,90 @@ void ATDMGameModeBase::PostLogin(APlayerController* NewPlayer)
 	SpawnAtPoint(NewPlayer);
 }
 
-ATDMSpawnPoint* ATDMGameModeBase::FindSpawnPoint()
+ATDMSpawnPoint* ATDMGameModeBase::FindSpawnPoint(ETeam CurrentTeam)
 {
 	if (SpawnPoints.Num() <= 0) { return nullptr; }
+	if (CurrentTeam == ETeam::None)
+	{
+		int RanInt = FMath::RandRange(0, SpawnPoints.Num()-1);
+		return SpawnPoints[RanInt];
+	}
 
-	int RandVal = FMath::RandRange(0, SpawnPoints.Num() - 1);
+	TArray<AActor*> FoundActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATDMCharacterBase::StaticClass(), FoundActors);
 
-	return SpawnPoints[RandVal];
+	TArray<ATDMCharacterBase*> Enemies;
+	for (AActor* Actor : FoundActors)
+	{
+		if (ATDMCharacterBase* Character = Cast<ATDMCharacterBase>(Actor))
+		{
+			if (ATDMPlayerState* PS = Character->GetPlayerState<ATDMPlayerState>())
+			{
+				if (PS->GetTeam() != CurrentTeam)
+				{
+					Enemies.Add(Character);
+				}
+			}
+		}
+	}
+
+	float FurthestDistance = 0.0f;
+	ATDMSpawnPoint* FurthestSpawnPoint = nullptr;
+
+	for (ATDMSpawnPoint* SpawnPoint : SpawnPoints)
+	{//For every spawn point
+		for (ATDMCharacterBase* Character : Enemies)
+		{//Where an enemy has spawned
+			float CurrentDistance = Character->GetDistanceTo(SpawnPoint);
+			if (CurrentDistance > FurthestDistance)
+			{//If the current distance on player is > the furthest distance
+				FurthestDistance = CurrentDistance;
+				FurthestSpawnPoint = SpawnPoint;
+			}
+		}
+	}
+	//int RandVal = FMath::RandRange(0, SpawnPoints.Num() - 1);
+	return FurthestSpawnPoint;
 }
 
 void ATDMGameModeBase::SpawnAtPoint(APlayerController* NewPlayer)
 {
 	if (CharacterClass == nullptr) { return; }
-	if (ATDMSpawnPoint* SpawnPoint = FindSpawnPoint())
+	if (ATDMCharacterBase* Character = NewPlayer->GetPawn<ATDMCharacterBase>())
 	{
-		FVector Location = SpawnPoint->GetActorLocation();
-		FRotator Rotation = SpawnPoint->GetActorRotation();
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-
-		if (ATDMCharacterBase* Character = GetWorld()->SpawnActor<ATDMCharacterBase>(CharacterClass, Location, Rotation, SpawnParams))
+		if (ATDMPlayerState* PS = Character->GetPlayerState<ATDMPlayerState>())
 		{
-			NewPlayer->Possess(Character);
+			if (ATDMSpawnPoint* SpawnPoint = FindSpawnPoint(PS->GetTeam()))
+			{
+				NewPlayer->UnPossess();
+
+				FVector Location = SpawnPoint->GetActorLocation();
+				FRotator Rotation = SpawnPoint->GetActorRotation();
+				FActorSpawnParameters SpawnParams;
+				SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+				if (ATDMCharacterBase* NewCharacter = GetWorld()->SpawnActor<ATDMCharacterBase>(CharacterClass, Location, Rotation, SpawnParams))
+				{
+					NewPlayer->Possess(NewCharacter);
+				}
+			}
+		}
+	}
+	else
+	{//Initial Spawn
+		if (ATDMSpawnPoint* SpawnPoint = FindSpawnPoint(ETeam::None))
+		{
+			NewPlayer->UnPossess();
+
+			FVector Location = SpawnPoint->GetActorLocation();
+			FRotator Rotation = SpawnPoint->GetActorRotation();
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+			if (ATDMCharacterBase* NewCharacter = GetWorld()->SpawnActor<ATDMCharacterBase>(CharacterClass, Location, Rotation, SpawnParams))
+			{
+				NewPlayer->Possess(NewCharacter);
+			}
 		}
 	}
 }
@@ -74,12 +136,11 @@ bool ATDMGameModeBase::CheckIfTeamScoreWins()
 
 void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase* Killed)
 {
-	if (!bGameInProgress) { return; }
+	//if (!bGameInProgress) { return; }
 	//Unpossess current pawn
-	if (Killed == nullptr) {return;}
+	if (Killed == nullptr) { return; }
 	if (APlayerController* PC = Killed->GetController<APlayerController>())
-	{	
-		PC->UnPossess();
+	{
 		SpawnAtPoint(PC);
 	}
 

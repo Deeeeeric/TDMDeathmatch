@@ -20,3 +20,4 @@ A fully replicated Team Deathmatch
 * Prevent Double Killing Dead Players
 * Create Spawn Points and Spawn
 * Respawn at random spawn points
+* Spawn furthest away from enemy team player

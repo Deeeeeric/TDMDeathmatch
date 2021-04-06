@@ -6,6 +6,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "TDMGameModeBase.generated.h"
 
+enum class ETeam : unsigned char;
 class ATDMCharacterBase;
 class ATDMSpawnPoint;
 
@@ -31,7 +32,7 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void PostLogin(APlayerController* NewPlayer) override;
 
-	ATDMSpawnPoint* FindSpawnPoint();
+	ATDMSpawnPoint* FindSpawnPoint(ETeam CurrentTeam);
 	void SpawnAtPoint(APlayerController* NewPlayer);
 	
 	// Returns true if a team has won

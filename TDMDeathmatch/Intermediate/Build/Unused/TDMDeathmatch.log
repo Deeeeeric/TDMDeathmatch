@@ -8,12 +8,12 @@
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMGameModeBase.cpp (0:01.79 at +0:00)
-  UE4Editor-TDMDeathmatch.dll (0:01.09 at +0:01)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.exp
-  UE4Editor-TDMDeathmatch.lib (0:00.20 at +0:02)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.exp
-  TDMDeathmatchEditor.target (0:00.26 at +0:03)
+  TDMWeaponBase.cpp (0:01.39 at +0:00)
+  UE4Editor-TDMDeathmatch-0012.dll (0:01.10 at +0:01)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.suppressed.exp
+  UE4Editor-TDMDeathmatch-0012.lib (0:00.18 at +0:02)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.exp
+  TDMDeathmatchEditor.target (0:00.26 at +0:02)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -21,5 +21,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 3.69 seconds
-  Total execution time: 4.82 seconds
+  Total time in XGE executor: 3.58 seconds
+  Total execution time: 4.67 seconds

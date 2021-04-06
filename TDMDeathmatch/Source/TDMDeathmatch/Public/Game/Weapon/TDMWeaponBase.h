@@ -29,6 +29,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	void PerformHit(FHitResult HitResult);
+	bool LineTrace(FVector SpawnLocation, FRotator SpawnRotation);
+
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_Fire(FVector SpawnLocation, FRotator SpawnRotation);
 	bool Server_Fire_Validate(FVector SpawnLocation, FRotator SpawnRotation);

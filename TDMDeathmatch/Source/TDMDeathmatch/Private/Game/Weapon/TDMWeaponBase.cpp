@@ -3,7 +3,10 @@
 
 #include "Game/Weapon/TDMWeaponBase.h"
 #include "Game/Weapon/TDMProjectileBase.h"
+#include "Player/TDMPlayerState.h"
+#include "Player/TDMCharacterBase.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "DrawDebugHelpers.h"
 
 // Sets default values
 ATDMWeaponBase::ATDMWeaponBase()
@@ -22,6 +25,50 @@ void ATDMWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
 
+}
+
+void ATDMWeaponBase::PerformHit(FHitResult HitResult)
+{
+	if (AActor* HitActor = HitResult.GetActor()) // Replicate on server
+	{
+		if (ATDMCharacterBase* ShotPlayer = Cast<ATDMCharacterBase>(HitActor))
+		{
+			// Spawn effects
+			if (GetWorld()->IsServer())
+			{
+				if (AActor* CurrentWeapon = GetOwner())
+				{
+					if (ATDMCharacterBase* Shooter = Cast<ATDMCharacterBase>(GetOwner()))
+					{//Make sure a player is valid before we call the function IsOnSameTeam
+						if (Shooter->GetPlayerState<ATDMPlayerState>() && !Shooter->GetPlayerState<ATDMPlayerState>()->IsOnSameTeam(ShotPlayer))
+						{//Player not on the same team will take damage
+							ShotPlayer->TakeDamage(20.0f, FDamageEvent(), nullptr, Shooter);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+bool ATDMWeaponBase::LineTrace(FVector SpawnLocation, FRotator SpawnRotation)
+{
+	FVector EndLocation = SpawnLocation + SpawnRotation.Vector() * 500.0f;
+	DrawDebugLine(GetWorld(), SpawnLocation, EndLocation, FColor::Blue, false, 3.0f, 0, 3.0f);
+
+	FHitResult HitResult;
+	/*Ignore player and current weapon when run and shoot so we don't accidentally collide with the projectile on fire*/
+	FCollisionQueryParams QueryParams;
+	QueryParams.AddIgnoredActor(this);
+	QueryParams.AddIgnoredActor(GetOwner());
+
+	if (GetWorld()->LineTraceSingleByObjectType(HitResult, SpawnLocation, EndLocation, FCollisionObjectQueryParams(), FCollisionQueryParams()))
+	{
+		//Play effects on hit location
+		PerformHit(HitResult);
+		return true;
+	}
+	return false;
 }
 
 bool ATDMWeaponBase::Server_Fire_Validate(FVector SpawnLocation, FRotator SpawnRotation)
@@ -49,25 +96,38 @@ void ATDMWeaponBase::Multi_Fire_Implementation(FVector SpawnLocation, FRotator S
 		}
 	}
 
+	if (LineTrace(SpawnLocation, SpawnRotation))
+	{
+		return;
+	}
+
+	FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.Owner = this;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-	ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
+	ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams);
 }
 
 void ATDMWeaponBase::Fire()
 {
+	bool LineTraceHit = false;
 	FVector SpawnLocation = WeaponMesh->GetSocketLocation(FName("Muzzle"));
 	FRotator SpawnRotation = WeaponMesh->GetSocketRotation(FName("Muzzle"));
 
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.Owner = this;
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-
-	if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams))
+	LineTraceHit = LineTrace(SpawnLocation, SpawnRotation);
+	if (!LineTraceHit)
 	{
-	
+		FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
+		}
 	}
 
 	if (!HasAuthority())

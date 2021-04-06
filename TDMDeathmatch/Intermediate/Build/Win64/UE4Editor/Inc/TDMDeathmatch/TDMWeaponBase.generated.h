@@ -90,6 +90,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__WeaponMesh() { return STRUCT_OFFSET(ATDMWeaponBase, WeaponMesh); } \
+	FORCEINLINE static uint32 __PPO__MagazineCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineCapacity); } \
+	FORCEINLINE static uint32 __PPO__TotalAmmoCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, TotalAmmoCapacity); } \
+	FORCEINLINE static uint32 __PPO__MagazineAmmo() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineAmmo); } \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(ATDMWeaponBase, ProjectileClass); }
 
 

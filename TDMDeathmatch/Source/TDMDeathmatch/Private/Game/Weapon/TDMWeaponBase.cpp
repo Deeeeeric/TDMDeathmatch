@@ -18,13 +18,17 @@ ATDMWeaponBase::ATDMWeaponBase()
 	RootComponent = WeaponMesh;
 
 	SetReplicates(true);
+
+	TotalAmmoCapacity = 100;
+	MagazineCapacity = 15;
+	MagazineAmmo = MagazineCapacity;
 }
 
 // Called when the game starts or when spawned
 void ATDMWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
-
+	MagazineAmmo = MagazineCapacity;
 }
 
 void ATDMWeaponBase::PerformHit(FHitResult HitResult)
@@ -111,33 +115,37 @@ void ATDMWeaponBase::Multi_Fire_Implementation(FVector SpawnLocation, FRotator S
 
 void ATDMWeaponBase::Fire()
 {
-	bool LineTraceHit = false;
-	FVector SpawnLocation = WeaponMesh->GetSocketLocation(FName("Muzzle"));
-	FRotator SpawnRotation = WeaponMesh->GetSocketRotation(FName("Muzzle"));
-
-	LineTraceHit = LineTrace(SpawnLocation, SpawnRotation);
-	if (!LineTraceHit)
+	if (MagazineAmmo > 0)
 	{
-		FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
+		--MagazineAmmo;
 
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		bool LineTraceHit = false;
+		FVector SpawnLocation = WeaponMesh->GetSocketLocation(FName("Muzzle"));
+		FRotator SpawnRotation = WeaponMesh->GetSocketRotation(FName("Muzzle"));
 
-		if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams))
+		LineTraceHit = LineTrace(SpawnLocation, SpawnRotation);
+		if (!LineTraceHit)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
+			FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
+
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.Owner = this;
+			SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+			if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
+			}
+		}
+
+		if (!HasAuthority())
+		{
+			Server_Fire(SpawnLocation, SpawnRotation);
+		}
+		else
+		{
+			Multi_Fire(SpawnLocation, SpawnRotation);
 		}
 	}
-
-	if (!HasAuthority())
-	{
-		Server_Fire(SpawnLocation, SpawnRotation);
-	}
-	else
-	{
-		Multi_Fire(SpawnLocation, SpawnRotation);
-	}
 }
-
 

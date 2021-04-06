@@ -8,11 +8,11 @@
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMWeaponBase.cpp (0:01.39 at +0:00)
-  UE4Editor-TDMDeathmatch-0012.dll (0:01.10 at +0:01)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.suppressed.exp
-  UE4Editor-TDMDeathmatch-0012.lib (0:00.18 at +0:02)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.exp
+  TDMWeaponBase.cpp (0:01.32 at +0:00)
+  UE4Editor-TDMDeathmatch-0015.dll (0:01.26 at +0:01)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0015.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0015.suppressed.exp
+  UE4Editor-TDMDeathmatch-0015.lib (0:00.18 at +0:02)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0015.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0015.exp
   TDMDeathmatchEditor.target (0:00.26 at +0:02)
   ---------------------- Done ----------------------
   
@@ -21,5 +21,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 3.58 seconds
-  Total execution time: 4.67 seconds
+  Total time in XGE executor: 3.38 seconds
+  Total execution time: 4.51 seconds

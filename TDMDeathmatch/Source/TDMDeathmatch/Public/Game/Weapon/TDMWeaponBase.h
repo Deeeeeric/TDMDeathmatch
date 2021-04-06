@@ -22,6 +22,15 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="Weapon")
 	USkeletalMeshComponent* WeaponMesh;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	int32 MagazineCapacity;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	int32 TotalAmmoCapacity;
+
+	UPROPERTY(BlueprintReadOnly, Category="Weapon")
+	int32 MagazineAmmo;
+
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<ATDMProjectileBase> ProjectileClass;
 

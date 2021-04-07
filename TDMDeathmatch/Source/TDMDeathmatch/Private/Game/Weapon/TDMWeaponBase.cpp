@@ -41,6 +41,8 @@ void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 
 void ATDMWeaponBase::PerformHit(FHitResult HitResult)
 {
+	OnHit(HitResult);
+
 	if (AActor* HitActor = HitResult.GetActor()) // Replicate on server
 	{
 		if (ATDMCharacterBase* ShotPlayer = Cast<ATDMCharacterBase>(HitActor))
@@ -73,8 +75,10 @@ bool ATDMWeaponBase::LineTrace(FVector SpawnLocation, FRotator SpawnRotation)
 	FCollisionQueryParams QueryParams;
 	QueryParams.AddIgnoredActor(this);
 	QueryParams.AddIgnoredActor(GetOwner());
+	/*Use QueryParams to perform physics material*/
+	QueryParams.bReturnPhysicalMaterial = true;
 
-	if (GetWorld()->LineTraceSingleByObjectType(HitResult, SpawnLocation, EndLocation, FCollisionObjectQueryParams(), FCollisionQueryParams()))
+	if (GetWorld()->LineTraceSingleByObjectType(HitResult, SpawnLocation, EndLocation, FCollisionObjectQueryParams(), QueryParams))
 	{
 		//Play effects on hit location
 		PerformHit(HitResult);
@@ -93,12 +97,7 @@ void ATDMWeaponBase::Server_Fire_Implementation(FVector SpawnLocation, FRotator 
 	if (MagazineAmmo > 0)
 	{
 		--MagazineAmmo;
-		UE_LOG(LogTemp, Warning, TEXT("Server: HAS AMMO"));
 		Multi_Fire(SpawnLocation, SpawnRotation);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Server: HAS NO AMMO"));
 	}
 }
 
@@ -132,7 +131,7 @@ void ATDMWeaponBase::Multi_Fire_Implementation(FVector SpawnLocation, FRotator S
 
 void ATDMWeaponBase::Fire()
 {
-	if (MagazineAmmo > 0	)
+	if (MagazineAmmo > 0)
 	{
 		--MagazineAmmo;
 

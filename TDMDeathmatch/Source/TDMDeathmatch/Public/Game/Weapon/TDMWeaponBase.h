@@ -31,6 +31,9 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Replicated, Category="Weapon")
 	int32 MagazineAmmo;
 
+	UFUNCTION(BlueprintImplementableEvent, Category="Weapon")
+	void OnHit(FHitResult HitResult);
+
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<ATDMProjectileBase> ProjectileClass;
 

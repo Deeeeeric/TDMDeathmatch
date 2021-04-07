@@ -10,6 +10,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FVector;
 struct FRotator;
+struct FHitResult;
 #ifdef TDMDEATHMATCH_TDMWeaponBase_generated_h
 #error "TDMWeaponBase.generated.h already included, missing '#pragma once' in TDMWeaponBase.h"
 #endif
@@ -37,6 +38,10 @@ struct FRotator;
 	{ \
 		FVector SpawnLocation; \
 		FRotator SpawnRotation; \
+	}; \
+	struct TDMWeaponBase_eventOnHit_Parms \
+	{ \
+		FHitResult HitResult; \
 	}; \
 	struct TDMWeaponBase_eventServer_Fire_Parms \
 	{ \

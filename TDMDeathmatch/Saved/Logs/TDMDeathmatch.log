@@ -958,3 +958,185 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.04.07-13.53.44:844][578]LogUObjectHash: Compacting FUObjectHashTables data took   8.44ms
 [2021.04.07-13.53.44:888][579]LogPlayLevel: Display: Destroying online subsystem :Context_4
 [2021.04.07-13.53.44:888][579]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2021.04.07-13.55.43:494][ 14]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.04.07-13.55.43:517][ 14]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.07-13.55.43:517][ 14]PIE: New page: PIE session: FirstPersonExampleMap (7 Apr 2021, 15:55:43)
+[2021.04.07-13.55.43:517][ 14]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.07-13.55.43:534][ 14]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016171s)
+[2021.04.07-13.55.43:535][ 14]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.07-13.55.43:536][ 14]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (00000231BA869200), frame # 2014
+[2021.04.07-13.55.43:536][ 14]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (00000231ABAF1300), frame # 2014
+[2021.04.07-13.55.43:536][ 14]LogPlayLevel: PIE: World Init took: (0.001759s)
+[2021.04.07-13.55.43:536][ 14]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.018174s)
+[2021.04.07-13.55.43:564][ 14]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2021.04.07-13.55.43:566][ 14]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.07-13.55.43:566][ 14]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.07-13.55.43:566][ 14]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.07-13.55.43:566][ 14]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.07-13.55.43:566][ 14]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.07-13.55.43:566][ 14]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.07-13.55.43:566][ 14]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.07-13.55.43:566][ 14]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.07-13.55.43:567][ 14]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.07-13.55.43:567][ 14]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.07-13.55.43:573][ 14]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.07-13.55.43:573][ 14]LogAudioMixer: Display: 1: FrontRight
+[2021.04.07-13.55.43:615][ 14]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.07-13.55.43:616][ 14]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.07-13.55.43:616][ 14]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.07-13.55.43:616][ 14]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.07-13.55.43:616][ 14]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.07-13.55.43:634][ 14]LogInit: FAudioDevice initialized.
+[2021.04.07-13.55.43:682][ 14]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.07-13.55.43:682][ 14]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.07-13.55.43:686][ 14]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.07-14.55.43
+[2021.04.07-13.55.43:686][ 14]LogWorld: Bringing up level for play took: 0.002976
+[2021.04.07-13.55.43:687][ 14]LogOnline: OSS: Creating online subsystem instance for: :Context_5
+[2021.04.07-13.55.43:689][ 14]LogTemp: Warning: POST LOGIN
+[2021.04.07-13.55.43:689][ 14]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.07-13.55.43:689][ 14]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.07-13.55.43:690][ 14]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.07-13.55.43:690][ 14]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.07-13.55.43:690][ 14]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.07-13.55.43:690][ 14]LogNet: GameNetDriver IpNetDriver_4 IpNetDriver listening on port 17777
+[2021.04.07-13.55.43:690][ 14]LogTemp: Warning: BEGIN PLAY
+[2021.04.07-13.55.43:690][ 14]LogTemp: Warning: POST LOGIN
+[2021.04.07-13.55.43:693][ 14]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.07-13.55.43:695][ 14]PIE: Server logged in
+[2021.04.07-13.55.43:697][ 14]PIE: Play in editor total start time 0.187 seconds.
+[2021.04.07-13.55.43:699][ 14]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.07-13.55.43:699][ 14]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.07-13.55.43:699][ 14]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.07-13.55.43:699][ 14]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.07-13.55.43:699][ 14]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.07-13.55.43:699][ 14]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.07-13.55.43:699][ 14]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.07-13.55.43:699][ 14]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.07-13.55.43:700][ 14]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.07-13.55.43:700][ 14]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.07-13.55.43:708][ 14]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.07-13.55.43:708][ 14]LogAudioMixer: Display: 1: FrontRight
+[2021.04.07-13.55.43:741][ 14]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.07-13.55.43:741][ 14]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.07-13.55.43:741][ 14]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.07-13.55.43:741][ 14]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.07-13.55.43:743][ 14]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.07-13.55.43:760][ 14]LogInit: FAudioDevice initialized.
+[2021.04.07-13.55.43:816][ 14]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.07-13.55.43:816][ 14]LogNet: Browse: 127.0.0.1:17777/Game/Levels/FirstPersonExampleMap
+[2021.04.07-13.55.43:816][ 14]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.04.07-13.55.43:817][ 14]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.04.07-13.55.43:817][ 14]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.07-13.55.43:817][ 14]LogNet: Game client on port 17777, rate 10000
+[2021.04.07-13.55.43:819][ 14]PIE: Client logged in
+[2021.04.07-13.55.43:820][ 14]PIE: Play in editor total start time 0.31 seconds.
+[2021.04.07-13.55.44:846][ 71]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:54996
+[2021.04.07-13.55.44:846][ 71]LogHandshake: SendConnectChallenge. Timestamp: 1.366807, Cookie: 092043241169117151016008117179039133233058008114024137225157
+[2021.04.07-13.55.44:846][ 71]LogHandshake: SendChallengeResponse. Timestamp: 1.366807, Cookie: 092043241169117151016008117179039133233058008114024137225157
+[2021.04.07-13.55.44:861][ 72]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:54996
+[2021.04.07-13.55.44:861][ 72]LogHandshake: SendChallengeAck. InCookie: 092043241169117151016008117179039133233058008114024137225157
+[2021.04.07-13.55.44:862][ 72]LogNet: Server accepting post-challenge connection from: 127.0.0.1:54996
+[2021.04.07-13.55.44:862][ 72]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.07-13.55.44:862][ 72]LogNet: NotifyAcceptedConnection: Name: FirstPersonExampleMap, TimeStamp: 04/07/21 14:55:44, [UNetConnection] RemoteAddr: 127.0.0.1:54996, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.07-13.55.44:862][ 72]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:54996, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.07-13.55.44:863][ 72]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_4, Driver: PendingNetDriver IpNetDriver_5, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.07-13.55.44:878][ 73]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap: Accepted
+[2021.04.07-13.55.44:878][ 73]LogNet: Remote platform little endian=1
+[2021.04.07-13.55.44:878][ 73]LogNet: This platform little endian=1
+[2021.04.07-13.55.44:879][ 73]LogOnline: OSS: Creating online subsystem instance for: :Context_6
+[2021.04.07-13.55.44:896][ 74]LogNet: Login request: ?Name=LAPTOP-205H8F92-ACD514C54D0E081E355789B3B5B4526F userId: NULL:LAPTOP-205H8F92-ACD514C54D0E081E355789B3B5B4526F platform: NULL
+[2021.04.07-13.55.44:898][ 74]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_0_FirstPersonExampleMap, Game: /Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C)
+[2021.04.07-13.55.44:898][ 74]LogLoad: LoadMap: 127.0.0.1:17777/Game/Levels/UEDPIE_0_FirstPersonExampleMap?game=/Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C
+[2021.04.07-13.55.44:898][ 74]LogWorld: BeginTearingDown for /Temp/Untitled_3
+[2021.04.07-13.55.44:898][ 74]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.04.07-13.55.44:898][ 74]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.07-13.55.44:909][ 74]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2021.04.07-13.55.44:940][ 74]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.07-13.55.44:940][ 74]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (00000231BBBA6600), frame # 2074
+[2021.04.07-13.55.44:940][ 74]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000023182225BC0), frame # 2074
+[2021.04.07-13.55.44:947][ 74]LogWorld: Bringing World /Game/Levels/UEDPIE_1_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.07-14.55.44
+[2021.04.07-13.55.44:947][ 74]LogWorld: Bringing up level for play took: 0.005400
+[2021.04.07-13.55.44:947][ 74]LogLoad: Took 0.049214 seconds to LoadMap(/Game/Levels/UEDPIE_0_FirstPersonExampleMap)
+[2021.04.07-13.55.44:947][ 74]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2021.04.07-13.55.44:963][ 75]LogNet: Client netspeed is 10000
+[2021.04.07-13.55.44:964][ 75]LogNet: Join request: /Game/Levels/FirstPersonExampleMap?Name=LAPTOP-205H8F92-ACD514C54D0E081E355789B3B5B4526F?SplitscreenCount=1
+[2021.04.07-13.55.44:964][ 75]LogTemp: Warning: Setting Team to BRAVO
+[2021.04.07-13.55.44:964][ 75]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.07-13.55.44:964][ 75]LogTemp: Warning: POST LOGIN
+[2021.04.07-13.55.44:965][ 75]LogNet: Join succeeded: LAPTOP-205H8F92-ACD5
+[2021.04.07-13.55.45:145][ 85]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.07-13.55.45:196][ 88]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.07-13.55.45:955][133]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.45:965][134]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.46:402][160]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.46:416][161]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.46:569][170]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.46:584][171]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.46:705][178]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.46:716][179]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.46:856][187]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.46:866][188]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.46:990][194]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.47:001][195]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.47:139][203]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.47:152][204]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.47:275][211]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.47:286][212]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.47:406][219]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.47:419][220]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.47:558][228]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.47:569][229]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.47:708][237]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.47:721][238]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.47:858][246]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.47:870][247]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.47:980][253]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.47:993][254]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.48:131][262]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.48:142][263]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.48:280][271]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.48:293][272]LogTemp: Warning: Server: HAS AMMO
+[2021.04.07-13.55.56:219][725]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.56:368][734]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.56:535][744]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.56:701][754]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.56:834][762]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.56:968][770]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.57:134][780]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.57:287][789]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.57:553][805]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.57:688][813]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.57:838][822]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.57:994][831]LogTemp: Warning: Firing projectile
+[2021.04.07-13.55.58:238][843]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.07-13.55.58:238][843]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_1_FirstPersonExampleMap
+[2021.04.07-13.55.58:238][843]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Client 2] (64-bit/Windows) ' being destroyed
+[2021.04.07-13.55.58:241][843]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.07-13.55.58:241][843]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.07-13.55.58:251][843]LogNet: World NetDriver shutdown IpNetDriver_5 [GameNetDriver]
+[2021.04.07-13.55.58:251][843]LogNet: DestroyNamedNetDriver IpNetDriver_5 [GameNetDriver]
+[2021.04.07-13.55.58:251][843]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_5, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:LAPTOP-205H8F92-ACD514C54D0E081E355789B3B5B4526F, Channels: 13, Time: 2021.04.07-13.55.58
+[2021.04.07-13.55.58:251][843]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_4, Driver: GameNetDriver IpNetDriver_5, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:LAPTOP-205H8F92-ACD514C54D0E081E355789B3B5B4526F
+[2021.04.07-13.55.58:251][843]LogExit: GameNetDriver IpNetDriver_5 shut down
+[2021.04.07-13.55.58:253][843]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.07-13.55.58:253][843]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.07-13.55.58:253][843]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.07-13.55.58:253][843]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.07-13.55.58:276][843]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.07-13.55.58:277][843]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.07-13.55.58:284][843]LogNet: World NetDriver shutdown IpNetDriver_4 [GameNetDriver]
+[2021.04.07-13.55.58:284][843]LogNet: DestroyNamedNetDriver IpNetDriver_4 [GameNetDriver]
+[2021.04.07-13.55.58:284][843]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:54996, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:LAPTOP-205H8F92-ACD514C54D0E081E355789B3B5B4526F
+[2021.04.07-13.55.58:284][843]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:54996, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:LAPTOP-205H8F92-ACD514C54D0E081E355789B3B5B4526F, Channels: 13, Time: 2021.04.07-13.55.58
+[2021.04.07-13.55.58:284][843]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:54996, Name: IpConnection_5, Driver: GameNetDriver IpNetDriver_4, IsServer: YES, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:LAPTOP-205H8F92-ACD514C54D0E081E355789B3B5B4526F
+[2021.04.07-13.55.58:284][843]LogExit: GameNetDriver IpNetDriver_4 shut down
+[2021.04.07-13.55.58:285][843]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.07-13.55.58:287][843]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.07-13.55.58:357][843]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000023182225BC0), frame # 2843
+[2021.04.07-13.55.58:357][843]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (00000231BBBA6600), frame # 2843
+[2021.04.07-13.55.58:357][843]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (00000231ABAF1300), frame # 2843
+[2021.04.07-13.55.58:357][843]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (00000231BA869200), frame # 2843
+[2021.04.07-13.55.58:358][843]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2021.04.07-13.55.58:385][844]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2021.04.07-13.55.58:386][844]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2021.04.07-13.56.02:035][887]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)

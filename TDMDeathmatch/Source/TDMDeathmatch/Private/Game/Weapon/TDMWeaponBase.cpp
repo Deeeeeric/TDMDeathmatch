@@ -78,7 +78,7 @@ bool ATDMWeaponBase::LineTrace(FVector SpawnLocation, FRotator SpawnRotation)
 	/*Use QueryParams to perform physics material*/
 	QueryParams.bReturnPhysicalMaterial = true;
 
-	if (GetWorld()->LineTraceSingleByObjectType(HitResult, SpawnLocation, EndLocation, FCollisionObjectQueryParams(), QueryParams))
+	if (GetWorld()->LineTraceSingleByChannel(HitResult, SpawnLocation, EndLocation, ECollisionChannel::ECC_Visibility, QueryParams))
 	{
 		//Play effects on hit location
 		PerformHit(HitResult);

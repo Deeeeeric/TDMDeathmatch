@@ -5,8 +5,10 @@
 #include "Game/Weapon/TDMProjectileBase.h"
 #include "Player/TDMPlayerState.h"
 #include "Player/TDMCharacterBase.h"
+
 #include "Components/SkeletalMeshComponent.h"
 #include "DrawDebugHelpers.h"
+#include "Net/UnrealNetwork.h"
 
 // Sets default values
 ATDMWeaponBase::ATDMWeaponBase()
@@ -29,6 +31,12 @@ void ATDMWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
 	MagazineAmmo = MagazineCapacity;
+}
+
+void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME_CONDITION(ATDMWeaponBase, MagazineAmmo, COND_OwnerOnly);
 }
 
 void ATDMWeaponBase::PerformHit(FHitResult HitResult)
@@ -82,7 +90,16 @@ bool ATDMWeaponBase::Server_Fire_Validate(FVector SpawnLocation, FRotator SpawnR
 
 void ATDMWeaponBase::Server_Fire_Implementation(FVector SpawnLocation, FRotator SpawnRotation)
 {
-	Multi_Fire(SpawnLocation, SpawnRotation);
+	if (MagazineAmmo > 0)
+	{
+		--MagazineAmmo;
+		UE_LOG(LogTemp, Warning, TEXT("Server: HAS AMMO"));
+		Multi_Fire(SpawnLocation, SpawnRotation);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Server: HAS NO AMMO"));
+	}
 }
 
 bool ATDMWeaponBase::Multi_Fire_Validate(FVector SpawnLocation, FRotator SpawnRotation)
@@ -115,7 +132,7 @@ void ATDMWeaponBase::Multi_Fire_Implementation(FVector SpawnLocation, FRotator S
 
 void ATDMWeaponBase::Fire()
 {
-	if (MagazineAmmo > 0)
+	if (MagazineAmmo > 0	)
 	{
 		--MagazineAmmo;
 
@@ -137,7 +154,6 @@ void ATDMWeaponBase::Fire()
 				UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
 			}
 		}
-
 		if (!HasAuthority())
 		{
 			Server_Fire(SpawnLocation, SpawnRotation);

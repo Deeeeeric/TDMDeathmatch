@@ -23,3 +23,4 @@ A fully replicated Team Deathmatch
 * Spawn furthest away from enemy team player
 * Line Trace on Weapon fire
 * Setup Ammo
+* Replicate Ammo

@@ -28,7 +28,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 	int32 TotalAmmoCapacity;
 
-	UPROPERTY(BlueprintReadOnly, Category="Weapon")
+	UPROPERTY(BlueprintReadOnly, Replicated, Category="Weapon")
 	int32 MagazineAmmo;
 
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)

@@ -52,7 +52,14 @@ private: \
 	friend struct Z_Construct_UClass_ATDMWeaponBase_Statics; \
 public: \
 	DECLARE_CLASS(ATDMWeaponBase, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TDMDeathmatch"), NO_API) \
-	DECLARE_SERIALIZER(ATDMWeaponBase)
+	DECLARE_SERIALIZER(ATDMWeaponBase) \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		MagazineAmmo=NETFIELD_REP_START, \
+		NETFIELD_REP_END=MagazineAmmo	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_15_INCLASS \
@@ -61,7 +68,14 @@ private: \
 	friend struct Z_Construct_UClass_ATDMWeaponBase_Statics; \
 public: \
 	DECLARE_CLASS(ATDMWeaponBase, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TDMDeathmatch"), NO_API) \
-	DECLARE_SERIALIZER(ATDMWeaponBase)
+	DECLARE_SERIALIZER(ATDMWeaponBase) \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		MagazineAmmo=NETFIELD_REP_START, \
+		NETFIELD_REP_END=MagazineAmmo	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_15_STANDARD_CONSTRUCTORS \

@@ -17,6 +17,7 @@ ATDMProjectileBase::ATDMProjectileBase()
 	CollisionComp->InitSphereRadius(5.0f);
 	CollisionComp->BodyInstance.SetCollisionProfileName("Projectile");
 	CollisionComp->OnComponentHit.AddDynamic(this, &ATDMProjectileBase::OnHit);		// set up a notification for when this component hits something blocking
+	CollisionComp->bReturnMaterialOnMove = true; //allow to give us the physics material that it gathers
 
 	// Players can't walk on it
 	CollisionComp->SetWalkableSlopeOverride(FWalkableSlopeOverride(WalkableSlope_Unwalkable, 0.f));
@@ -41,10 +42,10 @@ ATDMProjectileBase::ATDMProjectileBase()
 
 void ATDMProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor == nullptr)
-	{
-		return;
-	}
+	if (OtherActor == nullptr) {return;}
+	
+	OnProjectileHit(Hit);
+
 	// Only add impulse and destroy projectile if we hit a physics
 	if ((OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics()) // Replicate on server
 	{

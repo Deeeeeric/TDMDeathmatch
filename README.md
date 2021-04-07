@@ -26,3 +26,4 @@ A fully replicated Team Deathmatch
 * Replicate Ammo
 * Set Up Physics Material
 * Physics Material on Player
+* Projectile Physics Material

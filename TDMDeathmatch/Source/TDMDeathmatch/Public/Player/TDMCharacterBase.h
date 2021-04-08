@@ -92,5 +92,5 @@ public:
 	/** Returns FirstPersonCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
-
+	FORCEINLINE bool GetIsAiming() {return bIsAiming;}
 };

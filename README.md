@@ -29,3 +29,4 @@ A fully replicated Team Deathmatch
 * Projectile Physics Material
 * Setup M16 Class
 * Setup Animations P1
+* Setup Animations P2

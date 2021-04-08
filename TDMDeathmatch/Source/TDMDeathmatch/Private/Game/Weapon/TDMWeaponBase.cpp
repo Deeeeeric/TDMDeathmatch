@@ -135,6 +135,21 @@ void ATDMWeaponBase::Fire()
 {
 	if (MagazineAmmo > 0)
 	{
+		if (ATDMCharacterBase* Player = Cast<ATDMCharacterBase>(GetOwner()))
+		{
+			if (UAnimInstance* AnimInstance = Player->GetMesh1P()->GetAnimInstance())
+			{
+				AnimInstance->Montage_Play(FirstPersonMontage);
+				if (Player->GetIsAiming())
+				{
+					AnimInstance->Montage_JumpToSection(FName("Fire1"));
+				}
+				else
+				{
+					AnimInstance->Montage_JumpToSection(FName("FireHip1"));
+				}
+			}
+		}
 		--MagazineAmmo;
 
 		bool LineTraceHit = false;

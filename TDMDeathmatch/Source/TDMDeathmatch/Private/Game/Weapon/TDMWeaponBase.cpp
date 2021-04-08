@@ -25,12 +25,16 @@ ATDMWeaponBase::ATDMWeaponBase()
 	MagazineCapacity = 15;
 	MagazineAmmo = MagazineCapacity;
 	FireModesIndex = 0;
+	BurstFireAmount = 3;
+	BurstFireShot = 0;
 }
 
 // Called when the game starts or when spawned
 void ATDMWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	BurstFireShot = BurstFireAmount;
 	MagazineAmmo = MagazineCapacity;
 
 	if (FireModes.Num())
@@ -221,6 +225,29 @@ void ATDMWeaponBase::Fire()
 			GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
 		}
 
+		switch (FireMode)
+		{
+		case EFireMode::Full:
+		{
+			GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
+			break;
+		}
+
+		case EFireMode::Burst:
+		{
+			GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
+			if (BurstFireShot-1 > 0)
+			{
+				--BurstFireShot;
+			}
+			else
+			{
+				GetWorldTimerManager().PauseTimer(TFullAutoHandle);
+				BurstFireShot = BurstFireAmount;
+			}
+		}
+		}
+
 		if (!HasAuthority())
 		{
 			Server_Fire(SpawnLocation, SpawnRotation);
@@ -244,7 +271,7 @@ void ATDMWeaponBase::StopFire()
 
 void ATDMWeaponBase::SwitchFireMode()
 {
-	if (FireModesIndex+1 >= FireModes.Num())
+	if (FireModesIndex + 1 >= FireModes.Num())
 	{
 		FireModesIndex = 0;
 	}

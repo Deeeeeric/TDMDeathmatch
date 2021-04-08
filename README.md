@@ -35,3 +35,4 @@ A fully replicated Team Deathmatch
 * Setup Fire Modes
 * Switch Fire Modes
 * Make Full Auto Functional
+* Make Burst Function

@@ -15,6 +15,7 @@ UENUM(BlueprintType)
 enum class EFireMode : uint8
 {
 	Semi	UMETA(DisplayName, "Semi-Auto"),
+	Burst	UMETA(DisplayName, "Burst"),
 	Full	UMETA(DisplayName, "Full-Auto")
 };
 
@@ -35,9 +36,12 @@ protected:
 		TArray<TEnumAsByte<EFireMode>> FireModes;
 
 	int8 FireModesIndex;
-
 	TEnumAsByte<EFireMode> FireMode;
 	FTimerHandle TFullAutoHandle;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		uint8 BurstFireAmount;
+	uint8 BurstFireShot;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UAnimationAsset* FireAnimation;

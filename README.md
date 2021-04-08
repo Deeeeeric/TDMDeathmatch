@@ -27,3 +27,4 @@ A fully replicated Team Deathmatch
 * Set Up Physics Material
 * Physics Material on Player
 * Projectile Physics Material
+* Setup M16 Class

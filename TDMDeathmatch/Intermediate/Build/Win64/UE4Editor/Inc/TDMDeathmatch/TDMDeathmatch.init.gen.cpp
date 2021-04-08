@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeTDMDeathmatch_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x220D99F0,
-				0x487A5F18,
+				0xF46154AB,
+				0x75B84113,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

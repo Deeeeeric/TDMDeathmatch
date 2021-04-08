@@ -8,12 +8,12 @@
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMProjectileBase.cpp (0:01.53 at +0:00)
-  UE4Editor-TDMDeathmatch-0035.dll (0:01.18 at +0:01)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0035.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0035.suppressed.exp
-  UE4Editor-TDMDeathmatch-0035.lib (0:00.20 at +0:02)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0035.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0035.exp
-  TDMDeathmatchEditor.target (0:00.31 at +0:02)
+  TDMCharacterBase.cpp (0:33.78 at +0:00)
+  UE4Editor-TDMDeathmatch-0039.dll (0:01.48 at +0:33)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0039.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0039.suppressed.exp
+  UE4Editor-TDMDeathmatch-0039.lib (0:00.21 at +0:35)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0039.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0039.exp
+  TDMDeathmatchEditor.target (0:00.32 at +0:35)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -21,5 +21,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 3.75 seconds
-  Total execution time: 5.10 seconds
+  Total time in XGE executor: 36.10 seconds
+  Total execution time: 37.46 seconds

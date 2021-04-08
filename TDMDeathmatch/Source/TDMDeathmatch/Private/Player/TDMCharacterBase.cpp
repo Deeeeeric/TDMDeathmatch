@@ -65,7 +65,7 @@ void ATDMCharacterBase::BeginPlay()
 
 		if (WeaponInHand)
 		{
-			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));
 		}
 	}
 }

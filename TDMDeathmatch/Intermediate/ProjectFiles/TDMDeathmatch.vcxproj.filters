@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TDMDeathmatch.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C1272068-8387-4908-969A-E55F44CB01E2}</UniqueIdentifier>
+      <UniqueIdentifier>{2922CACF-FFE6-4326-93B8-839B6DEFA410}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TDMDeathmatch.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{29221C3F-FAAA-48EC-A243-63F29509CB04}</UniqueIdentifier>
+      <UniqueIdentifier>{745AA30A-91AA-49E6-8C3B-6C3FC1476833}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TDMDeathmatch">
-      <UniqueIdentifier>{2082CFBC-8DF9-4EC8-A492-249F975A1ED8}</UniqueIdentifier>
+      <UniqueIdentifier>{49BF8D07-7BE5-4BEE-8986-E54A167FD3A0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TDMDeathmatch\TDMDeathmatch.Build.cs">
       <Filter>Source\TDMDeathmatch</Filter>
@@ -48,13 +48,13 @@
       <Filter>Source\TDMDeathmatch</Filter>
     </ClInclude>
     <Filter Include="Source\TDMDeathmatch\Private">
-      <UniqueIdentifier>{0F245925-B2F3-4914-B784-1269693E0CCF}</UniqueIdentifier>
+      <UniqueIdentifier>{F3621003-1C30-43EA-AF83-6766368BD9BA}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TDMDeathmatch\Private\Game">
-      <UniqueIdentifier>{B5BE15CD-BB79-4369-AD51-186A0565138C}</UniqueIdentifier>
+      <UniqueIdentifier>{4C72507F-4620-457C-B9D7-2192BABF3912}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TDMDeathmatch\Private\Game\GameMode">
-      <UniqueIdentifier>{20485B16-DAAF-4ECF-BD80-D8D20460D24B}</UniqueIdentifier>
+      <UniqueIdentifier>{29B27BEA-5844-4B8D-B14A-8694AE0F491E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Game\GameMode\TDMGameModeBase.cpp">
       <Filter>Source\TDMDeathmatch\Private\Game\GameMode</Filter>
@@ -66,7 +66,7 @@
       <Filter>Source\TDMDeathmatch\Private\Game\GameMode</Filter>
     </ClCompile>
     <Filter Include="Source\TDMDeathmatch\Private\Game\Weapon">
-      <UniqueIdentifier>{CC6B0575-72BD-4B11-9D51-05B62A1DDF43}</UniqueIdentifier>
+      <UniqueIdentifier>{B8E238AE-5DE1-4060-9F72-50C313D7C65F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Game\Weapon\TDMProjectileBase.cpp">
       <Filter>Source\TDMDeathmatch\Private\Game\Weapon</Filter>
@@ -74,8 +74,14 @@
     <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Game\Weapon\TDMWeaponBase.cpp">
       <Filter>Source\TDMDeathmatch\Private\Game\Weapon</Filter>
     </ClCompile>
+    <Filter Include="Source\TDMDeathmatch\Private\Game\Weapon\Rifles">
+      <UniqueIdentifier>{EA90178B-B998-4E9B-B8E2-BAA6AD014220}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Game\Weapon\Rifles\TDM_M16.cpp">
+      <Filter>Source\TDMDeathmatch\Private\Game\Weapon\Rifles</Filter>
+    </ClCompile>
     <Filter Include="Source\TDMDeathmatch\Private\Player">
-      <UniqueIdentifier>{5DB751D9-F159-41EA-9BB3-B5AF4E28DC97}</UniqueIdentifier>
+      <UniqueIdentifier>{05DB9177-CAD9-49B8-8055-CB9B45C22672}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Player\TDMCharacterBase.cpp">
       <Filter>Source\TDMDeathmatch\Private\Player</Filter>
@@ -84,13 +90,13 @@
       <Filter>Source\TDMDeathmatch\Private\Player</Filter>
     </ClCompile>
     <Filter Include="Source\TDMDeathmatch\Public">
-      <UniqueIdentifier>{5B7BEBA1-0152-4F95-9096-1F790DEC52D0}</UniqueIdentifier>
+      <UniqueIdentifier>{7050C199-773A-4975-858A-2069A1F4FAFE}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TDMDeathmatch\Public\Game">
-      <UniqueIdentifier>{8D1AD683-E568-48D5-B2FF-A7E5EA798FE9}</UniqueIdentifier>
+      <UniqueIdentifier>{1F424DB0-25AF-4369-B055-34858790D66A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\TDMDeathmatch\Public\Game\GameMode">
-      <UniqueIdentifier>{B1FFE75C-DA1E-47B1-A9C2-597726548D73}</UniqueIdentifier>
+      <UniqueIdentifier>{A88CE6D9-4737-4ACF-9C92-33798B2B73B2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Game\GameMode\TDMGameModeBase.h">
       <Filter>Source\TDMDeathmatch\Public\Game\GameMode</Filter>
@@ -102,7 +108,7 @@
       <Filter>Source\TDMDeathmatch\Public\Game\GameMode</Filter>
     </ClInclude>
     <Filter Include="Source\TDMDeathmatch\Public\Game\Weapon">
-      <UniqueIdentifier>{BB583E52-CD3B-4D34-9E57-D4C6F90B4A89}</UniqueIdentifier>
+      <UniqueIdentifier>{80C555CD-4DA3-4ECA-8678-BABDA8B66FC8}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Game\Weapon\TDMProjectileBase.h">
       <Filter>Source\TDMDeathmatch\Public\Game\Weapon</Filter>
@@ -110,8 +116,14 @@
     <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Game\Weapon\TDMWeaponBase.h">
       <Filter>Source\TDMDeathmatch\Public\Game\Weapon</Filter>
     </ClInclude>
+    <Filter Include="Source\TDMDeathmatch\Public\Game\Weapon\Rifles">
+      <UniqueIdentifier>{8922A4AB-DBE5-4C10-BA3A-DDC179D71A5F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Game\Weapon\Rifles\TDM_M16.h">
+      <Filter>Source\TDMDeathmatch\Public\Game\Weapon\Rifles</Filter>
+    </ClInclude>
     <Filter Include="Source\TDMDeathmatch\Public\Player">
-      <UniqueIdentifier>{DDF1A9D9-295C-4D01-AC6F-D3F20646AA72}</UniqueIdentifier>
+      <UniqueIdentifier>{2753312C-24BB-4960-BF0C-C50A2D78128A}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Player\TDMCharacterBase.h">
       <Filter>Source\TDMDeathmatch\Public\Player</Filter>

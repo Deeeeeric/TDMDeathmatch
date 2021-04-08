@@ -22,6 +22,19 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ATDMCharacterBase::execServer_Aim)
+	{
+		P_GET_UBOOL(Z_Param_Aiming);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->Server_Aim_Validate(Z_Param_Aiming))
+		{
+			RPC_ValidateFailed(TEXT("Server_Aim_Validate"));
+			return;
+		}
+		P_THIS->Server_Aim_Implementation(Z_Param_Aiming);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATDMCharacterBase::execOnRep_IsDead)
 	{
 		P_FINISH;
@@ -29,11 +42,19 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		P_THIS->OnRep_IsDead();
 		P_NATIVE_END;
 	}
+	static FName NAME_ATDMCharacterBase_Server_Aim = FName(TEXT("Server_Aim"));
+	void ATDMCharacterBase::Server_Aim(bool Aiming)
+	{
+		TDMCharacterBase_eventServer_Aim_Parms Parms;
+		Parms.Aiming=Aiming ? true : false;
+		ProcessEvent(FindFunctionChecked(NAME_ATDMCharacterBase_Server_Aim),&Parms);
+	}
 	void ATDMCharacterBase::StaticRegisterNativesATDMCharacterBase()
 	{
 		UClass* Class = ATDMCharacterBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnRep_IsDead", &ATDMCharacterBase::execOnRep_IsDead },
+			{ "Server_Aim", &ATDMCharacterBase::execServer_Aim },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -56,6 +77,39 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_OnRep_IsDead_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics
+	{
+		static void NewProp_Aiming_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_Aiming;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::NewProp_Aiming_SetBit(void* Obj)
+	{
+		((TDMCharacterBase_eventServer_Aim_Parms*)Obj)->Aiming = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::NewProp_Aiming = { "Aiming", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(TDMCharacterBase_eventServer_Aim_Parms), &Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::NewProp_Aiming_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::NewProp_Aiming,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMCharacterBase, nullptr, "Server_Aim", nullptr, nullptr, sizeof(TDMCharacterBase_eventServer_Aim_Parms), Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMCharacterBase_Server_Aim()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -114,6 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMCharacterBase_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ATDMCharacterBase_OnRep_IsDead, "OnRep_IsDead" }, // 1214299108
+		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_Aim, "Server_Aim" }, // 40076570
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::Class_MetaDataParams[] = {
@@ -132,7 +187,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	{
 		((ATDMCharacterBase*)Obj)->bIsAiming = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming = { "bIsAiming", nullptr, (EPropertyFlags)0x0020080000000014, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ATDMCharacterBase), &Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming = { "bIsAiming", nullptr, (EPropertyFlags)0x0020080000000034, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ATDMCharacterBase), &Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponInHand_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
@@ -232,7 +287,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMCharacterBase, 2335141945);
+	IMPLEMENT_CLASS(ATDMCharacterBase, 3643717037);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMCharacterBase>()
 	{
 		return ATDMCharacterBase::StaticClass();
@@ -243,10 +298,12 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	{
 		static const FName Name_bIsDead(TEXT("bIsDead"));
 		static const FName Name_WeaponInHand(TEXT("WeaponInHand"));
+		static const FName Name_bIsAiming(TEXT("bIsAiming"));
 
 		const bool bIsValid = true
 			&& Name_bIsDead == ClassReps[(int32)ENetFields_Private::bIsDead].Property->GetFName()
-			&& Name_WeaponInHand == ClassReps[(int32)ENetFields_Private::WeaponInHand].Property->GetFName();
+			&& Name_WeaponInHand == ClassReps[(int32)ENetFields_Private::WeaponInHand].Property->GetFName()
+			&& Name_bIsAiming == ClassReps[(int32)ENetFields_Private::bIsAiming].Property->GetFName();
 
 		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ATDMCharacterBase"));
 	}

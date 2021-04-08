@@ -51,6 +51,8 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent, Category="Weapon")
 	void OnHit(FHitResult HitResult);
 
+	void PlayFireAnimation(bool IsLocalPlayer);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

@@ -15,15 +15,27 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_SPARSE_DATA
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_RPC_WRAPPERS \
+	virtual bool Server_Aim_Validate(bool ); \
+	virtual void Server_Aim_Implementation(bool Aiming); \
  \
+	DECLARE_FUNCTION(execServer_Aim); \
 	DECLARE_FUNCTION(execOnRep_IsDead);
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execServer_Aim); \
 	DECLARE_FUNCTION(execOnRep_IsDead);
 
 
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_EVENT_PARMS \
+	struct TDMCharacterBase_eventServer_Aim_Parms \
+	{ \
+		bool Aiming; \
+	};
+
+
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_CALLBACK_WRAPPERS
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATDMCharacterBase(); \
@@ -37,7 +49,8 @@ public: \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		bIsDead=NETFIELD_REP_START, \
 		WeaponInHand, \
-		NETFIELD_REP_END=WeaponInHand	}; \
+		bIsAiming, \
+		NETFIELD_REP_END=bIsAiming	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
@@ -54,7 +67,8 @@ public: \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		bIsDead=NETFIELD_REP_START, \
 		WeaponInHand, \
-		NETFIELD_REP_END=WeaponInHand	}; \
+		bIsAiming, \
+		NETFIELD_REP_END=bIsAiming	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
@@ -88,13 +102,17 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMCharacterBase); \
 	FORCEINLINE static uint32 __PPO__bIsAiming() { return STRUCT_OFFSET(ATDMCharacterBase, bIsAiming); }
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_11_PROLOG
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_11_PROLOG \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_EVENT_PARMS
+
+
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_PRIVATE_PROPERTY_OFFSET \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_SPARSE_DATA \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_RPC_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_CALLBACK_WRAPPERS \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_INCLASS \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_STANDARD_CONSTRUCTORS \
 public: \
@@ -107,6 +125,7 @@ public: \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_PRIVATE_PROPERTY_OFFSET \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_SPARSE_DATA \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_CALLBACK_WRAPPERS \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_INCLASS_NO_PURE_DECLS \
 	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_ENHANCED_CONSTRUCTORS \
 private: \

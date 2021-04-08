@@ -59,10 +59,15 @@ protected:
 	/** Fires a projectile. */
 	void OnFire();
 
-	UPROPERTY(BlueprintReadOnly, Category="Weapon")
+	UPROPERTY(BlueprintReadOnly, Replicated, Category="Weapon")
 	bool bIsAiming;
 	void StartAiming();
 	void StopAiming();
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_Aim(bool Aiming);
+	bool Server_Aim_Validate(bool Aiming);
+	void Server_Aim_Implementation(bool Aiming);
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);

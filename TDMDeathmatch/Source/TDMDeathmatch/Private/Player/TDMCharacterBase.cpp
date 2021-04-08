@@ -100,6 +100,7 @@ void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	DOREPLIFETIME(ATDMCharacterBase, WeaponInHand);
 	DOREPLIFETIME(ATDMCharacterBase, bIsDead);
+	DOREPLIFETIME_CONDITION(ATDMCharacterBase, bIsAiming, COND_SkipOwner);
 }
 
 float ATDMCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
@@ -156,11 +157,29 @@ void ATDMCharacterBase::OnFire()
 void ATDMCharacterBase::StartAiming()
 {
 	bIsAiming = true;
+	if (!HasAuthority())
+	{
+		Server_Aim(bIsAiming);
+	}
 }
 
 void ATDMCharacterBase::StopAiming()
 {
 	bIsAiming = false;
+	if (!HasAuthority())
+	{
+		Server_Aim(bIsAiming);
+	}
+}
+
+bool ATDMCharacterBase::Server_Aim_Validate(bool Aiming)
+{
+	return true;
+}
+
+void ATDMCharacterBase::Server_Aim_Implementation(bool Aiming)
+{
+	bIsAiming = Aiming;
 }
 
 void ATDMCharacterBase::MoveForward(float Value)

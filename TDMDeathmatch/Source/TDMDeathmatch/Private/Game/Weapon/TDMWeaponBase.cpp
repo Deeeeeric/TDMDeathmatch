@@ -41,6 +41,57 @@ void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 	DOREPLIFETIME_CONDITION(ATDMWeaponBase, MagazineAmmo, COND_OwnerOnly);
 }
 
+void ATDMWeaponBase::PlayFireAnimation(bool IsLocalPlayer)
+{
+	if (FireAnimation)
+	{
+		WeaponMesh->PlayAnimation(FireAnimation, false);
+	}
+	if (ATDMCharacterBase* Player = Cast<ATDMCharacterBase>(GetOwner()))
+	{
+		UAnimInstance* AnimInstance = nullptr;
+		if (IsLocalPlayer)
+		{
+			AnimInstance = Player->GetMesh1P()->GetAnimInstance();
+		}
+		else
+		{
+			AnimInstance = Player->GetMesh1P()->GetAnimInstance(); //change when third person setup
+		}
+
+		if (AnimInstance)
+		{
+			if (IsLocalPlayer)
+			{
+				AnimInstance->Montage_Play(FirstPersonMontage);
+			}
+			else
+			{
+				//play third person montage
+			}
+			AnimInstance->Montage_Play(FirstPersonMontage);
+			if (Player->GetIsAiming())
+			{
+				if (ADSFireNames.Num())
+				{
+					int SelectedIndex = FMath::RandRange(0, ADSFireNames.Num() - 1);
+					FName Selected = ADSFireNames[SelectedIndex];
+					AnimInstance->Montage_JumpToSection(FName(Selected));
+				}
+			}
+			else
+			{
+				if (HipFireNames.Num())
+				{
+					int SelectedIndex = FMath::RandRange(0, HipFireNames.Num() - 1);
+					FName Selected = HipFireNames[SelectedIndex];
+					AnimInstance->Montage_JumpToSection(FName(Selected));
+				}
+			}
+		}
+	}
+}
+
 void ATDMWeaponBase::PerformHit(FHitResult HitResult)
 {
 	OnHit(HitResult);
@@ -117,6 +168,7 @@ void ATDMWeaponBase::Multi_Fire_Implementation(FVector SpawnLocation, FRotator S
 			return;
 		}
 	}
+	PlayFireAnimation(false);
 
 	if (LineTrace(SpawnLocation, SpawnRotation))
 	{
@@ -135,31 +187,7 @@ void ATDMWeaponBase::Fire()
 {
 	if (MagazineAmmo > 0)
 	{
-		if (ATDMCharacterBase* Player = Cast<ATDMCharacterBase>(GetOwner()))
-		{
-			if (UAnimInstance* AnimInstance = Player->GetMesh1P()->GetAnimInstance())
-			{
-				AnimInstance->Montage_Play(FirstPersonMontage);
-				if (Player->GetIsAiming())
-				{
-					if (ADSFireNames.Num())
-					{
-						int SelectedIndex = FMath::RandRange(0, ADSFireNames.Num() - 1);
-						FName Selected = ADSFireNames[SelectedIndex];
-						AnimInstance->Montage_JumpToSection(FName(Selected));
-					}
-				}
-				else
-				{
-					if (HipFireNames.Num())
-					{
-						int SelectedIndex = FMath::RandRange(0, HipFireNames.Num() - 1);
-						FName Selected = HipFireNames[SelectedIndex];
-						AnimInstance->Montage_JumpToSection(FName(Selected));
-					}
-				}
-			}
-		}
+		PlayFireAnimation(true);
 		--MagazineAmmo;
 
 		bool LineTraceHit = false;

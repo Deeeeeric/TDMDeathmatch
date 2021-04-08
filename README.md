@@ -31,3 +31,4 @@ A fully replicated Team Deathmatch
 * Setup Animations P1
 * Setup Animations P2
 * Finish Setup Animations
+* Replicate Fire Animation

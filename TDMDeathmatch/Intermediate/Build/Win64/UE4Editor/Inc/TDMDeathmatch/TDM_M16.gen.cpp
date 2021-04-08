@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeTDM_M16() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDM_M16, 819291896);
+	IMPLEMENT_CLASS(ATDM_M16, 1715819060);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDM_M16>()
 	{
 		return ATDM_M16::StaticClass();

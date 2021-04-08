@@ -142,11 +142,21 @@ void ATDMWeaponBase::Fire()
 				AnimInstance->Montage_Play(FirstPersonMontage);
 				if (Player->GetIsAiming())
 				{
-					AnimInstance->Montage_JumpToSection(FName("Fire1"));
+					if (ADSFireNames.Num())
+					{
+						int SelectedIndex = FMath::RandRange(0, ADSFireNames.Num() - 1);
+						FName Selected = ADSFireNames[SelectedIndex];
+						AnimInstance->Montage_JumpToSection(FName(Selected));
+					}
 				}
 				else
 				{
-					AnimInstance->Montage_JumpToSection(FName("FireHip1"));
+					if (HipFireNames.Num())
+					{
+						int SelectedIndex = FMath::RandRange(0, HipFireNames.Num() - 1);
+						FName Selected = HipFireNames[SelectedIndex];
+						AnimInstance->Montage_JumpToSection(FName(Selected));
+					}
 				}
 			}
 		}

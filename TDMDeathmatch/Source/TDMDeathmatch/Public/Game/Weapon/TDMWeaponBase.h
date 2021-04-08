@@ -30,6 +30,12 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="Weapon")
 	UAnimMontage* FirstPersonMontage;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	TArray<FName> ADSFireNames;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	TArray<FName> HipFireNames;
+
 	UPROPERTY(EditDefaultsOnly, Category="Weapon")
 	USkeletalMeshComponent* WeaponMesh;
 

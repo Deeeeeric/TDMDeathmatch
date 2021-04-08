@@ -30,3 +30,4 @@ A fully replicated Team Deathmatch
 * Setup M16 Class
 * Setup Animations P1
 * Setup Animations P2
+* Finish Setup Animations

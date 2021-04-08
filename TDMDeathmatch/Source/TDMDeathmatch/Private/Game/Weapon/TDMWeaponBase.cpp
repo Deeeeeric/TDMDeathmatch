@@ -24,6 +24,7 @@ ATDMWeaponBase::ATDMWeaponBase()
 	TotalAmmoCapacity = 100;
 	MagazineCapacity = 15;
 	MagazineAmmo = MagazineCapacity;
+
 }
 
 // Called when the game starts or when spawned
@@ -32,7 +33,10 @@ void ATDMWeaponBase::BeginPlay()
 	Super::BeginPlay();
 	MagazineAmmo = MagazineCapacity;
 
-
+	if (FireModes.Num())
+	{
+		FireMode = FireModes[0];
+	}
 }
 
 void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -187,6 +191,10 @@ void ATDMWeaponBase::Fire()
 {
 	if (MagazineAmmo > 0)
 	{
+		if (FireMode == EFireMode::Full)
+		{//Handle Full-Auto Logic
+			
+		}
 		PlayFireAnimation(true);
 		--MagazineAmmo;
 
@@ -217,5 +225,10 @@ void ATDMWeaponBase::Fire()
 			Multi_Fire(SpawnLocation, SpawnRotation);
 		}
 	}
+}
+
+void ATDMWeaponBase::StopFire()
+{
+
 }
 

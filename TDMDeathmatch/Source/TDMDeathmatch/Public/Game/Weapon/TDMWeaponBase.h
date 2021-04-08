@@ -11,45 +11,57 @@ class USkeletalMeshComponent;
 class UAnimMontage;
 class UAnimationAsset;
 
+UENUM(BlueprintType)
+enum class EFireMode : uint8
+{
+	Semi	UMETA(DisplayName, "Semi-Auto"),
+	Full	UMETA(DisplayName, "Full-Auto")
+};
+
 UCLASS()
 class TDMDEATHMATCH_API ATDMWeaponBase : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ATDMWeaponBase();
-	
+
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
-	TSubclassOf<ATDMProjectileBase> ProjectileClass;
+		TSubclassOf<ATDMProjectileBase> ProjectileClass;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-	UAnimationAsset* FireAnimation;
+		TArray<TEnumAsByte<EFireMode>> FireModes;
 
-	UPROPERTY(EditDefaultsOnly, Category="Weapon")
-	UAnimMontage* FirstPersonMontage;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-	TArray<FName> ADSFireNames;
+		TEnumAsByte<EFireMode> FireMode;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-	TArray<FName> HipFireNames;
-
-	UPROPERTY(EditDefaultsOnly, Category="Weapon")
-	USkeletalMeshComponent* WeaponMesh;
+		UAnimationAsset* FireAnimation;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-	int32 MagazineCapacity;
+		UAnimMontage* FirstPersonMontage;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-	int32 TotalAmmoCapacity;
+		TArray<FName> ADSFireNames;
 
-	UPROPERTY(BlueprintReadOnly, Replicated, Category="Weapon")
-	int32 MagazineAmmo;
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		TArray<FName> HipFireNames;
 
-	UFUNCTION(BlueprintImplementableEvent, Category="Weapon")
-	void OnHit(FHitResult HitResult);
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		USkeletalMeshComponent* WeaponMesh;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		int32 MagazineCapacity;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		int32 TotalAmmoCapacity;
+
+	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Weapon")
+		int32 MagazineAmmo;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon")
+		void OnHit(FHitResult HitResult);
 
 	void PlayFireAnimation(bool IsLocalPlayer);
 
@@ -72,4 +84,5 @@ protected:
 
 public:
 	void Fire();
+	void StopFire();
 };

@@ -74,12 +74,6 @@
     <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Game\Weapon\TDMWeaponBase.cpp">
       <Filter>Source\TDMDeathmatch\Private\Game\Weapon</Filter>
     </ClCompile>
-    <Filter Include="Source\TDMDeathmatch\Private\Game\Weapon\Rifles">
-      <UniqueIdentifier>{EA90178B-B998-4E9B-B8E2-BAA6AD014220}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\TDMDeathmatch\Private\Game\Weapon\Rifles\TDM_M16.cpp">
-      <Filter>Source\TDMDeathmatch\Private\Game\Weapon\Rifles</Filter>
-    </ClCompile>
     <Filter Include="Source\TDMDeathmatch\Private\Player">
       <UniqueIdentifier>{05DB9177-CAD9-49B8-8055-CB9B45C22672}</UniqueIdentifier>
     </Filter>
@@ -115,12 +109,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Game\Weapon\TDMWeaponBase.h">
       <Filter>Source\TDMDeathmatch\Public\Game\Weapon</Filter>
-    </ClInclude>
-    <Filter Include="Source\TDMDeathmatch\Public\Game\Weapon\Rifles">
-      <UniqueIdentifier>{8922A4AB-DBE5-4C10-BA3A-DDC179D71A5F}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Source\TDMDeathmatch\Public\Game\Weapon\Rifles\TDM_M16.h">
-      <Filter>Source\TDMDeathmatch\Public\Game\Weapon\Rifles</Filter>
     </ClInclude>
     <Filter Include="Source\TDMDeathmatch\Public\Player">
       <UniqueIdentifier>{2753312C-24BB-4960-BF0C-C50A2D78128A}</UniqueIdentifier>

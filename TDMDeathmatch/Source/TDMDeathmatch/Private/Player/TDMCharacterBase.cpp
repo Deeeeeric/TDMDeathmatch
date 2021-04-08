@@ -79,6 +79,7 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 
 	// Bind fire event
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ATDMCharacterBase::OnFire);
+	PlayerInputComponent->BindAction("Fire", IE_Released, this, &ATDMCharacterBase::StopFire);
 	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ATDMCharacterBase::StartAiming);
 	PlayerInputComponent->BindAction("Aim", IE_Released, this, &ATDMCharacterBase::StopAiming);
 
@@ -151,6 +152,14 @@ void ATDMCharacterBase::OnFire()
 	if (WeaponInHand)
 	{
 		WeaponInHand->Fire();
+	}
+}
+
+void ATDMCharacterBase::StopFire()
+{
+	if (WeaponInHand)
+	{
+		WeaponInHand->StopFire();
 	}
 }
 

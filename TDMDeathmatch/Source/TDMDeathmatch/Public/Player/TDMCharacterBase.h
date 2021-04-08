@@ -58,6 +58,7 @@ protected:
 
 	/** Fires a projectile. */
 	void OnFire();
+	void StopFire();
 
 	UPROPERTY(BlueprintReadOnly, Replicated, Category="Weapon")
 	bool bIsAiming;

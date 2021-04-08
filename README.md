@@ -34,3 +34,4 @@ A fully replicated Team Deathmatch
 * Replicate Fire Animation
 * Setup Fire Modes
 * Switch Fire Modes
+* Make Full Auto Functional

@@ -37,6 +37,10 @@ void ATDMWeaponBase::BeginPlay()
 	{
 		FireMode = FireModes[FireModesIndex];
 	}
+
+	GetWorldTimerManager().SetTimer(TFullAutoHandle, this, &ATDMWeaponBase::Fire, 0.1, true);
+	GetWorldTimerManager().PauseTimer(TFullAutoHandle);
+
 }
 
 void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -214,7 +218,7 @@ void ATDMWeaponBase::Fire()
 		}
 		if (FireMode == EFireMode::Full)
 		{//Handle Full-Auto Logic
-			
+			GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
 		}
 
 		if (!HasAuthority())
@@ -226,10 +230,15 @@ void ATDMWeaponBase::Fire()
 			Multi_Fire(SpawnLocation, SpawnRotation);
 		}
 	}
+	else
+	{
+		GetWorldTimerManager().PauseTimer(TFullAutoHandle);
+	}
 }
 
 void ATDMWeaponBase::StopFire()
 {
+	GetWorldTimerManager().PauseTimer(TFullAutoHandle);
 
 }
 

@@ -33,10 +33,11 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		TArray<TEnumAsByte<EFireMode>> FireModes;
-		
-		int8 FireModesIndex;
 
-		TEnumAsByte<EFireMode> FireMode;
+	int8 FireModesIndex;
+
+	TEnumAsByte<EFireMode> FireMode;
+	FTimerHandle TFullAutoHandle;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UAnimationAsset* FireAnimation;

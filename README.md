@@ -36,3 +36,4 @@ A fully replicated Team Deathmatch
 * Switch Fire Modes
 * Make Full Auto Functional
 * Make Burst Function
+* Optimize Network Overhead with Shooting

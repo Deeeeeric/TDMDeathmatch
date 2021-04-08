@@ -8,8 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-struct FVector;
-struct FRotator;
+struct FVector_NetQuantize10;
 struct FHitResult;
 #ifdef TDMDEATHMATCH_TDMWeaponBase_generated_h
 #error "TDMWeaponBase.generated.h already included, missing '#pragma once' in TDMWeaponBase.h"
@@ -18,10 +17,10 @@ struct FHitResult;
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_25_SPARSE_DATA
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_25_RPC_WRAPPERS \
-	virtual bool Multi_Fire_Validate(FVector , FRotator ); \
-	virtual void Multi_Fire_Implementation(FVector SpawnLocation, FRotator SpawnRotation); \
-	virtual bool Server_Fire_Validate(FVector , FRotator ); \
-	virtual void Server_Fire_Implementation(FVector SpawnLocation, FRotator SpawnRotation); \
+	virtual bool Multi_Fire_Validate(FVector_NetQuantize10 , FVector_NetQuantize10 ); \
+	virtual void Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector); \
+	virtual bool Server_Fire_Validate(FVector_NetQuantize10 , FVector_NetQuantize10 ); \
+	virtual void Server_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector); \
  \
 	DECLARE_FUNCTION(execMulti_Fire); \
 	DECLARE_FUNCTION(execServer_Fire);
@@ -36,8 +35,8 @@ struct FHitResult;
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_25_EVENT_PARMS \
 	struct TDMWeaponBase_eventMulti_Fire_Parms \
 	{ \
-		FVector SpawnLocation; \
-		FRotator SpawnRotation; \
+		FVector_NetQuantize10 SpawnLocation; \
+		FVector_NetQuantize10 MuzzleRotationVector; \
 	}; \
 	struct TDMWeaponBase_eventOnHit_Parms \
 	{ \
@@ -45,8 +44,8 @@ struct FHitResult;
 	}; \
 	struct TDMWeaponBase_eventServer_Fire_Parms \
 	{ \
-		FVector SpawnLocation; \
-		FRotator SpawnRotation; \
+		FVector_NetQuantize10 SpawnLocation; \
+		FVector_NetQuantize10 MuzzleRotationVector; \
 	};
 
 

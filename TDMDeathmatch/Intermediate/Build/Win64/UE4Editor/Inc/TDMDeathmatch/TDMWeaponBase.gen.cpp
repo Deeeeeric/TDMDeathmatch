@@ -18,8 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMWeaponBase_NoRegister();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMWeaponBase();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FVector_NetQuantize10();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
@@ -90,38 +89,38 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	}
 	DEFINE_FUNCTION(ATDMWeaponBase::execMulti_Fire)
 	{
-		P_GET_STRUCT(FVector,Z_Param_SpawnLocation);
-		P_GET_STRUCT(FRotator,Z_Param_SpawnRotation);
+		P_GET_STRUCT(FVector_NetQuantize10,Z_Param_SpawnLocation);
+		P_GET_STRUCT(FVector_NetQuantize10,Z_Param_MuzzleRotationVector);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		if (!P_THIS->Multi_Fire_Validate(Z_Param_SpawnLocation,Z_Param_SpawnRotation))
+		if (!P_THIS->Multi_Fire_Validate(Z_Param_SpawnLocation,Z_Param_MuzzleRotationVector))
 		{
 			RPC_ValidateFailed(TEXT("Multi_Fire_Validate"));
 			return;
 		}
-		P_THIS->Multi_Fire_Implementation(Z_Param_SpawnLocation,Z_Param_SpawnRotation);
+		P_THIS->Multi_Fire_Implementation(Z_Param_SpawnLocation,Z_Param_MuzzleRotationVector);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ATDMWeaponBase::execServer_Fire)
 	{
-		P_GET_STRUCT(FVector,Z_Param_SpawnLocation);
-		P_GET_STRUCT(FRotator,Z_Param_SpawnRotation);
+		P_GET_STRUCT(FVector_NetQuantize10,Z_Param_SpawnLocation);
+		P_GET_STRUCT(FVector_NetQuantize10,Z_Param_MuzzleRotationVector);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		if (!P_THIS->Server_Fire_Validate(Z_Param_SpawnLocation,Z_Param_SpawnRotation))
+		if (!P_THIS->Server_Fire_Validate(Z_Param_SpawnLocation,Z_Param_MuzzleRotationVector))
 		{
 			RPC_ValidateFailed(TEXT("Server_Fire_Validate"));
 			return;
 		}
-		P_THIS->Server_Fire_Implementation(Z_Param_SpawnLocation,Z_Param_SpawnRotation);
+		P_THIS->Server_Fire_Implementation(Z_Param_SpawnLocation,Z_Param_MuzzleRotationVector);
 		P_NATIVE_END;
 	}
 	static FName NAME_ATDMWeaponBase_Multi_Fire = FName(TEXT("Multi_Fire"));
-	void ATDMWeaponBase::Multi_Fire(FVector SpawnLocation, FRotator SpawnRotation)
+	void ATDMWeaponBase::Multi_Fire(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector)
 	{
 		TDMWeaponBase_eventMulti_Fire_Parms Parms;
 		Parms.SpawnLocation=SpawnLocation;
-		Parms.SpawnRotation=SpawnRotation;
+		Parms.MuzzleRotationVector=MuzzleRotationVector;
 		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_Multi_Fire),&Parms);
 	}
 	static FName NAME_ATDMWeaponBase_OnHit = FName(TEXT("OnHit"));
@@ -132,11 +131,11 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_OnHit),&Parms);
 	}
 	static FName NAME_ATDMWeaponBase_Server_Fire = FName(TEXT("Server_Fire"));
-	void ATDMWeaponBase::Server_Fire(FVector SpawnLocation, FRotator SpawnRotation)
+	void ATDMWeaponBase::Server_Fire(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector)
 	{
 		TDMWeaponBase_eventServer_Fire_Parms Parms;
 		Parms.SpawnLocation=SpawnLocation;
-		Parms.SpawnRotation=SpawnRotation;
+		Parms.MuzzleRotationVector=MuzzleRotationVector;
 		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_Server_Fire),&Parms);
 	}
 	void ATDMWeaponBase::StaticRegisterNativesATDMWeaponBase()
@@ -150,7 +149,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	}
 	struct Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics
 	{
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnRotation;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MuzzleRotationVector;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnLocation;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
@@ -158,10 +157,10 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::NewProp_SpawnRotation = { "SpawnRotation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventMulti_Fire_Parms, SpawnRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::NewProp_SpawnLocation = { "SpawnLocation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventMulti_Fire_Parms, SpawnLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::NewProp_MuzzleRotationVector = { "MuzzleRotationVector", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventMulti_Fire_Parms, MuzzleRotationVector), Z_Construct_UScriptStruct_FVector_NetQuantize10, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::NewProp_SpawnLocation = { "SpawnLocation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventMulti_Fire_Parms, SpawnLocation), Z_Construct_UScriptStruct_FVector_NetQuantize10, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::NewProp_SpawnRotation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::NewProp_MuzzleRotationVector,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::NewProp_SpawnLocation,
 	};
 #if WITH_METADATA
@@ -169,7 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMWeaponBase, nullptr, "Multi_Fire", nullptr, nullptr, sizeof(TDMWeaponBase_eventMulti_Fire_Parms), Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80884CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMWeaponBase, nullptr, "Multi_Fire", nullptr, nullptr, sizeof(TDMWeaponBase_eventMulti_Fire_Parms), Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80084CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -210,7 +209,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	}
 	struct Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics
 	{
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnRotation;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MuzzleRotationVector;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SpawnLocation;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
@@ -218,10 +217,10 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::NewProp_SpawnRotation = { "SpawnRotation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventServer_Fire_Parms, SpawnRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::NewProp_SpawnLocation = { "SpawnLocation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventServer_Fire_Parms, SpawnLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::NewProp_MuzzleRotationVector = { "MuzzleRotationVector", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventServer_Fire_Parms, MuzzleRotationVector), Z_Construct_UScriptStruct_FVector_NetQuantize10, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::NewProp_SpawnLocation = { "SpawnLocation", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventServer_Fire_Parms, SpawnLocation), Z_Construct_UScriptStruct_FVector_NetQuantize10, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::NewProp_SpawnRotation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::NewProp_MuzzleRotationVector,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::NewProp_SpawnLocation,
 	};
 #if WITH_METADATA
@@ -229,7 +228,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMWeaponBase, nullptr, "Server_Fire", nullptr, nullptr, sizeof(TDMWeaponBase_eventServer_Fire_Parms), Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80A80CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMWeaponBase, nullptr, "Server_Fire", nullptr, nullptr, sizeof(TDMWeaponBase_eventServer_Fire_Parms), Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ATDMWeaponBase_Server_Fire()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -307,9 +306,9 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TDMDeathmatch,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMWeaponBase_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire, "Multi_Fire" }, // 2271622185
+		{ &Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire, "Multi_Fire" }, // 3723914427
 		{ &Z_Construct_UFunction_ATDMWeaponBase_OnHit, "OnHit" }, // 3892192549
-		{ &Z_Construct_UFunction_ATDMWeaponBase_Server_Fire, "Server_Fire" }, // 1361142559
+		{ &Z_Construct_UFunction_ATDMWeaponBase_Server_Fire, "Server_Fire" }, // 3096517451
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::Class_MetaDataParams[] = {
@@ -443,7 +442,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMWeaponBase, 20674779);
+	IMPLEMENT_CLASS(ATDMWeaponBase, 1430273071);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMWeaponBase>()
 	{
 		return ATDMWeaponBase::StaticClass();

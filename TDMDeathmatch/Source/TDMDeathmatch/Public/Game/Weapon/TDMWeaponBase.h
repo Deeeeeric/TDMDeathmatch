@@ -80,14 +80,14 @@ protected:
 	bool LineTrace(FVector SpawnLocation, FRotator SpawnRotation);
 
 	UFUNCTION(Server, Reliable, WithValidation)
-		void Server_Fire(FVector SpawnLocation, FRotator SpawnRotation);
-	bool Server_Fire_Validate(FVector SpawnLocation, FRotator SpawnRotation);
-	void Server_Fire_Implementation(FVector SpawnLocation, FRotator SpawnRotation);
+		void Server_Fire(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
+	bool Server_Fire_Validate(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
+	void Server_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
 
 	UFUNCTION(NetMulticast, Reliable, WithValidation)
-		void Multi_Fire(FVector SpawnLocation, FRotator SpawnRotation);
-	bool Multi_Fire_Validate(FVector SpawnLocation, FRotator SpawnRotation);
-	void Multi_Fire_Implementation(FVector SpawnLocation, FRotator SpawnRotation);
+		void Multi_Fire(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
+	bool Multi_Fire_Validate(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
+	void Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
 
 public:
 	void Fire();

@@ -152,26 +152,26 @@ bool ATDMWeaponBase::LineTrace(FVector SpawnLocation, FRotator SpawnRotation)
 	return false;
 }
 
-bool ATDMWeaponBase::Server_Fire_Validate(FVector SpawnLocation, FRotator SpawnRotation)
+bool ATDMWeaponBase::Server_Fire_Validate(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector)
 {
 	return true;
 }
 
-void ATDMWeaponBase::Server_Fire_Implementation(FVector SpawnLocation, FRotator SpawnRotation)
+void ATDMWeaponBase::Server_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector)
 {
 	if (MagazineAmmo > 0)
 	{
 		--MagazineAmmo;
-		Multi_Fire(SpawnLocation, SpawnRotation);
+		Multi_Fire(SpawnLocation, MuzzleRotationVector);
 	}
 }
 
-bool ATDMWeaponBase::Multi_Fire_Validate(FVector SpawnLocation, FRotator SpawnRotation)
+bool ATDMWeaponBase::Multi_Fire_Validate(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector)
 {
 	return true;
 }
 
-void ATDMWeaponBase::Multi_Fire_Implementation(FVector SpawnLocation, FRotator SpawnRotation)
+void ATDMWeaponBase::Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector)
 {
 	if (APawn* Character = Cast<APawn>(GetOwner()))
 	{
@@ -181,6 +181,8 @@ void ATDMWeaponBase::Multi_Fire_Implementation(FVector SpawnLocation, FRotator S
 		}
 	}
 	PlayFireAnimation(false);
+
+	FRotator SpawnRotation = FRotator(MuzzleRotationVector.X, MuzzleRotationVector.Y, MuzzleRotationVector.Z);
 
 	if (LineTrace(SpawnLocation, SpawnRotation))
 	{
@@ -236,7 +238,7 @@ void ATDMWeaponBase::Fire()
 		case EFireMode::Burst:
 		{
 			GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
-			if (BurstFireShot-1 > 0)
+			if (BurstFireShot - 1 > 0)
 			{
 				--BurstFireShot;
 			}
@@ -247,14 +249,15 @@ void ATDMWeaponBase::Fire()
 			}
 		}
 		}
+		FVector_NetQuantize10 MuzzleRotationVector = FVector_NetQuantize10(SpawnRotation.Pitch, SpawnRotation.Yaw, SpawnRotation.Roll);
 
 		if (!HasAuthority())
 		{
-			Server_Fire(SpawnLocation, SpawnRotation);
+			Server_Fire(FVector_NetQuantize10(SpawnLocation), MuzzleRotationVector);
 		}
 		else
 		{
-			Multi_Fire(SpawnLocation, SpawnRotation);
+			Multi_Fire(FVector_NetQuantize10(SpawnLocation), MuzzleRotationVector);
 		}
 	}
 	else

@@ -83,6 +83,8 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ATDMCharacterBase::StartAiming);
 	PlayerInputComponent->BindAction("Aim", IE_Released, this, &ATDMCharacterBase::StopAiming);
 
+	PlayerInputComponent->BindAction("FireMode", IE_Pressed, this, &ATDMCharacterBase::SwitchFireMode);
+
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &ATDMCharacterBase::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ATDMCharacterBase::MoveRight);
@@ -178,6 +180,14 @@ void ATDMCharacterBase::StopAiming()
 	if (!HasAuthority())
 	{
 		Server_Aim(bIsAiming);
+	}
+}
+
+void ATDMCharacterBase::SwitchFireMode()
+{
+	if (WeaponInHand)
+	{
+		WeaponInHand->SwitchFireMode();
 	}
 }
 

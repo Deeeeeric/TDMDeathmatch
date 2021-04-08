@@ -886,3 +886,171 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.04.08-19.15.37:639][764]Display: HotReload successful (9 functions remapped  0 scriptstructs remapped)
 [2021.04.08-19.15.37:738][764]LogContentBrowser: Native class hierarchy populated in 0.0101 seconds. Added 3415 classes and 812 folders.
 [2021.04.08-19.15.37:742][764]Display: HotReload took  4.8s.
+[2021.04.08-19.17.09:231][548]BlueprintLog: New page: Compile BP_M16
+[2021.04.08-19.17.09:342][548]LogUObjectHash: Compacting FUObjectHashTables data took   5.94ms
+[2021.04.08-19.17.09:938][578]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Firearms/M16/BP_M16" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Firearms/M16/BP_M16.uasset" SILENT=true
+[2021.04.08-19.17.09:956][578]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_M1617B1F22B4BD7681F2469018613DB8E57.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Firearms/M16/BP_M16.uasset'
+[2021.04.08-19.17.09:974][578]AssetCheck: New page: Asset Save: BP_M16
+[2021.04.08-19.17.09:974][578]LogContentValidation: Display: Validating Blueprint /Game/Firearms/M16/BP_M16.BP_M16
+[2021.04.08-19.26.42:161][992]LogHotReload: New module detected: UE4Editor-TDMDeathmatch-0005.dll
+[2021.04.08-19.26.44:196][999]LogHotReload: Starting Hot-Reload from IDE
+[2021.04.08-19.26.48:501][999]LogClass: ETeam HotReload.
+[2021.04.08-19.26.48:501][999]LogClass: EFireMode HotReload.
+[2021.04.08-19.26.48:513][999]LogContentBrowser: Native class hierarchy updated for 'TDMDeathmatch' in 0.0009 seconds. Added 8 classes and 7 folders.
+[2021.04.08-19.26.48:518][999]Display: HotReload successful (11 functions remapped  0 scriptstructs remapped)
+[2021.04.08-19.26.48:666][999]LogContentBrowser: Native class hierarchy populated in 0.0140 seconds. Added 3415 classes and 812 folders.
+[2021.04.08-19.26.48:672][999]Display: HotReload took  4.5s.
+[2021.04.08-19.27.20:168][ 92]LogHotReload: New module detected: UE4Editor-TDMDeathmatch-0006.dll
+[2021.04.08-19.27.21:538][ 97]LogHotReload: Starting Hot-Reload from IDE
+[2021.04.08-19.27.21:816][ 97]LogClass: ETeam HotReload.
+[2021.04.08-19.27.21:816][ 97]LogClass: EFireMode HotReload.
+[2021.04.08-19.27.21:834][ 97]LogContentBrowser: Native class hierarchy updated for 'TDMDeathmatch' in 0.0011 seconds. Added 8 classes and 7 folders.
+[2021.04.08-19.27.21:840][ 97]Display: HotReload successful (11 functions remapped  0 scriptstructs remapped)
+[2021.04.08-19.27.21:998][ 97]LogContentBrowser: Native class hierarchy populated in 0.0137 seconds. Added 3415 classes and 812 folders.
+[2021.04.08-19.27.22:003][ 97]Display: HotReload took  0.5s.
+[2021.04.08-19.27.33:327][463]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.04.08-19.27.33:353][463]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.08-19.27.33:354][463]PIE: New page: PIE session: FirstPersonExampleMap (8 Apr 2021, 21:27:33)
+[2021.04.08-19.27.33:354][463]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.08-19.27.33:375][463]LogPlayLevel: PIE: StaticDuplicateObject took: (0.021119s)
+[2021.04.08-19.27.33:377][463]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.08-19.27.33:377][463]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000024F6FC81C00), frame # 17463
+[2021.04.08-19.27.33:377][463]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000024F6FCAD6C0), frame # 17463
+[2021.04.08-19.27.33:378][463]LogPlayLevel: PIE: World Init took: (0.002588s)
+[2021.04.08-19.27.33:378][463]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.023961s)
+[2021.04.08-19.27.33:529][463]LogUObjectHash: Compacting FUObjectHashTables data took   5.01ms
+[2021.04.08-19.27.33:531][463]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.08-19.27.33:531][463]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.08-19.27.33:531][463]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.08-19.27.33:531][463]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.08-19.27.33:531][463]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.08-19.27.33:531][463]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.08-19.27.33:531][463]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.08-19.27.33:531][463]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.08-19.27.33:532][463]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.08-19.27.33:532][463]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.08-19.27.33:545][463]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.08-19.27.33:545][463]LogAudioMixer: Display: 1: FrontRight
+[2021.04.08-19.27.33:582][463]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.08-19.27.33:582][463]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.08-19.27.33:582][463]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.08-19.27.33:583][463]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.08-19.27.33:583][463]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.08-19.27.33:599][463]LogInit: FAudioDevice initialized.
+[2021.04.08-19.27.33:658][463]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.08-19.27.33:658][463]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.08-19.27.33:661][463]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.08-20.27.33
+[2021.04.08-19.27.33:662][463]LogWorld: Bringing up level for play took: 0.002826
+[2021.04.08-19.27.33:662][463]LogOnline: OSS: Creating online subsystem instance for: :Context_11
+[2021.04.08-19.27.33:666][463]LogTemp: Warning: POST LOGIN
+[2021.04.08-19.27.33:667][463]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.08-19.27.33:667][463]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.08-19.27.33:667][463]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.08-19.27.33:667][463]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.08-19.27.33:668][463]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.08-19.27.33:668][463]LogNet: GameNetDriver IpNetDriver_2 IpNetDriver listening on port 17777
+[2021.04.08-19.27.33:668][463]LogTemp: Warning: BEGIN PLAY
+[2021.04.08-19.27.33:668][463]LogTemp: Warning: POST LOGIN
+[2021.04.08-19.27.33:670][463]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.08-19.27.33:671][463]PIE: Server logged in
+[2021.04.08-19.27.33:672][463]PIE: Play in editor total start time 0.331 seconds.
+[2021.04.08-19.27.37:253][675]LogTemp: Warning: Old Firemode 2
+[2021.04.08-19.27.38:203][732]LogTemp: Warning: Old Firemode 2
+[2021.04.08-19.27.38:936][774]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.08-19.27.38:936][774]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.08-19.27.38:936][774]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.08-19.27.38:937][774]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.08-19.27.38:944][774]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.08-19.27.38:945][774]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.08-19.27.38:953][774]LogNet: World NetDriver shutdown IpNetDriver_2 [GameNetDriver]
+[2021.04.08-19.27.38:953][774]LogNet: DestroyNamedNetDriver IpNetDriver_2 [GameNetDriver]
+[2021.04.08-19.27.38:953][774]LogExit: GameNetDriver IpNetDriver_2 shut down
+[2021.04.08-19.27.38:955][774]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.08-19.27.38:960][774]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.08-19.27.39:030][774]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000024F6FC81C00), frame # 17774
+[2021.04.08-19.27.39:030][774]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000024F6FCAD6C0), frame # 17774
+[2021.04.08-19.27.39:045][774]LogUObjectHash: Compacting FUObjectHashTables data took   5.44ms
+[2021.04.08-19.27.39:078][775]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2021.04.08-19.29.36:651][166]LogHotReload: New module detected: UE4Editor-TDMDeathmatch-0007.dll
+[2021.04.08-19.29.38:696][173]LogHotReload: Starting Hot-Reload from IDE
+[2021.04.08-19.29.42:418][173]LogClass: ETeam HotReload.
+[2021.04.08-19.29.42:418][173]LogClass: EFireMode HotReload.
+[2021.04.08-19.29.42:430][173]LogContentBrowser: Native class hierarchy updated for 'TDMDeathmatch' in 0.0011 seconds. Added 8 classes and 7 folders.
+[2021.04.08-19.29.42:436][173]Display: HotReload successful (11 functions remapped  0 scriptstructs remapped)
+[2021.04.08-19.29.42:563][173]LogContentBrowser: Native class hierarchy populated in 0.0163 seconds. Added 3415 classes and 812 folders.
+[2021.04.08-19.29.42:567][173]Display: HotReload took  3.9s.
+[2021.04.08-19.29.43:745][217]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.04.08-19.29.43:769][217]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.08-19.29.43:769][217]PIE: New page: PIE session: FirstPersonExampleMap (8 Apr 2021, 21:29:43)
+[2021.04.08-19.29.43:769][217]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.08-19.29.43:780][217]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010381s)
+[2021.04.08-19.29.43:782][217]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.08-19.29.43:782][217]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000024F53726200), frame # 18217
+[2021.04.08-19.29.43:784][217]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000024F61208CC0), frame # 18217
+[2021.04.08-19.29.43:785][217]LogPlayLevel: PIE: World Init took: (0.004905s)
+[2021.04.08-19.29.43:785][217]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.015459s)
+[2021.04.08-19.29.43:868][217]LogUObjectHash: Compacting FUObjectHashTables data took   3.97ms
+[2021.04.08-19.29.43:872][217]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.08-19.29.43:872][217]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.08-19.29.43:872][217]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.08-19.29.43:872][217]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.08-19.29.43:872][217]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.08-19.29.43:872][217]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.08-19.29.43:872][217]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.08-19.29.43:872][217]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.08-19.29.43:873][217]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.08-19.29.43:873][217]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.08-19.29.43:882][217]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.08-19.29.43:882][217]LogAudioMixer: Display: 1: FrontRight
+[2021.04.08-19.29.43:921][217]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.08-19.29.43:921][217]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.08-19.29.43:921][217]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.08-19.29.43:921][217]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.08-19.29.43:922][217]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.08-19.29.43:937][217]LogInit: FAudioDevice initialized.
+[2021.04.08-19.29.43:983][217]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.08-19.29.43:983][217]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.08-19.29.43:986][217]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.08-20.29.43
+[2021.04.08-19.29.43:987][217]LogWorld: Bringing up level for play took: 0.002211
+[2021.04.08-19.29.43:987][217]LogOnline: OSS: Creating online subsystem instance for: :Context_12
+[2021.04.08-19.29.43:989][217]LogTemp: Warning: POST LOGIN
+[2021.04.08-19.29.43:989][217]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.08-19.29.43:989][217]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.08-19.29.43:989][217]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.08-19.29.43:990][217]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.08-19.29.43:990][217]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.08-19.29.43:990][217]LogNet: GameNetDriver IpNetDriver_3 IpNetDriver listening on port 17777
+[2021.04.08-19.29.43:990][217]LogTemp: Warning: BEGIN PLAY
+[2021.04.08-19.29.43:990][217]LogTemp: Warning: POST LOGIN
+[2021.04.08-19.29.43:994][217]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.08-19.29.43:995][217]PIE: Server logged in
+[2021.04.08-19.29.43:996][217]PIE: Play in editor total start time 0.235 seconds.
+[2021.04.08-19.29.46:636][372]LogTemp: Warning: Firemode index 1
+[2021.04.08-19.29.47:273][410]LogTemp: Warning: Firemode index 0
+[2021.04.08-19.29.47:689][435]LogTemp: Warning: Firemode index 1
+[2021.04.08-19.29.47:972][452]LogTemp: Warning: Firemode index 0
+[2021.04.08-19.29.48:122][461]LogTemp: Warning: Firemode index 1
+[2021.04.08-19.29.48:378][476]LogTemp: Warning: Firemode index 0
+[2021.04.08-19.29.49:019][512]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.08-19.29.49:019][512]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.08-19.29.49:019][512]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.08-19.29.49:019][512]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.08-19.29.49:026][512]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.08-19.29.49:026][512]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.08-19.29.49:034][512]LogNet: World NetDriver shutdown IpNetDriver_3 [GameNetDriver]
+[2021.04.08-19.29.49:034][512]LogNet: DestroyNamedNetDriver IpNetDriver_3 [GameNetDriver]
+[2021.04.08-19.29.49:034][512]LogExit: GameNetDriver IpNetDriver_3 shut down
+[2021.04.08-19.29.49:035][512]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.08-19.29.49:043][512]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.08-19.29.49:101][512]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000024F61208CC0), frame # 18512
+[2021.04.08-19.29.49:101][512]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000024F53726200), frame # 18512
+[2021.04.08-19.29.49:118][512]LogUObjectHash: Compacting FUObjectHashTables data took   3.07ms
+[2021.04.08-19.29.49:149][513]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2021.04.08-19.32.13:869][ 10]LogHotReload: New module detected: UE4Editor-TDMDeathmatch-0008.dll
+[2021.04.08-19.32.15:229][ 15]LogHotReload: Starting Hot-Reload from IDE
+[2021.04.08-19.32.18:050][ 15]LogClass: ETeam HotReload.
+[2021.04.08-19.32.18:050][ 15]LogClass: EFireMode HotReload.
+[2021.04.08-19.32.18:064][ 15]LogContentBrowser: Native class hierarchy updated for 'TDMDeathmatch' in 0.0011 seconds. Added 8 classes and 7 folders.
+[2021.04.08-19.32.18:069][ 15]Display: HotReload successful (11 functions remapped  0 scriptstructs remapped)
+[2021.04.08-19.32.18:169][ 15]LogContentBrowser: Native class hierarchy populated in 0.0103 seconds. Added 3415 classes and 812 folders.
+[2021.04.08-19.32.18:173][ 15]Display: HotReload took  2.9s.

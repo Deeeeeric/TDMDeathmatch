@@ -64,6 +64,7 @@ protected:
 	bool bIsAiming;
 	void StartAiming();
 	void StopAiming();
+	void SwitchFireMode();
 
 	UFUNCTION(Server, Reliable, WithValidation)
 	void Server_Aim(bool Aiming);

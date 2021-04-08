@@ -33,6 +33,8 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		TArray<TEnumAsByte<EFireMode>> FireModes;
+		
+		int8 FireModesIndex;
 
 		TEnumAsByte<EFireMode> FireMode;
 
@@ -85,4 +87,5 @@ protected:
 public:
 	void Fire();
 	void StopFire();
+	void SwitchFireMode();
 };

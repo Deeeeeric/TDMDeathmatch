@@ -24,7 +24,7 @@ ATDMWeaponBase::ATDMWeaponBase()
 	TotalAmmoCapacity = 100;
 	MagazineCapacity = 15;
 	MagazineAmmo = MagazineCapacity;
-
+	FireModesIndex = 0;
 }
 
 // Called when the game starts or when spawned
@@ -35,7 +35,7 @@ void ATDMWeaponBase::BeginPlay()
 
 	if (FireModes.Num())
 	{
-		FireMode = FireModes[0];
+		FireMode = FireModes[FireModesIndex];
 	}
 }
 
@@ -191,10 +191,6 @@ void ATDMWeaponBase::Fire()
 {
 	if (MagazineAmmo > 0)
 	{
-		if (FireMode == EFireMode::Full)
-		{//Handle Full-Auto Logic
-			
-		}
 		PlayFireAnimation(true);
 		--MagazineAmmo;
 
@@ -216,6 +212,11 @@ void ATDMWeaponBase::Fire()
 				UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
 			}
 		}
+		if (FireMode == EFireMode::Full)
+		{//Handle Full-Auto Logic
+			
+		}
+
 		if (!HasAuthority())
 		{
 			Server_Fire(SpawnLocation, SpawnRotation);
@@ -230,5 +231,21 @@ void ATDMWeaponBase::Fire()
 void ATDMWeaponBase::StopFire()
 {
 
+}
+
+void ATDMWeaponBase::SwitchFireMode()
+{
+	if (FireModesIndex+1 >= FireModes.Num())
+	{
+		FireModesIndex = 0;
+	}
+	else
+	{
+		++FireModesIndex;
+	}
+
+	UE_LOG(LogTemp, Warning, TEXT("Firemode index %d"), FireModesIndex);
+
+	FireMode = FireModes[FireModesIndex];
 }
 

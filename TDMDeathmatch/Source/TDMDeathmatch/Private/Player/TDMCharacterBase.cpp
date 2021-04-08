@@ -42,9 +42,7 @@ ATDMCharacterBase::ATDMCharacterBase()
 
 	Health = 100.0f;
 	bIsDead = false;
-
-	// Default offset from the character location for projectiles to spawn
-	GunOffset = FVector(100.0f, 0.0f, 10.0f);
+	bIsAiming = false;
 }
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
@@ -81,6 +79,8 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 
 	// Bind fire event
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ATDMCharacterBase::OnFire);
+	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &ATDMCharacterBase::StartAiming);
+	PlayerInputComponent->BindAction("Aim", IE_Released, this, &ATDMCharacterBase::StopAiming);
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &ATDMCharacterBase::MoveForward);
@@ -151,6 +151,16 @@ void ATDMCharacterBase::OnFire()
 	{
 		WeaponInHand->Fire();
 	}
+}
+
+void ATDMCharacterBase::StartAiming()
+{
+	bIsAiming = true;
+}
+
+void ATDMCharacterBase::StopAiming()
+{
+	bIsAiming = false;
 }
 
 void ATDMCharacterBase::MoveForward(float Value)

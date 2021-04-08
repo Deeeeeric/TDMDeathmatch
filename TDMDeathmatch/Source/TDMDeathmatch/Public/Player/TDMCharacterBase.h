@@ -49,10 +49,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 		float BaseLookUpRate;
 
-	/** Gun muzzle's offset from the characters location */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-		FVector GunOffset;
-
 protected:
 	UPROPERTY(EditAnywhere, Category="Weapon")
 	TSubclassOf<ATDMWeaponBase> WeaponToSpawn;
@@ -62,6 +58,11 @@ protected:
 
 	/** Fires a projectile. */
 	void OnFire();
+
+	UPROPERTY(BlueprintReadOnly, Category="Weapon")
+	bool bIsAiming;
+	void StartAiming();
+	void StopAiming();
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);

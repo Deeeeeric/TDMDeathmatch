@@ -8,6 +8,8 @@
 
 class ATDMProjectileBase;
 class USkeletalMeshComponent;
+class UAnimMontage;
+class UAnimationAsset;
 
 UCLASS()
 class TDMDEATHMATCH_API ATDMWeaponBase : public AActor
@@ -19,6 +21,15 @@ public:
 	ATDMWeaponBase();
 	
 protected:
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	TSubclassOf<ATDMProjectileBase> ProjectileClass;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	UAnimationAsset* FireAnimation;
+
+	UPROPERTY(EditDefaultsOnly, Category="Weapon")
+	UAnimMontage* FirstPersonMontage;
+
 	UPROPERTY(EditDefaultsOnly, Category="Weapon")
 	USkeletalMeshComponent* WeaponMesh;
 
@@ -33,9 +44,6 @@ protected:
 
 	UFUNCTION(BlueprintImplementableEvent, Category="Weapon")
 	void OnHit(FHitResult HitResult);
-
-	UPROPERTY(EditDefaultsOnly, Category = Projectile)
-	TSubclassOf<ATDMProjectileBase> ProjectileClass;
 
 protected:
 	// Called when the game starts or when spawned

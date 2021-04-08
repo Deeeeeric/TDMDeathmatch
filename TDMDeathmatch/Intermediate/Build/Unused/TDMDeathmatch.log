@@ -1,19 +1,27 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\DW\Documents\GitHub\TDMDeathmatch).
+  Parsing headers for TDMDeathmatchEditor
+    Running UnrealHeaderTool "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\TDMDeathmatch.uproject" "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\TDMDeathmatchEditor\Development\TDMDeathmatchEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\DW\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for TDMDeathmatchEditor in 7.9470948 seconds
   Building TDMDeathmatchEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 4 actions to XGE
+  Distributing 9 actions to XGE
   --------------------Build System Warning---------------------------------------
   Failed to connect to Coordinator:
       All builds will run in standalone mode.
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMCharacterBase.cpp (0:33.78 at +0:00)
-  UE4Editor-TDMDeathmatch-0039.dll (0:01.48 at +0:33)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0039.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0039.suppressed.exp
-  UE4Editor-TDMDeathmatch-0039.lib (0:00.21 at +0:35)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0039.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0039.exp
-  TDMDeathmatchEditor.target (0:00.32 at +0:35)
+  TDM_M16.gen.cpp (0:11.53 at +0:00)
+  TDMWeaponBase.gen.cpp (0:02.26 at +0:11)
+  TDMDeathmatch.init.gen.cpp (0:01.75 at +0:13)
+  TDMCharacterBase.cpp (0:11.42 at +0:15)
+  TDMWeaponBase.cpp (0:02.21 at +0:27)
+  TDM_M16.cpp (0:01.01 at +0:29)
+  UE4Editor-TDMDeathmatch-0044.dll (0:01.34 at +0:30)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0044.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0044.suppressed.exp
+  UE4Editor-TDMDeathmatch-0044.lib (0:00.25 at +0:31)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0044.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0044.exp
+  TDMDeathmatchEditor.target (0:00.36 at +0:31)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -21,5 +29,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 36.10 seconds
-  Total execution time: 37.46 seconds
+  Total time in XGE executor: 32.57 seconds
+  Total execution time: 41.63 seconds

@@ -84,7 +84,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMCharacterBase); \
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__WeaponToSpawn() { return STRUCT_OFFSET(ATDMCharacterBase, WeaponToSpawn); } \
-	FORCEINLINE static uint32 __PPO__WeaponInHand() { return STRUCT_OFFSET(ATDMCharacterBase, WeaponInHand); }
+	FORCEINLINE static uint32 __PPO__WeaponInHand() { return STRUCT_OFFSET(ATDMCharacterBase, WeaponInHand); } \
+	FORCEINLINE static uint32 __PPO__bIsAiming() { return STRUCT_OFFSET(ATDMCharacterBase, bIsAiming); }
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_11_PROLOG

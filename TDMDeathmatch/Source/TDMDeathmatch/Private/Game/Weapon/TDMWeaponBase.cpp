@@ -31,6 +31,8 @@ void ATDMWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
 	MagazineAmmo = MagazineCapacity;
+
+
 }
 
 void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const

@@ -42,3 +42,4 @@ A fully replicated Team Deathmatch
 * Replicate Attachment
 * Camera Aim FOV
 * Optic FOV and Zoom Speed
+* Move Camera FOV and Speed Handles into WeaponClass

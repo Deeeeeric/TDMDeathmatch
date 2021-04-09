@@ -134,7 +134,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 	FORCEINLINE static uint32 __PPO__TotalAmmoCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, TotalAmmoCapacity); } \
 	FORCEINLINE static uint32 __PPO__MagazineAmmo() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineAmmo); } \
 	FORCEINLINE static uint32 __PPO__Optic() { return STRUCT_OFFSET(ATDMWeaponBase, Optic); } \
-	FORCEINLINE static uint32 __PPO__Muzzle() { return STRUCT_OFFSET(ATDMWeaponBase, Muzzle); }
+	FORCEINLINE static uint32 __PPO__Muzzle() { return STRUCT_OFFSET(ATDMWeaponBase, Muzzle); } \
+	FORCEINLINE static uint32 __PPO__CameraFOV() { return STRUCT_OFFSET(ATDMWeaponBase, CameraFOV); } \
+	FORCEINLINE static uint32 __PPO__CameraFOVSpeed() { return STRUCT_OFFSET(ATDMWeaponBase, CameraFOVSpeed); }
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_24_PROLOG \

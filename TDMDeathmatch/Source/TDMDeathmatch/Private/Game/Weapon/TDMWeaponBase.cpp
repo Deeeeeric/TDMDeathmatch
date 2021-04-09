@@ -29,6 +29,9 @@ ATDMWeaponBase::ATDMWeaponBase()
 	FireModesIndex = 0;
 	BurstFireAmount = 3;
 	BurstFireShot = 0;
+
+	CameraFOV = 75.0;
+	CameraFOVSpeed = 100.0f;
 }
 
 // Called when the game starts or when spawned
@@ -330,5 +333,22 @@ void ATDMWeaponBase::AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass)
 	{
 		Server_AddAttachment(AttachmentClass);
 	}
+}
+float ATDMWeaponBase::GetCameraFOV()
+{
+	if (Optic)
+	{
+		return Optic->GetCameraFOV();
+	}
+	return CameraFOV;
+}
+
+float ATDMWeaponBase::GetCameraFOVSpeed()
+{
+	if (Optic)
+	{
+		return Optic->GetCameraFOVSpeed();
+	}
+	return CameraFOVSpeed;
 }
 

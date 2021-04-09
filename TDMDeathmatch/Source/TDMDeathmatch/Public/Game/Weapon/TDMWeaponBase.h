@@ -73,6 +73,12 @@ protected:
 		ATDMAttachment_Optic* Optic;
 	UPROPERTY(Replicated)
 		ATDMAttachment* Muzzle;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Optic")
+		float CameraFOV;
+	UPROPERTY(EditDefaultsOnly, Category = "Optic")
+		float CameraFOVSpeed;
+
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);
 	bool Server_AddAttachment_Validate(TSubclassOf<ATDMAttachment> AttachmentClass);
@@ -108,5 +114,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);
 
-	FORCEINLINE	ATDMAttachment_Optic* GetOptic() const{ return Optic; }
+	FORCEINLINE	ATDMAttachment_Optic* GetOptic() const { return Optic; }
+	float GetCameraFOV();
+	float GetCameraFOVSpeed();
 };

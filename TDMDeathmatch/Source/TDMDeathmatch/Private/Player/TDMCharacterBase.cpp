@@ -220,29 +220,22 @@ void ATDMCharacterBase::HandleAimFOV(float DeltaSeconds)
 	{
 		if (bIsAiming)
 		{
-			if (ATDMAttachment_Optic* Optic = WeaponInHand->GetOptic())
+			float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, WeaponInHand->GetCameraFOV(), DeltaSeconds, WeaponInHand->GetCameraFOVSpeed());
+			FirstPersonCameraComponent->SetFieldOfView(NewFOV);
+			if (NewFOV == 70.0f)
 			{
-				float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, Optic->GetCameraFOV(), DeltaSeconds, Optic->GetCameraFOVSpeed());
-				FirstPersonCameraComponent->SetFieldOfView(NewFOV);
-				if (NewFOV == 70.0f)
-				{
-					bFOVFinished = true;
-				}
+				bFOVFinished = true;
 			}
 		}
 		else
 		{
 			if (WeaponInHand)
 			{
-				if (ATDMAttachment_Optic* Optic = WeaponInHand->GetOptic())
+				float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, 90.0f, DeltaSeconds, WeaponInHand->GetCameraFOVSpeed());
+				FirstPersonCameraComponent->SetFieldOfView(NewFOV);
+				if (NewFOV == 70.0f)
 				{
-					float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, 90.0f, DeltaSeconds, Optic->GetCameraFOVSpeed());
-					FirstPersonCameraComponent->SetFieldOfView(NewFOV);
-					if (NewFOV == 70.0f)
-					{
-						bFOVFinished = true;
-					}
-
+					bFOVFinished = true;
 				}
 			}
 		}

@@ -1,33 +1,22 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\DW\Documents\GitHub\TDMDeathmatch).
-  Parsing headers for TDMDeathmatchEditor
-    Running UnrealHeaderTool "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\TDMDeathmatch.uproject" "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\TDMDeathmatchEditor\Development\TDMDeathmatchEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\DW\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for TDMDeathmatchEditor in 8.7029018 seconds
   Building TDMDeathmatchEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 9 actions to XGE
+  Distributing 4 actions to XGE
   --------------------Build System Warning---------------------------------------
   Failed to connect to Coordinator:
       All builds will run in standalone mode.
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMCharacterBase.gen.cpp (0:01.70 at +0:00)
-  TDMPlayerState.cpp (0:01.64 at +0:01)
-  TDMCharacterBase.cpp (0:03.42 at +0:03)
+  TDMCharacterBase.cpp (0:02.37 at +0:00)
 D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(20): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
   D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass'
   D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/Weapon/TDMWeaponBase.h(40): note: see reference to class template instantiation 'TEnumAsByte<EFireMode>' being compiled
-  TDMWeaponBase.cpp (0:02.29 at +0:06)
-D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(20): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-  D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass'
-  D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/Weapon/TDMWeaponBase.h(40): note: see reference to class template instantiation 'TEnumAsByte<EFireMode>' being compiled
-  TDMProjectileBase.cpp (0:01.70 at +0:09)
-  TDMGameModeBase.cpp (0:01.96 at +0:10)
-  UE4Editor-TDMDeathmatch-0007.dll (0:01.18 at +0:12)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.suppressed.exp
-  UE4Editor-TDMDeathmatch-0007.lib (0:00.20 at +0:13)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.exp
-  TDMDeathmatchEditor.target (0:00.23 at +0:14)
+  UE4Editor-TDMDeathmatch-0010.dll (0:00.75 at +0:02)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0010.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0010.suppressed.exp
+  UE4Editor-TDMDeathmatch-0010.lib (0:00.20 at +0:03)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0010.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0010.exp
+  TDMDeathmatchEditor.target (0:00.26 at +0:03)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -35,5 +24,5 @@ D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 14.78 seconds
-  Total execution time: 25.03 seconds
+  Total time in XGE executor: 3.97 seconds
+  Total execution time: 4.99 seconds

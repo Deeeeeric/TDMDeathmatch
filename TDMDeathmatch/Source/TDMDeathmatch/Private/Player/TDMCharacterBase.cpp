@@ -67,6 +67,15 @@ void ATDMCharacterBase::BeginPlay()
 			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));
 		}
 	}
+
+	if (IsLocallyControlled())
+	{
+		PrimaryActorTick.SetTickFunctionEnable(true);
+	}
+	else
+	{
+		PrimaryActorTick.SetTickFunctionEnable(false);
+	}
 }
 
 void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)

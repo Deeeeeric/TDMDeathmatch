@@ -53,7 +53,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Weapon")
 	TSubclassOf<ATDMWeaponBase> WeaponToSpawn;
 
-	UPROPERTY(Replicated)
+	UPROPERTY(Replicated, BlueprintReadOnly)
 	ATDMWeaponBase* WeaponInHand;
 
 	/** Fires a projectile. */

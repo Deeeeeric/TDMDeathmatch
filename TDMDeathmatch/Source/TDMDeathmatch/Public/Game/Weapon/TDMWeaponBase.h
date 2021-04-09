@@ -10,6 +10,7 @@ class ATDMProjectileBase;
 class USkeletalMeshComponent;
 class UAnimMontage;
 class UAnimationAsset;
+class ATDMAttachment;
 
 UENUM(BlueprintType)
 enum class EFireMode : uint8
@@ -93,4 +94,7 @@ public:
 	void Fire();
 	void StopFire();
 	void SwitchFireMode();
+
+	UFUNCTION(BlueprintCallable, Category="Weapon")
+	void AddAttachment(ATDMAttachment* Attachment);
 };

@@ -37,3 +37,4 @@ A fully replicated Team Deathmatch
 * Make Full Auto Functional
 * Make Burst Function
 * Optimize Network Overhead with Shooting
+* Add Optic Attachment

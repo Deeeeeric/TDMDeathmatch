@@ -5,6 +5,7 @@
 #include "Game/Weapon/TDMProjectileBase.h"
 #include "Player/TDMPlayerState.h"
 #include "Player/TDMCharacterBase.h"
+#include "Game/Weapon/TDMAttachment.h"
 
 #include "Components/SkeletalMeshComponent.h"
 #include "DrawDebugHelpers.h"
@@ -286,5 +287,13 @@ void ATDMWeaponBase::SwitchFireMode()
 	UE_LOG(LogTemp, Warning, TEXT("Firemode index %d"), FireModesIndex);
 
 	FireMode = FireModes[FireModesIndex];
+}
+
+void ATDMWeaponBase::AddAttachment(ATDMAttachment* Attachment)
+{
+	if (Attachment)
+	{
+		Attachment->AttachToComponent(WeaponMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, Attachment->GetAttachmentSocket());
+	}
 }
 

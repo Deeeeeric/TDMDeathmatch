@@ -41,3 +41,4 @@ A fully replicated Team Deathmatch
 * Add Muzzle Attachment
 * Replicate Attachment
 * Camera Aim FOV
+* Optic FOV and Zoom Speed

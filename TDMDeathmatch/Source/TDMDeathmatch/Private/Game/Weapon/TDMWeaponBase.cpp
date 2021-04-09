@@ -6,6 +6,7 @@
 #include "Player/TDMPlayerState.h"
 #include "Player/TDMCharacterBase.h"
 #include "Game/Weapon/TDMAttachment.h"
+#include "Game/Weapon/TDMAttachment_Optic.h"
 
 #include "Components/SkeletalMeshComponent.h"
 #include "DrawDebugHelpers.h"
@@ -308,7 +309,7 @@ void ATDMWeaponBase::Server_AddAttachment_Implementation(TSubclassOf<ATDMAttachm
 				{
 					Optic->Destroy();
 				}
-				Optic = Attachment;
+				Optic = Cast<ATDMAttachment_Optic>(Attachment);
 			}
 			else if (Attachment->GetAttachmentType() == EAttachmentType::Muzzle)
 			{

@@ -1,9 +1,10 @@
-D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\GameMode\TDMGameStateBase.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\GameMode\TDMGameModeBase.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\GameMode\TDMGameStateBase.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\GameMode\TDMSpawnPoint.h
-D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\Weapon\TDMWeaponBase.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\Weapon\TDMAttachment.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\Weapon\TDMProjectileBase.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\Weapon\TDMWeaponBase.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Player\TDMCharacterBase.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Player\TDMPlayerState.h
-D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\Weapon\TDMAttachment.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game\Weapon\TDMAttachment_Optic.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\TDMDeathmatchHUD.h

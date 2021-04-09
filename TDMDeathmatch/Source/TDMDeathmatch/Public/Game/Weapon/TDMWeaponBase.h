@@ -11,6 +11,7 @@ class USkeletalMeshComponent;
 class UAnimMontage;
 class UAnimationAsset;
 class ATDMAttachment;
+class ATDMAttachment_Optic;
 
 UENUM(BlueprintType)
 enum class EFireMode : uint8
@@ -69,7 +70,7 @@ protected:
 		int32 MagazineAmmo;
 
 	UPROPERTY(Replicated)
-		ATDMAttachment* Optic;
+		ATDMAttachment_Optic* Optic;
 	UPROPERTY(Replicated)
 		ATDMAttachment* Muzzle;
 	UFUNCTION(Server, Reliable, WithValidation)
@@ -106,4 +107,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);
+
+	FORCEINLINE	ATDMAttachment_Optic* GetOptic() const{ return Optic; }
 };

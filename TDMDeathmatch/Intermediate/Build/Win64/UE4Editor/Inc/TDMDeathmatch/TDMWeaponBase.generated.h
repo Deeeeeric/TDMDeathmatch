@@ -16,8 +16,8 @@ struct FHitResult;
 #endif
 #define TDMDEATHMATCH_TDMWeaponBase_generated_h
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_SPARSE_DATA
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_RPC_WRAPPERS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_SPARSE_DATA
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_RPC_WRAPPERS \
 	virtual bool Multi_Fire_Validate(FVector_NetQuantize10 , FVector_NetQuantize10 ); \
 	virtual void Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector); \
 	virtual bool Server_Fire_Validate(FVector_NetQuantize10 , FVector_NetQuantize10 ); \
@@ -31,7 +31,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execServer_AddAttachment);
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execAddAttachment); \
 	DECLARE_FUNCTION(execMulti_Fire); \
@@ -39,7 +39,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execServer_AddAttachment);
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_EVENT_PARMS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_EVENT_PARMS \
 	struct TDMWeaponBase_eventMulti_Fire_Parms \
 	{ \
 		FVector_NetQuantize10 SpawnLocation; \
@@ -60,8 +60,8 @@ struct FHitResult;
 	};
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_CALLBACK_WRAPPERS
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_INCLASS_NO_PURE_DECLS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_CALLBACK_WRAPPERS
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATDMWeaponBase(); \
 	friend struct Z_Construct_UClass_ATDMWeaponBase_Statics; \
@@ -79,7 +79,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_INCLASS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_INCLASS \
 private: \
 	static void StaticRegisterNativesATDMWeaponBase(); \
 	friend struct Z_Construct_UClass_ATDMWeaponBase_Statics; \
@@ -97,7 +97,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_STANDARD_CONSTRUCTORS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATDMWeaponBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATDMWeaponBase) \
@@ -110,7 +110,7 @@ private: \
 public:
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_ENHANCED_CONSTRUCTORS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATDMWeaponBase(ATDMWeaponBase&&); \
@@ -121,7 +121,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATDMWeaponBase)
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_PRIVATE_PROPERTY_OFFSET \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(ATDMWeaponBase, ProjectileClass); } \
 	FORCEINLINE static uint32 __PPO__FireModes() { return STRUCT_OFFSET(ATDMWeaponBase, FireModes); } \
 	FORCEINLINE static uint32 __PPO__BurstFireAmount() { return STRUCT_OFFSET(ATDMWeaponBase, BurstFireAmount); } \
@@ -137,32 +137,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 	FORCEINLINE static uint32 __PPO__Muzzle() { return STRUCT_OFFSET(ATDMWeaponBase, Muzzle); }
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_23_PROLOG \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_EVENT_PARMS
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_24_PROLOG \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_EVENT_PARMS
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_GENERATED_BODY_LEGACY \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_PRIVATE_PROPERTY_OFFSET \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_SPARSE_DATA \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_RPC_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_CALLBACK_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_INCLASS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_STANDARD_CONSTRUCTORS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_PRIVATE_PROPERTY_OFFSET \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_SPARSE_DATA \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_RPC_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_CALLBACK_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_INCLASS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_GENERATED_BODY \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_PRIVATE_PROPERTY_OFFSET \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_SPARSE_DATA \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_CALLBACK_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_INCLASS_NO_PURE_DECLS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_ENHANCED_CONSTRUCTORS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_PRIVATE_PROPERTY_OFFSET \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_SPARSE_DATA \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_CALLBACK_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_INCLASS_NO_PURE_DECLS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

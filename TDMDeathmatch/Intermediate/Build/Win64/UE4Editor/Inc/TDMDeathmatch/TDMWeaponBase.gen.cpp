@@ -22,6 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMAttachment_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FVector_NetQuantize10();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMAttachment_Optic_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimationAsset_NoRegister();
@@ -429,7 +430,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic = { "Optic", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, Optic), Z_Construct_UClass_ATDMAttachment_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic = { "Optic", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, Optic), Z_Construct_UClass_ATDMAttachment_Optic_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_MagazineAmmo_MetaData[] = {
 		{ "Category", "Weapon" },
@@ -558,7 +559,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMWeaponBase, 2250801211);
+	IMPLEMENT_CLASS(ATDMWeaponBase, 547749631);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMWeaponBase>()
 	{
 		return ATDMWeaponBase::StaticClass();

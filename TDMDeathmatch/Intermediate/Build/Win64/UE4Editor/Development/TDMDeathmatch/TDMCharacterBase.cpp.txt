@@ -15,6 +15,10 @@ D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/
 D:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 D:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Inc\TDMDeathmatch\TDMGameModeBase.generated.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/Weapon/TDMAttachment_Optic.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/Weapon/TDMAttachment.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Inc\TDMDeathmatch\TDMAttachment.generated.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Inc\TDMDeathmatch\TDMAttachment_Optic.generated.h
 D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 D:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
 D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h

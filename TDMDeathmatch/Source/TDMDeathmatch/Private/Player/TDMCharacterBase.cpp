@@ -5,6 +5,7 @@
 #include "Game/Weapon/TDMProjectileBase.h"
 #include "Game/Weapon/TDMWeaponBase.h"
 #include "Game/GameMode/TDMGameModeBase.h"
+#include "Game/Weapon/TDMAttachment_Optic.h"
 
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -215,25 +216,34 @@ void ATDMCharacterBase::Server_Aim_Implementation(bool Aiming)
 
 void ATDMCharacterBase::HandleAimFOV(float DeltaSeconds)
 {
-	if (!bFOVFinished)
+	if (!bFOVFinished && WeaponInHand)
 	{
 		if (bIsAiming)
 		{
-			float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, 70.0f, DeltaSeconds, 90.0f);
-			FirstPersonCameraComponent->SetFieldOfView(NewFOV);
-			if (NewFOV == 70.0f)
+			if (ATDMAttachment_Optic* Optic = WeaponInHand->GetOptic())
 			{
-				bFOVFinished = true;
+				float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, Optic->GetCameraFOV(), DeltaSeconds, Optic->GetCameraFOVSpeed());
+				FirstPersonCameraComponent->SetFieldOfView(NewFOV);
+				if (NewFOV == 70.0f)
+				{
+					bFOVFinished = true;
+				}
 			}
 		}
 		else
 		{
-			float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, 90.0f, DeltaSeconds, 90.0f);
-			FirstPersonCameraComponent->SetFieldOfView(NewFOV);
-			if (NewFOV == 90.0f)
+			if (WeaponInHand)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("FOV Finished"));
-				bFOVFinished = true;
+				if (ATDMAttachment_Optic* Optic = WeaponInHand->GetOptic())
+				{
+					float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, 90.0f, DeltaSeconds, Optic->GetCameraFOVSpeed());
+					FirstPersonCameraComponent->SetFieldOfView(NewFOV);
+					if (NewFOV == 70.0f)
+					{
+						bFOVFinished = true;
+					}
+
+				}
 			}
 		}
 	}

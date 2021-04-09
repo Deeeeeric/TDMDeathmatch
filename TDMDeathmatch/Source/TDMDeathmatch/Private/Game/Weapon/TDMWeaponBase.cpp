@@ -209,6 +209,15 @@ void ATDMWeaponBase::Fire()
 	if (MagazineAmmo > 0)
 	{
 		PlayFireAnimation(true);
+
+		if (ATDMCharacterBase* Character = Cast<ATDMCharacterBase>(GetOwner()))
+		{
+			if (FireCameraShakes.Num())
+			{
+				int RandonIndex = FMath::RandRange(0, FireCameraShakes.Num() - 1);
+				Character->PlayCameraShake(FireCameraShakes[RandonIndex]);
+			}
+		}
 		--MagazineAmmo;
 
 		bool LineTraceHit = false;

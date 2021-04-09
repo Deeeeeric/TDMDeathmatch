@@ -44,3 +44,4 @@ A fully replicated Team Deathmatch
 * Optic FOV and Zoom Speed
 * Move Camera FOV and Speed Handles into WeaponClass
 * Create Camera Shake
+* Play Camera Shake on Fire

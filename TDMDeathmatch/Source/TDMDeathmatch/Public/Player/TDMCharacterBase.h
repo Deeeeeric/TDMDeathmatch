@@ -7,6 +7,7 @@
 #include "TDMCharacterBase.generated.h"
 
 class ATDMWeaponBase;
+class UCameraShake;
 
 UCLASS()
 class TDMDEATHMATCH_API ATDMCharacterBase : public ACharacter
@@ -28,9 +29,9 @@ public:
 	float Health;
 
 	UPROPERTY(ReplicatedUsing = OnRep_IsDead)
-	bool bIsDead;
+		bool bIsDead;
 	UFUNCTION()
-	void OnRep_IsDead();
+		void OnRep_IsDead();
 
 	void DestroyCharacter();
 
@@ -50,25 +51,25 @@ public:
 		float BaseLookUpRate;
 
 protected:
-	UPROPERTY(EditAnywhere, Category="Weapon")
-	TSubclassOf<ATDMWeaponBase> WeaponToSpawn;
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		TSubclassOf<ATDMWeaponBase> WeaponToSpawn;
 
 	UPROPERTY(Replicated, BlueprintReadOnly)
-	ATDMWeaponBase* WeaponInHand;
+		ATDMWeaponBase* WeaponInHand;
 
 	/** Fires a projectile. */
 	void OnFire();
 	void StopFire();
 
-	UPROPERTY(BlueprintReadOnly, Replicated, Category="Weapon")
-	bool bIsAiming;
+	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Weapon")
+		bool bIsAiming;
 	void StartAiming();
 	void StopAiming();
 	void SwitchFireMode();
 	bool bFOVFinished;
 
 	UFUNCTION(Server, Reliable, WithValidation)
-	void Server_Aim(bool Aiming);
+		void Server_Aim(bool Aiming);
 	bool Server_Aim_Validate(bool Aiming);
 	void Server_Aim_Implementation(bool Aiming);
 
@@ -97,12 +98,14 @@ protected:
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 
 public:
-virtual void Tick(float DeltaSeconds) override;
+	virtual void Tick(float DeltaSeconds) override;
 
 	/** Returns Mesh1P subobject **/
 	FORCEINLINE class USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
-	FORCEINLINE bool GetIsAiming() {return bIsAiming;}
+	FORCEINLINE bool GetIsAiming() { return bIsAiming; }
+
+	void PlayCameraShake(TSubclassOf<UCameraShake> CameraShake);
 };

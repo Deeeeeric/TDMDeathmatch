@@ -123,20 +123,21 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(ATDMWeaponBase, ProjectileClass); } \
-	FORCEINLINE static uint32 __PPO__FireModes() { return STRUCT_OFFSET(ATDMWeaponBase, FireModes); } \
-	FORCEINLINE static uint32 __PPO__BurstFireAmount() { return STRUCT_OFFSET(ATDMWeaponBase, BurstFireAmount); } \
+	FORCEINLINE static uint32 __PPO__WeaponMesh() { return STRUCT_OFFSET(ATDMWeaponBase, WeaponMesh); } \
 	FORCEINLINE static uint32 __PPO__FireAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, FireAnimation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonMontage() { return STRUCT_OFFSET(ATDMWeaponBase, FirstPersonMontage); } \
 	FORCEINLINE static uint32 __PPO__ADSFireNames() { return STRUCT_OFFSET(ATDMWeaponBase, ADSFireNames); } \
 	FORCEINLINE static uint32 __PPO__HipFireNames() { return STRUCT_OFFSET(ATDMWeaponBase, HipFireNames); } \
-	FORCEINLINE static uint32 __PPO__WeaponMesh() { return STRUCT_OFFSET(ATDMWeaponBase, WeaponMesh); } \
+	FORCEINLINE static uint32 __PPO__FireModes() { return STRUCT_OFFSET(ATDMWeaponBase, FireModes); } \
+	FORCEINLINE static uint32 __PPO__BurstFireAmount() { return STRUCT_OFFSET(ATDMWeaponBase, BurstFireAmount); } \
 	FORCEINLINE static uint32 __PPO__MagazineCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineCapacity); } \
 	FORCEINLINE static uint32 __PPO__TotalAmmoCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, TotalAmmoCapacity); } \
 	FORCEINLINE static uint32 __PPO__MagazineAmmo() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineAmmo); } \
 	FORCEINLINE static uint32 __PPO__Optic() { return STRUCT_OFFSET(ATDMWeaponBase, Optic); } \
 	FORCEINLINE static uint32 __PPO__Muzzle() { return STRUCT_OFFSET(ATDMWeaponBase, Muzzle); } \
 	FORCEINLINE static uint32 __PPO__CameraFOV() { return STRUCT_OFFSET(ATDMWeaponBase, CameraFOV); } \
-	FORCEINLINE static uint32 __PPO__CameraFOVSpeed() { return STRUCT_OFFSET(ATDMWeaponBase, CameraFOVSpeed); }
+	FORCEINLINE static uint32 __PPO__CameraFOVSpeed() { return STRUCT_OFFSET(ATDMWeaponBase, CameraFOVSpeed); } \
+	FORCEINLINE static uint32 __PPO__FireCameraShakes() { return STRUCT_OFFSET(ATDMWeaponBase, FireCameraShakes); }
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_24_PROLOG \

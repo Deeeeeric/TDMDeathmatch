@@ -277,3 +277,14 @@ void ATDMCharacterBase::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 	HandleAimFOV(DeltaSeconds);
 }
+
+void ATDMCharacterBase::PlayCameraShake(TSubclassOf<UCameraShake> CameraShake)
+{
+	if (CameraShake)
+	{
+	 if (APlayerController* PC = GetController<APlayerController>())
+	 {
+		PC->ClientPlayCameraShake(CameraShake, 1.0f);
+	 }
+	}
+}

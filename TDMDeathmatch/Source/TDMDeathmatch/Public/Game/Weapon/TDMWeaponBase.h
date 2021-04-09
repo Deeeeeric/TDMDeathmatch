@@ -35,16 +35,12 @@ protected:
 		TSubclassOf<ATDMProjectileBase> ProjectileClass;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-		TArray<TEnumAsByte<EFireMode>> FireModes;
+		USkeletalMeshComponent* WeaponMesh;
 
-	int8 FireModesIndex;
-	TEnumAsByte<EFireMode> FireMode;
-	FTimerHandle TFullAutoHandle;
+	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon")
+		void OnHit(FHitResult HitResult);
 
-	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-		uint8 BurstFireAmount;
-	uint8 BurstFireShot;
-
+	/********************* ANIMATIONS *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UAnimationAsset* FireAnimation;
 
@@ -57,9 +53,19 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		TArray<FName> HipFireNames;
 
+	/********************* FIRE MODES *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-		USkeletalMeshComponent* WeaponMesh;
+		TArray<TEnumAsByte<EFireMode>> FireModes;
 
+	int8 FireModesIndex;
+	TEnumAsByte<EFireMode> FireMode;
+	FTimerHandle TFullAutoHandle;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		uint8 BurstFireAmount;
+	uint8 BurstFireShot;
+
+	/********************* AMMO *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		int32 MagazineCapacity;
 
@@ -69,23 +75,23 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Weapon")
 		int32 MagazineAmmo;
 
+	/********************* FOV/ATTACHMENTS *********************/
 	UPROPERTY(Replicated)
 		ATDMAttachment_Optic* Optic;
 	UPROPERTY(Replicated)
 		ATDMAttachment* Muzzle;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Optic")
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		float CameraFOV;
-	UPROPERTY(EditDefaultsOnly, Category = "Optic")
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		float CameraFOVSpeed;
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		TArray<TSubclassOf<UCameraShake>> FireCameraShakes;
 
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);
 	bool Server_AddAttachment_Validate(TSubclassOf<ATDMAttachment> AttachmentClass);
 	void Server_AddAttachment_Implementation(TSubclassOf<ATDMAttachment> AttachmentClass);
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon")
-		void OnHit(FHitResult HitResult);
 
 	void PlayFireAnimation(bool IsLocalPlayer);
 

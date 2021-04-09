@@ -65,11 +65,14 @@ protected:
 	void StartAiming();
 	void StopAiming();
 	void SwitchFireMode();
+	bool bFOVFinished;
 
 	UFUNCTION(Server, Reliable, WithValidation)
 	void Server_Aim(bool Aiming);
 	bool Server_Aim_Validate(bool Aiming);
 	void Server_Aim_Implementation(bool Aiming);
+
+	void HandleAimFOV(float DeltaSeconds);
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
@@ -94,6 +97,8 @@ protected:
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 
 public:
+virtual void Tick(float DeltaSeconds) override;
+
 	/** Returns Mesh1P subobject **/
 	FORCEINLINE class USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/

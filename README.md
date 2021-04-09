@@ -40,3 +40,4 @@ A fully replicated Team Deathmatch
 * Add Optic Attachment
 * Add Muzzle Attachment
 * Replicate Attachment
+* Camera Aim FOV

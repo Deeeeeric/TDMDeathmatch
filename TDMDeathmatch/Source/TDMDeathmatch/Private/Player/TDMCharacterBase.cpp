@@ -17,7 +17,7 @@
 ATDMCharacterBase::ATDMCharacterBase()
 {
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
 
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
@@ -43,6 +43,7 @@ ATDMCharacterBase::ATDMCharacterBase()
 	Health = 100.0f;
 	bIsDead = false;
 	bIsAiming = false;
+	bFOVFinished = false;
 }
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
@@ -109,7 +110,7 @@ void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 float ATDMCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	if (bIsDead) {return 0.0f;}
+	if (bIsDead) { return 0.0f; }
 
 	if (HasAuthority())
 	{
@@ -139,13 +140,13 @@ void ATDMCharacterBase::OnRep_IsDead()
 	if (HasAuthority())
 	{
 		FTimerHandle HandleTimer;
-		GetWorldTimerManager().SetTimer(HandleTimer,this,&ATDMCharacterBase::DestroyCharacter, 1.0f, false);
+		GetWorldTimerManager().SetTimer(HandleTimer, this, &ATDMCharacterBase::DestroyCharacter, 1.0f, false);
 	}
 }
 
 void ATDMCharacterBase::DestroyCharacter()
 {
-	if (WeaponInHand) {WeaponInHand->Destroy();}
+	if (WeaponInHand) { WeaponInHand->Destroy(); }
 	Destroy();
 }
 
@@ -168,6 +169,7 @@ void ATDMCharacterBase::StopFire()
 void ATDMCharacterBase::StartAiming()
 {
 	bIsAiming = true;
+	bFOVFinished = false;
 	if (!HasAuthority())
 	{
 		Server_Aim(bIsAiming);
@@ -177,6 +179,7 @@ void ATDMCharacterBase::StartAiming()
 void ATDMCharacterBase::StopAiming()
 {
 	bIsAiming = false;
+	bFOVFinished = false;
 	if (!HasAuthority())
 	{
 		Server_Aim(bIsAiming);
@@ -199,6 +202,32 @@ bool ATDMCharacterBase::Server_Aim_Validate(bool Aiming)
 void ATDMCharacterBase::Server_Aim_Implementation(bool Aiming)
 {
 	bIsAiming = Aiming;
+}
+
+void ATDMCharacterBase::HandleAimFOV(float DeltaSeconds)
+{
+	if (!bFOVFinished)
+	{
+		if (bIsAiming)
+		{
+			float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, 70.0f, DeltaSeconds, 90.0f);
+			FirstPersonCameraComponent->SetFieldOfView(NewFOV);
+			if (NewFOV == 70.0f)
+			{
+				bFOVFinished = true;
+			}
+		}
+		else
+		{
+			float NewFOV = FMath::FInterpConstantTo(FirstPersonCameraComponent->FieldOfView, 90.0f, DeltaSeconds, 90.0f);
+			FirstPersonCameraComponent->SetFieldOfView(NewFOV);
+			if (NewFOV == 90.0f)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("FOV Finished"));
+				bFOVFinished = true;
+			}
+		}
+	}
 }
 
 void ATDMCharacterBase::MoveForward(float Value)
@@ -231,3 +260,8 @@ void ATDMCharacterBase::LookUpAtRate(float Rate)
 	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
+void ATDMCharacterBase::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+	HandleAimFOV(DeltaSeconds);
+}

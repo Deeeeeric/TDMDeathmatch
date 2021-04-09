@@ -68,6 +68,15 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Weapon")
 		int32 MagazineAmmo;
 
+	UPROPERTY(Replicated)
+		ATDMAttachment* Optic;
+	UPROPERTY(Replicated)
+		ATDMAttachment* Muzzle;
+	UFUNCTION(Server, Reliable, WithValidation)
+		void Server_AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);
+	bool Server_AddAttachment_Validate(TSubclassOf<ATDMAttachment> AttachmentClass);
+	void Server_AddAttachment_Implementation(TSubclassOf<ATDMAttachment> AttachmentClass);
+
 	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon")
 		void OnHit(FHitResult HitResult);
 
@@ -95,6 +104,6 @@ public:
 	void StopFire();
 	void SwitchFireMode();
 
-	UFUNCTION(BlueprintCallable, Category="Weapon")
-	void AddAttachment(ATDMAttachment* Attachment);
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);
 };

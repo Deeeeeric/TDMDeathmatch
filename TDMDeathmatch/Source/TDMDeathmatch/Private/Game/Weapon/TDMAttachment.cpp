@@ -10,10 +10,10 @@ ATDMAttachment::ATDMAttachment()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
+	SetReplicates(true);
 
 	AttachmentMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("AttachmentStaticMesh"));
 	RootComponent = AttachmentMesh;
-
 }
 
 // Called when the game starts or when spawned

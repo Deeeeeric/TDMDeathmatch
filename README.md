@@ -38,3 +38,5 @@ A fully replicated Team Deathmatch
 * Make Burst Function
 * Optimize Network Overhead with Shooting
 * Add Optic Attachment
+* Add Muzzle Attachment
+* Replicate Attachment

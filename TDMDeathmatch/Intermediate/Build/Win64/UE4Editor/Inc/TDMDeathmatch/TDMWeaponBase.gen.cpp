@@ -18,13 +18,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMWeaponBase_NoRegister();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMWeaponBase();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMAttachment_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FVector_NetQuantize10();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimationAsset_NoRegister();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMProjectileBase_NoRegister();
 // End Cross Module References
 	static UEnum* EFireMode_StaticEnum()
@@ -90,10 +90,10 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	}
 	DEFINE_FUNCTION(ATDMWeaponBase::execAddAttachment)
 	{
-		P_GET_OBJECT(ATDMAttachment,Z_Param_Attachment);
+		P_GET_OBJECT(UClass,Z_Param_AttachmentClass);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->AddAttachment(Z_Param_Attachment);
+		P_THIS->AddAttachment(Z_Param_AttachmentClass);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ATDMWeaponBase::execMulti_Fire)
@@ -124,6 +124,19 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		P_THIS->Server_Fire_Implementation(Z_Param_SpawnLocation,Z_Param_MuzzleRotationVector);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ATDMWeaponBase::execServer_AddAttachment)
+	{
+		P_GET_OBJECT(UClass,Z_Param_AttachmentClass);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->Server_AddAttachment_Validate(Z_Param_AttachmentClass))
+		{
+			RPC_ValidateFailed(TEXT("Server_AddAttachment_Validate"));
+			return;
+		}
+		P_THIS->Server_AddAttachment_Implementation(Z_Param_AttachmentClass);
+		P_NATIVE_END;
+	}
 	static FName NAME_ATDMWeaponBase_Multi_Fire = FName(TEXT("Multi_Fire"));
 	void ATDMWeaponBase::Multi_Fire(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector)
 	{
@@ -139,6 +152,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		Parms.HitResult=HitResult;
 		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_OnHit),&Parms);
 	}
+	static FName NAME_ATDMWeaponBase_Server_AddAttachment = FName(TEXT("Server_AddAttachment"));
+	void ATDMWeaponBase::Server_AddAttachment(TSubclassOf<ATDMAttachment>  AttachmentClass)
+	{
+		TDMWeaponBase_eventServer_AddAttachment_Parms Parms;
+		Parms.AttachmentClass=AttachmentClass;
+		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_Server_AddAttachment),&Parms);
+	}
 	static FName NAME_ATDMWeaponBase_Server_Fire = FName(TEXT("Server_Fire"));
 	void ATDMWeaponBase::Server_Fire(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector)
 	{
@@ -153,6 +173,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AddAttachment", &ATDMWeaponBase::execAddAttachment },
 			{ "Multi_Fire", &ATDMWeaponBase::execMulti_Fire },
+			{ "Server_AddAttachment", &ATDMWeaponBase::execServer_AddAttachment },
 			{ "Server_Fire", &ATDMWeaponBase::execServer_Fire },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -161,18 +182,18 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	{
 		struct TDMWeaponBase_eventAddAttachment_Parms
 		{
-			ATDMAttachment* Attachment;
+			TSubclassOf<ATDMAttachment>  AttachmentClass;
 		};
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Attachment;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_AttachmentClass;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ATDMWeaponBase_AddAttachment_Statics::NewProp_Attachment = { "Attachment", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventAddAttachment_Parms, Attachment), Z_Construct_UClass_ATDMAttachment_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_ATDMWeaponBase_AddAttachment_Statics::NewProp_AttachmentClass = { "AttachmentClass", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventAddAttachment_Parms, AttachmentClass), Z_Construct_UClass_ATDMAttachment_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMWeaponBase_AddAttachment_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_AddAttachment_Statics::NewProp_Attachment,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_AddAttachment_Statics::NewProp_AttachmentClass,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMWeaponBase_AddAttachment_Statics::Function_MetaDataParams[] = {
@@ -250,6 +271,34 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics
+	{
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_AttachmentClass;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::NewProp_AttachmentClass = { "AttachmentClass", nullptr, (EPropertyFlags)0x0014000000000080, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMWeaponBase_eventServer_AddAttachment_Parms, AttachmentClass), Z_Construct_UClass_ATDMAttachment_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::NewProp_AttachmentClass,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMWeaponBase, nullptr, "Server_AddAttachment", nullptr, nullptr, sizeof(TDMWeaponBase_eventServer_AddAttachment_Parms), Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics
 	{
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MuzzleRotationVector;
@@ -292,6 +341,14 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Muzzle_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Muzzle;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Optic_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Optic;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MagazineAmmo_MetaData[];
 #endif
@@ -349,9 +406,10 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TDMDeathmatch,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMWeaponBase_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ATDMWeaponBase_AddAttachment, "AddAttachment" }, // 3903489476
+		{ &Z_Construct_UFunction_ATDMWeaponBase_AddAttachment, "AddAttachment" }, // 2450266344
 		{ &Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire, "Multi_Fire" }, // 3723914427
 		{ &Z_Construct_UFunction_ATDMWeaponBase_OnHit, "OnHit" }, // 3892192549
+		{ &Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment, "Server_AddAttachment" }, // 2049398816
 		{ &Z_Construct_UFunction_ATDMWeaponBase_Server_Fire, "Server_Fire" }, // 3096517451
 	};
 #if WITH_METADATA
@@ -360,6 +418,18 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Muzzle_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Muzzle = { "Muzzle", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, Muzzle), Z_Construct_UClass_ATDMAttachment_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Muzzle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Muzzle_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic = { "Optic", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, Optic), Z_Construct_UClass_ATDMAttachment_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_MagazineAmmo_MetaData[] = {
 		{ "Category", "Weapon" },
@@ -443,6 +513,8 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0024080000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, ProjectileClass), Z_Construct_UClass_ATDMProjectileBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_ProjectileClass_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATDMWeaponBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Muzzle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_Optic,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_MagazineAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_TotalAmmoCapacity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_MagazineCapacity,
@@ -486,7 +558,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMWeaponBase, 529924827);
+	IMPLEMENT_CLASS(ATDMWeaponBase, 2250801211);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMWeaponBase>()
 	{
 		return ATDMWeaponBase::StaticClass();
@@ -496,9 +568,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	void ATDMWeaponBase::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 	{
 		static const FName Name_MagazineAmmo(TEXT("MagazineAmmo"));
+		static const FName Name_Optic(TEXT("Optic"));
+		static const FName Name_Muzzle(TEXT("Muzzle"));
 
 		const bool bIsValid = true
-			&& Name_MagazineAmmo == ClassReps[(int32)ENetFields_Private::MagazineAmmo].Property->GetFName();
+			&& Name_MagazineAmmo == ClassReps[(int32)ENetFields_Private::MagazineAmmo].Property->GetFName()
+			&& Name_Optic == ClassReps[(int32)ENetFields_Private::Optic].Property->GetFName()
+			&& Name_Muzzle == ClassReps[(int32)ENetFields_Private::Muzzle].Property->GetFName();
 
 		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ATDMWeaponBase"));
 	}

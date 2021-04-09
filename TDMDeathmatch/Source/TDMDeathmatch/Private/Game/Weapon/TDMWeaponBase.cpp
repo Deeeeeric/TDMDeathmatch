@@ -52,6 +52,8 @@ void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	DOREPLIFETIME_CONDITION(ATDMWeaponBase, MagazineAmmo, COND_OwnerOnly);
+	DOREPLIFETIME_CONDITION(ATDMWeaponBase, Optic, COND_OwnerOnly);
+	DOREPLIFETIME_CONDITION(ATDMWeaponBase, Muzzle, COND_OwnerOnly);
 }
 
 void ATDMWeaponBase::PlayFireAnimation(bool IsLocalPlayer)
@@ -289,11 +291,43 @@ void ATDMWeaponBase::SwitchFireMode()
 	FireMode = FireModes[FireModesIndex];
 }
 
-void ATDMWeaponBase::AddAttachment(ATDMAttachment* Attachment)
+bool ATDMWeaponBase::Server_AddAttachment_Validate(TSubclassOf<ATDMAttachment> AttachmentClass)
 {
-	if (Attachment)
+	return true;
+}
+
+void ATDMWeaponBase::Server_AddAttachment_Implementation(TSubclassOf<ATDMAttachment> AttachmentClass)
+{
+	if (AttachmentClass)
 	{
-		Attachment->AttachToComponent(WeaponMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, Attachment->GetAttachmentSocket());
+		if (ATDMAttachment* Attachment = GetWorld()->SpawnActor<ATDMAttachment>(AttachmentClass))
+		{
+			if (Attachment->GetAttachmentType() == EAttachmentType::Optic)
+			{
+				if (Optic)
+				{
+					Optic->Destroy();
+				}
+				Optic = Attachment;
+			}
+			else if (Attachment->GetAttachmentType() == EAttachmentType::Muzzle)
+			{
+				if (Muzzle)
+				{
+					Muzzle->Destroy();
+				}
+				Muzzle = Attachment;
+			}
+			Attachment->AttachToComponent(WeaponMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, Attachment->GetAttachmentSocket());
+		}
+	}
+}
+
+void ATDMWeaponBase::AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass)
+{
+	if (AttachmentClass)
+	{
+		Server_AddAttachment(AttachmentClass);
 	}
 }
 

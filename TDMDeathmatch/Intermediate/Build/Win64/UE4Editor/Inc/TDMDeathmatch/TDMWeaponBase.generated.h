@@ -22,17 +22,21 @@ struct FHitResult;
 	virtual void Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector); \
 	virtual bool Server_Fire_Validate(FVector_NetQuantize10 , FVector_NetQuantize10 ); \
 	virtual void Server_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector); \
+	virtual bool Server_AddAttachment_Validate(TSubclassOf<ATDMAttachment>  ); \
+	virtual void Server_AddAttachment_Implementation(TSubclassOf<ATDMAttachment>  AttachmentClass); \
  \
 	DECLARE_FUNCTION(execAddAttachment); \
 	DECLARE_FUNCTION(execMulti_Fire); \
-	DECLARE_FUNCTION(execServer_Fire);
+	DECLARE_FUNCTION(execServer_Fire); \
+	DECLARE_FUNCTION(execServer_AddAttachment);
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execAddAttachment); \
 	DECLARE_FUNCTION(execMulti_Fire); \
-	DECLARE_FUNCTION(execServer_Fire);
+	DECLARE_FUNCTION(execServer_Fire); \
+	DECLARE_FUNCTION(execServer_AddAttachment);
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_26_EVENT_PARMS \
@@ -44,6 +48,10 @@ struct FHitResult;
 	struct TDMWeaponBase_eventOnHit_Parms \
 	{ \
 		FHitResult HitResult; \
+	}; \
+	struct TDMWeaponBase_eventServer_AddAttachment_Parms \
+	{ \
+		TSubclassOf<ATDMAttachment>  AttachmentClass; \
 	}; \
 	struct TDMWeaponBase_eventServer_Fire_Parms \
 	{ \
@@ -65,7 +73,9 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		MagazineAmmo=NETFIELD_REP_START, \
-		NETFIELD_REP_END=MagazineAmmo	}; \
+		Optic, \
+		Muzzle, \
+		NETFIELD_REP_END=Muzzle	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
@@ -81,7 +91,9 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		MagazineAmmo=NETFIELD_REP_START, \
-		NETFIELD_REP_END=MagazineAmmo	}; \
+		Optic, \
+		Muzzle, \
+		NETFIELD_REP_END=Muzzle	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
@@ -120,7 +132,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 	FORCEINLINE static uint32 __PPO__WeaponMesh() { return STRUCT_OFFSET(ATDMWeaponBase, WeaponMesh); } \
 	FORCEINLINE static uint32 __PPO__MagazineCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineCapacity); } \
 	FORCEINLINE static uint32 __PPO__TotalAmmoCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, TotalAmmoCapacity); } \
-	FORCEINLINE static uint32 __PPO__MagazineAmmo() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineAmmo); }
+	FORCEINLINE static uint32 __PPO__MagazineAmmo() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineAmmo); } \
+	FORCEINLINE static uint32 __PPO__Optic() { return STRUCT_OFFSET(ATDMWeaponBase, Optic); } \
+	FORCEINLINE static uint32 __PPO__Muzzle() { return STRUCT_OFFSET(ATDMWeaponBase, Muzzle); }
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_23_PROLOG \

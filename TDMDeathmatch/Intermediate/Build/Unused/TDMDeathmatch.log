@@ -1,22 +1,82 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\DW\Documents\GitHub\TDMDeathmatch).
+  Parsing headers for TDMDeathmatchEditor
+    Running UnrealHeaderTool "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\TDMDeathmatch.uproject" "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\TDMDeathmatchEditor\Development\TDMDeathmatchEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\DW\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for TDMDeathmatchEditor in 10.0238054 seconds
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0001.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0002.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0005.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0006.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0007.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0008.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0010.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0011.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0012.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0013.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0014.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0015.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0016.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0017.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0019.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0020.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0021.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0022.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0023.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0026.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch-0027.dll
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0001.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0002.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0005.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0006.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0007.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0008.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0010.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0011.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0012.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0013.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0014.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0015.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0016.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0017.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0019.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0020.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0021.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0022.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0023.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0024.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0025.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0026.lib
+  Deleted hot-reload file: D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0027.lib
   Building TDMDeathmatchEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 4 actions to XGE
+  Distributing 8 actions to XGE
   --------------------Build System Warning---------------------------------------
   Failed to connect to Coordinator:
       All builds will run in standalone mode.
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMAttachment.cpp (0:01.46 at +0:00)
+  TDMWeaponBase.gen.cpp (0:11.81 at +0:00)
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(20): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass'
+  D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch/Public/Game/Weapon/TDMWeaponBase.h(40): note: see reference to class template instantiation 'TEnumAsByte<EFireMode>' being compiled
+  TDMDeathmatch.init.gen.cpp (0:01.23 at +0:11)
+  TDMCharacterBase.cpp (0:04.46 at +0:13)
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(20): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass'
+  D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/Weapon/TDMWeaponBase.h(40): note: see reference to class template instantiation 'TEnumAsByte<EFireMode>' being compiled
+  TDMWeaponBase.cpp (0:02.04 at +0:17)
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(20): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass'
+  D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/Weapon/TDMWeaponBase.h(40): note: see reference to class template instantiation 'TEnumAsByte<EFireMode>' being compiled
+  TDMAttachment.cpp (0:01.17 at +0:19)
 D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(20): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
   D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass'
   D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/Weapon/TDMAttachment.h(32): note: see reference to class template instantiation 'TEnumAsByte<EAttachmentType>' being compiled
-  UE4Editor-TDMDeathmatch-0023.dll (0:01.89 at +0:01)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0023.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0023.suppressed.exp
-  UE4Editor-TDMDeathmatch-0023.lib (0:00.35 at +0:03)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0023.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0023.exp
-  TDMDeathmatchEditor.target (0:00.43 at +0:03)
+  UE4Editor-TDMDeathmatch.dll (0:01.25 at +0:20)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.exp
+  UE4Editor-TDMDeathmatch.lib (0:00.21 at +0:22)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.exp
+  TDMDeathmatchEditor.target (0:00.26 at +0:22)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -24,5 +84,5 @@ D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Containers
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 4.53 seconds
-  Total execution time: 5.89 seconds
+  Total time in XGE executor: 23.48 seconds
+  Total execution time: 34.86 seconds

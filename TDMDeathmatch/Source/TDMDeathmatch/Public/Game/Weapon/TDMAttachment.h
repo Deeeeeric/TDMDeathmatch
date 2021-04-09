@@ -39,4 +39,5 @@ protected:
 
 public:
 	FORCEINLINE FName GetAttachmentSocket() const { return AttachmentSocket; }
+	FORCEINLINE EAttachmentType GetAttachmentType() const {return AttachmentType; }
 };

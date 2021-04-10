@@ -45,3 +45,4 @@ A fully replicated Team Deathmatch
 * Move Camera FOV and Speed Handles into WeaponClass
 * Create Camera Shake
 * Play Camera Shake on Fire
+* Create Weapon Customization Widget

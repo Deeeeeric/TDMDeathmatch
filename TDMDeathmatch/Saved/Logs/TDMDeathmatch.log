@@ -1,8 +1,8 @@
-﻿Log file open, 04/09/21 17:49:13
+﻿Log file open, 04/10/21 14:08:34
 LogInit: Display: Running engine for game: TDMDeathmatch
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.265371
+LogStats: Stats thread started at 0.519636
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -192,640 +192,811 @@ LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
 LogInit: Object subsystem initialized
 LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
 LogConfig: Setting CVar [[r.setres:1280x720]]
-[2021.04.09-16.49.14:390][  0]LogConfig: Setting CVar [[r.VSync:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
-[2021.04.09-16.49.14:391][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
-[2021.04.09-16.49.14:391][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
-[2021.04.09-16.49.14:391][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
-[2021.04.09-16.49.14:397][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2021.04.09-16.49.14:397][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2021.04.09-16.49.14:398][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.HairStrands.DeepShadow.SuperSampling:0]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.HairStrands.VisibilityPPLL:0]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.HairStrands.RasterizationScale:0.5]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.HairStrands.VelocityRasterizationScale:1]]
-[2021.04.09-16.49.14:399][  0]LogInit: Selected Device Profile: [Windows]
-[2021.04.09-16.49.14:399][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2021.04.09-16.49.14:399][  0]LogHAL: Display: Platform has ~ 16 GB [17059516416 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2021.04.09-16.49.14:399][  0]LogInit: Going up to parent DeviceProfile []
-[2021.04.09-16.49.14:399][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:0.8]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:3]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:4]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:1024]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.04]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:0.85]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:0.8]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:0.5]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.AOQuality:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:16]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:64]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:3]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.6]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.5]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:3]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Upscale.Quality:2]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:0.8]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:0        ; lower gathering accumulator quality]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:2          ; Max3x3 postfilering method]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:1    ; no background occlusion]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:0      ; no bokeh simulation when scattering]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.04        ; only a maximum of 4% of scattered bokeh]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:0                ; no slight out of focus]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:0                ; faster temporal accumulation]]
-[2021.04.09-16.49.14:399][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.012   ; required because of AccumulatorQuality=0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.012   ; required because of AccumulatorQuality=0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Applying CVar settings from Section [TextureQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:4]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:800]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:48]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SSR.Quality:2]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SceneColorFormat:3]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.DetailMode:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SSS.Quality:-1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SSGI.Quality:2]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:0.5]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[foliage.DensityScale:0.8]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[grass.DensityScale:0.8]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.HairStrands.DeepShadow.SuperSampling:0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.HairStrands.VisibilityPPLL:0]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.HairStrands.RasterizationScale:0.5]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Setting CVar [[r.HairStrands.VelocityRasterizationScale:1]]
-[2021.04.09-16.49.14:400][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
-[2021.04.09-16.49.14:401][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
-[2021.04.09-16.49.14:401][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
-[2021.04.09-16.49.14:401][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
-[2021.04.09-16.49.14:401][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
-[2021.04.09-16.49.14:401][  0]LogInit: Computer: LAPTOP-205H8F92
-[2021.04.09-16.49.14:401][  0]LogInit: User: DW
-[2021.04.09-16.49.14:401][  0]LogInit: CPU Page size=4096, Cores=4
-[2021.04.09-16.49.14:401][  0]LogInit: High frequency timer resolution =10.000000 MHz
-[2021.04.09-16.49.14:401][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
-[2021.04.09-16.49.14:401][  0]LogMemory: Platform Memory Stats for Windows
-[2021.04.09-16.49.14:401][  0]LogMemory: Process Physical Memory: 114.88 MB used, 114.89 MB peak
-[2021.04.09-16.49.14:401][  0]LogMemory: Process Virtual Memory: 104.32 MB used, 104.32 MB peak
-[2021.04.09-16.49.14:401][  0]LogMemory: Physical Memory: 10216.75 MB used,  6052.47 MB free, 16269.22 MB total
-[2021.04.09-16.49.14:401][  0]LogMemory: Virtual Memory: 5150.15 MB used,  134212576.00 MB free, 134217728.00 MB total
-[2021.04.09-16.49.14:415][  0]LogWindows: WindowsPlatformFeatures enabled
-[2021.04.09-16.49.14:585][  0]LogInit: Physics initialised using underlying interface: PhysX
-[2021.04.09-16.49.14:587][  0]LogInit: Using OS detected language (en-GB).
-[2021.04.09-16.49.14:587][  0]LogInit: Using OS detected locale (en-GB).
-[2021.04.09-16.49.14:598][  0]LogTextLocalizationManager: No specific localization for 'en-GB' exists, so the 'en' localization will be used.
-[2021.04.09-16.49.15:011][  0]LogInit: Setting process to per monitor DPI aware
-[2021.04.09-16.49.15:084][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2021.04.09-16.49.15:084][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2021.04.09-16.49.15:700][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
-[2021.04.09-16.49.15:700][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
-[2021.04.09-16.49.15:700][  0]LogD3D11RHI: D3D11 adapters:
-[2021.04.09-16.49.15:901][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1050' (Feature Level 11_0)
-[2021.04.09-16.49.15:901][  0]LogD3D11RHI:       4019/0/8134 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
-[2021.04.09-16.49.15:969][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 630' (Feature Level 11_0)
-[2021.04.09-16.49.15:969][  0]LogD3D11RHI:       128/0/8134 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
-[2021.04.09-16.49.15:974][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2021.04.09-16.49.15:974][  0]LogD3D11RHI:       0/0/8134 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2021.04.09-16.49.15:974][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2021.04.09-16.49.15:983][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2021.04.09-16.49.15:983][  0]LogD3D11RHI:     GPU DeviceId: 0x1c8d (for the marketing name, search the web for "GPU Device Id")
-[2021.04.09-16.49.15:983][  0]LogWindows: EnumDisplayDevices:
-[2021.04.09-16.49.15:984][  0]LogWindows:    0. 'Intel(R) HD Graphics 630' (P:1 D:1)
-[2021.04.09-16.49.15:984][  0]LogWindows:    1. 'Intel(R) HD Graphics 630' (P:0 D:0)
-[2021.04.09-16.49.15:985][  0]LogWindows:    2. 'Intel(R) HD Graphics 630' (P:0 D:0)
-[2021.04.09-16.49.15:985][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1050' (P:0 D:0)
-[2021.04.09-16.49.15:986][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter 
-[2021.04.09-16.49.15:986][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1050
-[2021.04.09-16.49.15:986][  0]LogD3D11RHI:   Driver Version: 461.40 (internal:27.21.14.6140, unified:461.40)
-[2021.04.09-16.49.15:986][  0]LogD3D11RHI:      Driver Date: 1-22-2021
-[2021.04.09-16.49.15:986][  0]LogRHI: Texture pool is 2813 MB (70% of 4019 MB)
-[2021.04.09-16.49.16:096][  0]LogD3D11RHI: RHI has support for 64 bit atomics
-[2021.04.09-16.49.16:096][  0]LogD3D11RHI: Async texture creation enabled
-[2021.04.09-16.49.16:096][  0]LogD3D11RHI: Array index from any shader is supported
-[2021.04.09-16.49.16:130][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
-[2021.04.09-16.49.16:618][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
-[2021.04.09-16.49.16:657][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
-[2021.04.09-16.49.16:693][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
-[2021.04.09-16.49.16:693][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
-[2021.04.09-16.49.16:707][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Linux'
-[2021.04.09-16.49.16:720][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
-[2021.04.09-16.49.16:733][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
-[2021.04.09-16.49.16:746][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
-[2021.04.09-16.49.16:760][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
-[2021.04.09-16.49.16:776][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
-[2021.04.09-16.49.16:789][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
-[2021.04.09-16.49.16:821][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
-[2021.04.09-16.49.16:821][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
-[2021.04.09-16.49.16:845][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
-[2021.04.09-16.49.16:847][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
-[2021.04.09-16.49.16:863][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
-[2021.04.09-16.49.16:876][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
-[2021.04.09-16.49.16:888][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
-[2021.04.09-16.49.16:900][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
-[2021.04.09-16.49.16:900][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2021.04.09-16.49.16:917][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
-[2021.04.09-16.49.17:039][  0]LogShaderCompilers: Guid format shader working directory is -22 characters bigger than the processId version (../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Intermediate/Shaders/WorkingDirectory/9872/).
-[2021.04.09-16.49.17:039][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/DW/AppData/Local/Temp/UnrealShaderWorkingDir/6F017D134DFE67D14BA75880772AEDD2/'.
-[2021.04.09-16.49.17:041][  0]LogXGEController: Cleaning working directory: C:/Users/DW/AppData/Local/Temp/UnrealXGEWorkingDir/
-[2021.04.09-16.49.17:042][  0]LogShaderCompilers: Display: Using XGE Shader Compiler (Interception Interface).
-[2021.04.09-16.49.18:190][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2021.04.09-16.49.19:002][  0]LogDerivedDataCache: Loaded boot cache 0.81s 75MB C:/Users/DW/AppData/Local/UnrealEngine/4.25/DerivedDataCache/Boot.ddc.
-[2021.04.09-16.49.19:002][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/DW/AppData/Local/UnrealEngine/4.25/DerivedDataCache/Boot.ddc
-[2021.04.09-16.49.19:002][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2021.04.09-16.49.19:002][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2021.04.09-16.49.19:002][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2021.04.09-16.49.19:002][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2021.04.09-16.49.19:017][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2021.04.09-16.49.19:017][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2021.04.09-16.49.19:017][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
-[2021.04.09-16.49.19:020][  0]LogDerivedDataCache: Using Local data cache path C:/Users/DW/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2021.04.09-16.49.19:020][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2021.04.09-16.49.19:020][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2021.04.09-16.49.19:094][  0]LogSlate: Using FreeType 2.10.0
-[2021.04.09-16.49.19:096][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2021.04.09-16.49.19:144][  0]LogAssetRegistry: FAssetRegistry took 0.0027 seconds to start up
-[2021.04.09-16.49.19:473][  0]LogInit: Selected Device Profile: [Windows]
-[2021.04.09-16.49.19:669][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2021.04.09-16.49.19:669][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
-[2021.04.09-16.49.19:669][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2021.04.09-16.49.19:669][  0]LogMeshReduction: No distributed automatic mesh merging module available
-[2021.04.09-16.49.19:669][  0]LogMeshMerging: No distributed automatic mesh merging module available
-[2021.04.09-16.49.19:703][  0]LogNetVersion: TDMDeathmatch 1.0.0, NetCL: 13144385, EngineNetVer: 14, GameNetVer: 0 (Checksum: 193990812)
-[2021.04.09-16.49.20:491][  0]LogAISub: UAISubsystem::UAISubsystem AISubsystem (00000212752BBA40), frame # 0
-[2021.04.09-16.49.20:491][  0]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (00000212752C6AC0), frame # 0
-[2021.04.09-16.49.20:493][  0]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000021275325E00), frame # 0
-[2021.04.09-16.49.20:573][  0]LogPackageLocalizationCache: Processed 17 localized package path(s) for 1 prioritized culture(s) in 0.072224 seconds
-[2021.04.09-16.49.20:579][  0]LogUObjectArray: 15756 objects as part of root set at end of initial load.
-[2021.04.09-16.49.20:579][  0]LogUObjectAllocator: 3925280 out of 0 bytes used by permanent object pool.
-[2021.04.09-16.49.20:579][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2021.04.09-16.49.21:301][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2021.04.09-16.49.24:671][  0]SourceControl: Source control is disabled
-[2021.04.09-16.49.24:671][  0]SourceControl: Source control is disabled
-[2021.04.09-16.49.24:680][  0]SourceControl: Source control is disabled
-[2021.04.09-16.49.24:688][  0]SourceControl: Source control is disabled
-[2021.04.09-16.49.24:708][  0]SourceControl: Source control is disabled
-[2021.04.09-16.49.25:180][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2021.04.09-16.49.25:216][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
-[2021.04.09-16.49.25:216][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
-[2021.04.09-16.49.25:347][  0]LogEngine: Initializing Engine...
-[2021.04.09-16.49.25:347][  0]LogMagicLeap: Warning: VR disabled because ZI is not enabled.  To enable, in the editor, Edit -> Project Settings -> Plugins -> Magic Leap Plugin -> Enable Zero Iteration
-[2021.04.09-16.49.25:349][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
-[2021.04.09-16.49.25:489][  0]LogInit: Initializing FReadOnlyCVARCache
-[2021.04.09-16.49.25:503][  0]LogAIModule: Creating AISystem for world Untitled
-[2021.04.09-16.49.25:503][  0]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002127ADA3C00), frame # 0
-[2021.04.09-16.49.25:503][  0]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002127AE08B80), frame # 0
-[2021.04.09-16.49.25:526][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
-[2021.04.09-16.49.25:526][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
-[2021.04.09-16.49.25:526][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
-[2021.04.09-16.49.25:526][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
-[2021.04.09-16.49.25:526][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
-[2021.04.09-16.49.25:526][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
-[2021.04.09-16.49.25:526][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
-[2021.04.09-16.49.25:526][  0]LogAudio: Display: AudioDevice MaxSources: 32
-[2021.04.09-16.49.25:526][  0]LogAudio: Display: Using built-in audio occlusion.
-[2021.04.09-16.49.25:526][  0]LogAudioMixer: Display: Initializing audio mixer.
-[2021.04.09-16.49.25:552][  0]LogAudioMixer: Display: 0: FrontLeft
-[2021.04.09-16.49.25:552][  0]LogAudioMixer: Display: 1: FrontRight
-[2021.04.09-16.49.25:615][  0]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
-[2021.04.09-16.49.25:618][  0]LogAudioMixer: Display: Initializing Sound Submixes...
-[2021.04.09-16.49.25:620][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
-[2021.04.09-16.49.25:620][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
-[2021.04.09-16.49.25:621][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
-[2021.04.09-16.49.25:625][  0]LogInit: FAudioDevice initialized.
-[2021.04.09-16.49.25:626][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2021.04.09-16.49.25:826][  0]LogDerivedDataCache: Saved boot cache 0.20s 75MB C:/Users/DW/AppData/Local/UnrealEngine/4.25/DerivedDataCache/Boot.ddc.
-[2021.04.09-16.49.25:831][  0]LogInit: Texture streaming: Enabled
-[2021.04.09-16.49.25:864][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2021.04.09-16.49.25:864][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
-[2021.04.09-16.49.25:885][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
-[2021.04.09-16.49.25:956][  0]LogInit: Transaction tracking system initialized
-[2021.04.09-16.49.26:003][  0]BlueprintLog: New page: Editor Load
-[2021.04.09-16.49.26:128][  0]LocalizationService: Localization service is disabled
-[2021.04.09-16.49.26:354][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2021.04.09-16.49.26:354][  0]LogCook: Display: Mobile HDR setting 1
-[2021.04.09-16.49.26:647][  0]LogFileCache: Scanning file cache for directory 'D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/' took 0.01s
-[2021.04.09-16.49.26:647][  0]SourceControl: Source control is disabled
-[2021.04.09-16.49.26:647][  0]LogUnrealEdMisc: Loading editor; pre map load, took 14.533
-[2021.04.09-16.49.26:647][  0]Cmd: MAP LOAD FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Levels/FirstPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2021.04.09-16.49.26:648][  0]LightingResults: New page: Lighting Build
-[2021.04.09-16.49.26:650][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
-[2021.04.09-16.49.26:651][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
-[2021.04.09-16.49.26:651][  0]MapCheck: New page: Map Check
-[2021.04.09-16.49.26:651][  0]LightingResults: New page: Lighting Build
-[2021.04.09-16.49.26:660][  0]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000002127ADA3C00), frame # 0
-[2021.04.09-16.49.26:660][  0]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000002127AE08B80), frame # 0
-[2021.04.09-16.49.26:661][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
-[2021.04.09-16.49.27:119][  0]LogAIModule: Creating AISystem for world FirstPersonExampleMap
-[2021.04.09-16.49.27:119][  0]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002126C2B3E00), frame # 0
-[2021.04.09-16.49.27:119][  0]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002127474AFC0), frame # 0
-[2021.04.09-16.49.27:126][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2021.04.09-16.49.27:145][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
-[2021.04.09-16.49.27:146][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2021.04.09-16.49.27:146][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.105ms to complete.
-[2021.04.09-16.49.27:146][  0]LogFileHelpers: Loading map 'FirstPersonExampleMap' took 0.499
-[2021.04.09-16.49.27:151][  0]LogUnrealEdMisc: Total Editor Startup Time, took 15.038
-[2021.04.09-16.49.27:318][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2021.04.09-16.49.27:326][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2021.04.09-16.49.27:335][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2021.04.09-16.49.27:343][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2021.04.09-16.49.27:362][  0]LogCollectionManager: Loaded 0 collections in 0.001112 seconds
-[2021.04.09-16.49.27:386][  0]LogFileCache: Scanning file cache for directory 'D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Collections/' took 0.00s
-[2021.04.09-16.49.27:386][  0]LogFileCache: Scanning file cache for directory 'D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Developers/DW/Collections/' took 0.00s
-[2021.04.09-16.49.27:386][  0]LogFileCache: Scanning file cache for directory 'D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Collections/' took 0.00s
-[2021.04.09-16.49.27:386][  0]LogContentBrowser: Native class hierarchy populated in 0.0143 seconds. Added 3417 classes and 812 folders.
-[2021.04.09-16.49.27:397][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0010 seconds. Added 0 classes and 0 folders.
-[2021.04.09-16.49.27:701][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0008 seconds. Added 0 classes and 0 folders.
-[2021.04.09-16.49.27:932][  0]LogSlate: Took 0.002974 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2021.04.09-16.49.27:938][  0]LogSlate: Took 0.001495 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2021.04.09-16.49.27:948][  0]LogSlate: Took 0.001932 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2021.04.09-16.49.28:052][  0]LogRenderer: Reallocating scene render targets to support 1216x652 Format 9 NumSamples 1 (Frame:1).
-[2021.04.09-16.49.28:184][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0017 seconds. Added 0 classes and 0 folders.
-[2021.04.09-16.49.28:184][  0]LogLoad: (Engine Initialization) Total time: 16.07 seconds
-[2021.04.09-16.49.28:184][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2021.04.09-16.49.28:257][  0]LogContentStreaming: Texture pool size now 800 MB
-[2021.04.09-16.49.28:312][  0]LogSlate: Took 0.027350 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2021.04.09-16.49.28:331][  1]LogAssetRegistry: Asset discovery search completed in 9.1872 seconds
-[2021.04.09-16.49.28:339][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000007 seconds (updated 0 objects)
-[2021.04.09-16.49.29:663][  5]LogSlate: Took 0.000297 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2021.04.09-16.51.17:106][406]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase
-[2021.04.09-16.51.17:319][406]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0011 seconds. Added 125 classes and 0 folders.
-[2021.04.09-16.51.18:368][406]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Firearms/M16/CameraShakes/BP_M16CameraShake1.BP_M16CameraShake1
-[2021.04.09-16.51.18:842][406]LogSlate: Took 0.002880 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
-[2021.04.09-16.51.18:903][407]LogSlate: Took 0.001553 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
-[2021.04.09-16.51.20:915][513]LogSlate: Window 'BP_M16CameraShake1' being destroyed
-[2021.04.09-16.51.25:341][757]BlueprintLog: New page: Compile BP_TDMCharacterBase
-[2021.04.09-16.51.25:395][757]LogUObjectHash: Compacting FUObjectHashTables data took   2.40ms
-[2021.04.09-16.51.25:443][757]LogSlate: Took 0.002793 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
-[2021.04.09-16.51.38:020][186]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Firearms/M16/BP_M16.BP_M16
-[2021.04.09-16.51.39:861][271]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
-[2021.04.09-16.51.39:861][271]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
-[2021.04.09-16.51.39:929][271]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Firearms/M16/BP_M16.BP_M16
-[2021.04.09-16.51.54:549][822]BlueprintLog: New page: Compile BP_M16
-[2021.04.09-16.51.54:598][822]LogUObjectHash: Compacting FUObjectHashTables data took   2.40ms
-[2021.04.09-16.51.54:982][839]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Firearms/M16/BP_M16" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Firearms/M16/BP_M16.uasset" SILENT=true
-[2021.04.09-16.51.55:004][839]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_M16823352994E5D71B03BA7E79D2189C0BF.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Firearms/M16/BP_M16.uasset'
-[2021.04.09-16.51.55:020][839]AssetCheck: New page: Asset Save: BP_M16
-[2021.04.09-16.51.55:020][839]LogContentValidation: Display: Validating Blueprint /Game/Firearms/M16/BP_M16.BP_M16
-[2021.04.09-16.52.04:824][ 59]LogUObjectHash: Compacting FUObjectHashTables data took   2.15ms
-[2021.04.09-16.52.04:905][ 59]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBase47F7A441490F1EA35890B9BC40DE0F79.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMCharacterBase.uasset'
-[2021.04.09-16.52.04:928][ 59]AssetCheck: New page: Asset Save: BP_TDMCharacterBase
-[2021.04.09-16.52.04:928][ 59]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase
-[2021.04.09-16.52.07:270][194]LogTemp: Repeating last play command: Selected Viewport
-[2021.04.09-16.52.07:290][194]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2021.04.09-16.52.07:291][194]PIE: New page: PIE session: FirstPersonExampleMap (9 Apr 2021, 18:52:07)
-[2021.04.09-16.52.07:292][194]LogOnline: OSS: Creating online subsystem instance for: NULL
-[2021.04.09-16.52.07:293][194]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
-[2021.04.09-16.52.07:293][194]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
-[2021.04.09-16.52.07:312][194]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018731s)
-[2021.04.09-16.52.07:313][194]LogAIModule: Creating AISystem for world FirstPersonExampleMap
-[2021.04.09-16.52.07:313][194]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000021207615600), frame # 2194
-[2021.04.09-16.52.07:314][194]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000021233CBD940), frame # 2194
-[2021.04.09-16.52.07:314][194]LogPlayLevel: PIE: World Init took: (0.002041s)
-[2021.04.09-16.52.07:314][194]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.021019s)
-[2021.04.09-16.52.07:347][194]LogUObjectHash: Compacting FUObjectHashTables data took   1.89ms
-[2021.04.09-16.52.07:349][194]LogAudioMixer: Display: Audio Mixer Platform Settings:
-[2021.04.09-16.52.07:349][194]LogAudioMixer: Display: 	Sample Rate:						  48000
-[2021.04.09-16.52.07:349][194]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
-[2021.04.09-16.52.07:349][194]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
-[2021.04.09-16.52.07:349][194]LogAudioMixer: Display: 	Number of buffers to queue:			  2
-[2021.04.09-16.52.07:349][194]LogAudioMixer: Display: 	Max Channels (voices):				  32
-[2021.04.09-16.52.07:349][194]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
-[2021.04.09-16.52.07:349][194]LogAudio: Display: AudioDevice MaxSources: 32
-[2021.04.09-16.52.07:349][194]LogAudio: Display: Using built-in audio occlusion.
-[2021.04.09-16.52.07:349][194]LogAudioMixer: Display: Initializing audio mixer.
-[2021.04.09-16.52.07:356][194]LogAudioMixer: Display: 0: FrontLeft
-[2021.04.09-16.52.07:356][194]LogAudioMixer: Display: 1: FrontRight
-[2021.04.09-16.52.07:392][194]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
-[2021.04.09-16.52.07:392][194]LogAudioMixer: Display: Initializing Sound Submixes...
-[2021.04.09-16.52.07:392][194]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
-[2021.04.09-16.52.07:392][194]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
-[2021.04.09-16.52.07:393][194]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
-[2021.04.09-16.52.07:410][194]LogInit: FAudioDevice initialized.
-[2021.04.09-16.52.07:417][194]LogLoad: Game class is 'BP_TDMGameModeBase_C'
-[2021.04.09-16.52.07:420][194]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.09-17.52.07
-[2021.04.09-16.52.07:420][194]LogWorld: Bringing up level for play took: 0.001319
-[2021.04.09-16.52.07:420][194]LogOnline: OSS: Creating online subsystem instance for: :Context_8
-[2021.04.09-16.52.07:427][194]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0010 seconds. Added 20 classes and 0 folders.
-[2021.04.09-16.52.07:428][194]LogTemp: Warning: POST LOGIN
-[2021.04.09-16.52.07:428][194]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
-[2021.04.09-16.52.07:428][194]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
-[2021.04.09-16.52.07:428][194]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
-[2021.04.09-16.52.07:428][194]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
-[2021.04.09-16.52.07:428][194]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
-[2021.04.09-16.52.07:428][194]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
-[2021.04.09-16.52.07:429][194]LogTemp: Warning: BEGIN PLAY
-[2021.04.09-16.52.07:429][194]LogTemp: Warning: POST LOGIN
-[2021.04.09-16.52.07:430][194]LogTemp: Warning: Setting Team to ALPHA
-[2021.04.09-16.52.07:430][194]PIE: Server logged in
-[2021.04.09-16.52.07:431][194]PIE: Play in editor total start time 0.148 seconds.
-[2021.04.09-16.52.09:752][310]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.10:084][330]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_0] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.10:201][337]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.10:418][350]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.10:534][357]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_1] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.10:584][360]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.10:752][370]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.10:752][370]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_2] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.10:902][379]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.10:918][380]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_3] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.11:084][390]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_4] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.11:103][391]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.11:219][398]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.11:234][399]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_5] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.11:434][411]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_6] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.11:551][416]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
-[2021.04.09-16.52.11:551][416]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2021.04.09-16.52.11:551][416]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
-[2021.04.09-16.52.11:551][416]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
-[2021.04.09-16.52.11:551][416]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
-[2021.04.09-16.52.11:556][416]LogNet: World NetDriver shutdown IpNetDriver_0 [GameNetDriver]
-[2021.04.09-16.52.11:556][416]LogNet: DestroyNamedNetDriver IpNetDriver_0 [GameNetDriver]
-[2021.04.09-16.52.11:557][416]LogExit: GameNetDriver IpNetDriver_0 shut down
-[2021.04.09-16.52.11:557][416]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2021.04.09-16.52.11:562][416]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
-[2021.04.09-16.52.11:589][416]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2021.04.09-16.52.11:638][416]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000021233CBD940), frame # 2416
-[2021.04.09-16.52.11:640][416]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000021207615600), frame # 2416
-[2021.04.09-16.52.11:646][416]LogUObjectHash: Compacting FUObjectHashTables data took   6.14ms
-[2021.04.09-16.52.11:674][417]LogPlayLevel: Display: Destroying online subsystem :Context_8
-[2021.04.09-16.52.22:270][535]LogTemp: Repeating last play command: Selected Viewport
-[2021.04.09-16.52.22:293][535]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2021.04.09-16.52.22:293][535]PIE: New page: PIE session: FirstPersonExampleMap (9 Apr 2021, 18:52:22)
-[2021.04.09-16.52.22:294][535]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
-[2021.04.09-16.52.22:309][535]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014832s)
-[2021.04.09-16.52.22:310][535]LogAIModule: Creating AISystem for world FirstPersonExampleMap
-[2021.04.09-16.52.22:310][535]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (00000212332D9800), frame # 2535
-[2021.04.09-16.52.22:310][535]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000021232956200), frame # 2535
-[2021.04.09-16.52.22:310][535]LogPlayLevel: PIE: World Init took: (0.001565s)
-[2021.04.09-16.52.22:310][535]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.016627s)
-[2021.04.09-16.52.22:344][535]LogUObjectHash: Compacting FUObjectHashTables data took   3.12ms
-[2021.04.09-16.52.22:345][535]LogAudioMixer: Display: Audio Mixer Platform Settings:
-[2021.04.09-16.52.22:345][535]LogAudioMixer: Display: 	Sample Rate:						  48000
-[2021.04.09-16.52.22:345][535]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
-[2021.04.09-16.52.22:346][535]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
-[2021.04.09-16.52.22:346][535]LogAudioMixer: Display: 	Number of buffers to queue:			  2
-[2021.04.09-16.52.22:346][535]LogAudioMixer: Display: 	Max Channels (voices):				  32
-[2021.04.09-16.52.22:346][535]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
-[2021.04.09-16.52.22:346][535]LogAudio: Display: AudioDevice MaxSources: 32
-[2021.04.09-16.52.22:346][535]LogAudio: Display: Using built-in audio occlusion.
-[2021.04.09-16.52.22:346][535]LogAudioMixer: Display: Initializing audio mixer.
-[2021.04.09-16.52.22:353][535]LogAudioMixer: Display: 0: FrontLeft
-[2021.04.09-16.52.22:353][535]LogAudioMixer: Display: 1: FrontRight
-[2021.04.09-16.52.22:388][535]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
-[2021.04.09-16.52.22:389][535]LogAudioMixer: Display: Initializing Sound Submixes...
-[2021.04.09-16.52.22:389][535]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
-[2021.04.09-16.52.22:389][535]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
-[2021.04.09-16.52.22:389][535]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
-[2021.04.09-16.52.22:405][535]LogInit: FAudioDevice initialized.
-[2021.04.09-16.52.22:412][535]LogLoad: Game class is 'BP_TDMGameModeBase_C'
-[2021.04.09-16.52.22:414][535]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.09-17.52.22
-[2021.04.09-16.52.22:414][535]LogWorld: Bringing up level for play took: 0.001249
-[2021.04.09-16.52.22:414][535]LogOnline: OSS: Creating online subsystem instance for: :Context_9
-[2021.04.09-16.52.22:417][535]LogTemp: Warning: POST LOGIN
-[2021.04.09-16.52.22:417][535]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
-[2021.04.09-16.52.22:417][535]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
-[2021.04.09-16.52.22:418][535]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
-[2021.04.09-16.52.22:418][535]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
-[2021.04.09-16.52.22:418][535]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
-[2021.04.09-16.52.22:418][535]LogNet: GameNetDriver IpNetDriver_1 IpNetDriver listening on port 17777
-[2021.04.09-16.52.22:418][535]LogTemp: Warning: BEGIN PLAY
-[2021.04.09-16.52.22:418][535]LogTemp: Warning: POST LOGIN
-[2021.04.09-16.52.22:420][535]LogTemp: Warning: Setting Team to ALPHA
-[2021.04.09-16.52.22:420][535]PIE: Server logged in
-[2021.04.09-16.52.22:421][535]PIE: Play in editor total start time 0.135 seconds.
-[2021.04.09-16.52.23:918][623]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.24:151][637]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.24:385][651]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.24:401][652]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_0] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.24:585][663]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.24:618][665]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_1] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.24:735][672]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.24:850][679]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_2] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.24:868][680]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.25:051][691]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_3] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.25:152][697]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.25:201][700]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_4] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.25:285][705]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.25:351][709]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_5] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.25:436][714]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.25:602][724]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.25:635][726]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_6] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.25:737][732]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.25:752][733]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_7] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.25:870][740]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.25:902][742]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_8] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.26:069][752]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_9] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.26:218][761]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_10] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.26:352][769]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_11] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.26:456][775]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.26:793][795]LogTemp: Warning: Firing projectile
-[2021.04.09-16.52.26:825][797]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_12] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.27:159][817]LogBlueprintUserMessages: [BP_TDMProjectileBase_C_13] Server: DefaultPhysicalMaterial
-[2021.04.09-16.52.28:469][893]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
-[2021.04.09-16.52.28:469][893]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2021.04.09-16.52.28:469][893]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
-[2021.04.09-16.52.28:469][893]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
-[2021.04.09-16.52.28:470][893]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
-[2021.04.09-16.52.28:477][893]LogNet: World NetDriver shutdown IpNetDriver_1 [GameNetDriver]
-[2021.04.09-16.52.28:477][893]LogNet: DestroyNamedNetDriver IpNetDriver_1 [GameNetDriver]
-[2021.04.09-16.52.28:477][893]LogExit: GameNetDriver IpNetDriver_1 shut down
-[2021.04.09-16.52.28:478][893]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2021.04.09-16.52.28:481][893]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
-[2021.04.09-16.52.28:524][893]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2021.04.09-16.52.28:525][893]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000021232956200), frame # 2893
-[2021.04.09-16.52.28:525][893]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (00000212332D9800), frame # 2893
-[2021.04.09-16.52.28:528][893]LogUObjectHash: Compacting FUObjectHashTables data took   2.40ms
-[2021.04.09-16.52.28:556][894]LogPlayLevel: Display: Destroying online subsystem :Context_9
-[2021.04.09-16.53.20:162][ 62]LogAudioMixer: Display: Audio Buffer Underrun detected.
+[2021.04.10-13.08.35:496][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2021.04.10-13.08.35:496][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
+[2021.04.10-13.08.35:497][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2021.04.10-13.08.35:497][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2021.04.10-13.08.35:498][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
+[2021.04.10-13.08.35:498][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
+[2021.04.10-13.08.35:506][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2021.04.10-13.08.35:507][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2021.04.10-13.08.35:508][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.HairStrands.DeepShadow.SuperSampling:0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.HairStrands.VisibilityPPLL:0]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.HairStrands.RasterizationScale:0.5]]
+[2021.04.10-13.08.35:509][  0]LogConfig: Setting CVar [[r.HairStrands.VelocityRasterizationScale:1]]
+[2021.04.10-13.08.35:510][  0]LogInit: Selected Device Profile: [Windows]
+[2021.04.10-13.08.35:511][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2021.04.10-13.08.35:512][  0]LogHAL: Display: Platform has ~ 16 GB [17059516416 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2021.04.10-13.08.35:512][  0]LogInit: Going up to parent DeviceProfile []
+[2021.04.10-13.08.35:513][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:0.8]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:3]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:4]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:1024]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.04]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:0.85]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:0.8]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:0.5]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.AOQuality:1]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:16]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:64]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:3]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.6]]
+[2021.04.10-13.08.35:513][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.5]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:3]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Upscale.Quality:2]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:0.8]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:0        ; lower gathering accumulator quality]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:2          ; Max3x3 postfilering method]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:1    ; no background occlusion]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:0      ; no bokeh simulation when scattering]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.04        ; only a maximum of 4% of scattered bokeh]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:0                ; no slight out of focus]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:0                ; faster temporal accumulation]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.012   ; required because of AccumulatorQuality=0]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.012   ; required because of AccumulatorQuality=0]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Applying CVar settings from Section [TextureQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:4]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:1]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:800]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2021.04.10-13.08.35:514][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:48]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SSR.Quality:2]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SceneColorFormat:3]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.DetailMode:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SSS.Quality:-1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SSGI.Quality:2]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:0.5]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountPerSlice:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:32.0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:32.0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[foliage.DensityScale:0.8]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[grass.DensityScale:0.8]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@2] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Scalability.ini]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.SampleCount:16]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.JitterIntegration:0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:16]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.HairStrands.DeepShadow.SuperSampling:0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.HairStrands.VisibilityPPLL:0]]
+[2021.04.10-13.08.35:515][  0]LogConfig: Setting CVar [[r.HairStrands.RasterizationScale:0.5]]
+[2021.04.10-13.08.35:516][  0]LogConfig: Setting CVar [[r.HairStrands.VelocityRasterizationScale:1]]
+[2021.04.10-13.08.35:516][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2021.04.10-13.08.35:516][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2021.04.10-13.08.35:517][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2021.04.10-13.08.35:517][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2021.04.10-13.08.35:517][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Config/Windows/Engine.ini]
+[2021.04.10-13.08.35:520][  0]LogInit: Computer: LAPTOP-205H8F92
+[2021.04.10-13.08.35:521][  0]LogInit: User: DW
+[2021.04.10-13.08.35:521][  0]LogInit: CPU Page size=4096, Cores=4
+[2021.04.10-13.08.35:521][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2021.04.10-13.08.35:521][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2021.04.10-13.08.35:522][  0]LogMemory: Platform Memory Stats for Windows
+[2021.04.10-13.08.35:522][  0]LogMemory: Process Physical Memory: 114.54 MB used, 114.54 MB peak
+[2021.04.10-13.08.35:522][  0]LogMemory: Process Virtual Memory: 95.77 MB used, 95.77 MB peak
+[2021.04.10-13.08.35:522][  0]LogMemory: Physical Memory: 6668.04 MB used,  9601.18 MB free, 16269.22 MB total
+[2021.04.10-13.08.35:522][  0]LogMemory: Virtual Memory: 5141.90 MB used,  134212584.00 MB free, 134217728.00 MB total
+[2021.04.10-13.08.35:535][  0]LogWindows: WindowsPlatformFeatures enabled
+[2021.04.10-13.08.35:789][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2021.04.10-13.08.35:804][  0]LogInit: Using OS detected language (en-GB).
+[2021.04.10-13.08.35:804][  0]LogInit: Using OS detected locale (en-GB).
+[2021.04.10-13.08.35:825][  0]LogTextLocalizationManager: No specific localization for 'en-GB' exists, so the 'en' localization will be used.
+[2021.04.10-13.08.36:318][  0]LogInit: Setting process to per monitor DPI aware
+[2021.04.10-13.08.36:419][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2021.04.10-13.08.36:419][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2021.04.10-13.08.37:136][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2021.04.10-13.08.37:136][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2021.04.10-13.08.37:136][  0]LogD3D11RHI: D3D11 adapters:
+[2021.04.10-13.08.37:295][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1050' (Feature Level 11_0)
+[2021.04.10-13.08.37:295][  0]LogD3D11RHI:       4019/0/8134 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2021.04.10-13.08.37:350][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 630' (Feature Level 11_0)
+[2021.04.10-13.08.37:350][  0]LogD3D11RHI:       128/0/8134 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2021.04.10-13.08.37:357][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2021.04.10-13.08.37:357][  0]LogD3D11RHI:       0/0/8134 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2021.04.10-13.08.37:357][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2021.04.10-13.08.37:372][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2021.04.10-13.08.37:373][  0]LogD3D11RHI:     GPU DeviceId: 0x1c8d (for the marketing name, search the web for "GPU Device Id")
+[2021.04.10-13.08.37:373][  0]LogWindows: EnumDisplayDevices:
+[2021.04.10-13.08.37:373][  0]LogWindows:    0. 'Intel(R) HD Graphics 630' (P:1 D:1)
+[2021.04.10-13.08.37:373][  0]LogWindows:    1. 'Intel(R) HD Graphics 630' (P:0 D:0)
+[2021.04.10-13.08.37:374][  0]LogWindows:    2. 'Intel(R) HD Graphics 630' (P:0 D:0)
+[2021.04.10-13.08.37:374][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1050' (P:0 D:0)
+[2021.04.10-13.08.37:375][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter 
+[2021.04.10-13.08.37:375][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1050
+[2021.04.10-13.08.37:375][  0]LogD3D11RHI:   Driver Version: 461.40 (internal:27.21.14.6140, unified:461.40)
+[2021.04.10-13.08.37:375][  0]LogD3D11RHI:      Driver Date: 1-22-2021
+[2021.04.10-13.08.37:375][  0]LogRHI: Texture pool is 2813 MB (70% of 4019 MB)
+[2021.04.10-13.08.37:515][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2021.04.10-13.08.37:516][  0]LogD3D11RHI: Async texture creation enabled
+[2021.04.10-13.08.37:516][  0]LogD3D11RHI: Array index from any shader is supported
+[2021.04.10-13.08.37:598][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2021.04.10-13.08.38:263][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2021.04.10-13.08.38:307][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2021.04.10-13.08.38:365][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2021.04.10-13.08.38:365][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2021.04.10-13.08.38:389][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Linux'
+[2021.04.10-13.08.38:415][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
+[2021.04.10-13.08.38:431][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2021.04.10-13.08.38:449][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2021.04.10-13.08.38:465][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
+[2021.04.10-13.08.38:485][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
+[2021.04.10-13.08.38:504][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
+[2021.04.10-13.08.38:555][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
+[2021.04.10-13.08.38:555][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
+[2021.04.10-13.08.38:582][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2021.04.10-13.08.38:582][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2021.04.10-13.08.38:600][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2021.04.10-13.08.38:620][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2021.04.10-13.08.38:640][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2021.04.10-13.08.38:659][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2021.04.10-13.08.38:659][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2021.04.10-13.08.38:683][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2021.04.10-13.08.38:885][  0]LogShaderCompilers: Guid format shader working directory is -23 characters bigger than the processId version (../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Intermediate/Shaders/WorkingDirectory/19988/).
+[2021.04.10-13.08.38:886][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/DW/AppData/Local/Temp/UnrealShaderWorkingDir/19990EE849342AF834255EB4A939A44C/'.
+[2021.04.10-13.08.38:888][  0]LogXGEController: Cleaning working directory: C:/Users/DW/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2021.04.10-13.08.38:889][  0]LogShaderCompilers: Display: Using XGE Shader Compiler (Interception Interface).
+[2021.04.10-13.08.40:446][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2021.04.10-13.08.41:319][  0]LogDerivedDataCache: Loaded boot cache 0.87s 75MB C:/Users/DW/AppData/Local/UnrealEngine/4.25/DerivedDataCache/Boot.ddc.
+[2021.04.10-13.08.41:319][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/DW/AppData/Local/UnrealEngine/4.25/DerivedDataCache/Boot.ddc
+[2021.04.10-13.08.41:319][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2021.04.10-13.08.41:319][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2021.04.10-13.08.41:319][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2021.04.10-13.08.41:320][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2021.04.10-13.08.41:337][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2021.04.10-13.08.41:337][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2021.04.10-13.08.41:337][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2021.04.10-13.08.41:339][  0]LogDerivedDataCache: Using Local data cache path C:/Users/DW/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2021.04.10-13.08.41:339][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2021.04.10-13.08.41:339][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2021.04.10-13.08.41:429][  0]LogSlate: Using FreeType 2.10.0
+[2021.04.10-13.08.41:432][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2021.04.10-13.08.41:494][  0]LogAssetRegistry: FAssetRegistry took 0.0070 seconds to start up
+[2021.04.10-13.08.42:055][  0]LogInit: Selected Device Profile: [Windows]
+[2021.04.10-13.08.42:324][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2021.04.10-13.08.42:324][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2021.04.10-13.08.42:324][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2021.04.10-13.08.42:324][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2021.04.10-13.08.42:325][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2021.04.10-13.08.42:373][  0]LogNetVersion: TDMDeathmatch 1.0.0, NetCL: 13144385, EngineNetVer: 14, GameNetVer: 0 (Checksum: 193990812)
+[2021.04.10-13.08.43:804][  0]LogAISub: UAISubsystem::UAISubsystem AISubsystem (000002C5362D2540), frame # 0
+[2021.04.10-13.08.43:804][  0]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002C53625DE40), frame # 0
+[2021.04.10-13.08.43:811][  0]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002C5362BDC00), frame # 0
+[2021.04.10-13.08.43:985][  0]LogPackageLocalizationCache: Processed 17 localized package path(s) for 1 prioritized culture(s) in 0.136319 seconds
+[2021.04.10-13.08.43:992][  0]LogUObjectArray: 15756 objects as part of root set at end of initial load.
+[2021.04.10-13.08.43:992][  0]LogUObjectAllocator: 3925280 out of 0 bytes used by permanent object pool.
+[2021.04.10-13.08.43:992][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2021.04.10-13.08.45:279][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2021.04.10-13.08.45:670][  0]SourceControl: Source control is disabled
+[2021.04.10-13.08.45:670][  0]SourceControl: Source control is disabled
+[2021.04.10-13.08.45:688][  0]SourceControl: Source control is disabled
+[2021.04.10-13.08.45:700][  0]SourceControl: Source control is disabled
+[2021.04.10-13.08.45:719][  0]SourceControl: Source control is disabled
+[2021.04.10-13.08.46:429][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2021.04.10-13.08.46:471][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2021.04.10-13.08.46:471][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2021.04.10-13.08.46:740][  0]LogEngine: Initializing Engine...
+[2021.04.10-13.08.46:742][  0]LogMagicLeap: Warning: VR disabled because ZI is not enabled.  To enable, in the editor, Edit -> Project Settings -> Plugins -> Magic Leap Plugin -> Enable Zero Iteration
+[2021.04.10-13.08.46:747][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.002 s
+[2021.04.10-13.08.47:002][  0]LogInit: Initializing FReadOnlyCVARCache
+[2021.04.10-13.08.47:052][  0]LogAIModule: Creating AISystem for world Untitled
+[2021.04.10-13.08.47:052][  0]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002C53CF6FC00), frame # 0
+[2021.04.10-13.08.47:053][  0]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002C53CFA2FC0), frame # 0
+[2021.04.10-13.08.47:069][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.10-13.08.47:069][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.10-13.08.47:069][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.10-13.08.47:069][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.10-13.08.47:069][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.10-13.08.47:069][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.10-13.08.47:069][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.10-13.08.47:069][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.10-13.08.47:072][  0]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.10-13.08.47:072][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.10-13.08.47:110][  0]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.10-13.08.47:110][  0]LogAudioMixer: Display: 1: FrontRight
+[2021.04.10-13.08.47:168][  0]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.10-13.08.47:171][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.10-13.08.47:177][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.10-13.08.47:177][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.10-13.08.47:180][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.10-13.08.47:182][  0]LogInit: FAudioDevice initialized.
+[2021.04.10-13.08.47:183][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2021.04.10-13.08.47:424][  0]LogDerivedDataCache: Saved boot cache 0.24s 75MB C:/Users/DW/AppData/Local/UnrealEngine/4.25/DerivedDataCache/Boot.ddc.
+[2021.04.10-13.08.47:430][  0]LogInit: Texture streaming: Enabled
+[2021.04.10-13.08.47:469][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2021.04.10-13.08.47:469][  0]LogEngineSessionManager: EngineSessionManager sent abnormal shutdown report. Type=AbnormalShutdown, SessionId={5EEA950D-4F37-8D03-ADDD-1F9D4C2D40E2}
+[2021.04.10-13.08.47:469][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2021.04.10-13.08.47:485][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2021.04.10-13.08.48:280][  0]LogInit: Transaction tracking system initialized
+[2021.04.10-13.08.48:370][  0]BlueprintLog: New page: Editor Load
+[2021.04.10-13.08.48:662][  0]LocalizationService: Localization service is disabled
+[2021.04.10-13.08.49:063][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2021.04.10-13.08.49:063][  0]LogCook: Display: Mobile HDR setting 1
+[2021.04.10-13.08.49:436][  0]LogFileCache: Scanning file cache for directory 'D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/' took 0.01s
+[2021.04.10-13.08.50:087][  0]SourceControl: Source control is disabled
+[2021.04.10-13.08.50:088][  0]LogUnrealEdMisc: Loading editor; pre map load, took 20.100
+[2021.04.10-13.08.50:089][  0]Cmd: MAP LOAD FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Levels/FirstPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2021.04.10-13.08.50:091][  0]LightingResults: New page: Lighting Build
+[2021.04.10-13.08.50:097][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.04.10-13.08.50:099][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.08.50:099][  0]MapCheck: New page: Map Check
+[2021.04.10-13.08.50:099][  0]LightingResults: New page: Lighting Build
+[2021.04.10-13.08.50:117][  0]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000002C53CF6FC00), frame # 0
+[2021.04.10-13.08.50:117][  0]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000002C53CFA2FC0), frame # 0
+[2021.04.10-13.08.50:120][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.20ms
+[2021.04.10-13.08.51:390][  0]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.10-13.08.51:390][  0]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002C52D642600), frame # 0
+[2021.04.10-13.08.51:390][  0]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002C52CFB1E40), frame # 0
+[2021.04.10-13.08.51:416][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2021.04.10-13.08.51:452][  0]LogUObjectHash: Compacting FUObjectHashTables data took   3.05ms
+[2021.04.10-13.08.51:453][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2021.04.10-13.08.51:453][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.37ms to complete.
+[2021.04.10-13.08.51:453][  0]LogFileHelpers: Loading map 'FirstPersonExampleMap' took 1.365
+[2021.04.10-13.08.51:494][  0]LogUnrealEdMisc: Total Editor Startup Time, took 21.505
+[2021.04.10-13.08.51:762][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.08.51:774][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.08.51:786][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.08.51:810][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.08.51:837][  0]LogCollectionManager: Loaded 0 collections in 0.001202 seconds
+[2021.04.10-13.08.51:897][  0]LogFileCache: Scanning file cache for directory 'D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Collections/' took 0.00s
+[2021.04.10-13.08.51:898][  0]LogFileCache: Scanning file cache for directory 'D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Developers/DW/Collections/' took 0.00s
+[2021.04.10-13.08.51:898][  0]LogFileCache: Scanning file cache for directory 'D:/DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Collections/' took 0.00s
+[2021.04.10-13.08.51:898][  0]LogContentBrowser: Native class hierarchy populated in 0.0207 seconds. Added 3417 classes and 812 folders.
+[2021.04.10-13.08.51:913][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0008 seconds. Added 0 classes and 0 folders.
+[2021.04.10-13.08.52:207][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0012 seconds. Added 0 classes and 0 folders.
+[2021.04.10-13.08.52:585][  0]LogSlate: Took 0.001681 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2021.04.10-13.08.52:589][  0]LogSlate: Took 0.001506 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2021.04.10-13.08.52:597][  0]LogSlate: Took 0.001384 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2021.04.10-13.08.52:707][  0]LogRenderer: Reallocating scene render targets to support 1216x652 Format 9 NumSamples 1 (Frame:1).
+[2021.04.10-13.08.53:029][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0012 seconds. Added 0 classes and 0 folders.
+[2021.04.10-13.08.53:029][  0]LogLoad: (Engine Initialization) Total time: 23.04 seconds
+[2021.04.10-13.08.53:029][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2021.04.10-13.08.53:105][  0]LogAssetRegistry: Asset discovery search completed in 11.6128 seconds
+[2021.04.10-13.08.53:112][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000008 seconds (updated 0 objects)
+[2021.04.10-13.08.53:116][  0]LogContentStreaming: Texture pool size now 800 MB
+[2021.04.10-13.08.53:167][  0]LogSlate: Took 0.001994 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2021.04.10-13.08.54:407][  4]LogSlate: Took 0.000378 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2021.04.10-13.20.33:021][131]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase
+[2021.04.10-13.20.33:318][131]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0011 seconds. Added 125 classes and 0 folders.
+[2021.04.10-13.20.34:503][131]LogSlate: Took 0.001422 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2021.04.10-13.20.34:605][132]LogSlate: Took 0.002196 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2021.04.10-13.20.43:563][655]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/UI/Menu/WBP_Menu.WBP_Menu
+[2021.04.10-13.20.45:526][706]LogSlate: Window 'WBP_Menu' being destroyed
+[2021.04.10-13.21.43:316][818]LogUObjectHash: Compacting FUObjectHashTables data took   3.94ms
+[2021.04.10-13.21.43:318][818]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/FirstPersonExampleMap' took 0.061
+[2021.04.10-13.21.43:321][818]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/UI/Menu/WBP_Menu] ([1] browsable assets)...
+[2021.04.10-13.21.43:321][818]OBJ SavePackage: Finished generating thumbnails for package [/Game/UI/Menu/WBP_Menu]
+[2021.04.10-13.21.43:348][818]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/WBP_Menu_Auto1713981EF4704E947D45BE5BFD53FACB3.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Autosaves/Game/UI/Menu/WBP_Menu_Auto1.uasset'
+[2021.04.10-13.21.43:351][818]LogFileHelpers: Auto-saving content packages took 0.033
+[2021.04.10-13.30.18:633][462]BlueprintLog: New page: Compile WBP_Menu
+[2021.04.10-13.30.18:696][462]LogUObjectHash: Compacting FUObjectHashTables data took   4.15ms
+[2021.04.10-13.30.18:753][462]LogSlate: Took 0.001122 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2021.04.10-13.30.19:166][485]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/WBP_Menu" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset" SILENT=true
+[2021.04.10-13.30.19:184][485]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/WBP_Menu055818E5433DDABCE0A4A0BA9DD18555.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset'
+[2021.04.10-13.30.19:214][485]AssetCheck: New page: Asset Save: WBP_Menu
+[2021.04.10-13.30.19:214][485]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/Menu/WBP_Menu.WBP_Menu
+[2021.04.10-13.30.25:076][662]LogTemp: Repeating last play command: Selected Viewport
+[2021.04.10-13.30.25:105][662]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.10-13.30.25:113][662]PIE: New page: PIE session: FirstPersonExampleMap (10 Apr 2021, 15:30:25)
+[2021.04.10-13.30.25:121][662]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2021.04.10-13.30.25:124][662]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2021.04.10-13.30.25:126][662]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.10-13.30.25:144][662]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018143s)
+[2021.04.10-13.30.25:146][662]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.10-13.30.25:146][662]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002C580DCC600), frame # 5662
+[2021.04.10-13.30.25:146][662]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002C588C3DF80), frame # 5662
+[2021.04.10-13.30.25:146][662]LogPlayLevel: PIE: World Init took: (0.002140s)
+[2021.04.10-13.30.25:147][662]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.020886s)
+[2021.04.10-13.30.25:181][662]LogUObjectHash: Compacting FUObjectHashTables data took   4.65ms
+[2021.04.10-13.30.25:184][662]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.10-13.30.25:184][662]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.10-13.30.25:184][662]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.10-13.30.25:184][662]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.10-13.30.25:184][662]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.10-13.30.25:184][662]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.10-13.30.25:184][662]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.10-13.30.25:184][662]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.10-13.30.25:185][662]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.10-13.30.25:185][662]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.10-13.30.25:196][662]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.10-13.30.25:196][662]LogAudioMixer: Display: 1: FrontRight
+[2021.04.10-13.30.25:237][662]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.10-13.30.25:237][662]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.10-13.30.25:237][662]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.10-13.30.25:237][662]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.10-13.30.25:238][662]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.10-13.30.25:253][662]LogInit: FAudioDevice initialized.
+[2021.04.10-13.30.25:268][662]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.10-13.30.25:270][662]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.10-14.30.25
+[2021.04.10-13.30.25:273][662]LogWorld: Bringing up level for play took: 0.003485
+[2021.04.10-13.30.25:274][662]LogOnline: OSS: Creating online subsystem instance for: :Context_5
+[2021.04.10-13.30.25:296][662]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0009 seconds. Added 20 classes and 0 folders.
+[2021.04.10-13.30.25:298][662]LogTemp: Warning: POST LOGIN
+[2021.04.10-13.30.25:304][662]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.10-13.30.25:304][662]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.10-13.30.25:306][662]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.10-13.30.25:306][662]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.10-13.30.25:306][662]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.10-13.30.25:308][662]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
+[2021.04.10-13.30.25:311][662]LogTemp: Warning: BEGIN PLAY
+[2021.04.10-13.30.25:312][662]LogTemp: Warning: POST LOGIN
+[2021.04.10-13.30.25:317][662]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.10-13.30.25:330][662]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.10-13.30.25:332][662]PIE: Server logged in
+[2021.04.10-13.30.25:333][662]PIE: Play in editor total start time 0.241 seconds.
+[2021.04.10-13.30.34:418][181]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.10-13.30.34:420][181]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.30.34:420][181]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.10-13.30.34:423][181]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.10-13.30.34:423][181]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.30.34:433][181]LogNet: World NetDriver shutdown IpNetDriver_0 [GameNetDriver]
+[2021.04.10-13.30.34:433][181]LogNet: DestroyNamedNetDriver IpNetDriver_0 [GameNetDriver]
+[2021.04.10-13.30.34:433][181]LogExit: GameNetDriver IpNetDriver_0 shut down
+[2021.04.10-13.30.34:434][181]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.10-13.30.34:441][181]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.30.34:465][181]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.30.34:514][181]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000002C588C3DF80), frame # 6181
+[2021.04.10-13.30.34:514][181]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000002C580DCC600), frame # 6181
+[2021.04.10-13.30.34:553][181]LogUObjectHash: Compacting FUObjectHashTables data took   5.95ms
+[2021.04.10-13.30.34:586][182]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2021.04.10-13.32.02:731][881]LogUObjectHash: Compacting FUObjectHashTables data took   4.27ms
+[2021.04.10-13.32.02:732][881]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/FirstPersonExampleMap' took 0.070
+[2021.04.10-13.32.02:733][881]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/BlueprintClasses/Player/BP_TDMCharacterBase] ([1] browsable assets)...
+[2021.04.10-13.32.02:753][881]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase]
+[2021.04.10-13.32.02:753][881]OBJ SavePackage: Finished generating thumbnails for package [/Game/BlueprintClasses/Player/BP_TDMCharacterBase]
+[2021.04.10-13.32.02:812][881]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBase_Auto2077623724BC58D4D2657ED88DC2A382A.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Autosaves/Game/BlueprintClasses/Player/BP_TDMCharacterBase_Auto2.uasset'
+[2021.04.10-13.32.02:816][881]LogFileHelpers: Auto-saving content packages took 0.084
+[2021.04.10-13.33.03:108][379]BlueprintLog: New page: Compile BP_TDMCharacterBase
+[2021.04.10-13.33.03:185][379]LogUObjectHash: Compacting FUObjectHashTables data took   4.05ms
+[2021.04.10-13.33.03:905][415]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBase7D8E572D4FFF01FB071A8ABD81866761.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMCharacterBase.uasset'
+[2021.04.10-13.33.03:934][415]AssetCheck: New page: Asset Save: BP_TDMCharacterBase
+[2021.04.10-13.33.03:935][415]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase
+[2021.04.10-13.34.21:838][937]BlueprintLog: New page: Compile WBP_Menu
+[2021.04.10-13.34.21:886][937]LogUObjectHash: Compacting FUObjectHashTables data took   3.99ms
+[2021.04.10-13.34.22:220][951]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/WBP_Menu" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset" SILENT=true
+[2021.04.10-13.34.22:233][951]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/WBP_Menu32A96CF649C9C5AF50F3B7893044AA43.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset'
+[2021.04.10-13.34.22:249][951]AssetCheck: New page: Asset Save: WBP_Menu
+[2021.04.10-13.34.22:249][951]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/Menu/WBP_Menu.WBP_Menu
+[2021.04.10-13.43.06:886][186]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/CRT_M_WBP_Firearm" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/CRT_M_WBP_Firearm.uasset" SILENT=true
+[2021.04.10-13.43.06:892][186]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/CRT_M_WBP_FirearmC97DA9F84FE047D3D8B813A6014B97FC.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/CRT_M_WBP_Firearm.uasset'
+[2021.04.10-13.43.07:142][186]LogUObjectHash: Compacting FUObjectHashTables data took   4.25ms
+[2021.04.10-13.43.07:185][186]LogUObjectHash: Compacting FUObjectHashTables data took   2.87ms
+[2021.04.10-13.43.07:213][186]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2021.04.10-13.43.07:274][186]AssetCheck: New page: Asset Save: CRT_M_WBP_Firearm
+[2021.04.10-13.43.07:274][186]LogContentValidation: Display: Validating CanvasRenderTarget2D /Game/UI/Menu/CRT_M_WBP_Firearm.CRT_M_WBP_Firearm
+[2021.04.10-13.43.09:543][308]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/UI/Menu/M_WBP_Firearm.M_WBP_Firearm
+[2021.04.10-13.43.09:547][308]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.10:059][308]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.10:071][308]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.17:060][694]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.17:068][694]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_0, compiling. 
+[2021.04.10-13.43.17:081][694]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_0, compiling. 
+[2021.04.10-13.43.23:384][ 37]MaterialEditorStats: Base pass shader: 117 instructions
+[2021.04.10-13.43.23:384][ 37]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 191 instructions
+[2021.04.10-13.43.23:384][ 37]MaterialEditorStats: Base pass vertex shader: 40 instructions
+[2021.04.10-13.43.23:384][ 37]MaterialEditorStats: Texture samplers: 2/16
+[2021.04.10-13.43.26:928][223]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.28:171][293]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.28:192][293]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.28:198][293]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.33:483][600]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.33:491][600]LogMaterial: Display: Missing cached shader map for material FMatExpressionPreview MaterialExpressionTextureSample_0, compiling. 
+[2021.04.10-13.43.40:596][ 19]MaterialEditorStats: Default UI Pixel Shader: 33 instructions
+[2021.04.10-13.43.40:596][ 19]MaterialEditorStats: Default UI Vertex Shader: 17 instructions
+[2021.04.10-13.43.40:596][ 19]MaterialEditorStats: Instanced UI Vertex Shader: 17 instructions
+[2021.04.10-13.43.40:596][ 19]MaterialEditorStats: Texture samplers: 2/16
+[2021.04.10-13.43.40:596][ 19]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(1)
+[2021.04.10-13.43.40:596][ 19]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2021.04.10-13.43.46:989][227]LogMaterialEditor: Saving and Compiling material M_WBP_Firearm
+[2021.04.10-13.43.47:876][227]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.47:927][227]LogMaterial: Display: Missing cached shader map for material M_WBP_Firearm, compiling. 
+[2021.04.10-13.43.47:971][227]LogUObjectHash: Compacting FUObjectHashTables data took   2.78ms
+[2021.04.10-13.43.47:975][227]TextureStreamingBuild: Display: Compiling optional shaders took 0.000 seconds.
+[2021.04.10-13.43.48:009][227]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2021.04.10-13.43.53:351][227]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/M_WBP_Firearm" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/M_WBP_Firearm.uasset" SILENT=true
+[2021.04.10-13.43.53:356][227]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/M_WBP_Firearm794DE52B40B7933BEE2D51B9E5A36568.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/M_WBP_Firearm.uasset'
+[2021.04.10-13.43.53:417][227]AssetCheck: New page: Asset Save: M_WBP_Firearm
+[2021.04.10-13.43.53:417][227]LogContentValidation: Display: Validating Material /Game/UI/Menu/M_WBP_Firearm.M_WBP_Firearm
+[2021.04.10-13.44.09:348][612]LogEditor: Attempting to add actor of class 'SceneCapture2D' to level at 720.00,710.00,530.00
+[2021.04.10-13.44.10:745][685]LogEditor: Attempting to add actor of class 'SceneCapture2D' to level at 530.00,490.00,170.00
+[2021.04.10-13.44.37:189][847]LogUObjectHash: Compacting FUObjectHashTables data took   2.50ms
+[2021.04.10-13.44.37:262][847]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2021.04.10-13.44.37:312][847]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/FirstPersonExampleMapAB9A64ED41BA2FBDEC5466AE2E279385.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Levels/FirstPersonExampleMap.umap'
+[2021.04.10-13.44.37:358][847]LogFileHelpers: Saving map 'FirstPersonExampleMap' took 0.130
+[2021.04.10-13.44.38:790][847]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/FirstPersonExampleMap_BuiltData68A2F3444DD88685354969A248F96382.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Levels/FirstPersonExampleMap_BuiltData.uasset'
+[2021.04.10-13.44.39:753][847]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/FirstPersonExampleMap_BuiltData6D101DEE41F96F5D3D0B7C8A9D980D94.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Levels/FirstPersonExampleMap_BuiltData.uasset'
+[2021.04.10-13.44.39:792][847]AssetCheck: New page: Asset Save: multiple assets
+[2021.04.10-13.44.39:792][847]LogContentValidation: Display: Validating World /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap
+[2021.04.10-13.44.39:792][847]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Levels/FirstPersonExampleMap_BuiltData.FirstPersonExampleMap_BuiltData
+[2021.04.10-13.45.23:399][148]BlueprintLog: New page: Compile WBP_Menu
+[2021.04.10-13.45.23:443][148]LogUObjectHash: Compacting FUObjectHashTables data took   4.21ms
+[2021.04.10-13.45.24:084][177]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/WBP_Menu" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset" SILENT=true
+[2021.04.10-13.45.24:102][177]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/WBP_MenuDE6B6211414378952E2A3DA2FC856E52.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset'
+[2021.04.10-13.45.24:126][177]AssetCheck: New page: Asset Save: WBP_Menu
+[2021.04.10-13.45.24:126][177]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/Menu/WBP_Menu.WBP_Menu
+[2021.04.10-13.54.37:616][891]LogUObjectHash: Compacting FUObjectHashTables data took   3.52ms
+[2021.04.10-13.54.37:659][891]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/FirstPersonExampleMap_Auto39938193848E756BC1483B4853FE0E8E3.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Autosaves/Game/Levels/FirstPersonExampleMap_Auto3.umap'
+[2021.04.10-13.54.37:661][891]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/FirstPersonExampleMap' took 0.080
+[2021.04.10-13.54.37:661][891]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.080
+[2021.04.10-13.54.52:592][121]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2021.04.10-13.54.52:647][121]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2021.04.10-13.54.52:682][121]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/FirstPersonExampleMap6F11E9164BF3281823B13490F01170A4.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Levels/FirstPersonExampleMap.umap'
+[2021.04.10-13.54.52:717][121]LogFileHelpers: Saving map 'FirstPersonExampleMap' took 0.100
+[2021.04.10-13.54.53:610][121]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/FirstPersonExampleMap_BuiltDataE63B6DA342EE529173C1C8BE205FF2FC.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Levels/FirstPersonExampleMap_BuiltData.uasset'
+[2021.04.10-13.54.54:568][121]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/FirstPersonExampleMap_BuiltDataC75646F845EFC02F1FF3C99C184FC1AF.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Levels/FirstPersonExampleMap_BuiltData.uasset'
+[2021.04.10-13.54.54:607][121]AssetCheck: New page: Asset Save: multiple assets
+[2021.04.10-13.54.54:607][121]LogContentValidation: Display: Validating World /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap
+[2021.04.10-13.54.54:607][121]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Levels/FirstPersonExampleMap_BuiltData.FirstPersonExampleMap_BuiltData
+[2021.04.10-13.56.13:417][549]BlueprintLog: New page: Compile WBP_Menu
+[2021.04.10-13.56.13:459][549]LogUObjectHash: Compacting FUObjectHashTables data took   4.14ms
+[2021.04.10-13.56.14:090][579]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/WBP_Menu" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset" SILENT=true
+[2021.04.10-13.56.14:110][579]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/WBP_Menu48E23F824B47E3B798F67CA9F7770ABB.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset'
+[2021.04.10-13.56.14:134][579]AssetCheck: New page: Asset Save: WBP_Menu
+[2021.04.10-13.56.14:134][579]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/Menu/WBP_Menu.WBP_Menu
+[2021.04.10-13.56.15:732][672]LogTemp: Repeating last play command: Selected Viewport
+[2021.04.10-13.56.15:756][672]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.10-13.56.15:756][672]PIE: New page: PIE session: FirstPersonExampleMap (10 Apr 2021, 15:56:15)
+[2021.04.10-13.56.15:794][672]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.10-13.56.15:813][672]LogPlayLevel: PIE: StaticDuplicateObject took: (0.019499s)
+[2021.04.10-13.56.15:815][672]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.10-13.56.15:815][672]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002C5D51F0C00), frame # 26672
+[2021.04.10-13.56.15:815][672]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002C559B5A840), frame # 26672
+[2021.04.10-13.56.15:815][672]LogPlayLevel: PIE: World Init took: (0.002158s)
+[2021.04.10-13.56.15:815][672]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.022520s)
+[2021.04.10-13.56.15:851][672]LogUObjectHash: Compacting FUObjectHashTables data took   3.13ms
+[2021.04.10-13.56.15:852][672]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.10-13.56.15:852][672]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.10-13.56.15:853][672]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.10-13.56.15:853][672]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.10-13.56.15:853][672]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.10-13.56.15:853][672]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.10-13.56.15:853][672]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.10-13.56.15:853][672]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.10-13.56.15:853][672]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.10-13.56.15:853][672]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.10-13.56.15:864][672]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.10-13.56.15:864][672]LogAudioMixer: Display: 1: FrontRight
+[2021.04.10-13.56.15:907][672]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.10-13.56.15:908][672]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.10-13.56.15:908][672]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.10-13.56.15:908][672]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.10-13.56.15:908][672]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.10-13.56.15:928][672]LogInit: FAudioDevice initialized.
+[2021.04.10-13.56.15:937][672]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.10-13.56.15:939][672]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.10-14.56.15
+[2021.04.10-13.56.15:939][672]LogWorld: Bringing up level for play took: 0.001240
+[2021.04.10-13.56.15:939][672]LogOnline: OSS: Creating online subsystem instance for: :Context_10
+[2021.04.10-13.56.15:942][672]LogTemp: Warning: POST LOGIN
+[2021.04.10-13.56.15:942][672]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.10-13.56.15:942][672]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.10-13.56.15:943][672]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.10-13.56.15:943][672]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.10-13.56.15:943][672]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.10-13.56.15:943][672]LogNet: GameNetDriver IpNetDriver_1 IpNetDriver listening on port 17777
+[2021.04.10-13.56.15:943][672]LogTemp: Warning: BEGIN PLAY
+[2021.04.10-13.56.15:944][672]LogTemp: Warning: POST LOGIN
+[2021.04.10-13.56.15:946][672]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.10-13.56.15:950][672]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.10-13.56.15:950][672]PIE: Server logged in
+[2021.04.10-13.56.15:951][672]PIE: Play in editor total start time 0.201 seconds.
+[2021.04.10-13.56.17:673][765]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.10-13.56.17:673][765]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.56.17:673][765]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.10-13.56.17:676][765]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.10-13.56.17:676][765]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.56.17:681][765]LogNet: World NetDriver shutdown IpNetDriver_1 [GameNetDriver]
+[2021.04.10-13.56.17:681][765]LogNet: DestroyNamedNetDriver IpNetDriver_1 [GameNetDriver]
+[2021.04.10-13.56.17:682][765]LogExit: GameNetDriver IpNetDriver_1 shut down
+[2021.04.10-13.56.17:682][765]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.10-13.56.17:686][765]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.56.17:733][765]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.56.17:735][765]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000002C559B5A840), frame # 26765
+[2021.04.10-13.56.17:735][765]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000002C5D51F0C00), frame # 26765
+[2021.04.10-13.56.17:738][765]LogUObjectHash: Compacting FUObjectHashTables data took   2.74ms
+[2021.04.10-13.56.17:770][766]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2021.04.10-13.56.22:478][870]LogTemp: Repeating last play command: Selected Viewport
+[2021.04.10-13.56.22:501][870]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.10-13.56.22:501][870]PIE: New page: PIE session: FirstPersonExampleMap (10 Apr 2021, 15:56:22)
+[2021.04.10-13.56.22:502][870]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.10-13.56.22:520][870]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017919s)
+[2021.04.10-13.56.22:522][870]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.10-13.56.22:522][870]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002C5C4CA8C00), frame # 26870
+[2021.04.10-13.56.22:524][870]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002C596A22D40), frame # 26870
+[2021.04.10-13.56.22:524][870]LogPlayLevel: PIE: World Init took: (0.004542s)
+[2021.04.10-13.56.22:524][870]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.022685s)
+[2021.04.10-13.56.22:561][870]LogUObjectHash: Compacting FUObjectHashTables data took   2.38ms
+[2021.04.10-13.56.22:563][870]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.10-13.56.22:563][870]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.10-13.56.22:563][870]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.10-13.56.22:563][870]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.10-13.56.22:563][870]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.10-13.56.22:563][870]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.10-13.56.22:563][870]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.10-13.56.22:563][870]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.10-13.56.22:563][870]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.10-13.56.22:563][870]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.10-13.56.22:570][870]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.10-13.56.22:570][870]LogAudioMixer: Display: 1: FrontRight
+[2021.04.10-13.56.22:605][870]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.10-13.56.22:605][870]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.10-13.56.22:605][870]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.10-13.56.22:605][870]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.10-13.56.22:607][870]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.10-13.56.22:625][870]LogInit: FAudioDevice initialized.
+[2021.04.10-13.56.22:637][870]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.10-13.56.22:640][870]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.10-14.56.22
+[2021.04.10-13.56.22:641][870]LogWorld: Bringing up level for play took: 0.002356
+[2021.04.10-13.56.22:641][870]LogOnline: OSS: Creating online subsystem instance for: :Context_11
+[2021.04.10-13.56.22:643][870]LogTemp: Warning: POST LOGIN
+[2021.04.10-13.56.22:643][870]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.10-13.56.22:643][870]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.10-13.56.22:643][870]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.10-13.56.22:643][870]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.10-13.56.22:643][870]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.10-13.56.22:643][870]LogNet: GameNetDriver IpNetDriver_2 IpNetDriver listening on port 17777
+[2021.04.10-13.56.22:644][870]LogTemp: Warning: BEGIN PLAY
+[2021.04.10-13.56.22:644][870]LogTemp: Warning: POST LOGIN
+[2021.04.10-13.56.22:645][870]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.10-13.56.22:645][870]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.10-13.56.22:645][870]PIE: Server logged in
+[2021.04.10-13.56.22:646][870]PIE: Play in editor total start time 0.151 seconds.
+[2021.04.10-13.56.28:834][235]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.10-13.56.28:834][235]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.56.28:834][235]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.10-13.56.28:835][235]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.10-13.56.28:835][235]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.56.28:840][235]LogNet: World NetDriver shutdown IpNetDriver_2 [GameNetDriver]
+[2021.04.10-13.56.28:840][235]LogNet: DestroyNamedNetDriver IpNetDriver_2 [GameNetDriver]
+[2021.04.10-13.56.28:840][235]LogExit: GameNetDriver IpNetDriver_2 shut down
+[2021.04.10-13.56.28:841][235]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.10-13.56.28:845][235]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.56.28:873][235]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.56.28:895][235]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000002C596A22D40), frame # 27235
+[2021.04.10-13.56.28:895][235]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000002C5C4CA8C00), frame # 27235
+[2021.04.10-13.56.28:898][235]LogUObjectHash: Compacting FUObjectHashTables data took   3.10ms
+[2021.04.10-13.56.28:928][236]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2021.04.10-13.56.30:116][305]LogTemp: Repeating last play command: Selected Viewport
+[2021.04.10-13.56.30:141][305]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.10-13.56.30:141][305]PIE: New page: PIE session: FirstPersonExampleMap (10 Apr 2021, 15:56:30)
+[2021.04.10-13.56.30:141][305]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.10-13.56.30:154][305]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012571s)
+[2021.04.10-13.56.30:155][305]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.10-13.56.30:155][305]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000002C5D4993C00), frame # 27305
+[2021.04.10-13.56.30:155][305]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000002C59AF6CCC0), frame # 27305
+[2021.04.10-13.56.30:155][305]LogPlayLevel: PIE: World Init took: (0.001568s)
+[2021.04.10-13.56.30:155][305]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.014342s)
+[2021.04.10-13.56.30:188][305]LogUObjectHash: Compacting FUObjectHashTables data took   2.59ms
+[2021.04.10-13.56.30:189][305]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.10-13.56.30:189][305]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.10-13.56.30:189][305]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.10-13.56.30:189][305]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.10-13.56.30:189][305]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.10-13.56.30:189][305]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.10-13.56.30:189][305]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.10-13.56.30:189][305]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.10-13.56.30:189][305]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.10-13.56.30:189][305]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.10-13.56.30:196][305]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.10-13.56.30:196][305]LogAudioMixer: Display: 1: FrontRight
+[2021.04.10-13.56.30:235][305]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.10-13.56.30:236][305]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.10-13.56.30:236][305]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.10-13.56.30:236][305]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.10-13.56.30:236][305]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.10-13.56.30:252][305]LogInit: FAudioDevice initialized.
+[2021.04.10-13.56.30:266][305]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.10-13.56.30:268][305]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.10-14.56.30
+[2021.04.10-13.56.30:268][305]LogWorld: Bringing up level for play took: 0.001213
+[2021.04.10-13.56.30:268][305]LogOnline: OSS: Creating online subsystem instance for: :Context_12
+[2021.04.10-13.56.30:273][305]LogTemp: Warning: POST LOGIN
+[2021.04.10-13.56.30:273][305]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.10-13.56.30:273][305]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.10-13.56.30:273][305]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.10-13.56.30:273][305]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.10-13.56.30:274][305]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.10-13.56.30:274][305]LogNet: GameNetDriver IpNetDriver_3 IpNetDriver listening on port 17777
+[2021.04.10-13.56.30:274][305]LogTemp: Warning: BEGIN PLAY
+[2021.04.10-13.56.30:274][305]LogTemp: Warning: POST LOGIN
+[2021.04.10-13.56.30:275][305]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.10-13.56.30:275][305]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.10-13.56.30:275][305]PIE: Server logged in
+[2021.04.10-13.56.30:276][305]PIE: Play in editor total start time 0.141 seconds.
+[2021.04.10-13.56.31:434][370]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.10-13.56.31:435][370]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.56.31:435][370]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.10-13.56.31:436][370]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.10-13.56.31:436][370]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.56.31:443][370]LogNet: World NetDriver shutdown IpNetDriver_3 [GameNetDriver]
+[2021.04.10-13.56.31:443][370]LogNet: DestroyNamedNetDriver IpNetDriver_3 [GameNetDriver]
+[2021.04.10-13.56.31:443][370]LogExit: GameNetDriver IpNetDriver_3 shut down
+[2021.04.10-13.56.31:445][370]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.10-13.56.31:450][370]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.10-13.56.31:476][370]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.10-13.56.31:513][370]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000002C59AF6CCC0), frame # 27370
+[2021.04.10-13.56.31:513][370]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000002C5D4993C00), frame # 27370
+[2021.04.10-13.56.31:515][370]LogUObjectHash: Compacting FUObjectHashTables data took   2.35ms
+[2021.04.10-13.56.31:541][371]LogPlayLevel: Display: Destroying online subsystem :Context_12

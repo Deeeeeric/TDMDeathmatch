@@ -66,6 +66,7 @@ void ATDMCharacterBase::BeginPlay()
 		if (WeaponInHand)
 		{
 			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));
+			OnRep_WeaponInHand();
 		}
 	}
 
@@ -158,6 +159,14 @@ void ATDMCharacterBase::DestroyCharacter()
 {
 	if (WeaponInHand) { WeaponInHand->Destroy(); }
 	Destroy();
+}
+
+void ATDMCharacterBase::OnRep_WeaponInHand()
+{
+	if (WeaponInHand)
+	{
+		WeaponInHand->FirearmInHand();
+	}
 }
 
 void ATDMCharacterBase::OnFire()

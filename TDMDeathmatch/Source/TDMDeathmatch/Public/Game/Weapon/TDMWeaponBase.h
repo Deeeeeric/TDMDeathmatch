@@ -113,6 +113,8 @@ protected:
 	void Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
 
 public:
+void FirearmInHand();
+
 	void Fire();
 	void StopFire();
 	void SwitchFireMode();

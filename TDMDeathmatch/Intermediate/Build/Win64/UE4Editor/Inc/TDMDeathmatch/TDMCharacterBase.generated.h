@@ -19,12 +19,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual void Server_Aim_Implementation(bool Aiming); \
  \
 	DECLARE_FUNCTION(execServer_Aim); \
+	DECLARE_FUNCTION(execOnRep_WeaponInHand); \
 	DECLARE_FUNCTION(execOnRep_IsDead);
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execServer_Aim); \
+	DECLARE_FUNCTION(execOnRep_WeaponInHand); \
 	DECLARE_FUNCTION(execOnRep_IsDead);
 
 

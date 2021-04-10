@@ -35,6 +35,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		P_THIS->Server_Aim_Implementation(Z_Param_Aiming);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ATDMCharacterBase::execOnRep_WeaponInHand)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnRep_WeaponInHand();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATDMCharacterBase::execOnRep_IsDead)
 	{
 		P_FINISH;
@@ -54,6 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		UClass* Class = ATDMCharacterBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnRep_IsDead", &ATDMCharacterBase::execOnRep_IsDead },
+			{ "OnRep_WeaponInHand", &ATDMCharacterBase::execOnRep_WeaponInHand },
 			{ "Server_Aim", &ATDMCharacterBase::execServer_Aim },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -77,6 +85,28 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_OnRep_IsDead_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMCharacterBase, nullptr, "OnRep_WeaponInHand", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -168,6 +198,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMCharacterBase_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ATDMCharacterBase_OnRep_IsDead, "OnRep_IsDead" }, // 1214299108
+		{ &Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand, "OnRep_WeaponInHand" }, // 1930053663
 		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_Aim, "Server_Aim" }, // 40076570
 	};
 #if WITH_METADATA
@@ -194,7 +225,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponInHand = { "WeaponInHand", nullptr, (EPropertyFlags)0x0020080000000034, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, WeaponInHand), Z_Construct_UClass_ATDMWeaponBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponInHand_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponInHand_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponInHand = { "WeaponInHand", "OnRep_WeaponInHand", (EPropertyFlags)0x0020080100000034, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, WeaponInHand), Z_Construct_UClass_ATDMWeaponBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponInHand_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponInHand_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponToSpawn_MetaData[] = {
 		{ "Category", "Weapon" },
@@ -288,7 +319,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMCharacterBase, 3053246547);
+	IMPLEMENT_CLASS(ATDMCharacterBase, 441461895);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMCharacterBase>()
 	{
 		return ATDMCharacterBase::StaticClass();

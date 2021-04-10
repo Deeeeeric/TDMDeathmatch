@@ -38,7 +38,18 @@ ATDMWeaponBase::ATDMWeaponBase()
 void ATDMWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
+}
 
+void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME_CONDITION(ATDMWeaponBase, MagazineAmmo, COND_OwnerOnly);
+	DOREPLIFETIME_CONDITION(ATDMWeaponBase, Optic, COND_OwnerOnly);
+	DOREPLIFETIME_CONDITION(ATDMWeaponBase, Muzzle, COND_OwnerOnly);
+}
+
+void ATDMWeaponBase::FirearmInHand()
+{
 	BurstFireShot = BurstFireAmount;
 	MagazineAmmo = MagazineCapacity;
 
@@ -49,15 +60,6 @@ void ATDMWeaponBase::BeginPlay()
 
 	GetWorldTimerManager().SetTimer(TFullAutoHandle, this, &ATDMWeaponBase::Fire, 0.1, true);
 	GetWorldTimerManager().PauseTimer(TFullAutoHandle);
-
-}
-
-void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
-{
-	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	DOREPLIFETIME_CONDITION(ATDMWeaponBase, MagazineAmmo, COND_OwnerOnly);
-	DOREPLIFETIME_CONDITION(ATDMWeaponBase, Optic, COND_OwnerOnly);
-	DOREPLIFETIME_CONDITION(ATDMWeaponBase, Muzzle, COND_OwnerOnly);
 }
 
 void ATDMWeaponBase::PlayFireAnimation(bool IsLocalPlayer)

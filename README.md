@@ -48,3 +48,4 @@ A fully replicated Team Deathmatch
 * Create Weapon Customization Widget
 * Show Weapon in Widget
 * Add Attachments to Weapon Widget
+* Load Firearm Function from Data Table

@@ -98,6 +98,7 @@ protected:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void Destroyed() override;
 
 	void PerformHit(FHitResult HitResult);
 	bool LineTrace(FVector SpawnLocation, FRotator SpawnRotation);

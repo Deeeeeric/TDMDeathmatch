@@ -40,6 +40,13 @@ void ATDMWeaponBase::BeginPlay()
 	Super::BeginPlay();
 }
 
+void ATDMWeaponBase::Destroyed()
+{
+	Super::Destroyed();
+	if (Optic) { Optic->Destroy(); }
+	if (Muzzle) { Muzzle->Destroy(); }
+}
+
 void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);

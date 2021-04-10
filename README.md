@@ -49,3 +49,4 @@ A fully replicated Team Deathmatch
 * Show Weapon in Widget
 * Add Attachments to Weapon Widget
 * Load Firearm Function from Data Table
+* Fix Attachments not Destroying on switch

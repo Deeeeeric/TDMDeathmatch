@@ -46,3 +46,5 @@ A fully replicated Team Deathmatch
 * Create Camera Shake
 * Play Camera Shake on Fire
 * Create Weapon Customization Widget
+* Show Weapon in Widget
+* Add Attachments to Weapon Widget

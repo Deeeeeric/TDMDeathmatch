@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMCharacterBase();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_TDMDeathmatch();
+	TDMDEATHMATCH_API UScriptStruct* Z_Construct_UScriptStruct_FFirearmToSpawn();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMWeaponBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -33,6 +34,27 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 			return;
 		}
 		P_THIS->Server_Aim_Implementation(Z_Param_Aiming);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ATDMCharacterBase::execServer_SpawnFirearm)
+	{
+		P_GET_STRUCT(FFirearmToSpawn,Z_Param_FirearmToSpawn);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->Server_SpawnFirearm_Validate(Z_Param_FirearmToSpawn))
+		{
+			RPC_ValidateFailed(TEXT("Server_SpawnFirearm_Validate"));
+			return;
+		}
+		P_THIS->Server_SpawnFirearm_Implementation(Z_Param_FirearmToSpawn);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ATDMCharacterBase::execSpawnWeapon)
+	{
+		P_GET_STRUCT(FFirearmToSpawn,Z_Param_FirearmToSpawn);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SpawnWeapon(Z_Param_FirearmToSpawn);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ATDMCharacterBase::execOnRep_WeaponInHand)
@@ -56,6 +78,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		Parms.Aiming=Aiming ? true : false;
 		ProcessEvent(FindFunctionChecked(NAME_ATDMCharacterBase_Server_Aim),&Parms);
 	}
+	static FName NAME_ATDMCharacterBase_Server_SpawnFirearm = FName(TEXT("Server_SpawnFirearm"));
+	void ATDMCharacterBase::Server_SpawnFirearm(FFirearmToSpawn FirearmToSpawn)
+	{
+		TDMCharacterBase_eventServer_SpawnFirearm_Parms Parms;
+		Parms.FirearmToSpawn=FirearmToSpawn;
+		ProcessEvent(FindFunctionChecked(NAME_ATDMCharacterBase_Server_SpawnFirearm),&Parms);
+	}
 	void ATDMCharacterBase::StaticRegisterNativesATDMCharacterBase()
 	{
 		UClass* Class = ATDMCharacterBase::StaticClass();
@@ -63,6 +92,8 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 			{ "OnRep_IsDead", &ATDMCharacterBase::execOnRep_IsDead },
 			{ "OnRep_WeaponInHand", &ATDMCharacterBase::execOnRep_WeaponInHand },
 			{ "Server_Aim", &ATDMCharacterBase::execServer_Aim },
+			{ "Server_SpawnFirearm", &ATDMCharacterBase::execServer_SpawnFirearm },
+			{ "SpawnWeapon", &ATDMCharacterBase::execSpawnWeapon },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -143,6 +174,66 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics
+	{
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_FirearmToSpawn;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::NewProp_FirearmToSpawn = { "FirearmToSpawn", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMCharacterBase_eventServer_SpawnFirearm_Parms, FirearmToSpawn), Z_Construct_UScriptStruct_FFirearmToSpawn, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::NewProp_FirearmToSpawn,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMCharacterBase, nullptr, "Server_SpawnFirearm", nullptr, nullptr, sizeof(TDMCharacterBase_eventServer_SpawnFirearm_Parms), Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics
+	{
+		struct TDMCharacterBase_eventSpawnWeapon_Parms
+		{
+			FFirearmToSpawn FirearmToSpawn;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_FirearmToSpawn;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::NewProp_FirearmToSpawn = { "FirearmToSpawn", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMCharacterBase_eventSpawnWeapon_Parms, FirearmToSpawn), Z_Construct_UScriptStruct_FFirearmToSpawn, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::NewProp_FirearmToSpawn,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMCharacterBase, nullptr, "SpawnWeapon", nullptr, nullptr, sizeof(TDMCharacterBase_eventSpawnWeapon_Parms), Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ATDMCharacterBase_NoRegister()
 	{
 		return ATDMCharacterBase::StaticClass();
@@ -200,6 +291,8 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		{ &Z_Construct_UFunction_ATDMCharacterBase_OnRep_IsDead, "OnRep_IsDead" }, // 1214299108
 		{ &Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand, "OnRep_WeaponInHand" }, // 1930053663
 		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_Aim, "Server_Aim" }, // 40076570
+		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm, "Server_SpawnFirearm" }, // 1753500193
+		{ &Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon, "SpawnWeapon" }, // 2730230084
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::Class_MetaDataParams[] = {
@@ -236,18 +329,14 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseLookUpRate_MetaData[] = {
 		{ "Category", "Camera" },
-		{ "Comment", "/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */" },
 		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
-		{ "ToolTip", "Base look up/down rate, in deg/sec. Other scaling may affect final rate." },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseLookUpRate = { "BaseLookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, BaseLookUpRate), METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseLookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseLookUpRate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Camera" },
-		{ "Comment", "/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */" },
 		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
-		{ "ToolTip", "Base turn rate, in deg/sec. Other scaling may affect final turn rate." },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseTurnRate = { "BaseTurnRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, BaseTurnRate), METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseTurnRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_BaseTurnRate_MetaData)) };
@@ -319,7 +408,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMCharacterBase, 441461895);
+	IMPLEMENT_CLASS(ATDMCharacterBase, 2650663522);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMCharacterBase>()
 	{
 		return ATDMCharacterBase::StaticClass();

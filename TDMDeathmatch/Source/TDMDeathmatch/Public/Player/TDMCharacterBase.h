@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "TDMDeathmatch/TDMStructs.h"
 #include "TDMCharacterBase.generated.h"
 
 class ATDMWeaponBase;
@@ -42,11 +43,9 @@ protected:
 public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
-	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 		float BaseTurnRate;
 
-	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 		float BaseLookUpRate;
 
@@ -60,8 +59,16 @@ protected:
 	UFUNCTION()
 		void OnRep_WeaponInHand();
 
-	/** Fires a projectile. */
-	void OnFire();
+	UFUNCTION(BlueprintCallable)
+		void SpawnWeapon(FFirearmToSpawn FirearmToSpawn);
+
+		UFUNCTION(Server, Reliable, WithValidation)
+		void Server_SpawnFirearm(FFirearmToSpawn FirearmToSpawn);
+		bool Server_SpawnFirearm_Validate(FFirearmToSpawn FirearmToSpawn);
+		void Server_SpawnFirearm_Implementation(FFirearmToSpawn FirearmToSpawn);
+
+		/** Fires a projectile. */
+		void OnFire();
 	void StopFire();
 
 	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Weapon")
@@ -78,22 +85,12 @@ protected:
 
 	void HandleAimFOV(float DeltaSeconds);
 
-	/** Handles moving forward/backward */
 	void MoveForward(float Val);
 
-	/** Handles strafing movement, left and right */
 	void MoveRight(float Val);
 
-	/**
-	 * Called via input to turn at a given rate.
-	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
-	 */
 	void TurnAtRate(float Rate);
 
-	/**
-	 * Called via input to turn look up/down at a given rate.
-	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
-	 */
 	void LookUpAtRate(float Rate);
 
 protected:

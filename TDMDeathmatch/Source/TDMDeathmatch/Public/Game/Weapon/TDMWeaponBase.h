@@ -114,7 +114,7 @@ protected:
 	void Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
 
 public:
-void FirearmInHand();
+	void FirearmInHand();
 
 	void Fire();
 	void StopFire();
@@ -123,7 +123,11 @@ void FirearmInHand();
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);
 
-	FORCEINLINE	ATDMAttachment_Optic* GetOptic() const { return Optic; }
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		FORCEINLINE	ATDMAttachment_Optic* GetOptic() const { return Optic; }
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		FORCEINLINE	ATDMAttachment* GetMuzzle() const { return Muzzle; }
 	float GetCameraFOV();
 	float GetCameraFOVSpeed();
 };

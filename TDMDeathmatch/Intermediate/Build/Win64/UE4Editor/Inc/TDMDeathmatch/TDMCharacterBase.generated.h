@@ -8,37 +8,48 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FFirearmToSpawn;
 #ifdef TDMDEATHMATCH_TDMCharacterBase_generated_h
 #error "TDMCharacterBase.generated.h already included, missing '#pragma once' in TDMCharacterBase.h"
 #endif
 #define TDMDEATHMATCH_TDMCharacterBase_generated_h
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_SPARSE_DATA
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_RPC_WRAPPERS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_SPARSE_DATA
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_RPC_WRAPPERS \
 	virtual bool Server_Aim_Validate(bool ); \
 	virtual void Server_Aim_Implementation(bool Aiming); \
+	virtual bool Server_SpawnFirearm_Validate(FFirearmToSpawn ); \
+	virtual void Server_SpawnFirearm_Implementation(FFirearmToSpawn FirearmToSpawn); \
  \
 	DECLARE_FUNCTION(execServer_Aim); \
+	DECLARE_FUNCTION(execServer_SpawnFirearm); \
+	DECLARE_FUNCTION(execSpawnWeapon); \
 	DECLARE_FUNCTION(execOnRep_WeaponInHand); \
 	DECLARE_FUNCTION(execOnRep_IsDead);
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execServer_Aim); \
+	DECLARE_FUNCTION(execServer_SpawnFirearm); \
+	DECLARE_FUNCTION(execSpawnWeapon); \
 	DECLARE_FUNCTION(execOnRep_WeaponInHand); \
 	DECLARE_FUNCTION(execOnRep_IsDead);
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_EVENT_PARMS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_EVENT_PARMS \
 	struct TDMCharacterBase_eventServer_Aim_Parms \
 	{ \
 		bool Aiming; \
+	}; \
+	struct TDMCharacterBase_eventServer_SpawnFirearm_Parms \
+	{ \
+		FFirearmToSpawn FirearmToSpawn; \
 	};
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_CALLBACK_WRAPPERS
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_INCLASS_NO_PURE_DECLS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_CALLBACK_WRAPPERS
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATDMCharacterBase(); \
 	friend struct Z_Construct_UClass_ATDMCharacterBase_Statics; \
@@ -56,7 +67,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_INCLASS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesATDMCharacterBase(); \
 	friend struct Z_Construct_UClass_ATDMCharacterBase_Statics; \
@@ -74,7 +85,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_STANDARD_CONSTRUCTORS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATDMCharacterBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATDMCharacterBase) \
@@ -87,7 +98,7 @@ private: \
 public:
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_ENHANCED_CONSTRUCTORS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATDMCharacterBase(ATDMCharacterBase&&); \
@@ -98,38 +109,38 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMCharacterBase); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATDMCharacterBase)
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_PRIVATE_PROPERTY_OFFSET \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__WeaponToSpawn() { return STRUCT_OFFSET(ATDMCharacterBase, WeaponToSpawn); } \
 	FORCEINLINE static uint32 __PPO__WeaponInHand() { return STRUCT_OFFSET(ATDMCharacterBase, WeaponInHand); } \
 	FORCEINLINE static uint32 __PPO__bIsAiming() { return STRUCT_OFFSET(ATDMCharacterBase, bIsAiming); }
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_12_PROLOG \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_EVENT_PARMS
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_13_PROLOG \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_EVENT_PARMS
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_GENERATED_BODY_LEGACY \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_SPARSE_DATA \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_RPC_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_CALLBACK_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_INCLASS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_STANDARD_CONSTRUCTORS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_PRIVATE_PROPERTY_OFFSET \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_SPARSE_DATA \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_RPC_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_CALLBACK_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_INCLASS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_GENERATED_BODY \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_SPARSE_DATA \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_CALLBACK_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_INCLASS_NO_PURE_DECLS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_15_ENHANCED_CONSTRUCTORS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_PRIVATE_PROPERTY_OFFSET \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_SPARSE_DATA \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_CALLBACK_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_INCLASS_NO_PURE_DECLS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

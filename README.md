@@ -50,3 +50,4 @@ A fully replicated Team Deathmatch
 * Add Attachments to Weapon Widget
 * Load Firearm Function from Data Table
 * Fix Attachments not Destroying on switch
+* Setup Spawning of Weapons and Attachments

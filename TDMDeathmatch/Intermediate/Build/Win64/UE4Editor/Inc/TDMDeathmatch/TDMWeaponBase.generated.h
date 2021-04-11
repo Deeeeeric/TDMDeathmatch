@@ -9,6 +9,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class ATDMAttachment;
+class ATDMAttachment_Optic;
 struct FVector_NetQuantize10;
 struct FHitResult;
 #ifdef TDMDEATHMATCH_TDMWeaponBase_generated_h
@@ -25,6 +26,8 @@ struct FHitResult;
 	virtual bool Server_AddAttachment_Validate(TSubclassOf<ATDMAttachment>  ); \
 	virtual void Server_AddAttachment_Implementation(TSubclassOf<ATDMAttachment>  AttachmentClass); \
  \
+	DECLARE_FUNCTION(execGetMuzzle); \
+	DECLARE_FUNCTION(execGetOptic); \
 	DECLARE_FUNCTION(execAddAttachment); \
 	DECLARE_FUNCTION(execMulti_Fire); \
 	DECLARE_FUNCTION(execServer_Fire); \
@@ -33,6 +36,8 @@ struct FHitResult;
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetMuzzle); \
+	DECLARE_FUNCTION(execGetOptic); \
 	DECLARE_FUNCTION(execAddAttachment); \
 	DECLARE_FUNCTION(execMulti_Fire); \
 	DECLARE_FUNCTION(execServer_Fire); \

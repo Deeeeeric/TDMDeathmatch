@@ -101,9 +101,6 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 	PlayerInputComponent->BindAxis("MoveForward", this, &ATDMCharacterBase::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ATDMCharacterBase::MoveRight);
 
-	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
-	// "turn" handles devices that provide an absolute delta, such as a mouse.
-	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("TurnRate", this, &ATDMCharacterBase::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
@@ -167,6 +164,41 @@ void ATDMCharacterBase::OnRep_WeaponInHand()
 	{
 		WeaponInHand->FirearmInHand();
 	}
+}
+
+void ATDMCharacterBase::SpawnWeapon(FFirearmToSpawn FirearmToSpawn)
+{
+	if (FirearmToSpawn.FirearmClass == nullptr) { return; }
+	if (HasAuthority())
+	{
+		if (WeaponInHand)
+		{
+			WeaponInHand->Destroy();
+		}
+		WeaponInHand = GetWorld()->SpawnActor<ATDMWeaponBase>(FirearmToSpawn.FirearmClass);
+		if (WeaponInHand)
+		{
+			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));
+			OnRep_WeaponInHand();
+
+			WeaponInHand->AddAttachment(FirearmToSpawn.OpticClass);
+			WeaponInHand->AddAttachment(FirearmToSpawn.MuzzleClass);
+		}
+	}
+	else
+	{
+		Server_SpawnFirearm(FirearmToSpawn);
+	}
+}
+
+bool ATDMCharacterBase::Server_SpawnFirearm_Validate(FFirearmToSpawn FirearmToSpawn)
+{
+	return true;
+}
+
+void ATDMCharacterBase::Server_SpawnFirearm_Implementation(FFirearmToSpawn FirearmToSpawn)
+{
+	SpawnWeapon(FirearmToSpawn);
 }
 
 void ATDMCharacterBase::OnFire()
@@ -291,9 +323,9 @@ void ATDMCharacterBase::PlayCameraShake(TSubclassOf<UCameraShake> CameraShake)
 {
 	if (CameraShake)
 	{
-	 if (APlayerController* PC = GetController<APlayerController>())
-	 {
-		PC->ClientPlayCameraShake(CameraShake, 1.0f);
-	 }
+		if (APlayerController* PC = GetController<APlayerController>())
+		{
+			PC->ClientPlayCameraShake(CameraShake, 1.0f);
+		}
 	}
 }

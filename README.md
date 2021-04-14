@@ -51,3 +51,4 @@ A fully replicated Team Deathmatch
 * Load Firearm Function from Data Table
 * Fix Attachments not Destroying on switch
 * Setup Spawning of Weapons and Attachments
+* Create customizable weapon and attachment classes

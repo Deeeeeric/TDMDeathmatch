@@ -4,16 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "TDMDeathmatch/TDMStructs.h"
 #include "TDMAttachment.generated.h"
 
 class UStaticMeshComponent;
-
-UENUM(BlueprintType)
-enum class EAttachmentType : uint8
-{
-	Optic	UMETA(DisplayName, "Optic"),
-	Muzzle	UMETA(DisplayName, "Muzzle")
-};
 
 UCLASS()
 class TDMDEATHMATCH_API ATDMAttachment : public AActor
@@ -29,7 +23,7 @@ protected:
 		UStaticMeshComponent* AttachmentMesh;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Attachment")
-		TEnumAsByte<EAttachmentType> AttachmentType;
+		EAttachmentType AttachmentType;
 
 	FName AttachmentSocket;
 

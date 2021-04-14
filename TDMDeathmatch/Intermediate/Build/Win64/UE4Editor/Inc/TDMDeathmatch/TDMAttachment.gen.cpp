@@ -13,70 +13,13 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTDMAttachment() {}
 // Cross Module References
-	TDMDEATHMATCH_API UEnum* Z_Construct_UEnum_TDMDeathmatch_EAttachmentType();
-	UPackage* Z_Construct_UPackage__Script_TDMDeathmatch();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMAttachment_NoRegister();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMAttachment();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	UPackage* Z_Construct_UPackage__Script_TDMDeathmatch();
+	TDMDEATHMATCH_API UEnum* Z_Construct_UEnum_TDMDeathmatch_EAttachmentType();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
-	static UEnum* EAttachmentType_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_TDMDeathmatch_EAttachmentType, Z_Construct_UPackage__Script_TDMDeathmatch(), TEXT("EAttachmentType"));
-		}
-		return Singleton;
-	}
-	template<> TDMDEATHMATCH_API UEnum* StaticEnum<EAttachmentType>()
-	{
-		return EAttachmentType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EAttachmentType(EAttachmentType_StaticEnum, TEXT("/Script/TDMDeathmatch"), TEXT("EAttachmentType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_TDMDeathmatch_EAttachmentType_Hash() { return 3861431754U; }
-	UEnum* Z_Construct_UEnum_TDMDeathmatch_EAttachmentType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_TDMDeathmatch();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EAttachmentType"), 0, Get_Z_Construct_UEnum_TDMDeathmatch_EAttachmentType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EAttachmentType::Optic", (int64)EAttachmentType::Optic },
-				{ "EAttachmentType::Muzzle", (int64)EAttachmentType::Muzzle },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "ModuleRelativePath", "Public/Game/Weapon/TDMAttachment.h" },
-				{ "Muzzle.\"Muzzle\"", "" },
-				{ "Muzzle.DisplayName", "" },
-				{ "Muzzle.Name", "EAttachmentType::Muzzle" },
-				{ "Optic.\"Optic\"", "" },
-				{ "Optic.DisplayName", "" },
-				{ "Optic.Name", "EAttachmentType::Optic" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_TDMDeathmatch,
-				nullptr,
-				"EAttachmentType",
-				"EAttachmentType",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
 	void ATDMAttachment::StaticRegisterNativesATDMAttachment()
 	{
 	}

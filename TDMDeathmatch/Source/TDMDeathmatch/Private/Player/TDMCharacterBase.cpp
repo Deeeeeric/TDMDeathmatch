@@ -80,6 +80,14 @@ void ATDMCharacterBase::BeginPlay()
 	}
 }
 
+void ATDMCharacterBase::Destroyed()
+{
+	if (WeaponInHand)
+	{
+		WeaponInHand->Destroy();
+	}
+}
+
 void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	// set up gameplay key bindings

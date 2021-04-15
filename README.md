@@ -52,3 +52,4 @@ A fully replicated Team Deathmatch
 * Fix Attachments not Destroying on switch
 * Setup Spawning of Weapons and Attachments
 * Create customizable weapon and attachment classes
+* Setup Initial Spawn Points for weapon customization

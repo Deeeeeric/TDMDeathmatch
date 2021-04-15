@@ -58,7 +58,7 @@ void ATDMCharacterBase::BeginPlay()
 
 	if (HasAuthority())
 	{
-		FActorSpawnParameters SpawnParams;
+		/*FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		WeaponInHand = GetWorld()->SpawnActor<ATDMWeaponBase>(WeaponToSpawn, SpawnParams);
@@ -67,7 +67,7 @@ void ATDMCharacterBase::BeginPlay()
 		{
 			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));
 			OnRep_WeaponInHand();
-		}
+		}*/
 	}
 
 	if (IsLocallyControlled())

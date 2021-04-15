@@ -55,10 +55,10 @@ protected:
 
 	/********************* FIRE MODES *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-		TArray<TEnumAsByte<EFireMode>> FireModes;
+		TArray<EFireMode> FireModes;
 
 	int8 FireModesIndex;
-	TEnumAsByte<EFireMode> FireMode;
+	EFireMode FireMode;
 	FTimerHandle TFullAutoHandle;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")

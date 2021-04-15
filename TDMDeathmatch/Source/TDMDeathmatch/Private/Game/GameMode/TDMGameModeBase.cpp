@@ -51,7 +51,7 @@ void ATDMGameModeBase::PostLogin(APlayerController* NewPlayer)
 ATDMSpawnPoint* ATDMGameModeBase::FindSpawnPoint(ETeam CurrentTeam)
 {
 	if (SpawnPoints.Num() <= 0) { return nullptr; }
-	if (CurrentTeam == ETeam::None && SetupSpawnPoints.Num()>0)
+	if (CurrentTeam == ETeam::None && SetupSpawnPoints.Num() > 0)
 	{
 		int RanInt = FMath::RandRange(0, SetupSpawnPoints.Num() - 1);
 		return SetupSpawnPoints[RanInt];
@@ -76,7 +76,7 @@ ATDMSpawnPoint* ATDMGameModeBase::FindSpawnPoint(ETeam CurrentTeam)
 	}
 
 	float FurthestDistance = 0.0f;
-	ATDMSpawnPoint* FurthestSpawnPoint = nullptr;
+	ATDMSpawnPoint* FurthestSpawnPoint = SpawnPoints[0];
 
 	for (ATDMSpawnPoint* SpawnPoint : SpawnPoints)
 	{//For every spawn point
@@ -184,6 +184,20 @@ void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase
 		if (ATDMPlayerState* PS = Killed->GetPlayerState<ATDMPlayerState>())
 		{
 			PS->AddDeath();
+		}
+	}
+}
+
+void ATDMGameModeBase::SpawnAtPoint(ATDMCharacterBase* PlayerCharacter)
+{
+	if (PlayerCharacter)
+	{
+		if (ATDMPlayerState* PS = PlayerCharacter->GetPlayerState<ATDMPlayerState>())
+		{
+			if (ATDMSpawnPoint* SpawnPoint = FindSpawnPoint(PS->GetTeam()))
+			{
+				PlayerCharacter->SetActorLocation(SpawnPoint->GetActorLocation());
+			}
 		}
 	}
 }

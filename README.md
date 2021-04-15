@@ -54,3 +54,4 @@ A fully replicated Team Deathmatch
 * Create customizable weapon and attachment classes
 * Setup Initial Spawn Points for weapon customization
 * Spawn at start points instead on game spawn on play
+* Spawn at Game spawn after Weapon Select

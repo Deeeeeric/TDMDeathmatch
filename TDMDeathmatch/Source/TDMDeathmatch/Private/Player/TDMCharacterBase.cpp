@@ -192,6 +192,10 @@ void ATDMCharacterBase::SpawnWeapon(FFirearmToSpawn FirearmToSpawn)
 			WeaponInHand->AddAttachment(FirearmToSpawn.OpticClass);
 			WeaponInHand->AddAttachment(FirearmToSpawn.MuzzleClass);
 		}
+		if (ATDMGameModeBase* GM = GetWorld()->GetAuthGameMode<ATDMGameModeBase>())
+		{
+			GM->SpawnAtPoint(this);
+		}
 	}
 	else
 	{

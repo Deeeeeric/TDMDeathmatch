@@ -42,4 +42,5 @@ protected:
 
 public:
 	void PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase* Killed);
+	void SpawnAtPoint(ATDMCharacterBase* PlayerCharacter);
 };

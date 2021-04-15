@@ -58,7 +58,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMSpawnPoint); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATDMSpawnPoint)
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_GameMode_TDMSpawnPoint_h_15_PRIVATE_PROPERTY_OFFSET
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_GameMode_TDMSpawnPoint_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__bIsGameSpawnPoint() { return STRUCT_OFFSET(ATDMSpawnPoint, bIsGameSpawnPoint); }
+
+
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_GameMode_TDMSpawnPoint_h_12_PROLOG
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_GameMode_TDMSpawnPoint_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

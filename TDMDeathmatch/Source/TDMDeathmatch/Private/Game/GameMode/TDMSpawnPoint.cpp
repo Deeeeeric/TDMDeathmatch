@@ -5,5 +5,5 @@
 
 ATDMSpawnPoint::ATDMSpawnPoint()
 {
-
+	bIsGameSpawnPoint = false;
 }

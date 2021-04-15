@@ -16,4 +16,11 @@ class TDMDEATHMATCH_API ATDMSpawnPoint : public ATargetPoint
 	
 public:
 	ATDMSpawnPoint();
+
+protected:
+	UPROPERTY(EditAnywhere, Category="SpawnPoint")
+	bool bIsGameSpawnPoint;
+
+public:
+FORCEINLINE bool IsGameSpawnPoint() {return bIsGameSpawnPoint;}
 };

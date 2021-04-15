@@ -25,7 +25,14 @@ void ATDMGameModeBase::BeginPlay()
 	{
 		if (ATDMSpawnPoint* SpawnPoint = Cast<ATDMSpawnPoint>(Actor))
 		{
-			SpawnPoints.Add(SpawnPoint);
+			if (SpawnPoint->IsGameSpawnPoint())
+			{
+				SpawnPoints.Add(SpawnPoint);
+			}
+			else
+			{
+				SetupSpawnPoints.Add(SpawnPoint);
+			}
 		}
 	}
 	UE_LOG(LogTemp, Warning, TEXT("BEGIN PLAY"));
@@ -44,10 +51,10 @@ void ATDMGameModeBase::PostLogin(APlayerController* NewPlayer)
 ATDMSpawnPoint* ATDMGameModeBase::FindSpawnPoint(ETeam CurrentTeam)
 {
 	if (SpawnPoints.Num() <= 0) { return nullptr; }
-	if (CurrentTeam == ETeam::None)
+	if (CurrentTeam == ETeam::None && SetupSpawnPoints.Num()>0)
 	{
-		int RanInt = FMath::RandRange(0, SpawnPoints.Num()-1);
-		return SpawnPoints[RanInt];
+		int RanInt = FMath::RandRange(0, SetupSpawnPoints.Num() - 1);
+		return SetupSpawnPoints[RanInt];
 	}
 
 	TArray<AActor*> FoundActors;

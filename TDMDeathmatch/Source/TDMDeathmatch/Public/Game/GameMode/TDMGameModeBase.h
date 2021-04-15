@@ -27,6 +27,8 @@ protected:
 
 	//Dedicated TArray of spawn points
 	TArray<ATDMSpawnPoint*> SpawnPoints;
+	TArray<ATDMSpawnPoint*> SetupSpawnPoints;
+
 
 protected:
 	virtual void BeginPlay() override;

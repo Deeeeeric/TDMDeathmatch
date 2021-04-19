@@ -861,3 +861,176 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.04.19-14.49.04:920][571]AssetCheck: New page: Asset Save: multiple assets
 [2021.04.19-14.49.04:920][571]LogContentValidation: Display: Validating World /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap
 [2021.04.19-14.49.04:920][571]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Levels/FirstPersonExampleMap_BuiltData.FirstPersonExampleMap_BuiltData
+[2021.04.19-15.01.21:452][971]BlueprintLog: New page: Compile WBP_Menu
+[2021.04.19-15.01.21:689][971]LogUObjectHash: Compacting FUObjectHashTables data took   7.05ms
+[2021.04.19-15.01.22:221][993]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/WBP_Menu" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset" SILENT=true
+[2021.04.19-15.01.22:280][993]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/WBP_MenuEFCA866B49F8687352BDEB953A7F4B07.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset'
+[2021.04.19-15.01.22:316][993]AssetCheck: New page: Asset Save: WBP_Menu
+[2021.04.19-15.01.22:316][993]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/Menu/WBP_Menu.WBP_Menu
+[2021.04.19-15.05.22:324][399]BlueprintLog: New page: Compile WBP_Menu
+[2021.04.19-15.05.22:401][399]LogUObjectHash: Compacting FUObjectHashTables data took   4.99ms
+[2021.04.19-15.05.22:914][425]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/WBP_Menu" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset" SILENT=true
+[2021.04.19-15.05.22:955][425]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/WBP_Menu74AE9CE149B1D0F74F4C0EBBB2614192.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset'
+[2021.04.19-15.05.22:973][425]AssetCheck: New page: Asset Save: WBP_Menu
+[2021.04.19-15.05.22:973][425]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/Menu/WBP_Menu.WBP_Menu
+[2021.04.19-15.09.52:923][396]BlueprintLog: New page: Compile WBP_Menu
+[2021.04.19-15.09.52:993][396]LogUObjectHash: Compacting FUObjectHashTables data took   4.33ms
+[2021.04.19-15.09.53:392][414]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/UI/Menu/WBP_Menu" FILE="../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset" SILENT=true
+[2021.04.19-15.09.53:443][414]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/WBP_MenuCBA11A8E4A8C5F03F5C1E891E2D99996.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/UI/Menu/WBP_Menu.uasset'
+[2021.04.19-15.09.53:473][414]AssetCheck: New page: Asset Save: WBP_Menu
+[2021.04.19-15.09.53:474][414]LogContentValidation: Display: Validating WidgetBlueprint /Game/UI/Menu/WBP_Menu.WBP_Menu
+[2021.04.19-15.09.56:571][588]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.19-15.09.56:573][588]PIE: New page: PIE session: FirstPersonExampleMap (19 Apr 2021, 17:09:56)
+[2021.04.19-15.09.56:574][588]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.19-15.09.56:640][588]LogPlayLevel: PIE: StaticDuplicateObject took: (0.066469s)
+[2021.04.19-15.09.56:644][588]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.19-15.09.56:645][588]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000018B3C9A7E00), frame # 36588
+[2021.04.19-15.09.56:645][588]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000018B211B2480), frame # 36588
+[2021.04.19-15.09.56:646][588]LogPlayLevel: PIE: World Init took: (0.005242s)
+[2021.04.19-15.09.56:646][588]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.072138s)
+[2021.04.19-15.09.56:680][588]LogUObjectHash: Compacting FUObjectHashTables data took   3.62ms
+[2021.04.19-15.09.56:683][588]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.19-15.09.56:683][588]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.19-15.09.56:683][588]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.19-15.09.56:683][588]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.19-15.09.56:683][588]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.19-15.09.56:683][588]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.19-15.09.56:683][588]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.19-15.09.56:683][588]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.19-15.09.56:684][588]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.19-15.09.56:684][588]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.19-15.09.56:705][588]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.19-15.09.56:705][588]LogAudioMixer: Display: 1: FrontRight
+[2021.04.19-15.09.56:748][588]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.19-15.09.56:748][588]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.19-15.09.56:748][588]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.19-15.09.56:748][588]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.19-15.09.56:755][588]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.19-15.09.56:774][588]LogInit: FAudioDevice initialized.
+[2021.04.19-15.09.56:839][588]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.19-15.09.56:839][588]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.19-15.09.56:844][588]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.19-16.09.56
+[2021.04.19-15.09.56:845][588]LogWorld: Bringing up level for play took: 0.004182
+[2021.04.19-15.09.56:847][588]LogOnline: OSS: Creating online subsystem instance for: :Context_10
+[2021.04.19-15.09.56:854][588]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.04.19-15.09.56:855][588]LogTemp: Warning: POST LOGIN
+[2021.04.19-15.09.56:855][588]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.19-15.09.56:856][588]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.19-15.09.56:856][588]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.19-15.09.56:856][588]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.19-15.09.56:856][588]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.19-15.09.56:856][588]LogNet: GameNetDriver IpNetDriver_2 IpNetDriver listening on port 17777
+[2021.04.19-15.09.56:857][588]LogTemp: Warning: BEGIN PLAY
+[2021.04.19-15.09.56:857][588]LogTemp: Warning: POST LOGIN
+[2021.04.19-15.09.56:860][588]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.19-15.09.56:865][588]PIE: Server logged in
+[2021.04.19-15.09.56:867][588]PIE: Play in editor total start time 0.301 seconds.
+[2021.04.19-15.09.57:027][594]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.10.00:006][771]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.10.00:007][771]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.00:008][771]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.01:287][847]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.10.01:288][847]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.01:288][847]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.04:026][  8]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.10.04:026][  8]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.04:027][  8]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.08:772][290]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.10.08:773][290]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.08:773][290]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.14:688][642]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.10.14:688][642]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.14:689][642]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.17:639][818]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.10.17:640][818]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.17:640][818]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.19:098][905]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.10.19:098][905]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.19:099][905]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.10.21:888][ 68]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.19-15.10.21:889][ 68]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.19-15.10.21:889][ 68]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.19-15.10.21:889][ 68]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.19-15.10.21:897][ 68]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.19-15.10.21:900][ 68]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.19-15.10.21:906][ 68]LogNet: World NetDriver shutdown IpNetDriver_2 [GameNetDriver]
+[2021.04.19-15.10.21:906][ 68]LogNet: DestroyNamedNetDriver IpNetDriver_2 [GameNetDriver]
+[2021.04.19-15.10.21:906][ 68]LogExit: GameNetDriver IpNetDriver_2 shut down
+[2021.04.19-15.10.21:907][ 68]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.19-15.10.21:913][ 68]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.19-15.10.21:974][ 68]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000018B211B2480), frame # 38068
+[2021.04.19-15.10.21:974][ 68]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000018B3C9A7E00), frame # 38068
+[2021.04.19-15.10.21:979][ 68]LogUObjectHash: Compacting FUObjectHashTables data took   3.67ms
+[2021.04.19-15.10.22:010][ 69]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2021.04.19-15.15.22:315][465]LogTemp: Repeating last play command: Selected Viewport
+[2021.04.19-15.15.22:339][465]BlueprintLog: New page: Pre-Play auto-recompile
+[2021.04.19-15.15.22:343][465]LogPlayLevel: [PlayLevel] Compiling WBP_Menu before play...
+[2021.04.19-15.15.22:430][465]LogUObjectHash: Compacting FUObjectHashTables data took   3.50ms
+[2021.04.19-15.15.22:433][465]LogPlayLevel: PlayLevel: Blueprint regeneration took 94 ms (1 blueprints)
+[2021.04.19-15.15.22:433][465]PIE: New page: PIE session: FirstPersonExampleMap (19 Apr 2021, 17:15:22)
+[2021.04.19-15.15.22:433][465]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.19-15.15.22:450][465]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017027s)
+[2021.04.19-15.15.22:452][465]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.19-15.15.22:452][465]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000018B1AD3FE00), frame # 39465
+[2021.04.19-15.15.22:452][465]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000018B20F59440), frame # 39465
+[2021.04.19-15.15.22:453][465]LogPlayLevel: PIE: World Init took: (0.002322s)
+[2021.04.19-15.15.22:453][465]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.019637s)
+[2021.04.19-15.15.22:487][465]LogUObjectHash: Compacting FUObjectHashTables data took   2.78ms
+[2021.04.19-15.15.22:490][465]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.19-15.15.22:490][465]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.19-15.15.22:490][465]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.19-15.15.22:490][465]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.19-15.15.22:490][465]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.19-15.15.22:490][465]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.19-15.15.22:490][465]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.19-15.15.22:490][465]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.19-15.15.22:491][465]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.19-15.15.22:491][465]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.19-15.15.22:503][465]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.19-15.15.22:503][465]LogAudioMixer: Display: 1: FrontRight
+[2021.04.19-15.15.22:583][465]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.19-15.15.22:583][465]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.19-15.15.22:583][465]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.19-15.15.22:583][465]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.19-15.15.22:584][465]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.19-15.15.22:599][465]LogInit: FAudioDevice initialized.
+[2021.04.19-15.15.22:649][465]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.19-15.15.22:649][465]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.19-15.15.22:651][465]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.19-16.15.22
+[2021.04.19-15.15.22:652][465]LogWorld: Bringing up level for play took: 0.002070
+[2021.04.19-15.15.22:652][465]LogOnline: OSS: Creating online subsystem instance for: :Context_11
+[2021.04.19-15.15.22:655][465]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.04.19-15.15.22:656][465]LogTemp: Warning: POST LOGIN
+[2021.04.19-15.15.22:657][465]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.19-15.15.22:657][465]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.19-15.15.22:657][465]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.19-15.15.22:658][465]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.19-15.15.22:658][465]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.19-15.15.22:658][465]LogNet: GameNetDriver IpNetDriver_3 IpNetDriver listening on port 17777
+[2021.04.19-15.15.22:658][465]LogTemp: Warning: BEGIN PLAY
+[2021.04.19-15.15.22:658][465]LogTemp: Warning: POST LOGIN
+[2021.04.19-15.15.22:660][465]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.19-15.15.22:661][465]PIE: Server logged in
+[2021.04.19-15.15.22:662][465]PIE: Play in editor total start time 0.329 seconds.
+[2021.04.19-15.15.22:813][471]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.15.27:684][723]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.15.27:685][723]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.15.27:685][723]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.15.32:373][  3]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.19-15.15.32:374][  3]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.15.32:374][  3]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_Menu.WBP_Menu_C'!
+[2021.04.19-15.15.35:429][183]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.19-15.15.35:429][183]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.19-15.15.35:429][183]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.19-15.15.35:429][183]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.19-15.15.35:434][183]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.19-15.15.35:435][183]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.19-15.15.35:444][183]LogNet: World NetDriver shutdown IpNetDriver_3 [GameNetDriver]
+[2021.04.19-15.15.35:444][183]LogNet: DestroyNamedNetDriver IpNetDriver_3 [GameNetDriver]
+[2021.04.19-15.15.35:445][183]LogExit: GameNetDriver IpNetDriver_3 shut down
+[2021.04.19-15.15.35:446][183]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.19-15.15.35:454][183]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.19-15.15.35:520][183]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000018B20F59440), frame # 40183
+[2021.04.19-15.15.35:520][183]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000018B1AD3FE00), frame # 40183
+[2021.04.19-15.15.35:523][183]LogUObjectHash: Compacting FUObjectHashTables data took   2.87ms
+[2021.04.19-15.15.35:578][184]LogPlayLevel: Display: Destroying online subsystem :Context_11

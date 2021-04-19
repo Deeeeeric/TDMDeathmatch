@@ -55,3 +55,4 @@ A fully replicated Team Deathmatch
 * Setup Initial Spawn Points for weapon customization
 * Spawn at start points instead on game spawn on play
 * Spawn at Game spawn after Weapon Select
+* Ragdoll and weapon drop after death

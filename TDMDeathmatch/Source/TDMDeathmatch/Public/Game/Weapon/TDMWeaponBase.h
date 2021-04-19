@@ -130,4 +130,6 @@ public:
 		FORCEINLINE	ATDMAttachment* GetMuzzle() const { return Muzzle; }
 	float GetCameraFOV();
 	float GetCameraFOVSpeed();
+
+	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh(){return WeaponMesh;}
 };

@@ -155,8 +155,21 @@ void ATDMCharacterBase::OnRep_IsDead()
 {
 	if (HasAuthority())
 	{
-		FTimerHandle HandleTimer;
-		GetWorldTimerManager().SetTimer(HandleTimer, this, &ATDMCharacterBase::DestroyCharacter, 1.0f, false);
+		SetLifeSpan(10.0f);
+	}
+	//Ignore collision
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	//Set collision profile to ragdoll
+	GetMesh1P()->SetCollisionProfileName(FName("ragdoll"));
+	GetMesh1P()->SetAllBodiesSimulatePhysics(true);
+
+	if (WeaponInHand)
+	{//Detach weapon
+		WeaponInHand->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+		WeaponInHand->GetWeaponMesh()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+		WeaponInHand->GetWeaponMesh()->SetSimulatePhysics(true);
+		WeaponInHand->SetLifeSpan(10.0f);
 	}
 }
 
@@ -177,13 +190,18 @@ void ATDMCharacterBase::OnRep_WeaponInHand()
 void ATDMCharacterBase::SpawnWeapon(FFirearmToSpawn FirearmToSpawn)
 {
 	if (FirearmToSpawn.FirearmClass == nullptr) { return; }
+
 	if (HasAuthority())
 	{
 		if (WeaponInHand)
 		{
 			WeaponInHand->Destroy();
 		}
-		WeaponInHand = GetWorld()->SpawnActor<ATDMWeaponBase>(FirearmToSpawn.FirearmClass);
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+
+		WeaponInHand = GetWorld()->SpawnActor<ATDMWeaponBase>(FirearmToSpawn.FirearmClass, SpawnParams);
 		if (WeaponInHand)
 		{
 			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));

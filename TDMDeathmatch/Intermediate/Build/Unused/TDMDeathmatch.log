@@ -1,7 +1,4 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\DW\Documents\GitHub\TDMDeathmatch).
-  Failed to delete file 'D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch.pdb'
-      Exception: The process cannot access the file 'D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch.pdb' because it is being used by another process.
-  Attempting to retry...
   Building TDMDeathmatchEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Distributing 4 actions to XGE
@@ -11,12 +8,12 @@
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMGameModeBase.cpp (0:02.42 at +0:00)
-  UE4Editor-TDMDeathmatch.dll (0:01.15 at +0:02)
+  TDMCharacterBase.cpp (0:02.54 at +0:00)
+  UE4Editor-TDMDeathmatch.dll (0:01.18 at +0:02)
      Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.exp
-  UE4Editor-TDMDeathmatch.lib (0:00.20 at +0:03)
+  UE4Editor-TDMDeathmatch.lib (0:00.18 at +0:03)
      Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.exp
-  TDMDeathmatchEditor.target (0:00.29 at +0:03)
+  TDMDeathmatchEditor.target (0:00.31 at +0:03)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -24,5 +21,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 4.38 seconds
-  Total execution time: 6.33 seconds
+  Total time in XGE executor: 4.47 seconds
+  Total execution time: 5.68 seconds

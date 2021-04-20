@@ -1,43 +1,19 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\DW\Documents\GitHub\TDMDeathmatch).
-  Parsing headers for TDMDeathmatchEditor
-    Running UnrealHeaderTool "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\TDMDeathmatch.uproject" "D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\TDMDeathmatchEditor\Development\TDMDeathmatchEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\DW\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for TDMDeathmatchEditor in 11.8494387 seconds
   Building TDMDeathmatchEditor...
   Using Visual Studio 2019 14.28.29913 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 25 actions to XGE
+  Distributing 4 actions to XGE
   --------------------Build System Warning---------------------------------------
   Failed to connect to Coordinator:
       All builds will run in standalone mode.
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  TDMStructs.gen.cpp (0:15.65 at +0:00)
-  AttachmentCustomise_Muzzle.cpp (0:01.37 at +0:15)
-  AttachmentCustomise_Optic.cpp (0:01.21 at +0:17)
-  TDMAttachmentCustomise.cpp (0:01.54 at +0:18)
-  TDMWeaponCustomise.cpp (0:01.75 at +0:19)
-  TDMGameModeBase.cpp (0:02.64 at +0:21)
-  TDMAttachment.cpp (0:01.32 at +0:24)
-  TDMAttachment_Optic.cpp (0:01.17 at +0:25)
-  TDMProjectileBase.cpp (0:01.76 at +0:26)
-  TDMWeaponBase.cpp (0:01.84 at +0:28)
-  TDMPlayerState.cpp (0:01.60 at +0:30)
-  TDMCharacterBase.cpp (0:02.67 at +0:31)
-  AttachmentCustomise_Optic.gen.cpp (0:01.29 at +0:34)
-  AttachmentCustomise_Muzzle.gen.cpp (0:01.26 at +0:35)
-  TDMAttachment.gen.cpp (0:01.21 at +0:37)
-  TDMAttachmentCustomise.gen.cpp (0:01.25 at +0:38)
-  TDMAttachment_Optic.gen.cpp (0:01.26 at +0:39)
-  TDMCharacterBase.gen.cpp (0:01.46 at +0:40)
-  TDMDeathmatch.init.gen.cpp (0:00.98 at +0:42)
-  TDMGameStateBase.gen.cpp (0:01.39 at +0:43)
-  TDMPlayerState.gen.cpp (0:01.36 at +0:44)
-  TDMGameStateBase.cpp (0:01.42 at +0:46)
-  UE4Editor-TDMDeathmatch-0001.dll (0:01.26 at +0:47)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0001.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0001.suppressed.exp
-  UE4Editor-TDMDeathmatch-0001.lib (0:00.20 at +0:48)
-     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0001.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0001.exp
-  TDMDeathmatchEditor.target (0:00.23 at +0:49)
+  TDMBlueprintFunctionLibrary.cpp (0:02.29 at +0:00)
+  UE4Editor-TDMDeathmatch-0004.dll (0:01.09 at +0:02)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.suppressed.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.suppressed.exp
+  UE4Editor-TDMDeathmatch-0004.lib (0:00.28 at +0:03)
+     Creating library D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.lib and object D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch-0004.exp
+  TDMDeathmatchEditor.target (0:00.31 at +0:03)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -45,5 +21,5 @@
   1 build system warning(s):
      - Failed to connect to Coordinator
   
-  Total time in XGE executor: 49.55 seconds
-  Total execution time: 62.87 seconds
+  Total time in XGE executor: 4.30 seconds
+  Total execution time: 5.71 seconds

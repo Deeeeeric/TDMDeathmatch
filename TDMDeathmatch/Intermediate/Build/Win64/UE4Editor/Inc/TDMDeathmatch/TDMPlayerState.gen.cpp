@@ -13,77 +13,12 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTDMPlayerState() {}
 // Cross Module References
-	TDMDEATHMATCH_API UEnum* Z_Construct_UEnum_TDMDeathmatch_ETeam();
-	UPackage* Z_Construct_UPackage__Script_TDMDeathmatch();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMPlayerState_NoRegister();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMPlayerState();
 	ENGINE_API UClass* Z_Construct_UClass_APlayerState();
+	UPackage* Z_Construct_UPackage__Script_TDMDeathmatch();
+	TDMDEATHMATCH_API UEnum* Z_Construct_UEnum_TDMDeathmatch_ETeam();
 // End Cross Module References
-	static UEnum* ETeam_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_TDMDeathmatch_ETeam, Z_Construct_UPackage__Script_TDMDeathmatch(), TEXT("ETeam"));
-		}
-		return Singleton;
-	}
-	template<> TDMDEATHMATCH_API UEnum* StaticEnum<ETeam>()
-	{
-		return ETeam_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ETeam(ETeam_StaticEnum, TEXT("/Script/TDMDeathmatch"), TEXT("ETeam"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_TDMDeathmatch_ETeam_Hash() { return 3516266415U; }
-	UEnum* Z_Construct_UEnum_TDMDeathmatch_ETeam()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_TDMDeathmatch();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("ETeam"), 0, Get_Z_Construct_UEnum_TDMDeathmatch_ETeam_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "ETeam::None", (int64)ETeam::None },
-				{ "ETeam::Alpha", (int64)ETeam::Alpha },
-				{ "ETeam::Bravo", (int64)ETeam::Bravo },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "Alpha.\"Alpha\"", "" },
-				{ "Alpha.Comment", "// Default\n" },
-				{ "Alpha.DisplayName", "" },
-				{ "Alpha.Name", "ETeam::Alpha" },
-				{ "Alpha.ToolTip", "Default" },
-				{ "BlueprintType", "true" },
-				{ "Bravo.\"Bravo\"", "" },
-				{ "Bravo.DisplayName", "" },
-				{ "Bravo.Name", "ETeam::Bravo" },
-				{ "Comment", "/* Set up teams*/" },
-				{ "ModuleRelativePath", "Public/Player/TDMPlayerState.h" },
-				{ "None.\"None\"", "" },
-				{ "None.DisplayName", "" },
-				{ "None.Name", "ETeam::None" },
-				{ "ToolTip", "Set up teams" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_TDMDeathmatch,
-				nullptr,
-				"ETeam",
-				"ETeam",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
 	DEFINE_FUNCTION(ATDMPlayerState::execSetTeam)
 	{
 		P_GET_ENUM(ETeam,Z_Param_JoinTeam);
@@ -130,14 +65,14 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerState() {}
 		{
 			int32 ReturnValue;
 		};
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_ATDMPlayerState_GetDeaths_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMPlayerState_eventGetDeaths_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ATDMPlayerState_GetDeaths_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMPlayerState_eventGetDeaths_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMPlayerState_GetDeaths_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMPlayerState_GetDeaths_Statics::NewProp_ReturnValue,
 	};
@@ -162,14 +97,14 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerState() {}
 		{
 			int32 ReturnValue;
 		};
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_ATDMPlayerState_GetKills_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMPlayerState_eventGetKills_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ATDMPlayerState_GetKills_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMPlayerState_eventGetKills_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMPlayerState_GetKills_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMPlayerState_GetKills_Statics::NewProp_ReturnValue,
 	};
@@ -283,11 +218,11 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerState() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Deaths_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Deaths;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Deaths;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Kills_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_Kills;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Kills;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Team_MetaData[];
 #endif
@@ -302,17 +237,19 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerState() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TDMDeathmatch,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMPlayerState_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ATDMPlayerState_GetDeaths, "GetDeaths" }, // 603984304
-		{ &Z_Construct_UFunction_ATDMPlayerState_GetKills, "GetKills" }, // 3157706667
+		{ &Z_Construct_UFunction_ATDMPlayerState_GetDeaths, "GetDeaths" }, // 3963964564
+		{ &Z_Construct_UFunction_ATDMPlayerState_GetKills, "GetKills" }, // 3222863019
 		{ &Z_Construct_UFunction_ATDMPlayerState_GetTeam, "GetTeam" }, // 1352063378
 		{ &Z_Construct_UFunction_ATDMPlayerState_SetTeam, "SetTeam" }, // 4067254320
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMPlayerState_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/* Set up teams*/" },
 		{ "HideCategories", "Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "Player/TDMPlayerState.h" },
 		{ "ModuleRelativePath", "Public/Player/TDMPlayerState.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
+		{ "ToolTip", "Set up teams" },
 	};
 #endif
 #if WITH_METADATA
@@ -320,13 +257,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerState() {}
 		{ "ModuleRelativePath", "Public/Player/TDMPlayerState.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Deaths = { "Deaths", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMPlayerState, Deaths), METADATA_PARAMS(Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Deaths_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Deaths_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Deaths = { "Deaths", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMPlayerState, Deaths), METADATA_PARAMS(Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Deaths_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Deaths_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Kills_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/TDMPlayerState.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Kills = { "Kills", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMPlayerState, Kills), METADATA_PARAMS(Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Kills_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Kills_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Kills = { "Kills", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMPlayerState, Kills), METADATA_PARAMS(Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Kills_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Kills_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMPlayerState_Statics::NewProp_Team_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/TDMPlayerState.h" },
@@ -367,7 +304,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMPlayerState, 373318910);
+	IMPLEMENT_CLASS(ATDMPlayerState, 1472109454);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMPlayerState>()
 	{
 		return ATDMPlayerState::StaticClass();

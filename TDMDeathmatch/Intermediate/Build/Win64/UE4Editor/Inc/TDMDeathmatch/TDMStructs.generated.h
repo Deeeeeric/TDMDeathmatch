@@ -13,7 +13,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TDMDEATHMATCH_TDMStructs_generated_h
 
-#define TDMDeathmatch_Source_TDMDeathmatch_TDMStructs_h_21_GENERATED_BODY \
+#define TDMDeathmatch_Source_TDMDeathmatch_TDMStructs_h_43_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FScoreboardData_Statics; \
+	TDMDEATHMATCH_API static class UScriptStruct* StaticStruct();
+
+
+template<> TDMDEATHMATCH_API UScriptStruct* StaticStruct<struct FScoreboardData>();
+
+#define TDMDeathmatch_Source_TDMDeathmatch_TDMStructs_h_28_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FFirearmToSpawn_Statics; \
 	TDMDEATHMATCH_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -24,6 +31,14 @@ template<> TDMDEATHMATCH_API UScriptStruct* StaticStruct<struct FFirearmToSpawn>
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID TDMDeathmatch_Source_TDMDeathmatch_TDMStructs_h
 
+
+#define FOREACH_ENUM_ETEAM(op) \
+	op(ETeam::None) \
+	op(ETeam::Alpha) \
+	op(ETeam::Bravo) 
+
+enum class ETeam : uint8;
+template<> TDMDEATHMATCH_API UEnum* StaticEnum<ETeam>();
 
 #define FOREACH_ENUM_EATTACHMENTTYPE(op) \
 	op(EAttachmentType::Optic) \

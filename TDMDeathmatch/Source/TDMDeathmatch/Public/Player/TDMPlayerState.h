@@ -4,16 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerState.h"
+#include "TDMDeathmatch/TDMStructs.h"
 #include "TDMPlayerState.generated.h"
 
 /* Set up teams*/
-UENUM(BlueprintType)
-enum class ETeam : uint8
-{
-	None	UMETA(DisplayName, "None"), // Default
-	Alpha	UMETA(DisplayName, "Alpha"),
-	Bravo	UMETA(DisplayName, "Bravo")
-};
 
 UCLASS()
 class TDMDEATHMATCH_API ATDMPlayerState : public APlayerState
@@ -28,10 +22,10 @@ protected:
 		ETeam Team;
 
 	UPROPERTY(Replicated)
-		int Kills;
+		int32 Kills;
 
 	UPROPERTY(Replicated)
-		int Deaths;
+		int32 Deaths;
 
 protected:
 	virtual void BeginPlay() override;
@@ -40,9 +34,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 		FORCEINLINE ETeam GetTeam() const { return Team; }
 	UFUNCTION(BlueprintCallable)
-		FORCEINLINE int GetKills() const { return Kills; }
+		FORCEINLINE int32 GetKills() const { return Kills; }
 	UFUNCTION(BlueprintCallable)
-		FORCEINLINE int GetDeaths() const { return Deaths; }
+		FORCEINLINE int32 GetDeaths() const { return Deaths; }
 
 	// Returns true if join was successful
 	UFUNCTION(BlueprintCallable)

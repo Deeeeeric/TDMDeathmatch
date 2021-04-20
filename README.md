@@ -56,3 +56,4 @@ A fully replicated Team Deathmatch
 * Spawn at start points instead on game spawn on play
 * Spawn at Game spawn after Weapon Select
 * Ragdoll and weapon drop after death
+* Create Scoreboard Widget

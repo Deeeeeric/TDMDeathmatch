@@ -77,7 +77,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		MagazineAmmo=NETFIELD_REP_START, \
+		CurrentAmmoRemaining=NETFIELD_REP_START, \
+		MagazineAmmo, \
 		Optic, \
 		Muzzle, \
 		NETFIELD_REP_END=Muzzle	}; \
@@ -95,7 +96,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		MagazineAmmo=NETFIELD_REP_START, \
+		CurrentAmmoRemaining=NETFIELD_REP_START, \
+		MagazineAmmo, \
 		Optic, \
 		Muzzle, \
 		NETFIELD_REP_END=Muzzle	}; \
@@ -137,6 +139,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 	FORCEINLINE static uint32 __PPO__BurstFireAmount() { return STRUCT_OFFSET(ATDMWeaponBase, BurstFireAmount); } \
 	FORCEINLINE static uint32 __PPO__MagazineCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineCapacity); } \
 	FORCEINLINE static uint32 __PPO__TotalAmmoCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, TotalAmmoCapacity); } \
+	FORCEINLINE static uint32 __PPO__CurrentAmmoRemaining() { return STRUCT_OFFSET(ATDMWeaponBase, CurrentAmmoRemaining); } \
 	FORCEINLINE static uint32 __PPO__MagazineAmmo() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineAmmo); } \
 	FORCEINLINE static uint32 __PPO__Optic() { return STRUCT_OFFSET(ATDMWeaponBase, Optic); } \
 	FORCEINLINE static uint32 __PPO__Muzzle() { return STRUCT_OFFSET(ATDMWeaponBase, Muzzle); } \

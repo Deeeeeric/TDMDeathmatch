@@ -73,6 +73,9 @@ protected:
 		int32 TotalAmmoCapacity;
 
 	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Weapon")
+		int32 CurrentAmmoRemaining;
+
+	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Weapon")
 		int32 MagazineAmmo;
 
 	/********************* FOV/ATTACHMENTS *********************/
@@ -131,5 +134,5 @@ public:
 	float GetCameraFOV();
 	float GetCameraFOVSpeed();
 
-	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh(){return WeaponMesh;}
+	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh() { return WeaponMesh; }
 };

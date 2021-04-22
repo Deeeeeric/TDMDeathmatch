@@ -9,6 +9,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FFirearmToSpawn;
+class ATDMWeaponBase;
 #ifdef TDMDEATHMATCH_TDMCharacterBase_generated_h
 #error "TDMCharacterBase.generated.h already included, missing '#pragma once' in TDMCharacterBase.h"
 #endif
@@ -45,6 +46,10 @@ struct FFirearmToSpawn;
 	struct TDMCharacterBase_eventServer_SpawnFirearm_Parms \
 	{ \
 		FFirearmToSpawn FirearmToSpawn; \
+	}; \
+	struct TDMCharacterBase_eventWeaponFired_Parms \
+	{ \
+		ATDMWeaponBase* Weapon; \
 	};
 
 

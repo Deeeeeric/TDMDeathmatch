@@ -38,6 +38,8 @@ ATDMWeaponBase::ATDMWeaponBase()
 void ATDMWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
+	CurrentAmmoRemaining = TotalAmmoCapacity;
+	MagazineAmmo = MagazineCapacity;
 }
 
 void ATDMWeaponBase::Destroyed()
@@ -51,6 +53,7 @@ void ATDMWeaponBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	DOREPLIFETIME_CONDITION(ATDMWeaponBase, MagazineAmmo, COND_OwnerOnly);
+	DOREPLIFETIME_CONDITION(ATDMWeaponBase, CurrentAmmoRemaining, COND_OwnerOnly);
 	DOREPLIFETIME_CONDITION(ATDMWeaponBase, Optic, COND_OwnerOnly);
 	DOREPLIFETIME_CONDITION(ATDMWeaponBase, Muzzle, COND_OwnerOnly);
 }
@@ -226,63 +229,65 @@ void ATDMWeaponBase::Fire()
 				int RandonIndex = FMath::RandRange(0, FireCameraShakes.Num() - 1);
 				Character->PlayCameraShake(FireCameraShakes[RandonIndex]);
 			}
-		}
-		--MagazineAmmo;
 
-		bool LineTraceHit = false;
-		FVector SpawnLocation = WeaponMesh->GetSocketLocation(FName("Muzzle"));
-		FRotator SpawnRotation = WeaponMesh->GetSocketRotation(FName("Muzzle"));
+			--MagazineAmmo;
+			Character->WeaponFired(this);
 
-		LineTraceHit = LineTrace(SpawnLocation, SpawnRotation);
-		if (!LineTraceHit)
-		{
-			FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
+			bool LineTraceHit = false;
+			FVector SpawnLocation = WeaponMesh->GetSocketLocation(FName("Muzzle"));
+			FRotator SpawnRotation = WeaponMesh->GetSocketRotation(FName("Muzzle"));
 
-			FActorSpawnParameters SpawnParams;
-			SpawnParams.Owner = this;
-			SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-
-			if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams))
+			LineTraceHit = LineTrace(SpawnLocation, SpawnRotation);
+			if (!LineTraceHit)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
+				FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
+
+				FActorSpawnParameters SpawnParams;
+				SpawnParams.Owner = this;
+				SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+				if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>	(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams))
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
+				}
 			}
-		}
-		if (FireMode == EFireMode::Full)
-		{//Handle Full-Auto Logic
-			GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
-		}
+			if (FireMode == EFireMode::Full)
+			{//Handle Full-Auto Logic
+				GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
+			}
 
-		switch (FireMode)
-		{
-		case EFireMode::Full:
-		{
-			GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
-			break;
-		}
-
-		case EFireMode::Burst:
-		{
-			GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
-			if (BurstFireShot - 1 > 0)
+			switch (FireMode)
 			{
-				--BurstFireShot;
+			case EFireMode::Full:
+			{
+				GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
+				break;
+			}
+
+			case EFireMode::Burst:
+			{
+				GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
+				if (BurstFireShot - 1 > 0)
+				{
+					--BurstFireShot;
+				}
+				else
+				{
+					GetWorldTimerManager().PauseTimer(TFullAutoHandle);
+					BurstFireShot = BurstFireAmount;
+				}
+			}
+			}
+			FVector_NetQuantize10 MuzzleRotationVector = FVector_NetQuantize10(SpawnRotation.Pitch, SpawnRotation.Yaw, SpawnRotation.Roll);
+
+			if (!HasAuthority())
+			{
+				Server_Fire(FVector_NetQuantize10(SpawnLocation), MuzzleRotationVector);
 			}
 			else
 			{
-				GetWorldTimerManager().PauseTimer(TFullAutoHandle);
-				BurstFireShot = BurstFireAmount;
+				Multi_Fire(FVector_NetQuantize10(SpawnLocation), MuzzleRotationVector);
 			}
-		}
-		}
-		FVector_NetQuantize10 MuzzleRotationVector = FVector_NetQuantize10(SpawnRotation.Pitch, SpawnRotation.Yaw, SpawnRotation.Roll);
-
-		if (!HasAuthority())
-		{
-			Server_Fire(FVector_NetQuantize10(SpawnLocation), MuzzleRotationVector);
-		}
-		else
-		{
-			Multi_Fire(FVector_NetQuantize10(SpawnLocation), MuzzleRotationVector);
 		}
 	}
 	else

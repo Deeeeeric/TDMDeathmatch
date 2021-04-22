@@ -85,6 +85,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		Parms.FirearmToSpawn=FirearmToSpawn;
 		ProcessEvent(FindFunctionChecked(NAME_ATDMCharacterBase_Server_SpawnFirearm),&Parms);
 	}
+	static FName NAME_ATDMCharacterBase_WeaponFired = FName(TEXT("WeaponFired"));
+	void ATDMCharacterBase::WeaponFired(ATDMWeaponBase* Weapon)
+	{
+		TDMCharacterBase_eventWeaponFired_Parms Parms;
+		Parms.Weapon=Weapon;
+		ProcessEvent(FindFunctionChecked(NAME_ATDMCharacterBase_WeaponFired),&Parms);
+	}
 	void ATDMCharacterBase::StaticRegisterNativesATDMCharacterBase()
 	{
 		UClass* Class = ATDMCharacterBase::StaticClass();
@@ -234,6 +241,35 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics
+	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMCharacterBase_eventWeaponFired_Parms, Weapon), Z_Construct_UClass_ATDMWeaponBase_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::NewProp_Weapon,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon | HUD" },
+		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMCharacterBase, nullptr, "WeaponFired", nullptr, nullptr, sizeof(TDMCharacterBase_eventWeaponFired_Parms), Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMCharacterBase_WeaponFired()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_WeaponFired_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ATDMCharacterBase_NoRegister()
 	{
 		return ATDMCharacterBase::StaticClass();
@@ -293,6 +329,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_Aim, "Server_Aim" }, // 40076570
 		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm, "Server_SpawnFirearm" }, // 1753500193
 		{ &Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon, "SpawnWeapon" }, // 2730230084
+		{ &Z_Construct_UFunction_ATDMCharacterBase_WeaponFired, "WeaponFired" }, // 4210005316
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::Class_MetaDataParams[] = {
@@ -408,7 +445,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMCharacterBase, 2650663522);
+	IMPLEMENT_CLASS(ATDMCharacterBase, 3711265699);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMCharacterBase>()
 	{
 		return ATDMCharacterBase::StaticClass();

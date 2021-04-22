@@ -184,6 +184,10 @@ void ATDMCharacterBase::OnRep_WeaponInHand()
 	if (WeaponInHand)
 	{
 		WeaponInHand->FirearmInHand();
+		if (IsLocallyControlled())
+		{
+			WeaponFired(WeaponInHand);
+		}
 	}
 }
 

@@ -19,6 +19,10 @@ struct FHitResult;
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_SPARSE_DATA
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Game_Weapon_TDMWeaponBase_h_27_RPC_WRAPPERS \
+	virtual bool Multi_Reload_Validate(); \
+	virtual void Multi_Reload_Implementation(); \
+	virtual bool Server_Reload_Validate(); \
+	virtual void Server_Reload_Implementation(); \
 	virtual bool Multi_Fire_Validate(FVector_NetQuantize10 , FVector_NetQuantize10 ); \
 	virtual void Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector); \
 	virtual bool Server_Fire_Validate(FVector_NetQuantize10 , FVector_NetQuantize10 ); \
@@ -29,6 +33,8 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGetMuzzle); \
 	DECLARE_FUNCTION(execGetOptic); \
 	DECLARE_FUNCTION(execAddAttachment); \
+	DECLARE_FUNCTION(execMulti_Reload); \
+	DECLARE_FUNCTION(execServer_Reload); \
 	DECLARE_FUNCTION(execMulti_Fire); \
 	DECLARE_FUNCTION(execServer_Fire); \
 	DECLARE_FUNCTION(execServer_AddAttachment);
@@ -39,6 +45,8 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGetMuzzle); \
 	DECLARE_FUNCTION(execGetOptic); \
 	DECLARE_FUNCTION(execAddAttachment); \
+	DECLARE_FUNCTION(execMulti_Reload); \
+	DECLARE_FUNCTION(execServer_Reload); \
 	DECLARE_FUNCTION(execMulti_Fire); \
 	DECLARE_FUNCTION(execServer_Fire); \
 	DECLARE_FUNCTION(execServer_AddAttachment);

@@ -112,6 +112,30 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		P_THIS->AddAttachment(Z_Param_AttachmentClass);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ATDMWeaponBase::execMulti_Reload)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->Multi_Reload_Validate())
+		{
+			RPC_ValidateFailed(TEXT("Multi_Reload_Validate"));
+			return;
+		}
+		P_THIS->Multi_Reload_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ATDMWeaponBase::execServer_Reload)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->Server_Reload_Validate())
+		{
+			RPC_ValidateFailed(TEXT("Server_Reload_Validate"));
+			return;
+		}
+		P_THIS->Server_Reload_Implementation();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATDMWeaponBase::execMulti_Fire)
 	{
 		P_GET_STRUCT(FVector_NetQuantize10,Z_Param_SpawnLocation);
@@ -161,6 +185,11 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		Parms.MuzzleRotationVector=MuzzleRotationVector;
 		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_Multi_Fire),&Parms);
 	}
+	static FName NAME_ATDMWeaponBase_Multi_Reload = FName(TEXT("Multi_Reload"));
+	void ATDMWeaponBase::Multi_Reload()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_Multi_Reload),NULL);
+	}
 	static FName NAME_ATDMWeaponBase_OnHit = FName(TEXT("OnHit"));
 	void ATDMWeaponBase::OnHit(FHitResult HitResult)
 	{
@@ -183,6 +212,11 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		Parms.MuzzleRotationVector=MuzzleRotationVector;
 		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_Server_Fire),&Parms);
 	}
+	static FName NAME_ATDMWeaponBase_Server_Reload = FName(TEXT("Server_Reload"));
+	void ATDMWeaponBase::Server_Reload()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ATDMWeaponBase_Server_Reload),NULL);
+	}
 	void ATDMWeaponBase::StaticRegisterNativesATDMWeaponBase()
 	{
 		UClass* Class = ATDMWeaponBase::StaticClass();
@@ -191,8 +225,10 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 			{ "GetMuzzle", &ATDMWeaponBase::execGetMuzzle },
 			{ "GetOptic", &ATDMWeaponBase::execGetOptic },
 			{ "Multi_Fire", &ATDMWeaponBase::execMulti_Fire },
+			{ "Multi_Reload", &ATDMWeaponBase::execMulti_Reload },
 			{ "Server_AddAttachment", &ATDMWeaponBase::execServer_AddAttachment },
 			{ "Server_Fire", &ATDMWeaponBase::execServer_Fire },
+			{ "Server_Reload", &ATDMWeaponBase::execServer_Reload },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -326,6 +362,28 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ATDMWeaponBase_Multi_Reload_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMWeaponBase_Multi_Reload_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMWeaponBase_Multi_Reload_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMWeaponBase, nullptr, "Multi_Reload", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMWeaponBase_Multi_Reload_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Multi_Reload_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMWeaponBase_Multi_Reload()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMWeaponBase_Multi_Reload_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ATDMWeaponBase_OnHit_Statics
 	{
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HitResult;
@@ -411,6 +469,28 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMWeaponBase_Server_Fire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ATDMWeaponBase_Server_Reload_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMWeaponBase_Server_Reload_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMWeaponBase_Server_Reload_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMWeaponBase, nullptr, "Server_Reload", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMWeaponBase_Server_Reload_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_Server_Reload_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMWeaponBase_Server_Reload()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMWeaponBase_Server_Reload_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -511,9 +591,11 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		{ &Z_Construct_UFunction_ATDMWeaponBase_GetMuzzle, "GetMuzzle" }, // 3531150005
 		{ &Z_Construct_UFunction_ATDMWeaponBase_GetOptic, "GetOptic" }, // 3129440434
 		{ &Z_Construct_UFunction_ATDMWeaponBase_Multi_Fire, "Multi_Fire" }, // 3723914427
+		{ &Z_Construct_UFunction_ATDMWeaponBase_Multi_Reload, "Multi_Reload" }, // 381535954
 		{ &Z_Construct_UFunction_ATDMWeaponBase_OnHit, "OnHit" }, // 3892192549
 		{ &Z_Construct_UFunction_ATDMWeaponBase_Server_AddAttachment, "Server_AddAttachment" }, // 2049398816
 		{ &Z_Construct_UFunction_ATDMWeaponBase_Server_Fire, "Server_Fire" }, // 3096517451
+		{ &Z_Construct_UFunction_ATDMWeaponBase_Server_Reload, "Server_Reload" }, // 4127644100
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::Class_MetaDataParams[] = {
@@ -703,7 +785,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMWeaponBase, 1156407793);
+	IMPLEMENT_CLASS(ATDMWeaponBase, 3171829311);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMWeaponBase>()
 	{
 		return ATDMWeaponBase::StaticClass();

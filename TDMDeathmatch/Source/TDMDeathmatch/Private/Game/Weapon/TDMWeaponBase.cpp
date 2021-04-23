@@ -123,6 +123,53 @@ void ATDMWeaponBase::PlayFireAnimation(bool IsLocalPlayer)
 	}
 }
 
+void ATDMWeaponBase::PlayReloadAnimation(bool IsLocalPlayer)
+{
+	if (MagazineAmmo>0 && ReloadAnimation)
+	{
+		WeaponMesh->PlayAnimation(ReloadAnimation, false);
+	}
+	else if (MagazineAmmo == 0 && ReloadEmptyAnimation)
+	{
+		WeaponMesh->PlayAnimation(ReloadEmptyAnimation, false);
+	}
+
+	if (ATDMCharacterBase* Player = Cast<ATDMCharacterBase>(GetOwner()))
+	{
+		UAnimInstance* AnimInstance = nullptr;
+		if (IsLocalPlayer)
+		{
+			AnimInstance = Player->GetMesh1P()->GetAnimInstance();
+		}
+		else
+		{
+			AnimInstance = Player->GetMesh1P()->GetAnimInstance(); //change when third person setup
+		}
+
+		if (AnimInstance)
+		{
+			if (IsLocalPlayer)
+			{
+				AnimInstance->Montage_Play(FirstPersonMontage);
+			}
+			else
+			{
+				//play third person montage
+				AnimInstance->Montage_Play(FirstPersonMontage);
+			}
+
+			if (MagazineAmmo == 0)
+			{
+				AnimInstance->Montage_JumpToSection(FName("ReloadEmpty"));
+			}
+			else
+			{
+				AnimInstance->Montage_JumpToSection(FName("Reload"));
+			}
+		}
+	}
+}
+
 void ATDMWeaponBase::PerformHit(FHitResult HitResult)
 {
 	OnHit(HitResult);
@@ -246,7 +293,7 @@ void ATDMWeaponBase::Fire()
 				SpawnParams.Owner = this;
 				SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-				if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>	(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams))
+				if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams))
 				{
 					UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
 				}
@@ -300,6 +347,67 @@ void ATDMWeaponBase::StopFire()
 {
 	GetWorldTimerManager().PauseTimer(TFullAutoHandle);
 
+}
+
+bool ATDMWeaponBase::Server_Reload_Validate()
+{
+	return true;
+}
+
+void ATDMWeaponBase::Server_Reload_Implementation()
+{
+	int32 AmmoDifference = MagazineCapacity - MagazineAmmo;
+
+	int32 ClampAmmo = FMath::Clamp(AmmoDifference, 0, CurrentAmmoRemaining);
+
+	CurrentAmmoRemaining -= ClampAmmo;
+	MagazineAmmo += ClampAmmo;
+
+	Multi_Reload();
+}
+
+bool ATDMWeaponBase::Multi_Reload_Validate()
+{
+	return true;
+}
+
+void ATDMWeaponBase::Multi_Reload_Implementation()
+{
+	if (ATDMCharacterBase* Character = Cast<ATDMCharacterBase>(GetOwner()))
+	{
+		if (!Character->IsLocallyControlled())
+		{
+			PlayReloadAnimation(false);
+		}
+	}
+}
+
+void ATDMWeaponBase::Reload()
+{
+	int32 AmmoDifference = MagazineCapacity - MagazineAmmo;
+
+	int32 ClampAmmo = FMath::Clamp(AmmoDifference, 0, CurrentAmmoRemaining);
+
+	if (ClampAmmo > 0)
+	{
+		CurrentAmmoRemaining -= ClampAmmo;
+		MagazineAmmo += ClampAmmo;
+
+		if (ATDMCharacterBase* Character = Cast<ATDMCharacterBase>(GetOwner()))
+		{
+			Character->WeaponFired(this);
+		}
+
+		if (HasAuthority())
+		{
+			Multi_Reload();
+		}
+		else
+		{
+			PlayReloadAnimation(true);
+			Server_Reload();
+		}
+	}
 }
 
 void ATDMWeaponBase::SwitchFireMode()

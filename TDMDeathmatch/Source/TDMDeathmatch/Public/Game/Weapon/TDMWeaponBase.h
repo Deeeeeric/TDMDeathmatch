@@ -45,6 +45,12 @@ protected:
 		UAnimationAsset* FireAnimation;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		UAnimationAsset* ReloadAnimation;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		UAnimationAsset* ReloadEmptyAnimation;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UAnimMontage* FirstPersonMontage;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
@@ -52,6 +58,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		TArray<FName> HipFireNames;
+
+	void PlayFireAnimation(bool IsLocalPlayer);
+	void PlayReloadAnimation(bool IsLocalPlayer);
 
 	/********************* FIRE MODES *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
@@ -96,8 +105,6 @@ protected:
 	bool Server_AddAttachment_Validate(TSubclassOf<ATDMAttachment> AttachmentClass);
 	void Server_AddAttachment_Implementation(TSubclassOf<ATDMAttachment> AttachmentClass);
 
-	void PlayFireAnimation(bool IsLocalPlayer);
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -116,9 +123,18 @@ protected:
 	bool Multi_Fire_Validate(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
 	void Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);
 
+	UFUNCTION(Server, Reliable, WithValidation)
+		void Server_Reload();
+	bool Server_Reload_Validate();
+	void Server_Reload_Implementation();
+
+	UFUNCTION(Server, Reliable, WithValidation)
+		void Multi_Reload();
+	bool Multi_Reload_Validate();
+	void Multi_Reload_Implementation();
 public:
 	void FirearmInHand();
-
+	void Reload();
 	void Fire();
 	void StopFire();
 	void SwitchFireMode();

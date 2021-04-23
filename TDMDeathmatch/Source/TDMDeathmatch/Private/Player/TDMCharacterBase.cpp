@@ -104,6 +104,7 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 	PlayerInputComponent->BindAction("Aim", IE_Released, this, &ATDMCharacterBase::StopAiming);
 
 	PlayerInputComponent->BindAction("FireMode", IE_Pressed, this, &ATDMCharacterBase::SwitchFireMode);
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &ATDMCharacterBase::Reload);
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &ATDMCharacterBase::MoveForward);
@@ -276,6 +277,14 @@ void ATDMCharacterBase::SwitchFireMode()
 	if (WeaponInHand)
 	{
 		WeaponInHand->SwitchFireMode();
+	}
+}
+
+void ATDMCharacterBase::Reload()
+{
+	if (WeaponInHand)
+	{
+	WeaponInHand->Reload();
 	}
 }
 

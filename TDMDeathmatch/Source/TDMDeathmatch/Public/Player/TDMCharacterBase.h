@@ -80,6 +80,7 @@ protected:
 	void StartAiming();
 	void StopAiming();
 	void SwitchFireMode();
+	void Reload();
 	bool bFOVFinished;
 
 	UFUNCTION(Server, Reliable, WithValidation)

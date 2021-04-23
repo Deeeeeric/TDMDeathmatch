@@ -58,3 +58,5 @@ A fully replicated Team Deathmatch
 * Ragdoll and weapon drop after death
 * Create Scoreboard Widget
 * Sort Player Team in Scoreboard Widget
+* Create and setup weapon HUD
+* Setup Reloading

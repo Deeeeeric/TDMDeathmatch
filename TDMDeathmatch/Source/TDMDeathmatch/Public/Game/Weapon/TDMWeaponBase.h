@@ -111,7 +111,6 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void Destroyed() override;
 
-	void PerformHit(FHitResult HitResult);
 	bool LineTrace(FVector SpawnLocation, FRotator SpawnRotation);
 
 	UFUNCTION(Server, Reliable, WithValidation)
@@ -139,6 +138,8 @@ public:
 	void Fire();
 	void StopFire();
 	void SwitchFireMode();
+
+	void PerformHit(FHitResult HitResult);
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 	void ActivateWeapon();

@@ -3,6 +3,7 @@
 
 #include "Game/Weapon/TDMProjectileBase.h"
 #include "Player/TDMCharacterBase.h"
+#include "Game/Weapon/TDMWeaponBase.h"
 #include "Game/GameMode/TDMGameModeBase.h"
 #include "Player/TDMPlayerState.h"
 
@@ -42,34 +43,11 @@ ATDMProjectileBase::ATDMProjectileBase()
 
 void ATDMProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor == nullptr) {return;}
-	
-	OnProjectileHit(Hit);
+	if (OtherActor == nullptr) { return; }
 
-	// Only add impulse and destroy projectile if we hit a physics
-	if ((OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics()) // Replicate on server
+	if (ATDMWeaponBase* Weapon = Cast<ATDMWeaponBase>(GetOwner()))
 	{
-		OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
-
-		Destroy();
-	}
-
-	if (ATDMCharacterBase* ShotPlayer = Cast<ATDMCharacterBase>(OtherActor))
-	{
-		// Spawn effects
-		if (GetWorld()->IsServer())
-		{
-			if (AActor* CurrentWeapon = GetOwner())
-			{
-				if (ATDMCharacterBase* Shooter = Cast<ATDMCharacterBase>(CurrentWeapon->GetOwner()))
-				{//Make sure a player is valid before we call the function IsOnSameTeam
-					if (Shooter->GetPlayerState<ATDMPlayerState>() && !Shooter->GetPlayerState<ATDMPlayerState>()->IsOnSameTeam(ShotPlayer))
-					{//Player not on the same team will take damage
-						ShotPlayer->TakeDamage(20.0f, FDamageEvent(), nullptr, Shooter);
-					}
-				}
-			}
-		}
+		Weapon->PerformHit(Hit);
 	}
 
 	Destroy(); //Destroy projectile on any blocking hit (no bounce-back)

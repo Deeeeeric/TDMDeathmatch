@@ -12,6 +12,8 @@ D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Public\DataTabl
 D:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Inc\TDMDeathmatch\TDMStructs.generated.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Inc\TDMDeathmatch\TDMCharacterBase.generated.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/Weapon/TDMWeaponBase.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Inc\TDMDeathmatch\TDMWeaponBase.generated.h
 D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Game/GameMode/TDMGameModeBase.h
 D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h

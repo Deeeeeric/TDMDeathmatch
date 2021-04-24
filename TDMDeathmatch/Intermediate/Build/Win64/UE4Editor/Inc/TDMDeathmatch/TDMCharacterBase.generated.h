@@ -47,7 +47,7 @@ class ATDMWeaponBase;
 	{ \
 		FFirearmToSpawn FirearmToSpawn; \
 	}; \
-	struct TDMCharacterBase_eventWeaponFired_Parms \
+	struct TDMCharacterBase_eventWeaponAmmoChanged_Parms \
 	{ \
 		ATDMWeaponBase* Weapon; \
 	};

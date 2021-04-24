@@ -112,6 +112,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		P_THIS->AddAttachment(Z_Param_AttachmentClass);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ATDMWeaponBase::execActivateWeapon)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ActivateWeapon();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATDMWeaponBase::execMulti_Reload)
 	{
 		P_FINISH;
@@ -221,6 +228,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	{
 		UClass* Class = ATDMWeaponBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "ActivateWeapon", &ATDMWeaponBase::execActivateWeapon },
 			{ "AddAttachment", &ATDMWeaponBase::execAddAttachment },
 			{ "GetMuzzle", &ATDMWeaponBase::execGetMuzzle },
 			{ "GetOptic", &ATDMWeaponBase::execGetOptic },
@@ -231,6 +239,29 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 			{ "Server_Reload", &ATDMWeaponBase::execServer_Reload },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ATDMWeaponBase_ActivateWeapon_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMWeaponBase_ActivateWeapon_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Weapon" },
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMWeaponBase_ActivateWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMWeaponBase, nullptr, "ActivateWeapon", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMWeaponBase_ActivateWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMWeaponBase_ActivateWeapon_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMWeaponBase_ActivateWeapon()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMWeaponBase_ActivateWeapon_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ATDMWeaponBase_AddAttachment_Statics
 	{
@@ -595,6 +626,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TDMDeathmatch,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMWeaponBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATDMWeaponBase_ActivateWeapon, "ActivateWeapon" }, // 2799472503
 		{ &Z_Construct_UFunction_ATDMWeaponBase_AddAttachment, "AddAttachment" }, // 2450266344
 		{ &Z_Construct_UFunction_ATDMWeaponBase_GetMuzzle, "GetMuzzle" }, // 3531150005
 		{ &Z_Construct_UFunction_ATDMWeaponBase_GetOptic, "GetOptic" }, // 3129440434
@@ -809,7 +841,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMWeaponBase, 2660041459);
+	IMPLEMENT_CLASS(ATDMWeaponBase, 1255401426);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMWeaponBase>()
 	{
 		return ATDMWeaponBase::StaticClass();

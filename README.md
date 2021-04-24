@@ -61,3 +61,4 @@ A fully replicated Team Deathmatch
 * Create and setup weapon HUD
 * Setup Reloading
 * Play Reload Animation
+* on Reload Complete

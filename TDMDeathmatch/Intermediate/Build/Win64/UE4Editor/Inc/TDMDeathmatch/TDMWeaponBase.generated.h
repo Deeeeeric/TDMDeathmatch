@@ -33,6 +33,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGetMuzzle); \
 	DECLARE_FUNCTION(execGetOptic); \
 	DECLARE_FUNCTION(execAddAttachment); \
+	DECLARE_FUNCTION(execActivateWeapon); \
 	DECLARE_FUNCTION(execMulti_Reload); \
 	DECLARE_FUNCTION(execServer_Reload); \
 	DECLARE_FUNCTION(execMulti_Fire); \
@@ -45,6 +46,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execGetMuzzle); \
 	DECLARE_FUNCTION(execGetOptic); \
 	DECLARE_FUNCTION(execAddAttachment); \
+	DECLARE_FUNCTION(execActivateWeapon); \
 	DECLARE_FUNCTION(execMulti_Reload); \
 	DECLARE_FUNCTION(execServer_Reload); \
 	DECLARE_FUNCTION(execMulti_Fire); \

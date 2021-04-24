@@ -30,6 +30,8 @@ ATDMWeaponBase::ATDMWeaponBase()
 	BurstFireAmount = 3;
 	BurstFireShot = 0;
 
+	bWeaponActive = true;
+
 	CameraFOV = 75.0;
 	CameraFOVSpeed = 100.0f;
 }
@@ -218,7 +220,7 @@ void ATDMWeaponBase::Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocati
 
 void ATDMWeaponBase::Fire()
 {
-	if (MagazineAmmo > 0)
+	if (bWeaponActive && MagazineAmmo > 0)
 	{
 		PlayFireAnimation(true);
 
@@ -231,7 +233,7 @@ void ATDMWeaponBase::Fire()
 			}
 
 			--MagazineAmmo;
-			Character->WeaponFired(this);
+			Character->WeaponAmmoChanged(this);
 
 			bool LineTraceHit = false;
 			FVector SpawnLocation = WeaponMesh->GetSocketLocation(FName("Muzzle"));
@@ -343,14 +345,10 @@ void ATDMWeaponBase::Reload()
 
 	if (ClampAmmo > 0)
 	{
+		bWeaponActive = false;
 		PlayReloadAnimation(true);
 		CurrentAmmoRemaining -= ClampAmmo;
 		MagazineAmmo += ClampAmmo;
-
-		if (ATDMCharacterBase* Character = Cast<ATDMCharacterBase>(GetOwner()))
-		{
-			Character->WeaponFired(this);
-		}
 
 		if (HasAuthority())
 		{
@@ -408,6 +406,17 @@ void ATDMWeaponBase::PlayReloadAnimation(bool IsLocalPlayer)
 			}
 		}
 	}
+}
+
+void ATDMWeaponBase::ActivateWeapon()
+{
+	bWeaponActive = true;
+
+	if (ATDMCharacterBase* Character = Cast<ATDMCharacterBase>(GetOwner()))
+	{
+		Character->WeaponAmmoChanged(this);
+	}
+
 }
 
 void ATDMWeaponBase::SwitchFireMode()

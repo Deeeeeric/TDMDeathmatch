@@ -37,7 +37,7 @@ public:
 	void DestroyCharacter();
 
 	UFUNCTION(BlueprintImplementableEvent, Category="Weapon | HUD")
-	void WeaponFired(ATDMWeaponBase* Weapon);
+	void WeaponAmmoChanged(ATDMWeaponBase* Weapon);
 
 
 protected:

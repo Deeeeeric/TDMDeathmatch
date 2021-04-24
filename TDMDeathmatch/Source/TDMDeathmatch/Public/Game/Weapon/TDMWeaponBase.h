@@ -61,6 +61,7 @@ protected:
 
 	void PlayFireAnimation(bool IsLocalPlayer);
 	void PlayReloadAnimation(bool IsLocalPlayer);
+	bool bWeaponActive;
 
 	/********************* FIRE MODES *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
@@ -138,6 +139,9 @@ public:
 	void Fire();
 	void StopFire();
 	void SwitchFireMode();
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+	void ActivateWeapon();
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);

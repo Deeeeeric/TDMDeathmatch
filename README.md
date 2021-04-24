@@ -60,3 +60,4 @@ A fully replicated Team Deathmatch
 * Sort Player Team in Scoreboard Widget
 * Create and setup weapon HUD
 * Setup Reloading
+* Play Reload Animation

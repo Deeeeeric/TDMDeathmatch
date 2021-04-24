@@ -123,53 +123,6 @@ void ATDMWeaponBase::PlayFireAnimation(bool IsLocalPlayer)
 	}
 }
 
-void ATDMWeaponBase::PlayReloadAnimation(bool IsLocalPlayer)
-{
-	if (MagazineAmmo>0 && ReloadAnimation)
-	{
-		WeaponMesh->PlayAnimation(ReloadAnimation, false);
-	}
-	else if (MagazineAmmo == 0 && ReloadEmptyAnimation)
-	{
-		WeaponMesh->PlayAnimation(ReloadEmptyAnimation, false);
-	}
-
-	if (ATDMCharacterBase* Player = Cast<ATDMCharacterBase>(GetOwner()))
-	{
-		UAnimInstance* AnimInstance = nullptr;
-		if (IsLocalPlayer)
-		{
-			AnimInstance = Player->GetMesh1P()->GetAnimInstance();
-		}
-		else
-		{
-			AnimInstance = Player->GetMesh1P()->GetAnimInstance(); //change when third person setup
-		}
-
-		if (AnimInstance)
-		{
-			if (IsLocalPlayer)
-			{
-				AnimInstance->Montage_Play(FirstPersonMontage);
-			}
-			else
-			{
-				//play third person montage
-				AnimInstance->Montage_Play(FirstPersonMontage);
-			}
-
-			if (MagazineAmmo == 0)
-			{
-				AnimInstance->Montage_JumpToSection(FName("ReloadEmpty"));
-			}
-			else
-			{
-				AnimInstance->Montage_JumpToSection(FName("Reload"));
-			}
-		}
-	}
-}
-
 void ATDMWeaponBase::PerformHit(FHitResult HitResult)
 {
 	OnHit(HitResult);
@@ -390,6 +343,7 @@ void ATDMWeaponBase::Reload()
 
 	if (ClampAmmo > 0)
 	{
+		PlayReloadAnimation(true);
 		CurrentAmmoRemaining -= ClampAmmo;
 		MagazineAmmo += ClampAmmo;
 
@@ -404,8 +358,54 @@ void ATDMWeaponBase::Reload()
 		}
 		else
 		{
-			PlayReloadAnimation(true);
 			Server_Reload();
+		}
+	}
+}
+
+void ATDMWeaponBase::PlayReloadAnimation(bool IsLocalPlayer)
+{
+	if (MagazineAmmo > 0 && ReloadAnimation)
+	{
+		WeaponMesh->PlayAnimation(ReloadAnimation, false);
+	}
+	else if (MagazineAmmo == 0 && ReloadEmptyAnimation)
+	{
+		WeaponMesh->PlayAnimation(ReloadEmptyAnimation, false);
+	}
+
+	if (ATDMCharacterBase* Player = Cast<ATDMCharacterBase>(GetOwner()))
+	{
+		UAnimInstance* AnimInstance = nullptr;
+		if (IsLocalPlayer)
+		{
+			AnimInstance = Player->GetMesh1P()->GetAnimInstance();
+		}
+		else
+		{
+			AnimInstance = Player->GetMesh1P()->GetAnimInstance(); //change when third person setup
+		}
+
+		if (AnimInstance)
+		{
+			if (IsLocalPlayer)
+			{
+				AnimInstance->Montage_Play(FirstPersonMontage);
+			}
+			else
+			{
+				//play third person montage
+				AnimInstance->Montage_Play(FirstPersonMontage);
+			}
+
+			if (MagazineAmmo == 0)
+			{
+				AnimInstance->Montage_JumpToSection(FName("ReloadEmpty"));
+			}
+			else
+			{
+				AnimInstance->Montage_JumpToSection(FName("Reload"));
+			}
 		}
 	}
 }

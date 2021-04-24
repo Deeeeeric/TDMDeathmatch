@@ -140,6 +140,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(ATDMWeaponBase, ProjectileClass); } \
 	FORCEINLINE static uint32 __PPO__WeaponMesh() { return STRUCT_OFFSET(ATDMWeaponBase, WeaponMesh); } \
 	FORCEINLINE static uint32 __PPO__FireAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, FireAnimation); } \
+	FORCEINLINE static uint32 __PPO__ReloadAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, ReloadAnimation); } \
+	FORCEINLINE static uint32 __PPO__ReloadEmptyAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, ReloadEmptyAnimation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonMontage() { return STRUCT_OFFSET(ATDMWeaponBase, FirstPersonMontage); } \
 	FORCEINLINE static uint32 __PPO__ADSFireNames() { return STRUCT_OFFSET(ATDMWeaponBase, ADSFireNames); } \
 	FORCEINLINE static uint32 __PPO__HipFireNames() { return STRUCT_OFFSET(ATDMWeaponBase, HipFireNames); } \

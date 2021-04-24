@@ -240,6 +240,7 @@ void ATDMWeaponBase::Fire()
 			FRotator SpawnRotation = WeaponMesh->GetSocketRotation(FName("Muzzle"));
 
 			LineTraceHit = LineTrace(SpawnLocation, SpawnRotation);
+
 			if (!LineTraceHit)
 			{
 				FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
@@ -253,6 +254,7 @@ void ATDMWeaponBase::Fire()
 					UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
 				}
 			}
+
 			if (FireMode == EFireMode::Full)
 			{//Handle Full-Auto Logic
 				GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);

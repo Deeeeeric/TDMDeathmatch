@@ -58,7 +58,7 @@ void ATDMCharacterBase::BeginPlay()
 
 	if (HasAuthority())
 	{
-		/*FActorSpawnParameters SpawnParams;
+		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		WeaponInHand = GetWorld()->SpawnActor<ATDMWeaponBase>(WeaponToSpawn, SpawnParams);
@@ -67,7 +67,7 @@ void ATDMCharacterBase::BeginPlay()
 		{
 			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));
 			OnRep_WeaponInHand();
-		}*/
+		}
 	}
 
 	if (IsLocallyControlled())
@@ -78,6 +78,14 @@ void ATDMCharacterBase::BeginPlay()
 	{
 		PrimaryActorTick.SetTickFunctionEnable(false);
 	}
+}
+
+void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(ATDMCharacterBase, WeaponInHand);
+	DOREPLIFETIME(ATDMCharacterBase, bIsDead);
+	DOREPLIFETIME_CONDITION(ATDMCharacterBase, bIsAiming, COND_SkipOwner);
 }
 
 void ATDMCharacterBase::Destroyed()
@@ -116,13 +124,6 @@ void ATDMCharacterBase::SetupPlayerInputComponent(class UInputComponent* PlayerI
 	PlayerInputComponent->BindAxis("LookUpRate", this, &ATDMCharacterBase::LookUpAtRate);
 }
 
-void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
-{
-	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	DOREPLIFETIME(ATDMCharacterBase, WeaponInHand);
-	DOREPLIFETIME(ATDMCharacterBase, bIsDead);
-	DOREPLIFETIME_CONDITION(ATDMCharacterBase, bIsAiming, COND_SkipOwner);
-}
 
 float ATDMCharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {

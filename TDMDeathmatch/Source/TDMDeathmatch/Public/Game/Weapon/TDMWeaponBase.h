@@ -133,13 +133,14 @@ protected:
 	bool Multi_Reload_Validate();
 	void Multi_Reload_Implementation();
 public:
+	void PerformHit(FHitResult HitResult);
+
 	void FirearmInHand();
 	void Reload();
 	void Fire();
 	void StopFire();
 	void SwitchFireMode();
 
-	void PerformHit(FHitResult HitResult);
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 	void ActivateWeapon();

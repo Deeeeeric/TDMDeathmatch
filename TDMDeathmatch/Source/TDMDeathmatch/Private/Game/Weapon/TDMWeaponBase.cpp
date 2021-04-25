@@ -161,8 +161,8 @@ bool ATDMWeaponBase::LineTrace(FVector SpawnLocation, FRotator SpawnRotation)
 	FCollisionQueryParams QueryParams;
 	QueryParams.AddIgnoredActor(this);
 	QueryParams.AddIgnoredActor(GetOwner());
-	/*Use QueryParams to perform physics material*/
 	QueryParams.bReturnPhysicalMaterial = true;
+	/*Use QueryParams to perform physics material*/
 
 	if (GetWorld()->LineTraceSingleByChannel(HitResult, SpawnLocation, EndLocation, ECollisionChannel::ECC_Visibility, QueryParams))
 	{
@@ -228,8 +228,8 @@ void ATDMWeaponBase::Fire()
 		{
 			if (FireCameraShakes.Num())
 			{
-				int RandonIndex = FMath::RandRange(0, FireCameraShakes.Num() - 1);
-				Character->PlayCameraShake(FireCameraShakes[RandonIndex]);
+				int RandomIndex = FMath::RandRange(0, FireCameraShakes.Num() - 1);
+				Character->PlayCameraShake(FireCameraShakes[RandomIndex]);
 			}
 
 			--MagazineAmmo;
@@ -259,7 +259,6 @@ void ATDMWeaponBase::Fire()
 			{//Handle Full-Auto Logic
 				GetWorldTimerManager().UnPauseTimer(TFullAutoHandle);
 			}
-
 			switch (FireMode)
 			{
 			case EFireMode::Full:
@@ -283,7 +282,6 @@ void ATDMWeaponBase::Fire()
 			}
 			}
 			FVector_NetQuantize10 MuzzleRotationVector = FVector_NetQuantize10(SpawnRotation.Pitch, SpawnRotation.Yaw, SpawnRotation.Roll);
-
 			if (!HasAuthority())
 			{
 				Server_Fire(FVector_NetQuantize10(SpawnLocation), MuzzleRotationVector);

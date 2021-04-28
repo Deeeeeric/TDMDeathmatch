@@ -12,6 +12,7 @@
 #include "DrawDebugHelpers.h"
 #include "PhysicalMaterials/PhysicalMaterial.h"
 #include "NiagaraFunctionLibrary.h"
+#include "Kismet/GameplayStatics.h"
 #include "Net/UnrealNetwork.h"
 
 // Sets default values
@@ -137,32 +138,48 @@ void ATDMWeaponBase::PerformEffects(FHitResult HitResult)
 		if (NS_Flesh)
 		{
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Flesh, HitResult.Location);
-			break;
 		}
+		if (SB_Flesh)
+		{
+			UGameplayStatics::SpawnSoundAtLocation(GetWorld(), SB_Flesh, HitResult.Location);
+		}
+		break;
 	}
 	case EPhysicalSurface::SurfaceType2: //Metal
 	{
 		if (NS_Metal)
 		{
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Metal, HitResult.Location);
-			break;
 		}
+		if (SB_Metal)
+		{
+			UGameplayStatics::SpawnSoundAtLocation(GetWorld(), SB_Metal, HitResult.Location);
+		}
+		break;
 	}
 	case EPhysicalSurface::SurfaceType3: //Wood
 	{
 		if (NS_Wood)
 		{
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Wood, HitResult.Location);
-			break;
 		}
+		if (SB_Wood)
+		{
+			UGameplayStatics::SpawnSoundAtLocation(GetWorld(), SB_Wood, HitResult.Location);
+		}
+		break;
 	}
 	default:
 	{
 		if (NS_Default)
 		{
 			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Default, HitResult.Location);
-			break;
 		}
+		if (SB_Default)
+		{
+			UGameplayStatics::SpawnSoundAtLocation(GetWorld(), SB_Default, HitResult.Location);
+		}
+		break;
 	}
 	}
 }
@@ -197,7 +214,7 @@ void ATDMWeaponBase::PerformHit(FHitResult HitResult)
 bool ATDMWeaponBase::PerformLineTrace(FVector SpawnLocation, FRotator SpawnRotation)
 {
 	FVector EndLocation = SpawnLocation + SpawnRotation.Vector() * 500.0f;
-	DrawDebugLine(GetWorld(), SpawnLocation, EndLocation, FColor::Red, false, 3.0f, 0, 3.0f);
+	//DrawDebugLine(GetWorld(), SpawnLocation, EndLocation, FColor::Red, false, 3.0f, 0, 3.0f);
 
 	FHitResult HitResult;
 	FCollisionQueryParams QueryParams;
@@ -274,9 +291,9 @@ void ATDMWeaponBase::Fire()
 			--MagazineAmmo;
 			Character->WeaponAmmoChanged(this);
 
-			bool LineTraceMadeHit = false;
 			FVector SpawnLocation = WeaponMesh->GetSocketLocation(FName("Muzzle"));
 			FRotator SpawnRotation = WeaponMesh->GetSocketRotation(FName("Muzzle"));
+			bool LineTraceMadeHit = false;
 
 			LineTraceMadeHit = PerformLineTrace(SpawnLocation, SpawnRotation);
 

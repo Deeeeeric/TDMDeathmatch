@@ -63,3 +63,4 @@ A fully replicated Team Deathmatch
 * Play Reload Animation
 * on Reload Complete
 * Spawn Particles on C++
+* Trigger Sounds and Play Effects

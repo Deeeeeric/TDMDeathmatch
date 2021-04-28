@@ -97,6 +97,7 @@
 "D:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
 "D:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\InputCore\UE4Editor-InputCore.lib"
 "D:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\HeadMountedDisplay\UE4Editor-HeadMountedDisplay.lib"
+"D:\Program Files\Epic Games\UE_4.25\Engine\Plugins\FX\Niagara\Intermediate\Build\Win64\UE4Editor\Development\Niagara\UE4Editor-Niagara.lib"
 /OUT:"D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch.dll"
 /IMPLIB:"D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\UE4Editor-TDMDeathmatch.suppressed.lib"
 /PDB:"D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Binaries\Win64\UE4Editor-TDMDeathmatch.pdb"

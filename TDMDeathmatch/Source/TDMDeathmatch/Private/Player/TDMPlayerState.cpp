@@ -73,7 +73,7 @@ bool ATDMPlayerState::SetTeam(ETeam JoinTeam)
 	return false;
 }
 
-bool ATDMPlayerState::IsOnSameTeam(class ATDMCharacterBase* Character)
+bool ATDMPlayerState::IsOnSameTeam(ATDMCharacterBase* Character)
 {//Check if valid
 	if (Character == nullptr)
 	{

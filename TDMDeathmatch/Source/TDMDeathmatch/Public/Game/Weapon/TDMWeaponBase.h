@@ -12,6 +12,7 @@ class UAnimMontage;
 class UAnimationAsset;
 class ATDMAttachment;
 class ATDMAttachment_Optic;
+class UNiagaraSystem;
 
 UENUM(BlueprintType)
 enum class EFireMode : uint8
@@ -31,7 +32,7 @@ public:
 	ATDMWeaponBase();
 
 protected:
-	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
 		TSubclassOf<ATDMProjectileBase> ProjectileClass;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
@@ -39,6 +40,15 @@ protected:
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon")
 		void OnHit(FHitResult HitResult);
+
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+		UNiagaraSystem* NS_Default;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+		UNiagaraSystem* NS_Flesh;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+		UNiagaraSystem* NS_Metal;
 
 	/********************* ANIMATIONS *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
@@ -111,7 +121,7 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void Destroyed() override;
 
-	bool LineTrace(FVector SpawnLocation, FRotator SpawnRotation);
+	bool PerformLineTrace(FVector SpawnLocation, FRotator SpawnRotation);
 
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_Fire(FVector_NetQuantize10 SpawnLocation, FVector_NetQuantize10 MuzzleRotationVector);

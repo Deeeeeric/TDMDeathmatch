@@ -10,6 +10,8 @@
 
 #include "Components/SkeletalMeshComponent.h"
 #include "DrawDebugHelpers.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
+#include "NiagaraFunctionLibrary.h"
 #include "Net/UnrealNetwork.h"
 
 // Sets default values
@@ -129,6 +131,15 @@ void ATDMWeaponBase::PerformHit(FHitResult HitResult)
 {
 	OnHit(HitResult);
 
+	EPhysicalSurface Surface = UPhysicalMaterial::DetermineSurfaceType(HitResult.PhysMaterial.Get());
+	switch (Surface)
+	{
+	case EPhysicalSurface::SurfaceType1: //Flesh
+	{
+	UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Flesh, HitResult.Location);
+	}
+	}
+
 	if (AActor* HitActor = HitResult.GetActor()) // Replicate on server
 	{
 		if (ATDMCharacterBase* ShotPlayer = Cast<ATDMCharacterBase>(HitActor))
@@ -136,7 +147,7 @@ void ATDMWeaponBase::PerformHit(FHitResult HitResult)
 			// Spawn effects
 			if (GetWorld()->IsServer())
 			{
-				if (AActor* CurrentWeapon = GetOwner())
+				if (AActor* OwningWeapon = GetOwner())
 				{
 					if (ATDMCharacterBase* Shooter = Cast<ATDMCharacterBase>(GetOwner()))
 					{//Make sure a player is valid before we call the function IsOnSameTeam
@@ -151,22 +162,20 @@ void ATDMWeaponBase::PerformHit(FHitResult HitResult)
 	}
 }
 
-bool ATDMWeaponBase::LineTrace(FVector SpawnLocation, FRotator SpawnRotation)
+bool ATDMWeaponBase::PerformLineTrace(FVector SpawnLocation, FRotator SpawnRotation)
 {
 	FVector EndLocation = SpawnLocation + SpawnRotation.Vector() * 500.0f;
-	DrawDebugLine(GetWorld(), SpawnLocation, EndLocation, FColor::Blue, false, 3.0f, 0, 3.0f);
+	DrawDebugLine(GetWorld(), SpawnLocation, EndLocation, FColor::Red, false, 3.0f, 0, 3.0f);
 
 	FHitResult HitResult;
-	/*Ignore player and current weapon when run and shoot so we don't accidentally collide with the projectile on fire*/
 	FCollisionQueryParams QueryParams;
 	QueryParams.AddIgnoredActor(this);
 	QueryParams.AddIgnoredActor(GetOwner());
 	QueryParams.bReturnPhysicalMaterial = true;
-	/*Use QueryParams to perform physics material*/
 
 	if (GetWorld()->LineTraceSingleByChannel(HitResult, SpawnLocation, EndLocation, ECollisionChannel::ECC_Visibility, QueryParams))
 	{
-		//Play effects on hit location
+		// PLAY EFFECTS ON HIT LOCATION
 		PerformHit(HitResult);
 		return true;
 	}
@@ -196,26 +205,24 @@ void ATDMWeaponBase::Multi_Fire_Implementation(FVector_NetQuantize10 SpawnLocati
 {
 	if (APawn* Character = Cast<APawn>(GetOwner()))
 	{
-		if (Character->IsLocallyControlled())
-		{
-			return;
-		}
+		if (Character->IsLocallyControlled()) { return; }
 	}
+
 	PlayFireAnimation(false);
 
 	FRotator SpawnRotation = FRotator(MuzzleRotationVector.X, MuzzleRotationVector.Y, MuzzleRotationVector.Z);
 
-	if (LineTrace(SpawnLocation, SpawnRotation))
+	if (PerformLineTrace(SpawnLocation, SpawnRotation))
 	{
 		return;
 	}
 
-	FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
+	FVector EndOfTraceLocation = SpawnLocation + SpawnRotation.Vector() * 500.0f;
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.Owner = this;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-	ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams);
+	ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfTraceLocation, SpawnRotation, SpawnParams);
 }
 
 void ATDMWeaponBase::Fire()
@@ -235,23 +242,23 @@ void ATDMWeaponBase::Fire()
 			--MagazineAmmo;
 			Character->WeaponAmmoChanged(this);
 
-			bool LineTraceHit = false;
+			bool LineTraceMadeHit = false;
 			FVector SpawnLocation = WeaponMesh->GetSocketLocation(FName("Muzzle"));
 			FRotator SpawnRotation = WeaponMesh->GetSocketRotation(FName("Muzzle"));
 
-			LineTraceHit = LineTrace(SpawnLocation, SpawnRotation);
+			LineTraceMadeHit = PerformLineTrace(SpawnLocation, SpawnRotation);
 
-			if (!LineTraceHit)
+			if (!LineTraceMadeHit)
 			{
-				FVector EndOfLineTrace = SpawnLocation + SpawnRotation.Vector() * 500.0f;
+				FVector EndOfTraceLocation = SpawnLocation + SpawnRotation.Vector() * 500.0f;
 
 				FActorSpawnParameters SpawnParams;
 				SpawnParams.Owner = this;
 				SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-				if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfLineTrace, SpawnRotation, SpawnParams))
+				if (ATDMProjectileBase* Projectile = GetWorld()->SpawnActor<ATDMProjectileBase>(ProjectileClass, EndOfTraceLocation, SpawnRotation, SpawnParams))
 				{
-					UE_LOG(LogTemp, Warning, TEXT("Firing projectile"));
+					UE_LOG(LogTemp, Warning, TEXT("FIRING PROJECTILE"));
 				}
 			}
 

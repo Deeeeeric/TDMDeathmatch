@@ -43,7 +43,11 @@ public:
 		bool SetTeam(ETeam JoinTeam);
 
 	void AddKill() { ++Kills; }
-	void AddDeath() { ++Deaths; }
+	void AddDeath()
+	{
+		UE_LOG(LogTemp, Warning, TEXT("ADDING A DEATH"));
+		++Deaths;
+	}
 
 	bool IsOnSameTeam(class ATDMCharacterBase* Character);
 };

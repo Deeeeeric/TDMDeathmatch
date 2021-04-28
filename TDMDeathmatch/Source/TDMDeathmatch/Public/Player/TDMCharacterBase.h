@@ -1,4 +1,4 @@
-	// Fill out your copyright notice in the Description page of Project Settings.
+// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -36,13 +36,13 @@ public:
 
 	void DestroyCharacter();
 
-	UFUNCTION(BlueprintImplementableEvent, Category="Weapon | HUD")
-	void WeaponAmmoChanged(ATDMWeaponBase* Weapon);
+	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon | HUD")
+		void WeaponAmmoChanged(ATDMWeaponBase* Weapon);
 
 
 protected:
 	virtual void BeginPlay();
-	virtual void Destroyed();
+	virtual void Destroyed() override;
 
 public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
@@ -66,27 +66,27 @@ protected:
 	UFUNCTION(BlueprintCallable)
 		void SpawnWeapon(FFirearmToSpawn FirearmToSpawn);
 
-		UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_SpawnFirearm(FFirearmToSpawn FirearmToSpawn);
-		bool Server_SpawnFirearm_Validate(FFirearmToSpawn FirearmToSpawn);
-		void Server_SpawnFirearm_Implementation(FFirearmToSpawn FirearmToSpawn);
+	bool Server_SpawnFirearm_Validate(FFirearmToSpawn FirearmToSpawn);
+	void Server_SpawnFirearm_Implementation(FFirearmToSpawn FirearmToSpawn);
 
-		/** Fires a projectile. */
-		void OnFire();
+	/** Fires a projectile. */
+	void OnFire();
 	void StopFire();
 
 	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Weapon")
-		bool bIsAiming;
+	bool bIsAiming;
 	void StartAiming();
 	void StopAiming();
-	void SwitchFireMode();
-	void Reload();
 	bool bFOVFinished;
-
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_Aim(bool Aiming);
 	bool Server_Aim_Validate(bool Aiming);
 	void Server_Aim_Implementation(bool Aiming);
+
+	void SwitchFireMode();
+	void Reload();
 
 	void HandleAimFOV(float DeltaSeconds);
 

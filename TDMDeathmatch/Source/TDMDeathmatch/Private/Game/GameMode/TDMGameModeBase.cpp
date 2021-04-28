@@ -53,8 +53,8 @@ ATDMSpawnPoint* ATDMGameModeBase::FindSpawnPoint(ETeam CurrentTeam)
 	if (SpawnPoints.Num() <= 0) { return nullptr; }
 	if (CurrentTeam == ETeam::None && SetupSpawnPoints.Num() > 0)
 	{
-		int RanInt = FMath::RandRange(0, SetupSpawnPoints.Num() - 1);
-		return SetupSpawnPoints[RanInt];
+		int RandInt = FMath::RandRange(0, SetupSpawnPoints.Num() - 1);
+		return SetupSpawnPoints[RandInt];
 	}
 
 	TArray<AActor*> FoundActors;
@@ -90,7 +90,7 @@ ATDMSpawnPoint* ATDMGameModeBase::FindSpawnPoint(ETeam CurrentTeam)
 			}
 		}
 	}
-	//int RandVal = FMath::RandRange(0, SpawnPoints.Num() - 1);
+
 	return FurthestSpawnPoint;
 }
 
@@ -145,13 +145,8 @@ void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase
 {
 	//if (!bGameInProgress) { return; }
 	//Unpossess current pawn
-	if (Killed == nullptr) { return; }
-	if (APlayerController* PC = Killed->GetController<APlayerController>())
-	{
-		SpawnAtPoint(PC);
-	}
+	if (Killed == nullptr || Killer == nullptr) return;
 
-	if (Killer == nullptr) { return; }
 	if (Killer == Killed)
 	{//If self kill, add to death, not score
 		if (ATDMPlayerState* PS = Killer->GetPlayerState<ATDMPlayerState>())
@@ -185,6 +180,10 @@ void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase
 		{
 			PS->AddDeath();
 		}
+	}
+	if (APlayerController* PC = Killed->GetController<APlayerController>())
+	{
+		SpawnAtPoint(PC);
 	}
 }
 

@@ -26,6 +26,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraShake_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimationAsset_NoRegister();
+	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMProjectileBase_NoRegister();
 // End Cross Module References
@@ -610,6 +611,18 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FireAnimation;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NS_Metal_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_NS_Metal;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NS_Flesh_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_NS_Flesh;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NS_Default_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_NS_Default;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponMesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WeaponMesh;
@@ -774,6 +787,27 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireAnimation = { "FireAnimation", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, FireAnimation), Z_Construct_UClass_UAnimationAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireAnimation_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Metal_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Metal = { "NS_Metal", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, NS_Metal), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Metal_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Metal_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Flesh_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Flesh = { "NS_Flesh", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, NS_Flesh), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Flesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Flesh_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Default_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Default = { "NS_Default", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, NS_Default), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Default_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Default_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_WeaponMesh_MetaData[] = {
 		{ "Category", "Weapon" },
 		{ "EditInline", "true" },
@@ -811,6 +845,9 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_ReloadEmptyAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_ReloadAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireAnimation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Metal,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Flesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_NS_Default,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_WeaponMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_ProjectileClass,
 	};
@@ -841,7 +878,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMWeaponBase, 1255401426);
+	IMPLEMENT_CLASS(ATDMWeaponBase, 1817384273);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMWeaponBase>()
 	{
 		return ATDMWeaponBase::StaticClass();

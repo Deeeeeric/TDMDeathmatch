@@ -85,3 +85,5 @@ DerivedDataCache/*
 *.bin
 *.uasset
 *.ini
+*.old
+*.response

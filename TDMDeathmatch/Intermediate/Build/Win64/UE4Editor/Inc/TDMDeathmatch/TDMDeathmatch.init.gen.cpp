@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMDeathmatch_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xA951EB83,
+				0xB3ED5D7B,
 				0x1D42959C,
 				METADATA_PARAMS(nullptr, 0)
 			};

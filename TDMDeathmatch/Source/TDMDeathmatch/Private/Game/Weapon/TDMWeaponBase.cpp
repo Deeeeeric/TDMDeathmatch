@@ -127,24 +127,56 @@ void ATDMWeaponBase::PlayFireAnimation(bool IsLocalPlayer)
 	}
 }
 
-void ATDMWeaponBase::PerformHit(FHitResult HitResult)
+void ATDMWeaponBase::PerformEffects(FHitResult HitResult)
 {
-	OnHit(HitResult);
-
 	EPhysicalSurface Surface = UPhysicalMaterial::DetermineSurfaceType(HitResult.PhysMaterial.Get());
 	switch (Surface)
 	{
 	case EPhysicalSurface::SurfaceType1: //Flesh
 	{
-	UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Flesh, HitResult.Location);
+		if (NS_Flesh)
+		{
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Flesh, HitResult.Location);
+			break;
+		}
+	}
+	case EPhysicalSurface::SurfaceType2: //Metal
+	{
+		if (NS_Metal)
+		{
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Metal, HitResult.Location);
+			break;
+		}
+	}
+	case EPhysicalSurface::SurfaceType3: //Wood
+	{
+		if (NS_Wood)
+		{
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Wood, HitResult.Location);
+			break;
+		}
+	}
+	default:
+	{
+		if (NS_Default)
+		{
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), NS_Default, HitResult.Location);
+			break;
+		}
 	}
 	}
+}
+
+void ATDMWeaponBase::PerformHit(FHitResult HitResult)
+{
+	OnHit(HitResult);
+
+	PerformEffects(HitResult);
 
 	if (AActor* HitActor = HitResult.GetActor()) // Replicate on server
 	{
 		if (ATDMCharacterBase* ShotPlayer = Cast<ATDMCharacterBase>(HitActor))
 		{
-			// Spawn effects
 			if (GetWorld()->IsServer())
 			{
 				if (AActor* OwningWeapon = GetOwner())

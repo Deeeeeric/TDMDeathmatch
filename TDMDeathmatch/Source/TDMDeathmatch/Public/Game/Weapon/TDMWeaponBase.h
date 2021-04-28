@@ -13,6 +13,7 @@ class UAnimationAsset;
 class ATDMAttachment;
 class ATDMAttachment_Optic;
 class UNiagaraSystem;
+class USoundBase;
 
 UENUM(BlueprintType)
 enum class EFireMode : uint8
@@ -41,15 +42,24 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Weapon")
 		void OnHit(FHitResult HitResult);
 
+	/********************* EFFECTS *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
 		UNiagaraSystem* NS_Default;
-
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
 		UNiagaraSystem* NS_Flesh;
-
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
 		UNiagaraSystem* NS_Metal;
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+		UNiagaraSystem* NS_Wood;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+		USoundBase* SB_Default;
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+		USoundBase* SB_Flesh;
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+		USoundBase* SB_Metal;
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+		USoundBase* SB_Wood;
 	/********************* ANIMATIONS *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UAnimationAsset* FireAnimation;
@@ -121,6 +131,8 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void Destroyed() override;
 
+	void PerformEffects(FHitResult HitResult);
+
 	bool PerformLineTrace(FVector SpawnLocation, FRotator SpawnRotation);
 
 	UFUNCTION(Server, Reliable, WithValidation)
@@ -138,7 +150,7 @@ protected:
 	bool Server_Reload_Validate();
 	void Server_Reload_Implementation();
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(NetMulticast, Reliable, WithValidation)
 		void Multi_Reload();
 	bool Multi_Reload_Validate();
 	void Multi_Reload_Implementation();
@@ -153,7 +165,7 @@ public:
 
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
-	void ActivateWeapon();
+		void ActivateWeapon();
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void AddAttachment(TSubclassOf<ATDMAttachment> AttachmentClass);

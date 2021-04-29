@@ -162,6 +162,11 @@ void ATDMCharacterBase::OnRep_IsDead()
 	{
 		SetLifeSpan(10.0f);
 	}
+
+	if (IsLocallyControlled())
+	{
+		PrimaryActorTick.SetTickFunctionEnable(false);
+	}
 	//Ignore collision
 	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
@@ -382,7 +387,6 @@ void ATDMCharacterBase::Tick(float DeltaSeconds)
 
 	SpineRotation = GetControlRotation().Pitch * -1.0f;
 	Server_SetSpineRotation(SpineRotation);
-
 }
 
 void ATDMCharacterBase::PlayCameraShake(TSubclassOf<UCameraShake> CameraShake)

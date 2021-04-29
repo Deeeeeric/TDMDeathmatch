@@ -13,10 +13,13 @@ void ATDMPlayerController::SetPawn(APawn* InPawn)
 		}
 		else
 		{
+			if (APawn* PossessedPawn = GetPawn())
+			{
+				PossessedPawn->PrimaryActorTick.SetTickFunctionEnable(false);
+			}
 			OnPossessionChange(EPossessed::UnPossessed);
 		}
 	}
 
 	Super::SetPawn(InPawn);
 }
-	

@@ -2288,3 +2288,968 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.04.29-17.25.08:118][256]OBJ SavePackage: Finished generating thumbnails for package [/Game/BlueprintClasses/Player/BP_TDMCharacterBase]
 [2021.04.29-17.25.08:163][256]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBase_Auto1BF357A2A480CB13001A0C39779738758.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Autosaves/Game/BlueprintClasses/Player/BP_TDMCharacterBase_Auto1.uasset'
 [2021.04.29-17.25.08:166][256]LogFileHelpers: Auto-saving content packages took 0.064
+[2021.04.29-17.31.54:820][800]LogEditorTransaction: Undo Move Nodes
+[2021.04.29-17.31.54:842][800]LogMaterial: Display: Missing cached shader map for material M_UE4Man_Body, compiling. 
+[2021.04.29-17.32.20:055][157]BlueprintLog: New page: Compile BP_TDMPlayerController
+[2021.04.29-17.32.20:141][157]LogUObjectHash: Compacting FUObjectHashTables data took   5.17ms
+[2021.04.29-17.32.20:714][183]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMPlayerController0A78648B4AD60D53880EE2B2BEA71304.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMPlayerController.uasset'
+[2021.04.29-17.32.20:754][183]AssetCheck: New page: Asset Save: BP_TDMPlayerController
+[2021.04.29-17.32.20:754][183]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMPlayerController.BP_TDMPlayerController
+[2021.04.29-17.32.21:910][224]MaterialEditorStats: Base pass shader: 118 instructions
+[2021.04.29-17.32.21:910][224]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 192 instructions
+[2021.04.29-17.32.21:910][224]MaterialEditorStats: Base pass vertex shader: 45 instructions
+[2021.04.29-17.32.21:910][224]MaterialEditorStats: Base pass vertex shader: 148 instructions
+[2021.04.29-17.32.21:910][224]MaterialEditorStats: Texture samplers: 4/16
+[2021.04.29-17.32.21:910][224]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(4)
+[2021.04.29-17.32.21:910][224]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2021.04.29-18.12.03:658][329]LogAudioMixer: Display: Audio Buffer Underrun detected.
+[2021.04.29-18.13.18:365][550]LogHotReload: New module detected: UE4Editor-TDMDeathmatch-0001.dll
+[2021.04.29-18.13.20:063][556]LogHotReload: Starting Hot-Reload from IDE
+[2021.04.29-18.13.23:978][556]LogClass: EPossessed HotReload.
+[2021.04.29-18.13.23:979][556]LogClass: ETeam HotReload.
+[2021.04.29-18.13.23:979][556]LogClass: EAttachmentType HotReload.
+[2021.04.29-18.13.23:979][556]LogClass: EFireMode HotReload.
+[2021.04.29-18.13.23:979][556]LogClass: ScoreboardData HotReload.
+[2021.04.29-18.13.23:979][556]LogClass: FirearmToSpawn HotReload.
+[2021.04.29-18.13.24:010][556]LogContentBrowser: Native class hierarchy updated for 'TDMDeathmatch' in 0.0026 seconds. Added 16 classes and 8 folders.
+[2021.04.29-18.13.24:018][556]Display: HotReload successful (27 functions remapped  2 scriptstructs remapped)
+[2021.04.29-18.13.24:276][556]LogContentBrowser: Native class hierarchy populated in 0.0218 seconds. Added 3423 classes and 813 folders.
+[2021.04.29-18.13.24:282][556]Display: HotReload took  4.2s.
+[2021.04.29-18.13.32:303][651]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.04.29-18.13.32:338][651]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.29-18.13.32:338][651]PIE: New page: PIE session: FirstPersonExampleMap (29 Apr 2021, 20:13:32)
+[2021.04.29-18.13.32:339][651]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.29-18.13.32:368][651]LogPlayLevel: PIE: StaticDuplicateObject took: (0.028939s)
+[2021.04.29-18.13.32:372][651]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.29-18.13.32:373][651]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000001457E158400), frame # 23651
+[2021.04.29-18.13.32:373][651]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000001457E16CCC0), frame # 23651
+[2021.04.29-18.13.32:373][651]LogPlayLevel: PIE: World Init took: (0.005393s)
+[2021.04.29-18.13.32:374][651]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.034745s)
+[2021.04.29-18.13.32:613][651]LogUObjectHash: Compacting FUObjectHashTables data took   7.59ms
+[2021.04.29-18.13.32:631][651]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.29-18.13.32:631][651]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.29-18.13.32:631][651]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.29-18.13.32:631][651]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.29-18.13.32:631][651]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.29-18.13.32:631][651]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.29-18.13.32:631][651]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.29-18.13.32:631][651]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.29-18.13.32:632][651]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.29-18.13.32:632][651]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.29-18.13.32:657][651]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.29-18.13.32:657][651]LogAudioMixer: Display: 1: FrontRight
+[2021.04.29-18.13.32:708][651]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.29-18.13.32:711][651]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.29-18.13.32:711][651]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.29-18.13.32:711][651]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.29-18.13.32:716][651]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.29-18.13.32:730][651]LogInit: FAudioDevice initialized.
+[2021.04.29-18.13.32:789][651]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-18.13.32:789][651]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.29-18.13.32:794][651]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.29-19.13.32
+[2021.04.29-18.13.32:795][651]LogWorld: Bringing up level for play took: 0.004488
+[2021.04.29-18.13.32:796][651]LogOnline: OSS: Creating online subsystem instance for: :Context_14
+[2021.04.29-18.13.32:799][651]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.04.29-18.13.32:800][651]LogTemp: Warning: POST LOGIN
+[2021.04.29-18.13.32:800][651]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.29-18.13.32:800][651]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.29-18.13.32:800][651]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.29-18.13.32:800][651]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.29-18.13.32:801][651]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-18.13.32:801][651]LogNet: GameNetDriver IpNetDriver_6 IpNetDriver listening on port 17777
+[2021.04.29-18.13.32:801][651]LogTemp: Warning: BEGIN PLAY
+[2021.04.29-18.13.32:801][651]LogTemp: Warning: POST LOGIN
+[2021.04.29-18.13.32:807][651]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-18.13.32:810][651]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.29-18.13.32:816][651]PIE: Server logged in
+[2021.04.29-18.13.32:817][651]PIE: Play in editor total start time 0.491 seconds.
+[2021.04.29-18.13.32:821][651]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.29-18.13.32:821][651]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.29-18.13.32:821][651]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.29-18.13.32:821][651]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.29-18.13.32:821][651]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.29-18.13.32:822][651]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.29-18.13.32:822][651]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.29-18.13.32:822][651]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.29-18.13.32:823][651]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.29-18.13.32:823][651]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.29-18.13.32:830][651]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.29-18.13.32:830][651]LogAudioMixer: Display: 1: FrontRight
+[2021.04.29-18.13.32:866][651]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.29-18.13.32:871][651]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.29-18.13.32:871][651]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.29-18.13.32:871][651]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.29-18.13.32:878][651]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.29-18.13.32:884][651]LogInit: FAudioDevice initialized.
+[2021.04.29-18.13.32:938][651]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-18.13.32:938][651]LogNet: Browse: 127.0.0.1:17777/Game/Levels/FirstPersonExampleMap
+[2021.04.29-18.13.32:939][651]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.04.29-18.13.32:939][651]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.04.29-18.13.32:941][651]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-18.13.32:941][651]LogNet: Game client on port 17777, rate 10000
+[2021.04.29-18.13.32:942][651]PIE: Client logged in
+[2021.04.29-18.13.32:945][651]PIE: Play in editor total start time 0.618 seconds.
+[2021.04.29-18.13.33:963][705]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58963
+[2021.04.29-18.13.33:963][705]LogHandshake: SendConnectChallenge. Timestamp: 1.675376, Cookie: 242115070223052001083025247121128019234081137212157031189248
+[2021.04.29-18.13.33:963][705]LogHandshake: SendChallengeResponse. Timestamp: 1.675376, Cookie: 242115070223052001083025247121128019234081137212157031189248
+[2021.04.29-18.13.33:979][706]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58963
+[2021.04.29-18.13.33:980][706]LogHandshake: SendChallengeAck. InCookie: 242115070223052001083025247121128019234081137212157031189248
+[2021.04.29-18.13.33:980][706]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58963
+[2021.04.29-18.13.33:982][706]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-18.13.33:982][706]LogNet: NotifyAcceptedConnection: Name: FirstPersonExampleMap, TimeStamp: 04/29/21 19:13:33, [UNetConnection] RemoteAddr: 127.0.0.1:58963, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-18.13.33:982][706]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58963, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-18.13.33:982][706]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_6, Driver: PendingNetDriver IpNetDriver_7, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-18.13.33:996][707]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap: Accepted
+[2021.04.29-18.13.33:996][707]LogNet: Remote platform little endian=1
+[2021.04.29-18.13.33:996][707]LogNet: This platform little endian=1
+[2021.04.29-18.13.33:998][707]LogOnline: OSS: Creating online subsystem instance for: :Context_15
+[2021.04.29-18.13.34:013][708]LogNet: Login request: ?Name=LAPTOP-205H8F92-C8C795FF4258D69259308D8B60416437 userId: NULL:LAPTOP-205H8F92-C8C795FF4258D69259308D8B60416437 platform: NULL
+[2021.04.29-18.13.34:015][708]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_0_FirstPersonExampleMap, Game: /Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C)
+[2021.04.29-18.13.34:015][708]LogLoad: LoadMap: 127.0.0.1:17777/Game/Levels/UEDPIE_0_FirstPersonExampleMap?game=/Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C
+[2021.04.29-18.13.34:015][708]LogWorld: BeginTearingDown for /Temp/Untitled_4
+[2021.04.29-18.13.34:015][708]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-18.13.34:015][708]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-18.13.34:091][708]LogUObjectHash: Compacting FUObjectHashTables data took   3.18ms
+[2021.04.29-18.13.34:108][708]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.29-18.13.34:108][708]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000001456439AE00), frame # 23708
+[2021.04.29-18.13.34:108][708]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000014538C9B4C0), frame # 23708
+[2021.04.29-18.13.34:111][708]LogWorld: Bringing World /Game/Levels/UEDPIE_1_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.29-19.13.34
+[2021.04.29-18.13.34:111][708]LogWorld: Bringing up level for play took: 0.001286
+[2021.04.29-18.13.34:112][708]LogLoad: Took 0.096800 seconds to LoadMap(/Game/Levels/UEDPIE_0_FirstPersonExampleMap)
+[2021.04.29-18.13.34:112][708]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2021.04.29-18.13.34:135][709]LogNet: Client netspeed is 10000
+[2021.04.29-18.13.34:135][709]LogNet: Join request: /Game/Levels/FirstPersonExampleMap?Name=LAPTOP-205H8F92-C8C795FF4258D69259308D8B60416437?SplitscreenCount=1
+[2021.04.29-18.13.34:135][709]LogTemp: Warning: Setting Team to BRAVO
+[2021.04.29-18.13.34:135][709]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-18.13.34:135][709]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.04.29-18.13.34:136][709]LogTemp: Warning: POST LOGIN
+[2021.04.29-18.13.34:138][709]LogNet: Join succeeded: LAPTOP-205H8F92-C8C7
+[2021.04.29-18.13.34:262][716]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-18.13.34:280][717]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-18.13.34:297][718]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-18.13.35:714][770]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-18.13.35:715][770]LogSlate: WidgetSwitcher ('None') active index changed to 2
+[2021.04.29-18.13.36:701][809]LogSlate: WidgetSwitcher ('None') active index changed to 2
+[2021.04.29-18.13.36:735][811]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-18.13.40:346][  6]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-18.13.40:346][  6]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-18.13.40:347][  6]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-18.13.40:364][  7]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-18.13.40:483][ 14]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-18.13.40:483][ 14]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-18.13.40:484][ 14]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-18.13.40:501][ 15]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-18.13.40:619][ 22]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-18.13.40:620][ 22]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-18.13.40:637][ 23]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-18.13.40:640][ 23]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-18.13.40:892][ 38]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-18.13.40:892][ 38]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-18.13.40:909][ 39]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-18.13.40:911][ 39]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-18.13.41:059][ 48]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-18.13.41:059][ 48]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-18.13.41:074][ 49]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-18.13.41:075][ 49]LogTemp: Warning: TESTING TO ADD SCORE
+[2021.04.29-18.13.41:075][ 49]LogTemp: Warning: ADDING A DEATH
+[2021.04.29-18.13.41:080][ 49]LogSlate: WidgetSwitcher ('None') active index changed to 0
+[2021.04.29-18.13.41:080][ 49]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-18.13.41:081][ 49]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-18.13.41:081][ 49]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-18.13.41:082][ 49]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-18.13.41:083][ 49]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:100][ 50]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-18.13.41:101][ 50]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-18.13.41:101][ 50]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-18.13.41:102][ 50]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-18.13.41:103][ 50]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-18.13.41:103][ 50]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-18.13.41:103][ 50]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-18.13.41:104][ 50]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-18.13.41:104][ 50]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-18.13.41:105][ 50]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:122][ 51]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:138][ 52]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:154][ 53]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:170][ 54]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:187][ 55]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:203][ 56]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:221][ 57]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:237][ 58]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:254][ 59]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:271][ 60]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:288][ 61]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:304][ 62]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:321][ 63]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:336][ 64]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:353][ 65]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:370][ 66]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:386][ 67]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:403][ 68]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:420][ 69]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:436][ 70]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:453][ 71]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:470][ 72]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:487][ 73]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:504][ 74]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:521][ 75]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:536][ 76]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:554][ 77]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:571][ 78]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:587][ 79]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:604][ 80]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:621][ 81]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:649][ 82]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:664][ 83]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:681][ 84]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:698][ 85]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:715][ 86]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:731][ 87]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:747][ 88]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:764][ 89]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:780][ 90]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:797][ 91]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:814][ 92]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:831][ 93]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:847][ 94]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:864][ 95]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:881][ 96]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:898][ 97]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:914][ 98]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:931][ 99]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:948][100]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:965][101]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.41:983][102]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:000][103]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:017][104]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:034][105]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:051][106]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:067][107]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:084][108]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:101][109]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:117][110]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:134][111]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:150][112]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:167][113]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:184][114]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:201][115]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:217][116]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:234][117]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:250][118]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:267][119]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:283][120]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:300][121]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:318][122]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:334][123]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:351][124]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:367][125]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:385][126]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:403][127]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:420][128]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:436][129]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:452][130]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:468][131]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:485][132]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:502][133]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:519][134]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:535][135]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:553][136]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:570][137]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:586][138]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:602][139]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:618][140]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:652][141]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:665][142]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:681][143]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:698][144]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:715][145]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:731][146]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:749][147]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:765][148]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:781][149]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:799][150]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:816][151]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:836][152]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:854][153]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:870][154]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:886][155]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:903][156]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:920][157]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:937][158]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:953][159]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:970][160]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.42:986][161]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:003][162]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:020][163]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:036][164]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:053][165]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:069][166]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:086][167]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:103][168]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:119][169]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:136][170]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:152][171]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:169][172]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:185][173]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:202][174]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:219][175]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:236][176]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:253][177]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:270][178]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:286][179]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:305][180]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:323][181]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:340][182]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:356][183]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:376][184]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:397][185]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:420][186]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:442][187]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:464][188]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor BP_TDMCharacterBase_C_0. Function Server_SetSpineRotation will not be processed.
+[2021.04.29-18.13.43:557][188]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-18.13.43:557][188]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_1_FirstPersonExampleMap
+[2021.04.29-18.13.43:557][188]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Client 2] (64-bit/Windows) ' being destroyed
+[2021.04.29-18.13.43:560][188]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-18.13.43:561][188]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-18.13.43:567][188]LogNet: World NetDriver shutdown IpNetDriver_7 [GameNetDriver]
+[2021.04.29-18.13.43:567][188]LogNet: DestroyNamedNetDriver IpNetDriver_7 [GameNetDriver]
+[2021.04.29-18.13.43:567][188]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_6, Driver: GameNetDriver IpNetDriver_7, IsServer: NO, PC: BP_TDMPlayerController_C_0, Owner: BP_TDMPlayerController_C_0, UniqueId: NULL:LAPTOP-205H8F92-C8C795FF4258D69259308D8B60416437, Channels: 18, Time: 2021.04.29-18.13.43
+[2021.04.29-18.13.43:567][188]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_6, Driver: GameNetDriver IpNetDriver_7, IsServer: NO, PC: BP_TDMPlayerController_C_0, Owner: BP_TDMPlayerController_C_0, UniqueId: NULL:LAPTOP-205H8F92-C8C795FF4258D69259308D8B60416437
+[2021.04.29-18.13.43:568][188]LogExit: GameNetDriver IpNetDriver_7 shut down
+[2021.04.29-18.13.43:568][188]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.29-18.13.43:569][188]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.29-18.13.43:570][188]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-18.13.43:570][188]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.29-18.13.43:586][188]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-18.13.43:587][188]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-18.13.43:599][188]LogNet: World NetDriver shutdown IpNetDriver_6 [GameNetDriver]
+[2021.04.29-18.13.43:599][188]LogNet: DestroyNamedNetDriver IpNetDriver_6 [GameNetDriver]
+[2021.04.29-18.13.43:599][188]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:58963, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-C8C795FF4258D69259308D8B60416437
+[2021.04.29-18.13.43:599][188]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:58963, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-C8C795FF4258D69259308D8B60416437, Channels: 18, Time: 2021.04.29-18.13.43
+[2021.04.29-18.13.43:599][188]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58963, Name: IpConnection_7, Driver: GameNetDriver IpNetDriver_6, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-C8C795FF4258D69259308D8B60416437
+[2021.04.29-18.13.43:600][188]LogExit: GameNetDriver IpNetDriver_6 shut down
+[2021.04.29-18.13.43:601][188]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.29-18.13.43:608][188]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-18.13.43:692][188]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000001457E158400), frame # 24188
+[2021.04.29-18.13.43:692][188]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000001457E16CCC0), frame # 24188
+[2021.04.29-18.13.43:693][188]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000014538C9B4C0), frame # 24188
+[2021.04.29-18.13.43:693][188]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000001456439AE00), frame # 24188
+[2021.04.29-18.13.43:695][188]LogUObjectHash: Compacting FUObjectHashTables data took   2.37ms
+[2021.04.29-18.13.43:856][189]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2021.04.29-18.13.43:856][189]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2021.04.29-18.13.47:135][373]LogSlate: Window 'Message Log' being destroyed
+[2021.04.29-18.13.47:141][373]LogSlate: Window 'Message Log' being destroyed
+[2021.04.29-19.09.53:419][739]LogAudioMixer: Display: Audio Buffer Underrun detected.
+[2021.04.29-19.10.13:254][798]LogAudioMixer: Display: Audio Buffer Underrun detected.
+[2021.04.29-19.11.33:583][ 36]LogHotReload: New module detected: UE4Editor-TDMDeathmatch-0002.dll
+[2021.04.29-19.11.35:281][ 42]LogHotReload: Starting Hot-Reload from IDE
+[2021.04.29-19.11.38:705][ 42]LogClass: EPossessed HotReload.
+[2021.04.29-19.11.38:705][ 42]LogClass: ETeam HotReload.
+[2021.04.29-19.11.38:705][ 42]LogClass: EAttachmentType HotReload.
+[2021.04.29-19.11.38:705][ 42]LogClass: EFireMode HotReload.
+[2021.04.29-19.11.38:705][ 42]LogClass: ScoreboardData HotReload.
+[2021.04.29-19.11.38:705][ 42]LogClass: FirearmToSpawn HotReload.
+[2021.04.29-19.11.38:724][ 42]LogContentBrowser: Native class hierarchy updated for 'TDMDeathmatch' in 0.0016 seconds. Added 16 classes and 8 folders.
+[2021.04.29-19.11.38:728][ 42]Display: HotReload successful (27 functions remapped  2 scriptstructs remapped)
+[2021.04.29-19.11.38:868][ 42]LogContentBrowser: Native class hierarchy populated in 0.0106 seconds. Added 3423 classes and 813 folders.
+[2021.04.29-19.11.38:873][ 42]Display: HotReload took  3.6s.
+[2021.04.29-19.12.05:331][369]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.04.29-19.12.05:358][369]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.29-19.12.05:358][369]PIE: New page: PIE session: FirstPersonExampleMap (29 Apr 2021, 21:12:05)
+[2021.04.29-19.12.05:358][369]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.29-19.12.05:372][369]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014485s)
+[2021.04.29-19.12.05:374][369]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.29-19.12.05:374][369]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000014551FCBE00), frame # 35369
+[2021.04.29-19.12.05:374][369]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000014550EA0F40), frame # 35369
+[2021.04.29-19.12.05:374][369]LogPlayLevel: PIE: World Init took: (0.001943s)
+[2021.04.29-19.12.05:374][369]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.016563s)
+[2021.04.29-19.12.05:482][369]LogUObjectHash: Compacting FUObjectHashTables data took   6.30ms
+[2021.04.29-19.12.05:486][369]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.29-19.12.05:486][369]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.29-19.12.05:486][369]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.29-19.12.05:487][369]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.29-19.12.05:487][369]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.29-19.12.05:487][369]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.29-19.12.05:487][369]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.29-19.12.05:487][369]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.29-19.12.05:488][369]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.29-19.12.05:488][369]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.29-19.12.05:501][369]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.29-19.12.05:501][369]LogAudioMixer: Display: 1: FrontRight
+[2021.04.29-19.12.05:540][369]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.29-19.12.05:541][369]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.29-19.12.05:541][369]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.29-19.12.05:541][369]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.29-19.12.05:542][369]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.29-19.12.05:556][369]LogInit: FAudioDevice initialized.
+[2021.04.29-19.12.05:622][369]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.12.05:622][369]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.29-19.12.05:624][369]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.29-20.12.05
+[2021.04.29-19.12.05:625][369]LogWorld: Bringing up level for play took: 0.001448
+[2021.04.29-19.12.05:625][369]LogOnline: OSS: Creating online subsystem instance for: :Context_16
+[2021.04.29-19.12.05:632][369]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.12.05:636][369]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.29-19.12.05:636][369]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.29-19.12.05:637][369]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.29-19.12.05:638][369]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.29-19.12.05:638][369]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.12.05:638][369]LogNet: GameNetDriver IpNetDriver_8 IpNetDriver listening on port 17777
+[2021.04.29-19.12.05:638][369]LogTemp: Warning: BEGIN PLAY
+[2021.04.29-19.12.05:640][369]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.12.05:648][369]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.12.05:649][369]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.29-19.12.05:661][369]PIE: Server logged in
+[2021.04.29-19.12.05:662][369]PIE: Play in editor total start time 0.314 seconds.
+[2021.04.29-19.12.05:664][369]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.29-19.12.05:664][369]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.29-19.12.05:664][369]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.29-19.12.05:664][369]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.29-19.12.05:664][369]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.29-19.12.05:664][369]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.29-19.12.05:664][369]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.29-19.12.05:664][369]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.29-19.12.05:665][369]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.29-19.12.05:665][369]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.29-19.12.05:671][369]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.29-19.12.05:671][369]LogAudioMixer: Display: 1: FrontRight
+[2021.04.29-19.12.05:707][369]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.29-19.12.05:707][369]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.29-19.12.05:707][369]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.29-19.12.05:707][369]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.29-19.12.05:708][369]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.29-19.12.05:721][369]LogInit: FAudioDevice initialized.
+[2021.04.29-19.12.05:769][369]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.12.05:769][369]LogNet: Browse: 127.0.0.1:17777/Game/Levels/FirstPersonExampleMap
+[2021.04.29-19.12.05:770][369]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.04.29-19.12.05:770][369]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.04.29-19.12.05:770][369]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.12.05:770][369]LogNet: Game client on port 17777, rate 10000
+[2021.04.29-19.12.05:772][369]PIE: Client logged in
+[2021.04.29-19.12.05:774][369]PIE: Play in editor total start time 0.426 seconds.
+[2021.04.29-19.12.07:186][418]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:53943
+[2021.04.29-19.12.07:186][418]LogHandshake: SendConnectChallenge. Timestamp: 1.872142, Cookie: 083219054037217185091009238113204001090116214237022000004036
+[2021.04.29-19.12.07:187][418]LogHandshake: SendChallengeResponse. Timestamp: 1.872142, Cookie: 083219054037217185091009238113204001090116214237022000004036
+[2021.04.29-19.12.07:203][419]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:53943
+[2021.04.29-19.12.07:203][419]LogHandshake: SendChallengeAck. InCookie: 083219054037217185091009238113204001090116214237022000004036
+[2021.04.29-19.12.07:203][419]LogNet: Server accepting post-challenge connection from: 127.0.0.1:53943
+[2021.04.29-19.12.07:204][419]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.12.07:204][419]LogNet: NotifyAcceptedConnection: Name: FirstPersonExampleMap, TimeStamp: 04/29/21 20:12:07, [UNetConnection] RemoteAddr: 127.0.0.1:53943, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.12.07:204][419]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:53943, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.12.07:206][419]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_8, Driver: PendingNetDriver IpNetDriver_9, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.12.07:221][420]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap: Accepted
+[2021.04.29-19.12.07:221][420]LogNet: Remote platform little endian=1
+[2021.04.29-19.12.07:221][420]LogNet: This platform little endian=1
+[2021.04.29-19.12.07:223][420]LogOnline: OSS: Creating online subsystem instance for: :Context_17
+[2021.04.29-19.12.07:237][421]LogNet: Login request: ?Name=LAPTOP-205H8F92-10F8BDAD4D6270256895CFA87956BC33 userId: NULL:LAPTOP-205H8F92-10F8BDAD4D6270256895CFA87956BC33 platform: NULL
+[2021.04.29-19.12.07:238][421]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_0_FirstPersonExampleMap, Game: /Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C)
+[2021.04.29-19.12.07:238][421]LogLoad: LoadMap: 127.0.0.1:17777/Game/Levels/UEDPIE_0_FirstPersonExampleMap?game=/Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C
+[2021.04.29-19.12.07:238][421]LogWorld: BeginTearingDown for /Temp/Untitled_5
+[2021.04.29-19.12.07:238][421]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.12.07:238][421]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.12.07:307][421]LogUObjectHash: Compacting FUObjectHashTables data took   4.90ms
+[2021.04.29-19.12.07:325][421]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.29-19.12.07:325][421]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (00000144B5AB3A00), frame # 35421
+[2021.04.29-19.12.07:325][421]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000014540EDD580), frame # 35421
+[2021.04.29-19.12.07:327][421]LogWorld: Bringing World /Game/Levels/UEDPIE_1_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.29-20.12.07
+[2021.04.29-19.12.07:327][421]LogWorld: Bringing up level for play took: 0.001002
+[2021.04.29-19.12.07:328][421]LogLoad: Took 0.089272 seconds to LoadMap(/Game/Levels/UEDPIE_0_FirstPersonExampleMap)
+[2021.04.29-19.12.07:328][421]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2021.04.29-19.12.07:347][422]LogNet: Client netspeed is 10000
+[2021.04.29-19.12.07:348][422]LogNet: Join request: /Game/Levels/FirstPersonExampleMap?Name=LAPTOP-205H8F92-10F8BDAD4D6270256895CFA87956BC33?SplitscreenCount=1
+[2021.04.29-19.12.07:348][422]LogTemp: Warning: Setting Team to BRAVO
+[2021.04.29-19.12.07:348][422]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.12.07:349][422]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.12.07:352][422]LogNet: Join succeeded: LAPTOP-205H8F92-10F8
+[2021.04.29-19.12.07:469][428]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.12.07:519][431]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.12.07:551][433]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.12.07:940][456]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-19.12.07:940][456]LogSlate: WidgetSwitcher ('None') active index changed to 2
+[2021.04.29-19.12.09:069][504]LogSlate: WidgetSwitcher ('None') active index changed to 2
+[2021.04.29-19.12.09:103][506]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-19.12.12:145][668]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-19.12.12:146][668]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.12.12:161][669]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-19.12.12:163][669]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-19.12.12:296][677]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-19.12.12:297][677]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.12.12:312][678]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-19.12.12:314][678]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-19.12.12:446][686]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-19.12.12:446][686]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.12.12:461][687]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-19.12.12:463][687]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-19.12.12:580][694]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-19.12.12:581][694]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.12.12:595][695]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-19.12.12:597][695]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-19.12.12:737][703]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property WBP_Menu". Blueprint:  BP_TDMCharacterBase Function:  Execute Ubergraph BP TDMCharacter Base Graph:  EventGraph Node:  Update Ammo HUD
+[2021.04.29-19.12.12:738][703]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.12.12:752][704]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-19.12.12:753][704]LogTemp: Warning: TESTING TO ADD SCORE
+[2021.04.29-19.12.12:753][704]LogTemp: Warning: ADDING A DEATH
+[2021.04.29-19.12.12:759][704]LogTemp: Warning: Stiopping TICK
+[2021.04.29-19.12.12:761][704]LogSlate: WidgetSwitcher ('None') active index changed to 0
+[2021.04.29-19.12.12:761][704]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.12.12:762][704]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-19.12.12:762][704]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-19.12.12:765][704]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-19.12.12:782][705]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.12.12:783][705]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-19.12.12:783][705]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-19.12.12:784][705]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.12.12:784][705]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-19.12.12:785][705]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-19.12.12:785][705]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.12.12:786][705]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Optics' of length 2 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-19.12.12:787][705]LogScript: Warning: Script Msg: Attempted to access index -1 from array 'Muzzle' of length 1 in '/Game/UI/Menu/WBP_WeaponMenu.WBP_WeaponMenu_C'!
+[2021.04.29-19.12.15:878][877]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.29-19.12.15:887][877]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.29-19.12.15:897][877]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.12.15:897][877]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_1_FirstPersonExampleMap
+[2021.04.29-19.12.15:897][877]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Client 2] (64-bit/Windows) ' being destroyed
+[2021.04.29-19.12.15:940][877]LogTemp: Warning: Stiopping TICK
+[2021.04.29-19.12.15:940][877]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.12.15:941][877]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.12.15:947][877]LogNet: World NetDriver shutdown IpNetDriver_9 [GameNetDriver]
+[2021.04.29-19.12.15:947][877]LogNet: DestroyNamedNetDriver IpNetDriver_9 [GameNetDriver]
+[2021.04.29-19.12.15:947][877]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_8, Driver: GameNetDriver IpNetDriver_9, IsServer: NO, PC: BP_TDMPlayerController_C_0, Owner: BP_TDMPlayerController_C_0, UniqueId: NULL:LAPTOP-205H8F92-10F8BDAD4D6270256895CFA87956BC33, Channels: 18, Time: 2021.04.29-19.12.15
+[2021.04.29-19.12.15:947][877]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_8, Driver: GameNetDriver IpNetDriver_9, IsServer: NO, PC: BP_TDMPlayerController_C_0, Owner: BP_TDMPlayerController_C_0, UniqueId: NULL:LAPTOP-205H8F92-10F8BDAD4D6270256895CFA87956BC33
+[2021.04.29-19.12.15:948][877]LogExit: GameNetDriver IpNetDriver_9 shut down
+[2021.04.29-19.12.15:949][877]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.29-19.12.15:991][877]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.12.15:991][877]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.12.15:999][877]LogNet: World NetDriver shutdown IpNetDriver_8 [GameNetDriver]
+[2021.04.29-19.12.15:999][877]LogNet: DestroyNamedNetDriver IpNetDriver_8 [GameNetDriver]
+[2021.04.29-19.12.15:999][877]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:53943, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-10F8BDAD4D6270256895CFA87956BC33
+[2021.04.29-19.12.15:999][877]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:53943, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-10F8BDAD4D6270256895CFA87956BC33, Channels: 18, Time: 2021.04.29-19.12.15
+[2021.04.29-19.12.15:999][877]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:53943, Name: IpConnection_9, Driver: GameNetDriver IpNetDriver_8, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-10F8BDAD4D6270256895CFA87956BC33
+[2021.04.29-19.12.16:000][877]LogExit: GameNetDriver IpNetDriver_8 shut down
+[2021.04.29-19.12.16:001][877]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.29-19.12.16:007][877]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.12.16:092][877]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000014540EDD580), frame # 35877
+[2021.04.29-19.12.16:092][877]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (00000144B5AB3A00), frame # 35877
+[2021.04.29-19.12.16:093][877]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000014550EA0F40), frame # 35877
+[2021.04.29-19.12.16:093][877]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000014551FCBE00), frame # 35877
+[2021.04.29-19.12.16:097][877]LogUObjectHash: Compacting FUObjectHashTables data took   3.87ms
+[2021.04.29-19.12.16:243][878]LogPlayLevel: Display: Destroying online subsystem :Context_17
+[2021.04.29-19.12.16:243][878]LogPlayLevel: Display: Destroying online subsystem :Context_16
+[2021.04.29-19.12.17:765][959]LogSlate: Window 'Message Log' being destroyed
+[2021.04.29-19.12.17:772][959]LogSlate: Window 'Message Log' being destroyed
+[2021.04.29-19.12.35:507][ 87]LogHotReload: New module detected: UE4Editor-TDMDeathmatch-0003.dll
+[2021.04.29-19.12.37:206][ 93]LogHotReload: Starting Hot-Reload from IDE
+[2021.04.29-19.12.37:553][ 93]LogClass: EPossessed HotReload.
+[2021.04.29-19.12.37:553][ 93]LogClass: ETeam HotReload.
+[2021.04.29-19.12.37:553][ 93]LogClass: EAttachmentType HotReload.
+[2021.04.29-19.12.37:553][ 93]LogClass: EFireMode HotReload.
+[2021.04.29-19.12.37:553][ 93]LogClass: ScoreboardData HotReload.
+[2021.04.29-19.12.37:553][ 93]LogClass: FirearmToSpawn HotReload.
+[2021.04.29-19.12.37:575][ 93]LogContentBrowser: Native class hierarchy updated for 'TDMDeathmatch' in 0.0009 seconds. Added 16 classes and 8 folders.
+[2021.04.29-19.12.37:579][ 93]Display: HotReload successful (27 functions remapped  2 scriptstructs remapped)
+[2021.04.29-19.12.37:727][ 93]LogContentBrowser: Native class hierarchy populated in 0.0113 seconds. Added 3423 classes and 813 folders.
+[2021.04.29-19.12.37:733][ 93]Display: HotReload took  0.5s.
+[2021.04.29-19.12.49:668][337]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBase86BEA7DF4533047B6E2149AAB8DCAB32.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMCharacterBase.uasset'
+[2021.04.29-19.12.49:694][337]AssetCheck: New page: Asset Save: BP_TDMCharacterBase
+[2021.04.29-19.12.49:694][337]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase
+[2021.04.29-19.13.19:838][707]LogSlate: Window 'Message' being destroyed
+[2021.04.29-19.13.19:845][707]Message dialog closed, result: Cancel, title: Message, text: Would you like to apply the changes of the modified material to the original material?
+/Game/Mannequin/Character/Materials/M_UE4Man_Body.M_UE4Man_Body
+(Selecting 'No' will cause all changes to be lost!)
+[2021.04.29-19.13.21:394][796]LogMaterialEditor: Saving and Compiling material M_UE4Man_Body
+[2021.04.29-19.13.22:163][796]LogMaterial: Display: Missing cached shader map for material M_UE4Man_Body, compiling. 
+[2021.04.29-19.13.22:286][796]LogMaterial: Display: Missing cached shader map for material M_UE4Man_Body, compiling. 
+[2021.04.29-19.13.22:367][796]LogMaterial: Display: Missing cached shader map for material M_UE4Man_Body, compiling. 
+[2021.04.29-19.13.22:522][796]LogUObjectHash: Compacting FUObjectHashTables data took   6.24ms
+[2021.04.29-19.13.22:530][796]LogMaterial: Display: Missing cached shader map for material DebugViewMode MaterialTexCoordScale, compiling. 
+[2021.04.29-19.14.36:747][796]TextureStreamingBuild: Display: Compiling optional shaders took 74.221 seconds.
+[2021.04.29-19.14.36:799][796]LogUObjectHash: Compacting FUObjectHashTables data took   2.51ms
+[2021.04.29-19.14.37:026][796]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/M_UE4Man_BodyB6C6BA114B1A5BEEE731A399F5CD4C03.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/Mannequin/Character/Materials/M_UE4Man_Body.uasset'
+[2021.04.29-19.14.37:045][796]AssetCheck: New page: Asset Save: M_UE4Man_Body
+[2021.04.29-19.14.37:045][796]LogContentValidation: Display: Validating Material /Game/Mannequin/Character/Materials/M_UE4Man_Body.M_UE4Man_Body
+[2021.04.29-19.14.37:053][796]MaterialEditorStats: Base pass shader: 118 instructions
+[2021.04.29-19.14.37:053][796]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 192 instructions
+[2021.04.29-19.14.37:053][796]MaterialEditorStats: Base pass vertex shader: 45 instructions
+[2021.04.29-19.14.37:053][796]MaterialEditorStats: Base pass vertex shader: 148 instructions
+[2021.04.29-19.14.37:053][796]MaterialEditorStats: Texture samplers: 5/16
+[2021.04.29-19.14.37:053][796]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(4)
+[2021.04.29-19.14.37:053][796]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2021.04.29-19.21.03:236][  8]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.21.03:236][  8]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.23.50:697][227]LogUObjectHash: Compacting FUObjectHashTables data took   3.87ms
+[2021.04.29-19.23.50:700][227]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/FirstPersonExampleMap' took 0.046
+[2021.04.29-19.23.50:701][227]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/BlueprintClasses/Player/BP_TDMCharacterBase] ([1] browsable assets)...
+[2021.04.29-19.23.50:718][227]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase]
+[2021.04.29-19.23.50:718][227]OBJ SavePackage: Finished generating thumbnails for package [/Game/BlueprintClasses/Player/BP_TDMCharacterBase]
+[2021.04.29-19.23.50:769][227]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBase_Auto22548A82B430FEB9188C3E69BB67F2E3F.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Autosaves/Game/BlueprintClasses/Player/BP_TDMCharacterBase_Auto2.uasset'
+[2021.04.29-19.23.50:772][227]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/BlueprintClasses/Player/BP_TDMPlayerController] ([1] browsable assets)...
+[2021.04.29-19.23.50:772][227]OBJ SavePackage: Finished generating thumbnails for package [/Game/BlueprintClasses/Player/BP_TDMPlayerController]
+[2021.04.29-19.23.50:794][227]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMPlayerController_Auto2FF3D8F6A425D8D008C24B9A20FF6C20F.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/Autosaves/Game/BlueprintClasses/Player/BP_TDMPlayerController_Auto2.uasset'
+[2021.04.29-19.23.50:795][227]LogFileHelpers: Auto-saving content packages took 0.095
+[2021.04.29-19.24.37:673][582]LogSlate: Took 0.003105 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensedItalic.ttf' (160K)
+[2021.04.29-19.25.18:140][209]BlueprintLog: New page: Compile BP_TDMPlayerController
+[2021.04.29-19.25.18:210][209]LogUObjectHash: Compacting FUObjectHashTables data took   4.95ms
+[2021.04.29-19.25.18:557][225]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMPlayerController1972EBFA4E42C3CD5AC96283FC8528DF.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMPlayerController.uasset'
+[2021.04.29-19.25.18:584][225]AssetCheck: New page: Asset Save: BP_TDMPlayerController
+[2021.04.29-19.25.18:585][225]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMPlayerController.BP_TDMPlayerController
+[2021.04.29-19.26.49:121][922]BlueprintLog: New page: Compile BP_TDMCharacterBase
+[2021.04.29-19.26.49:206][922]LogUObjectHash: Compacting FUObjectHashTables data took   4.12ms
+[2021.04.29-19.26.49:595][938]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBaseB77FC27340FFC4FEB9E1C39E3C5F31D2.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMCharacterBase.uasset'
+[2021.04.29-19.26.49:626][938]AssetCheck: New page: Asset Save: BP_TDMCharacterBase
+[2021.04.29-19.26.49:626][938]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase
+[2021.04.29-19.26.50:708][  1]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.04.29-19.26.50:739][  1]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.04.29-19.26.50:739][  1]PIE: New page: PIE session: FirstPersonExampleMap (29 Apr 2021, 21:26:50)
+[2021.04.29-19.26.50:739][  1]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.29-19.26.50:756][  1]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016354s)
+[2021.04.29-19.26.50:757][  1]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.29-19.26.50:757][  1]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000001454D1EEC00), frame # 46001
+[2021.04.29-19.26.50:757][  1]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000014581D5CF40), frame # 46001
+[2021.04.29-19.26.50:757][  1]LogPlayLevel: PIE: World Init took: (0.001437s)
+[2021.04.29-19.26.50:757][  1]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.018033s)
+[2021.04.29-19.26.50:788][  1]LogUObjectHash: Compacting FUObjectHashTables data took   3.55ms
+[2021.04.29-19.26.50:790][  1]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.29-19.26.50:790][  1]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.29-19.26.50:790][  1]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.29-19.26.50:790][  1]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.29-19.26.50:790][  1]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.29-19.26.50:790][  1]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.29-19.26.50:790][  1]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.29-19.26.50:790][  1]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.29-19.26.50:791][  1]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.29-19.26.50:791][  1]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.29-19.26.50:801][  1]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.29-19.26.50:801][  1]LogAudioMixer: Display: 1: FrontRight
+[2021.04.29-19.26.50:837][  1]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.29-19.26.50:837][  1]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.29-19.26.50:837][  1]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.29-19.26.50:837][  1]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.29-19.26.50:838][  1]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.29-19.26.50:852][  1]LogInit: FAudioDevice initialized.
+[2021.04.29-19.26.50:906][  1]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.26.50:907][  1]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.29-19.26.50:909][  1]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.29-20.26.50
+[2021.04.29-19.26.50:910][  1]LogWorld: Bringing up level for play took: 0.002135
+[2021.04.29-19.26.50:910][  1]LogOnline: OSS: Creating online subsystem instance for: :Context_18
+[2021.04.29-19.26.50:913][  1]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.04.29-19.26.50:915][  1]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.26.50:915][  1]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.29-19.26.50:915][  1]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.29-19.26.50:915][  1]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.29-19.26.50:915][  1]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.29-19.26.50:916][  1]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.26.50:916][  1]LogNet: GameNetDriver IpNetDriver_10 IpNetDriver listening on port 17777
+[2021.04.29-19.26.50:916][  1]LogTemp: Warning: BEGIN PLAY
+[2021.04.29-19.26.50:916][  1]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.26.50:921][  1]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.26.50:923][  1]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.29-19.26.50:924][  1]PIE: Server logged in
+[2021.04.29-19.26.50:926][  1]PIE: Play in editor total start time 0.197 seconds.
+[2021.04.29-19.26.50:929][  1]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.29-19.26.50:929][  1]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.29-19.26.50:929][  1]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.29-19.26.50:929][  1]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.29-19.26.50:929][  1]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.29-19.26.50:929][  1]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.29-19.26.50:929][  1]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.29-19.26.50:929][  1]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.29-19.26.50:930][  1]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.29-19.26.50:930][  1]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.29-19.26.50:937][  1]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.29-19.26.50:937][  1]LogAudioMixer: Display: 1: FrontRight
+[2021.04.29-19.26.50:974][  1]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.29-19.26.50:974][  1]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.29-19.26.50:974][  1]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.29-19.26.50:974][  1]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.29-19.26.50:975][  1]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.29-19.26.50:994][  1]LogInit: FAudioDevice initialized.
+[2021.04.29-19.26.51:055][  1]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.26.51:055][  1]LogNet: Browse: 127.0.0.1:17777/Game/Levels/FirstPersonExampleMap
+[2021.04.29-19.26.51:055][  1]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.04.29-19.26.51:055][  1]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.04.29-19.26.51:056][  1]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.26.51:056][  1]LogNet: Game client on port 17777, rate 10000
+[2021.04.29-19.26.51:058][  1]PIE: Client logged in
+[2021.04.29-19.26.51:059][  1]PIE: Play in editor total start time 0.33 seconds.
+[2021.04.29-19.26.52:081][ 58]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58615
+[2021.04.29-19.26.52:081][ 58]LogHandshake: SendConnectChallenge. Timestamp: 1.387717, Cookie: 004032032250225173031244046200194142155175052138174065062194
+[2021.04.29-19.26.52:083][ 58]LogHandshake: SendChallengeResponse. Timestamp: 1.387717, Cookie: 004032032250225173031244046200194142155175052138174065062194
+[2021.04.29-19.26.52:097][ 59]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:58615
+[2021.04.29-19.26.52:098][ 59]LogHandshake: SendChallengeAck. InCookie: 004032032250225173031244046200194142155175052138174065062194
+[2021.04.29-19.26.52:098][ 59]LogNet: Server accepting post-challenge connection from: 127.0.0.1:58615
+[2021.04.29-19.26.52:099][ 59]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.26.52:099][ 59]LogNet: NotifyAcceptedConnection: Name: FirstPersonExampleMap, TimeStamp: 04/29/21 20:26:52, [UNetConnection] RemoteAddr: 127.0.0.1:58615, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.26.52:099][ 59]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:58615, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.26.52:100][ 59]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_10, Driver: PendingNetDriver IpNetDriver_11, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.26.52:115][ 60]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap: Accepted
+[2021.04.29-19.26.52:115][ 60]LogNet: Remote platform little endian=1
+[2021.04.29-19.26.52:115][ 60]LogNet: This platform little endian=1
+[2021.04.29-19.26.52:117][ 60]LogOnline: OSS: Creating online subsystem instance for: :Context_19
+[2021.04.29-19.26.52:132][ 61]LogNet: Login request: ?Name=LAPTOP-205H8F92-D613D040417B2E1B0A3811B5B436C46A userId: NULL:LAPTOP-205H8F92-D613D040417B2E1B0A3811B5B436C46A platform: NULL
+[2021.04.29-19.26.52:134][ 61]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_0_FirstPersonExampleMap, Game: /Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C)
+[2021.04.29-19.26.52:134][ 61]LogLoad: LoadMap: 127.0.0.1:17777/Game/Levels/UEDPIE_0_FirstPersonExampleMap?game=/Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C
+[2021.04.29-19.26.52:134][ 61]LogWorld: BeginTearingDown for /Temp/Untitled_6
+[2021.04.29-19.26.52:134][ 61]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.26.52:134][ 61]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.26.52:167][ 61]LogUObjectHash: Compacting FUObjectHashTables data took   2.76ms
+[2021.04.29-19.26.52:187][ 61]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.29-19.26.52:187][ 61]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000001452B623C00), frame # 46061
+[2021.04.29-19.26.52:187][ 61]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000001454BAC5800), frame # 46061
+[2021.04.29-19.26.52:188][ 61]LogWorld: Bringing World /Game/Levels/UEDPIE_1_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.29-20.26.52
+[2021.04.29-19.26.52:189][ 61]LogWorld: Bringing up level for play took: 0.000735
+[2021.04.29-19.26.52:189][ 61]LogLoad: Took 0.054677 seconds to LoadMap(/Game/Levels/UEDPIE_0_FirstPersonExampleMap)
+[2021.04.29-19.26.52:189][ 61]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2021.04.29-19.26.52:202][ 62]LogNet: Client netspeed is 10000
+[2021.04.29-19.26.52:202][ 62]LogNet: Join request: /Game/Levels/FirstPersonExampleMap?Name=LAPTOP-205H8F92-D613D040417B2E1B0A3811B5B436C46A?SplitscreenCount=1
+[2021.04.29-19.26.52:202][ 62]LogTemp: Warning: Setting Team to BRAVO
+[2021.04.29-19.26.52:202][ 62]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.26.52:202][ 62]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.04.29-19.26.52:203][ 62]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.26.52:205][ 62]LogNet: Join succeeded: LAPTOP-205H8F92-D613
+[2021.04.29-19.26.52:317][ 68]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.26.52:366][ 71]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.26.52:382][ 72]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.26.53:555][120]LogSlate: WidgetSwitcher ('None') active index changed to 2
+[2021.04.29-19.26.54:698][168]LogSlate: WidgetSwitcher ('None') active index changed to 2
+[2021.04.29-19.26.56:945][262]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.26.56:946][262]LogBlueprintUserMessages: [BP_M16_C_1] Client 0: F
+[2021.04.29-19.26.56:962][263]LogBlueprintUserMessages: [BP_M16_C_1] Server: F
+[2021.04.29-19.27.00:142][452]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.27.00:157][453]LogBlueprintUserMessages: [BP_M16_C_1] Client 0: F
+[2021.04.29-19.27.00:173][454]LogBlueprintUserMessages: [BP_M16_C_1] Server: F
+[2021.04.29-19.27.01:893][537]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.27.02:301][561]LogBlueprintUserMessages: [BP_M16_C_0] Server: D
+[2021.04.29-19.27.02:304][561]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: D
+[2021.04.29-19.27.02:469][571]LogTemp: Warning: Hit Actor Cube2
+[2021.04.29-19.27.02:469][571]LogBlueprintUserMessages: [BP_M16_C_0] Server: M
+[2021.04.29-19.27.02:472][571]LogTemp: Warning: Hit Actor Cube2
+[2021.04.29-19.27.02:472][571]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: M
+[2021.04.29-19.27.02:662][582]LogTemp: Warning: Hit Actor Cube_2
+[2021.04.29-19.27.02:662][582]LogBlueprintUserMessages: [BP_M16_C_0] Server: F
+[2021.04.29-19.27.02:663][582]LogTemp: Warning: Hit Actor Cube_2
+[2021.04.29-19.27.02:664][582]LogBlueprintUserMessages: [BP_M16_C_0] Client 0: F
+[2021.04.29-19.27.03:967][655]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.27.03:967][655]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_1_FirstPersonExampleMap
+[2021.04.29-19.27.03:967][655]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Client 2] (64-bit/Windows) ' being destroyed
+[2021.04.29-19.27.03:971][655]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.27.03:972][655]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.27.03:981][655]LogNet: World NetDriver shutdown IpNetDriver_11 [GameNetDriver]
+[2021.04.29-19.27.03:981][655]LogNet: DestroyNamedNetDriver IpNetDriver_11 [GameNetDriver]
+[2021.04.29-19.27.03:981][655]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_10, Driver: GameNetDriver IpNetDriver_11, IsServer: NO, PC: BP_TDMPlayerController_C_0, Owner: BP_TDMPlayerController_C_0, UniqueId: NULL:LAPTOP-205H8F92-D613D040417B2E1B0A3811B5B436C46A, Channels: 17, Time: 2021.04.29-19.27.03
+[2021.04.29-19.27.03:981][655]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_10, Driver: GameNetDriver IpNetDriver_11, IsServer: NO, PC: BP_TDMPlayerController_C_0, Owner: BP_TDMPlayerController_C_0, UniqueId: NULL:LAPTOP-205H8F92-D613D040417B2E1B0A3811B5B436C46A
+[2021.04.29-19.27.03:981][655]LogExit: GameNetDriver IpNetDriver_11 shut down
+[2021.04.29-19.27.03:981][655]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.29-19.27.03:982][655]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.29-19.27.03:982][655]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.27.03:982][655]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.29-19.27.03:990][655]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.27.03:991][655]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.27.03:997][655]LogNet: World NetDriver shutdown IpNetDriver_10 [GameNetDriver]
+[2021.04.29-19.27.03:997][655]LogNet: DestroyNamedNetDriver IpNetDriver_10 [GameNetDriver]
+[2021.04.29-19.27.03:997][655]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:58615, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-D613D040417B2E1B0A3811B5B436C46A
+[2021.04.29-19.27.03:997][655]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:58615, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-D613D040417B2E1B0A3811B5B436C46A, Channels: 17, Time: 2021.04.29-19.27.03
+[2021.04.29-19.27.03:997][655]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:58615, Name: IpConnection_11, Driver: GameNetDriver IpNetDriver_10, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-D613D040417B2E1B0A3811B5B436C46A
+[2021.04.29-19.27.03:998][655]LogExit: GameNetDriver IpNetDriver_10 shut down
+[2021.04.29-19.27.03:999][655]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.29-19.27.04:006][655]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.27.04:083][655]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000014581D5CF40), frame # 46655
+[2021.04.29-19.27.04:083][655]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000001454D1EEC00), frame # 46655
+[2021.04.29-19.27.04:084][655]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000001454BAC5800), frame # 46655
+[2021.04.29-19.27.04:084][655]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000001452B623C00), frame # 46655
+[2021.04.29-19.27.04:088][655]LogUObjectHash: Compacting FUObjectHashTables data took   2.74ms
+[2021.04.29-19.27.04:119][656]LogPlayLevel: Display: Destroying online subsystem :Context_19
+[2021.04.29-19.27.04:119][656]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2021.04.29-19.28.06:536][452]LogEditorTransaction: Undo Move Nodes
+[2021.04.29-19.28.06:964][464]LogEditorTransaction: Undo Move Nodes
+[2021.04.29-19.28.07:853][513]LogEditorTransaction: Undo Move Nodes
+[2021.04.29-19.28.08:459][549]LogEditorTransaction: Undo Delete current selection
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BF5FB0688-448B-AD41-DF26-E5AD84542C7E%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.25.4-14469661%2B%2B%2BUE4%2BRelease-4.25&UserID=c70249fa4c45168e5e400dbdf38cf223%7C165d4cadac3948179fb86d3c7b140245%7C18afdf57-248a-4ca9-bc1d-fec345c77b9c&AppEnvironment=datacollector-source&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: request failed, libcurl error: 0 (No error)
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x144e5087f70 [can pipeline])
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 1 (Re-using existing connection! (#44) with host datarouter.ol.epicgames.com)
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (54.243.67.50) port 443 (#44))
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 3 (We are completely uploaded and fine)
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, Client hello (1):)
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 7 (Closing connection 44)
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: 0000014581B1A400: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, Client hello (1):)
+[2021.04.29-19.29.21:309][528]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BF5FB0688-448B-AD41-DF26-E5AD84542C7E%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.25.4-14469661%2B%2B%2BUE4%2BRelease-4.25&UserID=c70249fa4c45168e5e400dbdf38cf223%7C165d4cadac3948179fb86d3c7b140245%7C18afdf57-248a-4ca9-bc1d-fec345c77b9c&AppEnvironment=datacollector-source&UploadType=eteventstream
+[2021.04.29-19.29.47:153][480]BlueprintLog: New page: Compile BP_TDMCharacterBase
+[2021.04.29-19.29.47:242][480]LogUObjectHash: Compacting FUObjectHashTables data took   4.09ms
+[2021.04.29-19.29.47:723][499]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBase650847C94EC6B5D76D089280213421C5.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMCharacterBase.uasset'
+[2021.04.29-19.29.47:741][499]AssetCheck: New page: Asset Save: BP_TDMCharacterBase
+[2021.04.29-19.29.47:741][499]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase
+[2021.04.29-19.30.25:083][214]LogEditorTransaction: Undo Delete current selection
+[2021.04.29-19.30.36:141][840]BlueprintLog: New page: Compile BP_TDMCharacterBase
+[2021.04.29-19.30.36:228][840]LogUObjectHash: Compacting FUObjectHashTables data took   6.11ms
+[2021.04.29-19.30.36:653][858]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMCharacterBaseBE3F4A7E4FC9ABAB6A8E889F7B977E69.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMCharacterBase.uasset'
+[2021.04.29-19.30.36:678][858]AssetCheck: New page: Asset Save: BP_TDMCharacterBase
+[2021.04.29-19.30.36:679][858]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMCharacterBase.BP_TDMCharacterBase
+[2021.04.29-19.31.06:272][ 28]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2021.04.29-19.31.06:295][ 28]BlueprintLog: New page: Pre-Play auto-recompile
+[2021.04.29-19.31.06:299][ 28]LogPlayLevel: [PlayLevel] Compiling BP_TDMPlayerController before play...
+[2021.04.29-19.31.06:386][ 28]LogUObjectHash: Compacting FUObjectHashTables data took   3.88ms
+[2021.04.29-19.31.06:386][ 28]LogPlayLevel: PlayLevel: Blueprint regeneration took 92 ms (1 blueprints)
+[2021.04.29-19.31.06:386][ 28]PIE: New page: PIE session: FirstPersonExampleMap (29 Apr 2021, 21:31:06)
+[2021.04.29-19.31.06:387][ 28]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.29-19.31.06:401][ 28]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013859s)
+[2021.04.29-19.31.06:402][ 28]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.29-19.31.06:402][ 28]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000014581B77000), frame # 55028
+[2021.04.29-19.31.06:402][ 28]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000001457D06F600), frame # 55028
+[2021.04.29-19.31.06:403][ 28]LogPlayLevel: PIE: World Init took: (0.001962s)
+[2021.04.29-19.31.06:403][ 28]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/FirstPersonExampleMap.FirstPersonExampleMap to /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.016076s)
+[2021.04.29-19.31.06:437][ 28]LogUObjectHash: Compacting FUObjectHashTables data took   2.50ms
+[2021.04.29-19.31.06:439][ 28]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.29-19.31.06:439][ 28]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.29-19.31.06:439][ 28]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.29-19.31.06:439][ 28]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.29-19.31.06:439][ 28]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.29-19.31.06:439][ 28]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.29-19.31.06:439][ 28]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.29-19.31.06:439][ 28]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.29-19.31.06:440][ 28]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.29-19.31.06:440][ 28]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.29-19.31.06:447][ 28]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.29-19.31.06:447][ 28]LogAudioMixer: Display: 1: FrontRight
+[2021.04.29-19.31.06:479][ 28]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.29-19.31.06:480][ 28]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.29-19.31.06:480][ 28]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.29-19.31.06:480][ 28]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.29-19.31.06:480][ 28]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.29-19.31.06:494][ 28]LogInit: FAudioDevice initialized.
+[2021.04.29-19.31.06:547][ 28]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.31.06:547][ 28]LogLoad: Game class is 'BP_TDMGameModeBase_C'
+[2021.04.29-19.31.06:550][ 28]LogWorld: Bringing World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.29-20.31.06
+[2021.04.29-19.31.06:550][ 28]LogWorld: Bringing up level for play took: 0.002054
+[2021.04.29-19.31.06:551][ 28]LogOnline: OSS: Creating online subsystem instance for: :Context_20
+[2021.04.29-19.31.06:553][ 28]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.04.29-19.31.06:554][ 28]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.31.06:554][ 28]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.04.29-19.31.06:554][ 28]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.04.29-19.31.06:555][ 28]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.04.29-19.31.06:555][ 28]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.04.29-19.31.06:555][ 28]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.31.06:555][ 28]LogNet: GameNetDriver IpNetDriver_12 IpNetDriver listening on port 17777
+[2021.04.29-19.31.06:555][ 28]LogTemp: Warning: BEGIN PLAY
+[2021.04.29-19.31.06:556][ 28]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.31.06:562][ 28]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.31.06:564][ 28]LogTemp: Warning: Setting Team to ALPHA
+[2021.04.29-19.31.06:566][ 28]PIE: Server logged in
+[2021.04.29-19.31.06:567][ 28]PIE: Play in editor total start time 0.278 seconds.
+[2021.04.29-19.31.06:569][ 28]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.04.29-19.31.06:569][ 28]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.04.29-19.31.06:569][ 28]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.04.29-19.31.06:569][ 28]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.04.29-19.31.06:569][ 28]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.04.29-19.31.06:569][ 28]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.04.29-19.31.06:569][ 28]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.04.29-19.31.06:569][ 28]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.04.29-19.31.06:570][ 28]LogAudio: Display: Using built-in audio occlusion.
+[2021.04.29-19.31.06:570][ 28]LogAudioMixer: Display: Initializing audio mixer.
+[2021.04.29-19.31.06:577][ 28]LogAudioMixer: Display: 0: FrontLeft
+[2021.04.29-19.31.06:577][ 28]LogAudioMixer: Display: 1: FrontRight
+[2021.04.29-19.31.06:609][ 28]LogAudioMixer: Display: Using Audio Device Speaker/Headphone (Realtek High Definition Audio)
+[2021.04.29-19.31.06:609][ 28]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.04.29-19.31.06:609][ 28]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.04.29-19.31.06:609][ 28]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.04.29-19.31.06:610][ 28]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.04.29-19.31.06:625][ 28]LogInit: FAudioDevice initialized.
+[2021.04.29-19.31.06:679][ 28]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.31.06:679][ 28]LogNet: Browse: 127.0.0.1:17777/Game/Levels/FirstPersonExampleMap
+[2021.04.29-19.31.06:680][ 28]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.04.29-19.31.06:680][ 28]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.04.29-19.31.06:680][ 28]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.31.06:680][ 28]LogNet: Game client on port 17777, rate 10000
+[2021.04.29-19.31.06:681][ 28]PIE: Client logged in
+[2021.04.29-19.31.06:682][ 28]PIE: Play in editor total start time 0.393 seconds.
+[2021.04.29-19.31.07:703][ 84]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:49734
+[2021.04.29-19.31.07:703][ 84]LogHandshake: SendConnectChallenge. Timestamp: 1.447856, Cookie: 113235100087030155178029162163178234077086019089226071170039
+[2021.04.29-19.31.07:705][ 84]LogHandshake: SendChallengeResponse. Timestamp: 1.447856, Cookie: 113235100087030155178029162163178234077086019089226071170039
+[2021.04.29-19.31.07:726][ 85]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:49734
+[2021.04.29-19.31.07:726][ 85]LogHandshake: SendChallengeAck. InCookie: 113235100087030155178029162163178234077086019089226071170039
+[2021.04.29-19.31.07:726][ 85]LogNet: Server accepting post-challenge connection from: 127.0.0.1:49734
+[2021.04.29-19.31.07:727][ 85]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.04.29-19.31.07:727][ 85]LogNet: NotifyAcceptedConnection: Name: FirstPersonExampleMap, TimeStamp: 04/29/21 20:31:07, [UNetConnection] RemoteAddr: 127.0.0.1:49734, Name: IpConnection_13, Driver: GameNetDriver IpNetDriver_12, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.31.07:727][ 85]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:49734, Name: IpConnection_13, Driver: GameNetDriver IpNetDriver_12, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.31.07:728][ 85]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_12, Driver: PendingNetDriver IpNetDriver_13, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.04.29-19.31.07:736][ 86]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Levels/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap: Accepted
+[2021.04.29-19.31.07:736][ 86]LogNet: Remote platform little endian=1
+[2021.04.29-19.31.07:736][ 86]LogNet: This platform little endian=1
+[2021.04.29-19.31.07:738][ 86]LogOnline: OSS: Creating online subsystem instance for: :Context_21
+[2021.04.29-19.31.07:758][ 87]LogNet: Login request: ?Name=LAPTOP-205H8F92-5277D5904F425E387CD819B90D633A0A userId: NULL:LAPTOP-205H8F92-5277D5904F425E387CD819B90D633A0A platform: NULL
+[2021.04.29-19.31.07:760][ 87]LogNet: Welcomed by server (Level: /Game/Levels/UEDPIE_0_FirstPersonExampleMap, Game: /Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C)
+[2021.04.29-19.31.07:760][ 87]LogLoad: LoadMap: 127.0.0.1:17777/Game/Levels/UEDPIE_0_FirstPersonExampleMap?game=/Game/BlueprintClasses/game/GameMode/BP_TDMGameModeBase.BP_TDMGameModeBase_C
+[2021.04.29-19.31.07:760][ 87]LogWorld: BeginTearingDown for /Temp/Untitled_7
+[2021.04.29-19.31.07:760][ 87]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.31.07:760][ 87]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.31.07:801][ 87]LogUObjectHash: Compacting FUObjectHashTables data took   4.08ms
+[2021.04.29-19.31.07:822][ 87]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2021.04.29-19.31.07:822][ 87]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000014540CF8400), frame # 55087
+[2021.04.29-19.31.07:822][ 87]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000001457D06EE80), frame # 55087
+[2021.04.29-19.31.07:824][ 87]LogWorld: Bringing World /Game/Levels/UEDPIE_1_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 60) at 2021.04.29-20.31.07
+[2021.04.29-19.31.07:824][ 87]LogWorld: Bringing up level for play took: 0.000721
+[2021.04.29-19.31.07:824][ 87]LogLoad: Took 0.064127 seconds to LoadMap(/Game/Levels/UEDPIE_0_FirstPersonExampleMap)
+[2021.04.29-19.31.07:824][ 87]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2021.04.29-19.31.07:836][ 88]LogNet: Client netspeed is 10000
+[2021.04.29-19.31.07:836][ 88]LogNet: Join request: /Game/Levels/FirstPersonExampleMap?Name=LAPTOP-205H8F92-5277D5904F425E387CD819B90D633A0A?SplitscreenCount=1
+[2021.04.29-19.31.07:836][ 88]LogTemp: Warning: Setting Team to BRAVO
+[2021.04.29-19.31.07:836][ 88]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.31.07:836][ 88]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2021.04.29-19.31.07:837][ 88]LogTemp: Warning: POST LOGIN
+[2021.04.29-19.31.07:840][ 88]LogNet: Join succeeded: LAPTOP-205H8F92-5277
+[2021.04.29-19.31.07:960][ 94]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(799)]!
+[2021.04.29-19.31.08:008][ 97]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.31.08:024][ 98]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.04.29-19.31.09:686][164]LogSlate: WidgetSwitcher ('None') active index changed to 2
+[2021.04.29-19.31.13:406][366]LogSlate: WidgetSwitcher ('None') active index changed to 2
+[2021.04.29-19.31.14:923][456]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.31.14:942][457]LogBlueprintUserMessages: [BP_M16_C_1] Client 0: F
+[2021.04.29-19.31.14:956][458]LogBlueprintUserMessages: [BP_M16_C_1] Server: F
+[2021.04.29-19.31.15:442][487]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.31.15:458][488]LogBlueprintUserMessages: [BP_M16_C_1] Client 0: F
+[2021.04.29-19.31.15:473][489]LogBlueprintUserMessages: [BP_M16_C_1] Server: F
+[2021.04.29-19.31.15:576][495]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.31.15:592][496]LogBlueprintUserMessages: [BP_M16_C_1] Client 0: F
+[2021.04.29-19.31.15:606][497]LogBlueprintUserMessages: [BP_M16_C_1] Server: F
+[2021.04.29-19.31.15:720][503]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.31.15:736][504]LogBlueprintUserMessages: [BP_M16_C_1] Client 0: F
+[2021.04.29-19.31.15:751][505]LogBlueprintUserMessages: [BP_M16_C_1] Server: F
+[2021.04.29-19.31.16:154][529]LogTemp: Warning: FIRING PROJECTILE
+[2021.04.29-19.31.16:170][530]LogBlueprintUserMessages: [BP_M16_C_1] Client 0: F
+[2021.04.29-19.31.16:186][531]LogBlueprintUserMessages: [BP_M16_C_1] Server: F
+[2021.04.29-19.31.16:186][531]LogTemp: Warning: TESTING TO ADD SCORE
+[2021.04.29-19.31.16:186][531]LogTemp: Warning: ADDING A DEATH
+[2021.04.29-19.31.20:327][774]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.31.20:327][774]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_1_FirstPersonExampleMap
+[2021.04.29-19.31.20:327][774]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Client 2] (64-bit/Windows) ' being destroyed
+[2021.04.29-19.31.20:334][774]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.31.20:335][774]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.31.20:345][774]LogNet: World NetDriver shutdown IpNetDriver_13 [GameNetDriver]
+[2021.04.29-19.31.20:345][774]LogNet: DestroyNamedNetDriver IpNetDriver_13 [GameNetDriver]
+[2021.04.29-19.31.20:345][774]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_12, Driver: GameNetDriver IpNetDriver_13, IsServer: NO, PC: BP_TDMPlayerController_C_0, Owner: BP_TDMPlayerController_C_0, UniqueId: NULL:LAPTOP-205H8F92-5277D5904F425E387CD819B90D633A0A, Channels: 18, Time: 2021.04.29-19.31.20
+[2021.04.29-19.31.20:345][774]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_12, Driver: GameNetDriver IpNetDriver_13, IsServer: NO, PC: BP_TDMPlayerController_C_0, Owner: BP_TDMPlayerController_C_0, UniqueId: NULL:LAPTOP-205H8F92-5277D5904F425E387CD819B90D633A0A
+[2021.04.29-19.31.20:345][774]LogExit: GameNetDriver IpNetDriver_13 shut down
+[2021.04.29-19.31.20:347][774]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_FirstPersonExampleMap
+[2021.04.29-19.31.20:348][774]LogOnlineSession: Warning: OSS: No game present to leave for session (GameSession)
+[2021.04.29-19.31.20:349][774]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.04.29-19.31.20:349][774]LogSlate: Window 'TDMDeathmatch Preview [NetMode: Server] (64-bit/Windows) ' being destroyed
+[2021.04.29-19.31.20:365][774]LogWorld: UWorld::CleanupWorld for FirstPersonExampleMap, bSessionEnded=true, bCleanupResources=true
+[2021.04.29-19.31.20:367][774]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.31.20:377][774]LogNet: World NetDriver shutdown IpNetDriver_12 [GameNetDriver]
+[2021.04.29-19.31.20:377][774]LogNet: DestroyNamedNetDriver IpNetDriver_12 [GameNetDriver]
+[2021.04.29-19.31.20:378][774]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:49734, Name: IpConnection_13, Driver: GameNetDriver IpNetDriver_12, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-5277D5904F425E387CD819B90D633A0A
+[2021.04.29-19.31.20:378][774]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:49734, Name: IpConnection_13, Driver: GameNetDriver IpNetDriver_12, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-5277D5904F425E387CD819B90D633A0A, Channels: 18, Time: 2021.04.29-19.31.20
+[2021.04.29-19.31.20:378][774]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:49734, Name: IpConnection_13, Driver: GameNetDriver IpNetDriver_12, IsServer: YES, PC: BP_TDMPlayerController_C_1, Owner: BP_TDMPlayerController_C_1, UniqueId: NULL:LAPTOP-205H8F92-5277D5904F425E387CD819B90D633A0A
+[2021.04.29-19.31.20:379][774]LogExit: GameNetDriver IpNetDriver_12 shut down
+[2021.04.29-19.31.20:380][774]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.04.29-19.31.20:386][774]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.04.29-19.31.20:461][774]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000001457D06EE80), frame # 55774
+[2021.04.29-19.31.20:461][774]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000014540CF8400), frame # 55774
+[2021.04.29-19.31.20:461][774]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000001457D06F600), frame # 55774
+[2021.04.29-19.31.20:461][774]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000014581B77000), frame # 55774
+[2021.04.29-19.31.20:464][774]LogUObjectHash: Compacting FUObjectHashTables data took   2.51ms
+[2021.04.29-19.31.20:498][775]LogPlayLevel: Display: Destroying online subsystem :Context_21
+[2021.04.29-19.31.20:498][775]LogPlayLevel: Display: Destroying online subsystem :Context_20
+[2021.04.29-19.31.37:252][932]LogSavePackage: Moving '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Saved/BP_TDMPlayerController8DB8D86E4BF244AD30ACC2ABC2E020D2.tmp' to '../../../../../../DW/Documents/GitHub/TDMDeathmatch/TDMDeathmatch/Content/BlueprintClasses/Player/BP_TDMPlayerController.uasset'
+[2021.04.29-19.31.37:271][932]AssetCheck: New page: Asset Save: BP_TDMPlayerController
+[2021.04.29-19.31.37:271][932]LogContentValidation: Display: Validating Blueprint /Game/BlueprintClasses/Player/BP_TDMPlayerController.BP_TDMPlayerController

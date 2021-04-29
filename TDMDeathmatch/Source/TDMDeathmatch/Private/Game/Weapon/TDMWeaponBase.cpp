@@ -92,7 +92,7 @@ void ATDMWeaponBase::PlayFireAnimation(bool IsLocalPlayer)
 		}
 		else
 		{
-			AnimInstance = Player->GetMesh1P()->GetAnimInstance(); //change when third person setup
+			AnimInstance = Player->GetMesh()->GetAnimInstance(); //change when third person setup
 		}
 
 		if (AnimInstance)
@@ -103,9 +103,8 @@ void ATDMWeaponBase::PlayFireAnimation(bool IsLocalPlayer)
 			}
 			else
 			{
-				//play third person montage
+				AnimInstance->Montage_Play(ThirdPersonMontage);
 			}
-			AnimInstance->Montage_Play(FirstPersonMontage);
 			if (Player->GetIsAiming())
 			{
 				if (ADSFireNames.Num())
@@ -225,6 +224,14 @@ bool ATDMWeaponBase::PerformLineTrace(FVector SpawnLocation, FRotator SpawnRotat
 	if (GetWorld()->LineTraceSingleByChannel(HitResult, SpawnLocation, EndLocation, ECollisionChannel::ECC_Visibility, QueryParams))
 	{
 		// PLAY EFFECTS ON HIT LOCATION
+		if (HitResult.GetActor())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Hit Actor %s"), *HitResult.GetActor()->GetName());
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("HIT ACTOR INVALID BUT STILL BLOCKING HIT"));
+		}
 		PerformHit(HitResult);
 		return true;
 	}
@@ -437,7 +444,7 @@ void ATDMWeaponBase::PlayReloadAnimation(bool IsLocalPlayer)
 		}
 		else
 		{
-			AnimInstance = Player->GetMesh1P()->GetAnimInstance(); //change when third person setup
+			AnimInstance = Player->GetMesh()->GetAnimInstance();
 		}
 
 		if (AnimInstance)
@@ -448,8 +455,7 @@ void ATDMWeaponBase::PlayReloadAnimation(bool IsLocalPlayer)
 			}
 			else
 			{
-				//play third person montage
-				AnimInstance->Montage_Play(FirstPersonMontage);
+				AnimInstance->Montage_Play(ThirdPersonMontage);
 			}
 
 			if (MagazineAmmo == 0)

@@ -45,6 +45,8 @@ ATDMCharacterBase::ATDMCharacterBase()
 	bIsDead = false;
 	bIsAiming = false;
 	bFOVFinished = false;
+
+	SpineRotation = 0.0f;
 }
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
@@ -86,6 +88,7 @@ void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 	DOREPLIFETIME(ATDMCharacterBase, WeaponInHand);
 	DOREPLIFETIME(ATDMCharacterBase, bIsDead);
 	DOREPLIFETIME_CONDITION(ATDMCharacterBase, bIsAiming, COND_SkipOwner);
+	DOREPLIFETIME_CONDITION(ATDMCharacterBase, SpineRotation, COND_SkipOwner);
 }
 
 void ATDMCharacterBase::Destroyed()
@@ -188,7 +191,13 @@ void ATDMCharacterBase::OnRep_WeaponInHand()
 		WeaponInHand->FirearmInHand();
 		if (IsLocallyControlled())
 		{
+			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));
 			WeaponAmmoChanged(WeaponInHand);
+		}
+		else
+		{
+			WeaponInHand->AttachToComponent(GetMesh(), FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("hand_r"));
+
 		}
 	}
 }
@@ -210,7 +219,6 @@ void ATDMCharacterBase::SpawnWeapon(FFirearmToSpawn FirearmToSpawn)
 		WeaponInHand = GetWorld()->SpawnActor<ATDMWeaponBase>(FirearmToSpawn.FirearmClass, SpawnParams);
 		if (WeaponInHand)
 		{
-			WeaponInHand->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("ik_hand_gun"));
 			OnRep_WeaponInHand();
 
 			WeaponInHand->AddAttachment(FirearmToSpawn.OpticClass);
@@ -285,8 +293,18 @@ void ATDMCharacterBase::Reload()
 {
 	if (WeaponInHand)
 	{
-	WeaponInHand->Reload();
+		WeaponInHand->Reload();
 	}
+}
+
+bool ATDMCharacterBase::Server_SetSpineRotation_Validate(float Pitch)
+{
+	return true;
+}
+
+void ATDMCharacterBase::Server_SetSpineRotation_Implementation(float Pitch)
+{
+	SpineRotation = Pitch;
 }
 
 bool ATDMCharacterBase::Server_Aim_Validate(bool Aiming)
@@ -361,6 +379,10 @@ void ATDMCharacterBase::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	HandleAimFOV(DeltaSeconds);
+
+	SpineRotation = GetControlRotation().Pitch * -1.0f;
+	Server_SetSpineRotation(SpineRotation);
+
 }
 
 void ATDMCharacterBase::PlayCameraShake(TSubclassOf<UCameraShake> CameraShake)

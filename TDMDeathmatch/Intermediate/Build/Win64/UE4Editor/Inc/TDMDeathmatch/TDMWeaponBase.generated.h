@@ -152,9 +152,12 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 	FORCEINLINE static uint32 __PPO__FireAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, FireAnimation); } \
 	FORCEINLINE static uint32 __PPO__ReloadAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, ReloadAnimation); } \
 	FORCEINLINE static uint32 __PPO__ReloadEmptyAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, ReloadEmptyAnimation); } \
+	FORCEINLINE static uint32 __PPO__TPPReloadAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, TPPReloadAnimation); } \
+	FORCEINLINE static uint32 __PPO__TPPReloadEmptyAnimation() { return STRUCT_OFFSET(ATDMWeaponBase, TPPReloadEmptyAnimation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonMontage() { return STRUCT_OFFSET(ATDMWeaponBase, FirstPersonMontage); } \
 	FORCEINLINE static uint32 __PPO__ADSFireNames() { return STRUCT_OFFSET(ATDMWeaponBase, ADSFireNames); } \
 	FORCEINLINE static uint32 __PPO__HipFireNames() { return STRUCT_OFFSET(ATDMWeaponBase, HipFireNames); } \
+	FORCEINLINE static uint32 __PPO__ThirdPersonMontage() { return STRUCT_OFFSET(ATDMWeaponBase, ThirdPersonMontage); } \
 	FORCEINLINE static uint32 __PPO__FireModes() { return STRUCT_OFFSET(ATDMWeaponBase, FireModes); } \
 	FORCEINLINE static uint32 __PPO__BurstFireAmount() { return STRUCT_OFFSET(ATDMWeaponBase, BurstFireAmount); } \
 	FORCEINLINE static uint32 __PPO__MagazineCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineCapacity); } \

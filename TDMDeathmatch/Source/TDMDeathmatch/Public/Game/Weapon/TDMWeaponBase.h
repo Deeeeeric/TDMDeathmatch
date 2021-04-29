@@ -66,18 +66,23 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UAnimationAsset* ReloadAnimation;
-
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UAnimationAsset* ReloadEmptyAnimation;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-		UAnimMontage* FirstPersonMontage;
+		UAnimationAsset* TPPReloadAnimation;
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		UAnimationAsset* TPPReloadEmptyAnimation;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		UAnimMontage* FirstPersonMontage;
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		TArray<FName> ADSFireNames;
-
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		TArray<FName> HipFireNames;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		UAnimMontage* ThirdPersonMontage;
 
 	void PlayFireAnimation(bool IsLocalPlayer);
 	void PlayReloadAnimation(bool IsLocalPlayer);

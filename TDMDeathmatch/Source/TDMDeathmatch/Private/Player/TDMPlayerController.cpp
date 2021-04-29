@@ -5,17 +5,18 @@
 
 void ATDMPlayerController::SetPawn(APawn* InPawn)
 {
-	if (InPawn)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("InPawn Valid"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("InPawn INValid"));
-	}
 	if (!HasAuthority())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Running On Client"));
+		if (InPawn)
+		{
+			OnPossessionChange(EPossessed::Possessed);
+		}
+		else
+		{
+			OnPossessionChange(EPossessed::UnPossessed);
+		}
 	}
+
 	Super::SetPawn(InPawn);
 }
+	

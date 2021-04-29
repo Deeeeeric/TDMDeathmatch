@@ -64,3 +64,4 @@ A fully replicated Team Deathmatch
 * on Reload Complete
 * Spawn Particles on C++
 * Trigger Sounds and Play Effects
+* Ragdoll TPP and Setup New PlayerController

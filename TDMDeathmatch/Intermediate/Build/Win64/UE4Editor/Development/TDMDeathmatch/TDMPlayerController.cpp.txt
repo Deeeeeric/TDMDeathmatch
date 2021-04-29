@@ -1,0 +1,3 @@
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Development\TDMDeathmatch\Definitions.TDMDeathmatch.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Source\TDMDeathmatch\Public\Player/TDMPlayerController.h
+D:\DW\Documents\GitHub\TDMDeathmatch\TDMDeathmatch\Intermediate\Build\Win64\UE4Editor\Inc\TDMDeathmatch\TDMPlayerController.generated.h

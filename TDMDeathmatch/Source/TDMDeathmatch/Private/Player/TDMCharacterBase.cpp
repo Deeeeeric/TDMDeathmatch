@@ -166,8 +166,8 @@ void ATDMCharacterBase::OnRep_IsDead()
 	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	//Set collision profile to ragdoll
-	GetMesh1P()->SetCollisionProfileName(FName("ragdoll"));
-	GetMesh1P()->SetAllBodiesSimulatePhysics(true);
+	GetMesh()->SetCollisionProfileName(FName("ragdoll"));
+	GetMesh()->SetAllBodiesSimulatePhysics(true);
 
 	if (WeaponInHand)
 	{//Detach weapon

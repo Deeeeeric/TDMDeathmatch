@@ -20,7 +20,7 @@ public:
 	ATDMCharacterBase();
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+	UPROPERTY(BlueprintReadWrite, Category = Mesh)
 		class USkeletalMeshComponent* Mesh1P;
 
 	/** First person camera */

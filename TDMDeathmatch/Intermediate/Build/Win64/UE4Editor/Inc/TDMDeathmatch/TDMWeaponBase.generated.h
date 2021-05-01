@@ -160,6 +160,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMWeaponBase); \
 	FORCEINLINE static uint32 __PPO__ThirdPersonMontage() { return STRUCT_OFFSET(ATDMWeaponBase, ThirdPersonMontage); } \
 	FORCEINLINE static uint32 __PPO__FireModes() { return STRUCT_OFFSET(ATDMWeaponBase, FireModes); } \
 	FORCEINLINE static uint32 __PPO__BurstFireAmount() { return STRUCT_OFFSET(ATDMWeaponBase, BurstFireAmount); } \
+	FORCEINLINE static uint32 __PPO__FireRate() { return STRUCT_OFFSET(ATDMWeaponBase, FireRate); } \
 	FORCEINLINE static uint32 __PPO__MagazineCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, MagazineCapacity); } \
 	FORCEINLINE static uint32 __PPO__TotalAmmoCapacity() { return STRUCT_OFFSET(ATDMWeaponBase, TotalAmmoCapacity); } \
 	FORCEINLINE static uint32 __PPO__CurrentAmmoRemaining() { return STRUCT_OFFSET(ATDMWeaponBase, CurrentAmmoRemaining); } \

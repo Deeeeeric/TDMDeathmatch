@@ -100,6 +100,8 @@ protected:
 		uint8 BurstFireAmount;
 	uint8 BurstFireShot;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	float FireRate;
 	/********************* AMMO *********************/
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		int32 MagazineCapacity;

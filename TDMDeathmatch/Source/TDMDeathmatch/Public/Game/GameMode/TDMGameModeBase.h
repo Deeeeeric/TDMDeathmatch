@@ -42,6 +42,7 @@ protected:
 	bool CheckIfTeamScoreWins();
 
 	void OnGameOver(ETeam WinningTeam);
+	void RestartGame();
 
 public:
 	void PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase* Killed);

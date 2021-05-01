@@ -157,6 +157,13 @@ void ATDMGameModeBase::OnGameOver(ETeam WinningTeam)
 	}
 
 	//start timer to restart game	
+	FTimerHandle TempHandle;
+	GetWorldTimerManager().SetTimer(TempHandle,this,&ATDMGameModeBase::RestartGame, 5.0f, false);
+}
+
+void ATDMGameModeBase::RestartGame()
+{
+	GetWorld()->ServerTravel("/Game/Levels/Rusty?listen");
 }
 
 void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase* Killed)

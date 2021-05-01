@@ -32,6 +32,7 @@ ATDMWeaponBase::ATDMWeaponBase()
 	FireModesIndex = 0;
 	BurstFireAmount = 3;
 	BurstFireShot = 0;
+	FireRate = 500.0f;
 
 	bWeaponActive = true;
 
@@ -45,6 +46,8 @@ void ATDMWeaponBase::BeginPlay()
 	Super::BeginPlay();
 	CurrentAmmoRemaining = TotalAmmoCapacity;
 	MagazineAmmo = MagazineCapacity;
+
+	FireRate = 60 / FireRate;
 }
 
 void ATDMWeaponBase::Destroyed()
@@ -73,7 +76,7 @@ void ATDMWeaponBase::FirearmInHand()
 		FireMode = FireModes[FireModesIndex];
 	}
 
-	GetWorldTimerManager().SetTimer(TFullAutoHandle, this, &ATDMWeaponBase::Fire, 0.1, true);
+	GetWorldTimerManager().SetTimer(TFullAutoHandle, this, &ATDMWeaponBase::Fire, FireRate, true);
 	GetWorldTimerManager().PauseTimer(TFullAutoHandle);
 }
 
@@ -426,11 +429,14 @@ void ATDMWeaponBase::Reload()
 
 void ATDMWeaponBase::PlayReloadAnimation(bool IsLocalPlayer)
 {
-	if (MagazineAmmo > 0 && ReloadAnimation)
+	if (MagazineAmmo > 0)
 	{
-		WeaponMesh->PlayAnimation(ReloadAnimation, false);
+		if (IsLocalPlayer && ReloadAnimation)
+		{
+			WeaponMesh->PlayAnimation(ReloadAnimation, false);
+		}
 	}
-	else if (MagazineAmmo == 0 && ReloadEmptyAnimation)
+	else if (MagazineAmmo == 0)
 	{
 		WeaponMesh->PlayAnimation(ReloadEmptyAnimation, false);
 	}
@@ -460,10 +466,26 @@ void ATDMWeaponBase::PlayReloadAnimation(bool IsLocalPlayer)
 
 			if (MagazineAmmo == 0)
 			{
+				if (IsLocalPlayer)
+				{
+					WeaponMesh->PlayAnimation(ReloadEmptyAnimation, false);
+				}
+				else
+				{
+					WeaponMesh->PlayAnimation(TPPReloadEmptyAnimation, false);
+				}
 				AnimInstance->Montage_JumpToSection(FName("ReloadEmpty"));
 			}
 			else
 			{
+				if (IsLocalPlayer)
+				{
+					WeaponMesh->PlayAnimation(ReloadAnimation, false);
+				}
+				else
+				{
+					WeaponMesh->PlayAnimation(TPPReloadAnimation, false);
+				}
 				AnimInstance->Montage_JumpToSection(FName("Reload"));
 			}
 		}

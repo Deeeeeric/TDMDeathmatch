@@ -576,6 +576,10 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_MagazineCapacity;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireRate_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_FireRate;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BurstFireAmount_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_BurstFireAmount;
@@ -756,6 +760,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_MagazineCapacity = { "MagazineCapacity", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, MagazineCapacity), METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_MagazineCapacity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_MagazineCapacity_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireRate_MetaData[] = {
+		{ "Category", "Weapon" },
+		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireRate = { "FireRate", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMWeaponBase, FireRate), METADATA_PARAMS(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireRate_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_BurstFireAmount_MetaData[] = {
 		{ "Category", "Weapon" },
 		{ "ModuleRelativePath", "Public/Game/Weapon/TDMWeaponBase.h" },
@@ -924,6 +935,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_CurrentAmmoRemaining,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_TotalAmmoCapacity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_MagazineCapacity,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_BurstFireAmount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireModes,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMWeaponBase_Statics::NewProp_FireModes_Inner,
@@ -977,7 +989,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMWeaponBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMWeaponBase, 579741189);
+	IMPLEMENT_CLASS(ATDMWeaponBase, 1140687438);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMWeaponBase>()
 	{
 		return ATDMWeaponBase::StaticClass();

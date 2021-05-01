@@ -8,24 +8,42 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+enum class ETeam : uint8;
 enum class EPossessed : uint8;
 #ifdef TDMDEATHMATCH_TDMPlayerController_generated_h
 #error "TDMPlayerController.generated.h already included, missing '#pragma once' in TDMPlayerController.h"
 #endif
 #define TDMDEATHMATCH_TDMPlayerController_generated_h
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_SPARSE_DATA
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_RPC_WRAPPERS
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_RPC_WRAPPERS_NO_PURE_DECLS
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_EVENT_PARMS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_SPARSE_DATA
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_RPC_WRAPPERS \
+	virtual void GameOver_Implementation(ETeam WinningTeam); \
+ \
+	DECLARE_FUNCTION(execGameOver);
+
+
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGameOver);
+
+
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_EVENT_PARMS \
+	struct TDMPlayerController_eventGameOver_Parms \
+	{ \
+		ETeam WinningTeam; \
+	}; \
+	struct TDMPlayerController_eventOnGameOver_Parms \
+	{ \
+		ETeam WinningTeam; \
+	}; \
 	struct TDMPlayerController_eventOnPossessionChange_Parms \
 	{ \
 		EPossessed Possessed; \
 	};
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_CALLBACK_WRAPPERS
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_INCLASS_NO_PURE_DECLS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_CALLBACK_WRAPPERS
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATDMPlayerController(); \
 	friend struct Z_Construct_UClass_ATDMPlayerController_Statics; \
@@ -34,7 +52,7 @@ public: \
 	DECLARE_SERIALIZER(ATDMPlayerController)
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_INCLASS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_INCLASS \
 private: \
 	static void StaticRegisterNativesATDMPlayerController(); \
 	friend struct Z_Construct_UClass_ATDMPlayerController_Statics; \
@@ -43,7 +61,7 @@ public: \
 	DECLARE_SERIALIZER(ATDMPlayerController)
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_STANDARD_CONSTRUCTORS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATDMPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATDMPlayerController) \
@@ -56,7 +74,7 @@ private: \
 public:
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_ENHANCED_CONSTRUCTORS \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ATDMPlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -69,33 +87,33 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMPlayerController); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATDMPlayerController)
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_PRIVATE_PROPERTY_OFFSET
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_16_PROLOG \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_EVENT_PARMS
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_PRIVATE_PROPERTY_OFFSET
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_17_PROLOG \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_EVENT_PARMS
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_GENERATED_BODY_LEGACY \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_PRIVATE_PROPERTY_OFFSET \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_SPARSE_DATA \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_RPC_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_CALLBACK_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_INCLASS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_STANDARD_CONSTRUCTORS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_PRIVATE_PROPERTY_OFFSET \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_SPARSE_DATA \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_RPC_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_CALLBACK_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_INCLASS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_GENERATED_BODY \
+#define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_PRIVATE_PROPERTY_OFFSET \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_SPARSE_DATA \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_CALLBACK_WRAPPERS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_INCLASS_NO_PURE_DECLS \
-	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_19_ENHANCED_CONSTRUCTORS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_PRIVATE_PROPERTY_OFFSET \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_SPARSE_DATA \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_CALLBACK_WRAPPERS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_INCLASS_NO_PURE_DECLS \
+	TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMPlayerController_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

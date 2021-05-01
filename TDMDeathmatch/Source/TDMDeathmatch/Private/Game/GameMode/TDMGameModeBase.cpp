@@ -6,6 +6,7 @@
 #include "Game/GameMode/TDMSpawnPoint.h"
 #include "Player/TDMPlayerState.h"
 #include "Player/TDMCharacterBase.h"
+#include "Player/TDMPlayerController.h"
 
 #include "Kismet/GameplayStatics.h"
 
@@ -141,6 +142,23 @@ bool ATDMGameModeBase::CheckIfTeamScoreWins()
 	return false;
 }
 
+void ATDMGameModeBase::OnGameOver(ETeam WinningTeam)
+{
+	bGameInProgress = false;
+	TArray<AActor*> FoundActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATDMPlayerController::StaticClass(), FoundActors);
+
+	for (AActor* Actor : FoundActors)
+	{
+		if (ATDMPlayerController* PC = Cast<ATDMPlayerController>(Actor))
+		{
+			PC->GameOver(WinningTeam);
+		}
+	}
+
+	//start timer to restart game	
+}
+
 void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase* Killed)
 {
 	//if (!bGameInProgress) { return; }
@@ -164,15 +182,7 @@ void ATDMGameModeBase::PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase
 			ETeam WinningTeam = GS->AddScoreToTeam(PS->GetTeam());
 			if (WinningTeam != ETeam::None)
 			{// A team has won
-				bGameInProgress = false;
-				if (WinningTeam == ETeam::Alpha)
-				{
-					UE_LOG(LogTemp, Warning, TEXT("ALPHA Team WON"));
-				}
-				else
-				{
-					UE_LOG(LogTemp, Warning, TEXT("BRAVO Team WON"));
-				}
+				OnGameOver(WinningTeam);
 			}
 		}
 

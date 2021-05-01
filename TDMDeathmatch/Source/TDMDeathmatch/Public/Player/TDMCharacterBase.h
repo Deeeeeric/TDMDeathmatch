@@ -81,16 +81,6 @@ protected:
 	void StopAiming();
 	bool bFOVFinished;
 
-	UPROPERTY(Replicated)
-	float SpineRotation;
-	UFUNCTION(BlueprintCallable, Category="BoneRotation")
-	float GetSpineRotation() { return SpineRotation;}
-
-	UFUNCTION(Server, Reliable, WithValidation)
-	void Server_SetSpineRotation(float Pitch);
-	bool Server_SetSpineRotation_Validate(float Pitch);
-	void Server_SetSpineRotation_Implementation(float Pitch);
-
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_Aim(bool Aiming);
 	bool Server_Aim_Validate(bool Aiming);

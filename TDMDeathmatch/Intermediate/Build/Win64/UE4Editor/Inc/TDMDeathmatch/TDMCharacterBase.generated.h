@@ -19,14 +19,10 @@ class ATDMWeaponBase;
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_RPC_WRAPPERS \
 	virtual bool Server_Aim_Validate(bool ); \
 	virtual void Server_Aim_Implementation(bool Aiming); \
-	virtual bool Server_SetSpineRotation_Validate(float ); \
-	virtual void Server_SetSpineRotation_Implementation(float Pitch); \
 	virtual bool Server_SpawnFirearm_Validate(FFirearmToSpawn ); \
 	virtual void Server_SpawnFirearm_Implementation(FFirearmToSpawn FirearmToSpawn); \
  \
 	DECLARE_FUNCTION(execServer_Aim); \
-	DECLARE_FUNCTION(execServer_SetSpineRotation); \
-	DECLARE_FUNCTION(execGetSpineRotation); \
 	DECLARE_FUNCTION(execServer_SpawnFirearm); \
 	DECLARE_FUNCTION(execSpawnWeapon); \
 	DECLARE_FUNCTION(execOnRep_WeaponInHand); \
@@ -36,8 +32,6 @@ class ATDMWeaponBase;
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execServer_Aim); \
-	DECLARE_FUNCTION(execServer_SetSpineRotation); \
-	DECLARE_FUNCTION(execGetSpineRotation); \
 	DECLARE_FUNCTION(execServer_SpawnFirearm); \
 	DECLARE_FUNCTION(execSpawnWeapon); \
 	DECLARE_FUNCTION(execOnRep_WeaponInHand); \
@@ -48,10 +42,6 @@ class ATDMWeaponBase;
 	struct TDMCharacterBase_eventServer_Aim_Parms \
 	{ \
 		bool Aiming; \
-	}; \
-	struct TDMCharacterBase_eventServer_SetSpineRotation_Parms \
-	{ \
-		float Pitch; \
 	}; \
 	struct TDMCharacterBase_eventServer_SpawnFirearm_Parms \
 	{ \
@@ -78,8 +68,7 @@ public: \
 		bIsDead=NETFIELD_REP_START, \
 		WeaponInHand, \
 		bIsAiming, \
-		SpineRotation, \
-		NETFIELD_REP_END=SpineRotation	}; \
+		NETFIELD_REP_END=bIsAiming	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
@@ -97,8 +86,7 @@ public: \
 		bIsDead=NETFIELD_REP_START, \
 		WeaponInHand, \
 		bIsAiming, \
-		SpineRotation, \
-		NETFIELD_REP_END=SpineRotation	}; \
+		NETFIELD_REP_END=bIsAiming	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
@@ -129,8 +117,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATDMCharacterBase); \
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__WeaponToSpawn() { return STRUCT_OFFSET(ATDMCharacterBase, WeaponToSpawn); } \
 	FORCEINLINE static uint32 __PPO__WeaponInHand() { return STRUCT_OFFSET(ATDMCharacterBase, WeaponInHand); } \
-	FORCEINLINE static uint32 __PPO__bIsAiming() { return STRUCT_OFFSET(ATDMCharacterBase, bIsAiming); } \
-	FORCEINLINE static uint32 __PPO__SpineRotation() { return STRUCT_OFFSET(ATDMCharacterBase, SpineRotation); }
+	FORCEINLINE static uint32 __PPO__bIsAiming() { return STRUCT_OFFSET(ATDMCharacterBase, bIsAiming); }
 
 
 #define TDMDeathmatch_Source_TDMDeathmatch_Public_Player_TDMCharacterBase_h_13_PROLOG \

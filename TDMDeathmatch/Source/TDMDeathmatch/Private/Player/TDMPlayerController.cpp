@@ -23,3 +23,9 @@ void ATDMPlayerController::SetPawn(APawn* InPawn)
 
 	Super::SetPawn(InPawn);
 }
+
+void ATDMPlayerController::GameOver_Implementation(ETeam WinningTeam)
+{
+	UE_LOG(LogTemp, Warning, TEXT("OngameOVer implementation"));
+	OnGameOver(WinningTeam);
+}

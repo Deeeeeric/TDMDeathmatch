@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerController() {}
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMPlayerController_NoRegister();
 	TDMDEATHMATCH_API UClass* Z_Construct_UClass_ATDMPlayerController();
 	ENGINE_API UClass* Z_Construct_UClass_APlayerController();
+	TDMDEATHMATCH_API UEnum* Z_Construct_UEnum_TDMDeathmatch_ETeam();
 // End Cross Module References
 	static UEnum* EPossessed_StaticEnum()
 	{
@@ -76,6 +77,28 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerController() {}
 		}
 		return ReturnEnum;
 	}
+	DEFINE_FUNCTION(ATDMPlayerController::execGameOver)
+	{
+		P_GET_ENUM(ETeam,Z_Param_WinningTeam);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GameOver_Implementation(ETeam(Z_Param_WinningTeam));
+		P_NATIVE_END;
+	}
+	static FName NAME_ATDMPlayerController_GameOver = FName(TEXT("GameOver"));
+	void ATDMPlayerController::GameOver(ETeam WinningTeam)
+	{
+		TDMPlayerController_eventGameOver_Parms Parms;
+		Parms.WinningTeam=WinningTeam;
+		ProcessEvent(FindFunctionChecked(NAME_ATDMPlayerController_GameOver),&Parms);
+	}
+	static FName NAME_ATDMPlayerController_OnGameOver = FName(TEXT("OnGameOver"));
+	void ATDMPlayerController::OnGameOver(ETeam WinningTeam)
+	{
+		TDMPlayerController_eventOnGameOver_Parms Parms;
+		Parms.WinningTeam=WinningTeam;
+		ProcessEvent(FindFunctionChecked(NAME_ATDMPlayerController_OnGameOver),&Parms);
+	}
 	static FName NAME_ATDMPlayerController_OnPossessionChange = FName(TEXT("OnPossessionChange"));
 	void ATDMPlayerController::OnPossessionChange(EPossessed Possessed)
 	{
@@ -85,6 +108,73 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerController() {}
 	}
 	void ATDMPlayerController::StaticRegisterNativesATDMPlayerController()
 	{
+		UClass* Class = ATDMPlayerController::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GameOver", &ATDMPlayerController::execGameOver },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics
+	{
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_WinningTeam;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_WinningTeam_Underlying;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::NewProp_WinningTeam = { "WinningTeam", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMPlayerController_eventGameOver_Parms, WinningTeam), Z_Construct_UEnum_TDMDeathmatch_ETeam, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::NewProp_WinningTeam_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::NewProp_WinningTeam,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::NewProp_WinningTeam_Underlying,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/TDMPlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMPlayerController, nullptr, "GameOver", nullptr, nullptr, sizeof(TDMPlayerController_eventGameOver_Parms), Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMPlayerController_GameOver()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMPlayerController_GameOver_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics
+	{
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_WinningTeam;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_WinningTeam_Underlying;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::NewProp_WinningTeam = { "WinningTeam", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMPlayerController_eventOnGameOver_Parms, WinningTeam), Z_Construct_UEnum_TDMDeathmatch_ETeam, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::NewProp_WinningTeam_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::NewProp_WinningTeam,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::NewProp_WinningTeam_Underlying,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/TDMPlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMPlayerController, nullptr, "OnGameOver", nullptr, nullptr, sizeof(TDMPlayerController_eventOnGameOver_Parms), Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATDMPlayerController_OnGameOver()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMPlayerController_OnGameOver_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ATDMPlayerController_OnPossessionChange_Statics
 	{
@@ -136,6 +226,8 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerController() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TDMDeathmatch,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMPlayerController_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATDMPlayerController_GameOver, "GameOver" }, // 2270560178
+		{ &Z_Construct_UFunction_ATDMPlayerController_OnGameOver, "OnGameOver" }, // 2527691252
 		{ &Z_Construct_UFunction_ATDMPlayerController_OnPossessionChange, "OnPossessionChange" }, // 3719130521
 	};
 #if WITH_METADATA
@@ -172,7 +264,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMPlayerController, 2883868006);
+	IMPLEMENT_CLASS(ATDMPlayerController, 3169790751);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMPlayerController>()
 	{
 		return ATDMPlayerController::StaticClass();

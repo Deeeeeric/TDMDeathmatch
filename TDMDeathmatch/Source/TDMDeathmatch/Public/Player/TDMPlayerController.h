@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "TDMDeathmatch/TDMStructs.h"
 #include "TDMPlayerController.generated.h"
 
 UENUM(BlueprintType)
@@ -23,4 +24,11 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnPossessionChange(EPossessed Possessed);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnGameOver(ETeam WinningTeam);
+
+	UFUNCTION(Client, Reliable)
+	void GameOver(ETeam WinningTeam);
+	void GameOver_Implementation(ETeam WinningTeam);
 };

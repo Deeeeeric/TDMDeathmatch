@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "TDMDeathmatch/TDMStructs.h"
 #include "TDMGameModeBase.generated.h"
 
 enum class ETeam : unsigned char;
@@ -39,6 +40,8 @@ protected:
 	
 	// Returns true if a team has won
 	bool CheckIfTeamScoreWins();
+
+	void OnGameOver(ETeam WinningTeam);
 
 public:
 	void PlayerKilled(ATDMCharacterBase* Killer, ATDMCharacterBase* Killed);

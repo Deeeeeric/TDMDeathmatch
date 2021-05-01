@@ -46,7 +46,6 @@ ATDMCharacterBase::ATDMCharacterBase()
 	bIsAiming = false;
 	bFOVFinished = false;
 
-	SpineRotation = 0.0f;
 }
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
@@ -88,7 +87,6 @@ void ATDMCharacterBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 	DOREPLIFETIME(ATDMCharacterBase, WeaponInHand);
 	DOREPLIFETIME(ATDMCharacterBase, bIsDead);
 	DOREPLIFETIME_CONDITION(ATDMCharacterBase, bIsAiming, COND_SkipOwner);
-	DOREPLIFETIME_CONDITION(ATDMCharacterBase, SpineRotation, COND_SkipOwner);
 }
 
 void ATDMCharacterBase::Destroyed()
@@ -302,16 +300,6 @@ void ATDMCharacterBase::Reload()
 	}
 }
 
-bool ATDMCharacterBase::Server_SetSpineRotation_Validate(float Pitch)
-{
-	return true;
-}
-
-void ATDMCharacterBase::Server_SetSpineRotation_Implementation(float Pitch)
-{
-	SpineRotation = Pitch;
-}
-
 bool ATDMCharacterBase::Server_Aim_Validate(bool Aiming)
 {
 	return true;
@@ -385,8 +373,7 @@ void ATDMCharacterBase::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 	HandleAimFOV(DeltaSeconds);
 
-	SpineRotation = GetControlRotation().Pitch * -1.0f;
-	Server_SetSpineRotation(SpineRotation);
+
 }
 
 void ATDMCharacterBase::PlayCameraShake(TSubclassOf<UCameraShake> CameraShake)

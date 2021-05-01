@@ -36,26 +36,6 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		P_THIS->Server_Aim_Implementation(Z_Param_Aiming);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ATDMCharacterBase::execServer_SetSpineRotation)
-	{
-		P_GET_PROPERTY(FFloatProperty,Z_Param_Pitch);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		if (!P_THIS->Server_SetSpineRotation_Validate(Z_Param_Pitch))
-		{
-			RPC_ValidateFailed(TEXT("Server_SetSpineRotation_Validate"));
-			return;
-		}
-		P_THIS->Server_SetSpineRotation_Implementation(Z_Param_Pitch);
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(ATDMCharacterBase::execGetSpineRotation)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(float*)Z_Param__Result=P_THIS->GetSpineRotation();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ATDMCharacterBase::execServer_SpawnFirearm)
 	{
 		P_GET_STRUCT(FFirearmToSpawn,Z_Param_FirearmToSpawn);
@@ -98,13 +78,6 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		Parms.Aiming=Aiming ? true : false;
 		ProcessEvent(FindFunctionChecked(NAME_ATDMCharacterBase_Server_Aim),&Parms);
 	}
-	static FName NAME_ATDMCharacterBase_Server_SetSpineRotation = FName(TEXT("Server_SetSpineRotation"));
-	void ATDMCharacterBase::Server_SetSpineRotation(float Pitch)
-	{
-		TDMCharacterBase_eventServer_SetSpineRotation_Parms Parms;
-		Parms.Pitch=Pitch;
-		ProcessEvent(FindFunctionChecked(NAME_ATDMCharacterBase_Server_SetSpineRotation),&Parms);
-	}
 	static FName NAME_ATDMCharacterBase_Server_SpawnFirearm = FName(TEXT("Server_SpawnFirearm"));
 	void ATDMCharacterBase::Server_SpawnFirearm(FFirearmToSpawn FirearmToSpawn)
 	{
@@ -123,48 +96,13 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 	{
 		UClass* Class = ATDMCharacterBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "GetSpineRotation", &ATDMCharacterBase::execGetSpineRotation },
 			{ "OnRep_IsDead", &ATDMCharacterBase::execOnRep_IsDead },
 			{ "OnRep_WeaponInHand", &ATDMCharacterBase::execOnRep_WeaponInHand },
 			{ "Server_Aim", &ATDMCharacterBase::execServer_Aim },
-			{ "Server_SetSpineRotation", &ATDMCharacterBase::execServer_SetSpineRotation },
 			{ "Server_SpawnFirearm", &ATDMCharacterBase::execServer_SpawnFirearm },
 			{ "SpawnWeapon", &ATDMCharacterBase::execSpawnWeapon },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics
-	{
-		struct TDMCharacterBase_eventGetSpineRotation_Parms
-		{
-			float ReturnValue;
-		};
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMCharacterBase_eventGetSpineRotation_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::Function_MetaDataParams[] = {
-		{ "Category", "BoneRotation" },
-		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMCharacterBase, nullptr, "GetSpineRotation", nullptr, nullptr, sizeof(TDMCharacterBase_eventGetSpineRotation_Parms), Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ATDMCharacterBase_OnRep_IsDead_Statics
 	{
@@ -240,34 +178,6 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_Server_Aim_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics
-	{
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Pitch;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::NewProp_Pitch = { "Pitch", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(TDMCharacterBase_eventServer_SetSpineRotation_Parms, Pitch), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::NewProp_Pitch,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATDMCharacterBase, nullptr, "Server_SetSpineRotation", nullptr, nullptr, sizeof(TDMCharacterBase_eventServer_SetSpineRotation_Parms), Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80280CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -372,10 +282,6 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpineRotation_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SpineRotation;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsAiming_MetaData[];
 #endif
 		static void NewProp_bIsAiming_SetBit(void* Obj);
@@ -418,11 +324,9 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TDMDeathmatch,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATDMCharacterBase_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ATDMCharacterBase_GetSpineRotation, "GetSpineRotation" }, // 2552151311
 		{ &Z_Construct_UFunction_ATDMCharacterBase_OnRep_IsDead, "OnRep_IsDead" }, // 1214299108
 		{ &Z_Construct_UFunction_ATDMCharacterBase_OnRep_WeaponInHand, "OnRep_WeaponInHand" }, // 1930053663
 		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_Aim, "Server_Aim" }, // 40076570
-		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_SetSpineRotation, "Server_SetSpineRotation" }, // 472763700
 		{ &Z_Construct_UFunction_ATDMCharacterBase_Server_SpawnFirearm, "Server_SpawnFirearm" }, // 1753500193
 		{ &Z_Construct_UFunction_ATDMCharacterBase_SpawnWeapon, "SpawnWeapon" }, // 2730230084
 		{ &Z_Construct_UFunction_ATDMCharacterBase_WeaponAmmoChanged, "WeaponAmmoChanged" }, // 2937385651
@@ -434,12 +338,6 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_SpineRotation_MetaData[] = {
-		{ "ModuleRelativePath", "Public/Player/TDMCharacterBase.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_SpineRotation = { "SpineRotation", nullptr, (EPropertyFlags)0x0020080000000020, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, SpineRotation), METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_SpineRotation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_SpineRotation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming_MetaData[] = {
 		{ "Category", "Weapon" },
@@ -511,7 +409,6 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_Mesh1P = { "Mesh1P", nullptr, (EPropertyFlags)0x001000000008000c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATDMCharacterBase, Mesh1P), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_Mesh1P_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_Mesh1P_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATDMCharacterBase_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_SpineRotation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_bIsAiming,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponInHand,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATDMCharacterBase_Statics::NewProp_WeaponToSpawn,
@@ -548,7 +445,7 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATDMCharacterBase, 804762037);
+	IMPLEMENT_CLASS(ATDMCharacterBase, 362435174);
 	template<> TDMDEATHMATCH_API UClass* StaticClass<ATDMCharacterBase>()
 	{
 		return ATDMCharacterBase::StaticClass();
@@ -560,13 +457,11 @@ void EmptyLinkFunctionForGeneratedCodeTDMCharacterBase() {}
 		static const FName Name_bIsDead(TEXT("bIsDead"));
 		static const FName Name_WeaponInHand(TEXT("WeaponInHand"));
 		static const FName Name_bIsAiming(TEXT("bIsAiming"));
-		static const FName Name_SpineRotation(TEXT("SpineRotation"));
 
 		const bool bIsValid = true
 			&& Name_bIsDead == ClassReps[(int32)ENetFields_Private::bIsDead].Property->GetFName()
 			&& Name_WeaponInHand == ClassReps[(int32)ENetFields_Private::WeaponInHand].Property->GetFName()
-			&& Name_bIsAiming == ClassReps[(int32)ENetFields_Private::bIsAiming].Property->GetFName()
-			&& Name_SpineRotation == ClassReps[(int32)ENetFields_Private::SpineRotation].Property->GetFName();
+			&& Name_bIsAiming == ClassReps[(int32)ENetFields_Private::bIsAiming].Property->GetFName();
 
 		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ATDMCharacterBase"));
 	}

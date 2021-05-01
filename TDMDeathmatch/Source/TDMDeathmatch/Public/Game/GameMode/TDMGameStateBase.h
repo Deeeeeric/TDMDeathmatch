@@ -21,13 +21,10 @@ public:
 protected:
 	UPROPERTY(EditDefaultsOnly)
 		int ScoreToWin;
-
 	UPROPERTY(EditDefaultsOnly)
 		int IncrementScoreValue;
-
 	UPROPERTY(Replicated, BlueprintReadOnly)
 		int AlphaTeamScore;
-
 	UPROPERTY(Replicated, BlueprintReadOnly)
 		int BravoTeamScore;
 

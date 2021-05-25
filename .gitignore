@@ -87,3 +87,4 @@ DerivedDataCache/*
 *.ini
 *.old
 *.response
+*.umap

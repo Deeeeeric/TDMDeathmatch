@@ -158,7 +158,7 @@ void ATDMCharacterBase::OnRep_IsDead()
 {
 	if (HasAuthority())
 	{
-		SetLifeSpan(10.0f);
+		SetLifeSpan(5.0f);
 	}
 
 	if (IsLocallyControlled())
@@ -177,7 +177,7 @@ void ATDMCharacterBase::OnRep_IsDead()
 		WeaponInHand->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 		WeaponInHand->GetWeaponMesh()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 		WeaponInHand->GetWeaponMesh()->SetSimulatePhysics(true);
-		WeaponInHand->SetLifeSpan(10.0f);
+		WeaponInHand->SetLifeSpan(5.0f);
 	}
 }
 

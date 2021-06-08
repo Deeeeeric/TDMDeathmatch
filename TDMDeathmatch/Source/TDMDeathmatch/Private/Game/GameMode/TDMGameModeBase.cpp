@@ -158,7 +158,7 @@ void ATDMGameModeBase::OnGameOver(ETeam WinningTeam)
 
 	//start timer to restart game	
 	FTimerHandle TempHandle;
-	GetWorldTimerManager().SetTimer(TempHandle,this,&ATDMGameModeBase::RestartGame, 5.0f, false);
+	GetWorldTimerManager().SetTimer(TempHandle,this,&ATDMGameModeBase::RestartGame, 3.0f, false);
 }
 
 void ATDMGameModeBase::RestartGame()
